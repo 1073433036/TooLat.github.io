@@ -1,0 +1,51 @@
+#TopNav {
+  width: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 15px #ddd;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+  ul{
+    width: calc(100% - 100px);
+    height: 60px;
+    margin: 0 50px;
+    list-style: none;
+    font-family: "Microsoft YaHei";
+    li{
+      position: relative;
+      float: left;
+      text-align: center;
+      line-height: 60px;
+      font-size: 18px;
+      color: #1c1c1c;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &.on{ 
+          color:#4787e1;
+          // font-weight: 700;
+          background-color: #F0F1F4;
+          em {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            height: 3px;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4787e1;
+          }
+      }
+
+    }
+    .menuSwiper{
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      height: 4px;
+      width: 100px;
+      background-color: #4787e1;
+    }
+  }
+}

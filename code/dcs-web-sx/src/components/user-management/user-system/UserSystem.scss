@@ -1,0 +1,132 @@
+@import '../management.scss';
+.user-syetem-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+.table-wrap {
+  min-height: 474px;
+}
+
+#userSystem {
+  padding: 0 5%;
+  min-width: 880px;
+  overflow: auto;
+
+  .top {
+    position: relative;
+    padding: 25px 0 18px 0;
+
+    .btn {
+      float: left;
+      width: 80px;
+      height: 30px;
+      color: #2c9eff;
+      font-size: 14px;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid #2c9eff;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+        background: #2c9eff;
+      }
+    }
+
+    .btn-add { margin-left: 15px; }
+
+    .btn-delete { margin-left: 20px; }
+    
+    .btn-add-role {
+      margin-left: 20px;
+      width: 120px;
+    }
+
+    .search-inp {
+      float: right;
+
+      input[type="text"] {
+        margin-top: 1px;
+        padding: 0 70px 0 10px;
+        float: left;
+        width: 280px;
+        height: 28px;
+        color: #2c9eff;
+        font-size: 14px;
+        border: 1px solid #bbc9d6;
+        border-radius: 2px;
+        outline: none;
+      }
+
+      .search {
+        float: left;
+        width: 60px;
+        height: 30px;
+        margin: 1px 0 0 -60px;
+        background: rgba(44, 158, 255, 0.8) url(../../../../static/img/userSystem/search.png) no-repeat (center / 30%);
+        border-radius: 2px;
+        cursor: pointer;
+
+        &:hover {
+          background: #2c9eff url(../../../../static/img/userSystem/search.png) no-repeat (center / 30%);
+        }
+      }
+    }
+  }
+}
+
+.del-role {
+  width: 100%;
+  thead {
+    background: #e9f2f8;
+    tr {
+      th {
+        line-height: 25px;
+        border: solid 1px #e0e4eb;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        line-height: 25px;
+        text-align: center;
+        border: solid 1px #e0e4eb;
+        &.del {
+          cursor: pointer;
+          &:hover {
+            color: #2c9eff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-size {
+  float: left;
+  position: relative;
+  margin: 2.5px 5px 0 0;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  cursor: pointer;
+  ul {
+      position: absolute;
+      top: 0;
+      left: -1px;
+      transform: translateY(-100%);
+      width: 50px;
+      background: #fff;
+      border: 1px solid #999;
+      li {
+          &.on, &:hover { background: #eee; }
+      }
+  }
+}

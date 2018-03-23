@@ -1,0 +1,6 @@
+<main id="AisMonitor" class="popup-general" v-drag="{handle: '.draggable'}">
+  <div for="dragging"></div>
+  <header class="draggable"><a>AIS监控</a><i @click="closeSelf"></i></header>
+  <component :selectData="selectData" :limit="3" :selectionChange="selectionChange" :title="'船舶类型'" :is="selectView"></component>
+  <div class="primary-btn" style="margin: 0; width: 100%; text-align: center; height: 34px;"><span @click="drawSelectedShip" style="display: block; margin: 12px auto 0 auto;">刷新</span></div>
+</main>

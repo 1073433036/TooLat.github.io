@@ -1,0 +1,16 @@
+<main id="Ranging">
+  <header class="header cf">测距<span class="close" @click="closeFunc('ranging')">×</span></header>
+  <ul class="colors">
+    <li v-for="(bool, key) in pickedColor" :class="{'picked-color': bool}" @click="pickColor(key)"></li>
+  </ul>
+  <div class="btn-wrap cf">
+    <div class="start-btn btn" @click="ranging" title="开始测量">测量</div>
+    <div class="clear-btn btn" @click="clearRangingPoint('all')" title="清除所有">清除</div>
+  </div>
+  <ul class="lists">
+    <li v-for="(color, index) in state.rangingCountArray">
+      测量组{{ index }} <em :style="{'background': color}"></em>
+      <span @click="clearRangingPoint(Number(index))">×</span>
+    </li>
+  </ul>
+</main>

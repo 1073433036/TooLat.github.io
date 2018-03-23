@@ -1,0 +1,20 @@
+<main id="baseInfo" v-drag="{handle: '.draggable'} " class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>基础信息</span>
+    <i @click="toggleBasicInfoPopup(false)"></i>
+  </header>
+  <div v-if="tabOptionSelected === 'basicData'">
+    <div class="wrapper" v-for="(opt, type) in basicDataMenu">
+      <div class="popup-option-wraper cn-title">{{ opt.text }}</div>
+      <div class="lists">
+        <ul class="cf">
+          <li v-for="(item, subType) in opt.menu" 
+              :class="{on: item.selected}" 
+              @click="toggleGeography(item, type, subType)">{{ item.text }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="primary-btn" @click="removeAllGeo"><span>清空</span></div>
+</main>

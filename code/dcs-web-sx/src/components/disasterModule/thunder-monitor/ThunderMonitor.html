@@ -1,0 +1,13 @@
+<main id="ThunderMonitor">
+  <ul class="weather-option-wraper cf">
+    <!-- <li @click="selectOption('tracking')" :class="{'on': tracking}">
+      <i></i><span>雷暴跟踪</span>
+    </li> -->
+    <li @click="selectOption('radar')" :class="{'on': radar}">
+      <i></i><span>雷达拼图</span>
+    </li>
+    <li @click="selectOption('lightning')" :class="{'on': lightning}" style="margin-left: 25px;">
+      <i></i><span>闪电</span>
+    </li>
+  </ul>
+</main>

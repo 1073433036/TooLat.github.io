@@ -1,0 +1,71 @@
+<main id="LibPlan">
+  <div class="info">
+    <span class="info-cn">突发事件</span>
+    <select v-model="selectedType" @change="getDisasterTypeInfo">
+      <option v-for="type of emtype" :value="type.id">{{ type.name }}</option>
+    </select>
+  </div>
+  
+  <div class="info">
+    <span class="info-cn">事件类型</span>
+    <select v-model="selectedDisaster" @change="getInfo">
+      <option v-for="opt in disaster" :value="opt.id">{{ opt.name }}</option>
+    </select>
+  </div>
+  
+  <div class="info">
+    <span class="info-cn">响应等级</span>
+    <select v-model="selectedLevel" @change="getInfo">
+      <option v-for="opt of level" :value="opt">{{ levelFormat[opt - 1] }}</option>
+    </select>
+  </div>
+
+  <div class="info">
+    <span class="info-cn">成员单位</span>
+    <span>（点击成员名称查看预案内容）</span>
+  </div>
+  <ul class="org scrollbar">
+    <li v-show="!Object.keys(organizations).length">无</li>
+    <li :class="['org-li', {'on': org.id === selectedOrg}]" v-show="Object.keys(organizations).length"
+        v-for="org of organizations" @click="togglePlanMeasure(org)">
+      {{ org.name }}
+    </li>
+  </ul>
+
+  <div class="info">
+    <span class="info-cn">文字提示</span>
+    <ul class="type-of-tip">
+      <li v-for="(opt, key) in tips" @click="tipSelected = key" :class="{'on': tipSelected === key}">{{ opt }}</li>
+    </ul>
+  </div>
+  <div class="tip" :title="disaster[selectedDisaster] ? disaster[selectedDisaster][tipSelected] : '暂无'">
+    {{ disaster[selectedDisaster] ? disaster[selectedDisaster][tipSelected] : '暂无' }}
+  </div>
+
+  <div v-drag="{handle: '.draggable'}" class="plan-popup popup-general" v-if="isPlanPopupOn">
+    <div for="dragging"></div>
+    <header class="draggable">
+      <span>{{ organizations[selectedOrg + ''].name }}</span>
+      <i @click="closePlanPopup"></i>
+    </header>
+    <section class="popup-tab-wraper" style="height: 26px;">
+      <ul class="tab-option-container">
+          <li @click="tabOptionSelected = 'plan'" 
+          :class="['tab-option', { 'tab-option-selected': tabOptionSelected === 'plan' }]">单位预案</li>
+        <li @click="tabOptionSelected = 'message'" 
+          :class="['tab-option', { 'tab-option-selected': tabOptionSelected === 'message' }]">短信</li>
+        <li @click="tabOptionSelected = 'fax'" 
+          :class="['tab-option', { 'tab-option-selected': tabOptionSelected === 'fax' }]">传真</li>
+      </ul>
+    </section>
+    <section class="wrap scrollbar">
+      <div v-show="tabOptionSelected === 'plan'" :title="selectedOrgMea.detail">
+        {{ selectedOrgMea.detail ? selectedOrgMea.detail : '暂无' }}
+      </div>
+      <div v-show="tabOptionSelected === 'message'" :title="selectedOrgMea.measure">
+        {{ selectedOrgMea.measure ? selectedOrgMea.measure : '暂无' }}
+      </div>
+      <img v-show="tabOptionSelected === 'fax'" :src="fax">
+    </section>
+  </div>
+</main>

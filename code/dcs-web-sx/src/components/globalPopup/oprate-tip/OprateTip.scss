@@ -1,0 +1,19 @@
+#OprateTip{
+  z-index: 10000;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  z-index: 10000;
+  padding: 0 10px;
+  min-width: 180px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(255,255,255,.8);
+  text-shadow: 0 0 10px rgba(0,0,0,.4);
+  border-radius: 3px;
+  span{
+    color: #f4434b;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,17 @@
+<main id="WaterInfoPopup" v-drag="{handle: '.draggable'}" class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <a>报警信息发送</a>
+    <i @click="closeFn"></i>
+  </header>
+  <div class="cont">
+    <div class="title">报警点：</div>
+    <ul class="scrollbar">
+      <li v-for="key of selectedKey">
+        {{ warningDataFormat['' + key] ? warningDataFormat['' + key].name : '' }}
+      </li>
+    </ul>
+    <textarea placeholder="请输入报警信息" v-model="info"></textarea>
+    <div class="btn" @click="send">发送</div>
+  </div>
+</main>

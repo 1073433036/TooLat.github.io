@@ -1,0 +1,96 @@
+@import '../../styles/colorTheme';
+#mainMenu {
+    position: absolute;
+    top: 30.5%;
+    z-index: 2;
+    right: 30px;
+    transition: transform .3s ease-out;
+    li.first-tier-btn {
+        width: 45px;
+        height: 70px;
+        border-radius: 4px;
+        margin-bottom: 1px;
+        background-color: $translucent-bg;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &:hover {
+            background-color: $translucent-bg-hover !important;
+        }
+        
+        &:nth-child(1) {
+            background-image: url('../../../static/img/sidebar_disaster.png');
+        }
+        &:nth-child(2) {
+            background-image: url('../../../static/img/sidebar_monitor.png');
+        }
+        &:nth-child(3) {
+            background-image: url('../../../static/img/sidebar_command.png');
+        }
+        &:nth-child(4) {
+            background-image: url('../../../static/img/sidebar_information.png');
+        }
+        &:nth-child(5) {
+            font-size: 14px;
+            margin-bottom: 0;
+            color: #ffffff;
+            height: 16px;
+            font-weight: bold;
+            line-height: 10px;
+            text-align: center;
+        }
+    }
+}
+
+section.second-tire-wraper {
+    background-color: $translucent-bg;
+    border-radius: 4px;
+    width: 160px;
+    position: absolute;
+    top: -55px;
+    right: 56px;
+    padding: 10px 20px;
+    li {
+        height: 30px;
+        width: 100%;
+        line-height: 30px;
+        font-size: 14px;
+        color: #ffffff;
+        i {
+            height: 24px;
+            display: block;
+            float: right;
+            transform: translateY(4px);
+            cursor: pointer;
+            width: 50px;
+            background-position: center;
+            background-position-y: -24px;
+            background-repeat: no-repeat;
+            background-image: url('../../../static/img/sidebar_btn.png');
+            &.on { background-position-y: 0; }
+        }
+    }
+}
+
+#system-title {
+    width: 30rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -15rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+#disasterMenu {
+    top: -55px !important;
+}
+
+#monitorMenu{
+    top: 25px !important;
+}
+
+#commandMenu {
+    top: 100px !important;
+}

@@ -1,0 +1,29 @@
+<main id="HistoryEventPopup" v-drag="{handle: '.draggable'} " class="popup-general ">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>应急处理</span>
+    <i @click="closeFn"></i>
+  </header>
+  <div class="cont">
+    <div class="info">
+      <span class="info-cn">事件名称</span>
+      <span class="bl">{{ event.name }}</span>
+    </div>
+    <div class="info">
+      <span class="info-cn">事件时间</span>
+      <span class="bl">{{ moment(event.starttime).format('YYYY-MM-DD hh:mm') }}</span>
+    </div>
+    <div class="info">
+      <span class="info-cn">应急人</span>
+      <span class="bl">{{ event.userName }}</span>
+    </div>
+    <div class="info">
+      <span class="info-cn">描述</span>
+      <span class="bl" :title="event.description">{{ event.description }}</span>
+    </div>
+    <div class="info">
+      <span class="info-cn">应急点</span>
+    </div>
+    <component :is="regionModelView" :regions="regions" style="margin-left: 20px;"></component>
+  </div>
+</main>

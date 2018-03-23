@@ -1,0 +1,157 @@
+<div class="user-syetem-wrap">
+    <div id="userSystem">
+        <div class="top cf">
+            <div class="btn btn-add" @click="toggleUserPopup(true)">＋&nbsp新增</div>
+            <div class="btn btn-delete" @click="deleteAllSelect">－&nbsp删除</div>
+            <div class="btn btn-add-role" @click="toggleRolePopup">＋&nbsp新增部门角色</div>
+            <div class="btn btn-add-role" @click="toggleDelRolePopup">-&nbsp删除部门角色</div>
+            <div class="search-inp cf">
+                <input type="text" placeholder="请输入关键字" v-model="message" @keyup.13="search" />
+                <div class="search" @click="search"></div>
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table class="userSystem" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th><em :class="['sel', {'selected': allSelect}]"
+                                @click="toggleAllSel">
+                        </em>全选</th>
+                        <th>昵称</th>
+                        <th>姓名</th>
+                        <th>角色名称</th>
+                        <th>手机号码</th>
+                        <th>登录密码</th>
+                        <th>邮箱</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(msg, key) in dealUserList[currentPage]">
+                        <td><em :class="['sel', {'selected': msg.selected}]"
+                                @click="toggleDetailSel(key)">
+                        </em></td>
+                        <td>{{ msg.username }}</td>
+                        <td>{{ msg.name }}</td>
+                        <td>{{ allRoles[msg.roleId] ? allRoles[msg.roleId].name : ''}}</td>
+                        <td>{{ msg.phoneNum }}</td>
+                        <td>{{ msg.pwd }}</td>
+                        <td>{{ msg.email }}</td>
+                        <td>
+                            <span class="editor" @click="editUserMsg(msg, key)">编辑</span>
+                            <span class="delete" @click="deleteUserMsg(key)">删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="userSystem-bottom cf">
+            <div class="page-size" @mouseenter="isPageSizePopupOn = true" @mouseleave="isPageSizePopupOn = false">
+                {{ numOfPage }}
+                <ul v-show="isPageSizePopupOn">
+                    <li v-for="size of pageSizes" @click="togglePageSize(size)" :class="{'on': size === pageSize}">{{ size }}</li>
+                </ul>
+            </div>
+            <div class="record">
+                共有<span>{{ listLength }}</span>条记录，当前第<span>{{ currentPage + 1 }}</span>页
+            </div>
+            <ul class="page cf">
+                <li class="newPageBtn" @click="changePageNaum(0)">上一页</li>
+                <li class="newPageBtn newNextBtn" @click="changePageNaum(1)">下一页</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup-under" v-if="display.popup || display.editorPopup || display.rolePopup"></div> 
+    <div class="userSystemPopup" v-if="display.popup">
+        <div class="title">
+            新增用户
+            <span @click="toggleUserPopup(false)">✕</span>
+        </div>
+        <div class="content">
+            <table class="addUser" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr><td>昵称</td><td><input type="text" v-model="newUsername"></td></tr>
+                    <tr><td>姓名</td><td><input type="text" v-model="newName"></td></tr>
+                    <tr><td>角色名称</td><td><select v-model="newRoleId"><option v-for="opt in allRoles" :value="opt.roleId">{{ opt.name }}</option></select></td></tr>
+                    <tr><td>手机号码</td><td><input type="text" v-model="newPhoneNum"></td></tr>
+                    <tr><td>登录密码</td><td><input type="text" v-model="newPwd"></td></tr>
+                    <tr><td>邮箱</td><td><input type="text" v-model="newEmail"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="cf">
+                            <div class="td-btn subBtn" @click="submitInfo">提交</div>
+                            <div class="td-btn canBtn" @click="toggleUserPopup(false)">取消</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="userSystemPopup" v-if="display.editorPopup">
+        <div class="title">
+            编辑用户信息
+            <span @click="toggleEditPopup(false)">✕</span>
+        </div>
+        <div class="content">
+            <table class="addUser" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr><td>昵称</td><td><input type="text" v-model="username"></td></tr>
+                    <tr><td>姓名</td><td><input type="text" v-model="name"></td></tr>
+                    <tr><td>角色名称</td><td><select v-model="roleId"><option v-for="opt in allRoles" :value="opt.roleId">{{ opt.name }}</option></select></td></tr>
+                    <tr><td>手机号码</td><td><input type="text" v-model="phoneNum"></td></tr>
+                    <tr><td>登录密码</td><td><input type="text" v-model="pwd"></td></tr>
+                    <tr><td>邮箱</td><td><input type="text" v-model="email"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="cf">
+                            <div class="td-btn subBtn" @click="submitEditInfo">提交</div>
+                            <div class="td-btn canBtn" @click="toggleEditPopup(false)">取消</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="userSystemPopup" v-if="display.rolePopup">
+        <div class="title">
+            新增部门角色
+            <span @click="toggleRolePopup">✕</span>
+        </div>
+        <div class="content">
+            <table class="addUser" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr><td>名称</td><td><input type="text" v-model="roleName"></td></tr>
+                    <tr><td>描述</td><td><input type="text" v-model="roleDesc"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="cf">
+                            <div class="td-btn subBtn" @click="insertRole">提交</div>
+                            <div class="td-btn canBtn" @click="toggleRolePopup">取消</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="userSystemPopup" v-if="display.delRolePopup">
+        <div class="title">
+            删除部门角色
+            <span @click="toggleDelRolePopup">✕</span>
+        </div>
+        <div class="content">
+            <table class="del-role" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr><th>名称</th><th>描述</th><th>操作</th></tr>
+                </thead>
+                <tbody>
+                    <tr v-for="opt in allRoles">
+                        <td>{{ opt.name }}</td>
+                        <td>{{ opt.description ? opt.description : '暂无' }}</td>
+                        <td class="del" @click="delRole(opt.roleId)">删除</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

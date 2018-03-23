@@ -1,0 +1,16 @@
+@import'../../../styles/colorTheme';
+#EventDeal {
+  z-index: 10;
+  position: absolute;
+  top: 30.5%;
+  right: 300px;
+  width: 350px;
+  overflow: visible;
+  >div[for=dragging] {
+      border-radius: 4px 4px 0 0;
+  }
+  .cont {
+    position: relative;
+    padding: 10px;
+  }
+}

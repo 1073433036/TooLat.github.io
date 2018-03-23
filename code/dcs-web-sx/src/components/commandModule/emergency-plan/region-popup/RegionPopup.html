@@ -1,0 +1,39 @@
+<div class="popup" id="emgAddAreaPopup" v-drag="{handle: '.title'}">
+  <div class="title">
+    <div class="text">添加标注</div>
+    <div class="close" @click="closeFunc">×</div>
+  </div>
+  <div class="content">
+    <el-radio-group v-model="nav" size="small" fill="#00bfdc" class="radio" @change="toggleNav">
+      <el-radio-button v-for="opt of navs" :label="opt">{{ opt }}</el-radio-button>
+    </el-radio-group>
+    <div class="info" v-if="nav === '绘制标注'">
+      <span class="cn">绘制标注</span>
+      <span :class="['way', {on: drawWay.circle}]" @click="drawRegion">圈选</span>
+    </div>
+    <div class="region" v-show="showCircleInfo">
+      {{ lat }},{{ lon }} 半径{{ radius }}KM
+      <em title="删除该标注区域" @click="clearCircle">×</em>
+    </div>
+    <div class="area-name" v-show="showCircleInfo">
+      <input type="text" placeholder="请输入绘制区域描述" v-model="areaName">
+    </div>
+    <div class="info" v-if="nav === '行政地区'">
+      <span class="cn">行政地区</span>
+      <select v-model="townId" @change="drawTown">
+        <option value="all">全县</option>
+        <option v-for="(opt, optKey) in towns" :value="optKey">{{ opt }}</option>
+      </select>
+    </div>
+    <textarea placeholder="填写说明" v-model="description"></textarea>
+    <div class="info">
+      <span class="cn">报警人</span>
+      <input type="text" placeholder="填写报警人" v-model="sourceman">
+    </div>
+    <div class="info">
+      <span class="cn">报警电话</span>
+      <input type="text" placeholder="填写报警电话" v-model="sourcephone">
+    </div>
+    <div class="popup-btn add-btn" @click="addRegion">标注</div>
+  </div>
+</div>

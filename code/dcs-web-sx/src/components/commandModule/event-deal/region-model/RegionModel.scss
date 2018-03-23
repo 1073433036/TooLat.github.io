@@ -1,0 +1,84 @@
+@import'../../../../styles/colorTheme';
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#RegionModel {
+  overflow: visible;
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-thumb {
+    background: $theme-color;
+    border-radius: 3px;
+  }
+  .region {
+    position: relative;
+    height: 26px;
+    span {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      display: inline-block;
+      width: 260px;
+      height: 26px;
+      @extend .text-overflow;
+      color: #000;
+      cursor: pointer;
+    }
+    i {
+      position: absolute;
+      top: 6.5px;
+      left: 270px;
+      display: inline-block;
+      width: 12px;
+      height: 13px;
+      background: url(../../../../../static/img/sidebar_nearby.png) no-repeat 0 -13px / 100% 200%;
+      cursor: pointer;
+      .inner-popup {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        top: 13px;
+        left: -54px;
+        width: 120px;
+        border: 1px solid #bfcbd9;
+        background-color: #fff;
+        border-radius: 3px;
+        &:after {
+
+        }
+        ul {
+          margin: 10px 0;
+          font-size: 12px;
+          li {
+            padding: 0 5px;
+            color: $theme-color;
+            &.on,&:hover { 
+              color: #fff;
+              background: $theme-color;
+            }
+          }
+        }
+      }
+      &:hover { 
+        background: url(../../../../../static/img/sidebar_nearby.png) no-repeat 0 0 / 100% 200%; 
+        .inner-popup {
+          display: block;
+        }
+      }
+    }
+    em {
+      position: absolute;
+      top: 2px;
+      left: 285px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center;
+      cursor: pointer;
+      &:hover { color: $theme-color; }
+    }
+  }
+}

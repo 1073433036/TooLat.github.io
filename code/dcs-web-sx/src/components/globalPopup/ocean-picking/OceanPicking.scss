@@ -1,0 +1,25 @@
+@import'../../../styles/colorTheme';
+#OceanPicking{
+  position: absolute;
+  background: $translucent-bg;
+  width: 128px;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  z-index: 39;
+  overflow: hidden;
+  border-radius: 4px;
+  div{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    span{
+      font-size: 12px;
+      color: #d6dce5;
+      &:last-of-type{
+        color: white;
+        margin-left: 10px;
+      }
+    }
+  }
+}

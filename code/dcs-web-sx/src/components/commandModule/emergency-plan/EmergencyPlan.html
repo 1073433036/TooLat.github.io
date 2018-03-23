@@ -1,0 +1,67 @@
+<main id="currentPlan" class="popup-general ">
+  <div for="dragging"></div>
+  <header class="title draggable">
+    <span class="current-name" @mouseenter="isNamePopupOn = true" @mouseleave="isNamePopupOn = false">
+      {{ unfinishPlan[unfinishPlanKey] ? unfinishPlan[unfinishPlanKey].tag.split('-')[1] + " " + levelFormat[unfinishPlan[unfinishPlanKey].level - 1] + '级' : '' }}
+      <div class="inner-popup" v-if="isNamePopupOn">
+        <div class="name" 
+            v-if="planKey !== unfinishPlanKey" 
+            @click="toggleUnfinishPlan(planKey)" 
+            v-for="(plan, planKey) in unfinishPlan">
+          {{ plan.tag.split('-')[1] + " " + levelFormat[plan.level - 1] + '级' }}
+        </div>
+      </div>
+    </span>
+    <div class="close" @click="toggleEmergencyPlan_global">×</div>
+  </header>
+
+  <div class="content">
+    <div class="info">
+      <!-- 预案时间
+      <span class="time">
+        {{ unfinishPlan[unfinishPlanKey] ? moment(unfinishPlan[unfinishPlanKey].starttime).fromNow() : '' }}
+      </span> -->
+      启动时间
+      <span class="time">
+        {{ unfinishPlan[unfinishPlanKey] ? moment(unfinishPlan[unfinishPlanKey].starttime).format('YYYY年MM月DD日 HH时mm分') : '' }}
+      </span>
+    </div>
+
+    <div class="info">工作备忘</div>
+    <div class="duties cf">
+      <div class="duty-btn prev-btn" @click="toggleCurrPlanDuty(0)"></div>
+      <div class="duty" 
+          :title="planDuties[currentPlanDutyKey] ? planDuties[currentPlanDutyKey].name : ''">
+        {{ planDuties[currentPlanDutyKey] ? planDuties[currentPlanDutyKey].name : '' }}
+      </div>
+      <em :class="{on: (planDuties[currentPlanDutyKey] && planDuties[currentPlanDutyKey].status === 'Finish')}" 
+          @click="finishDuty"></em>
+      <div class="duty-btn next-btn" @click="toggleCurrPlanDuty(1)"></div>
+    </div>
+    <div class="page">{{ Number(currentPlanDutyKey) + 1 }} / {{ Object.keys(planDuties).length }}</div>
+
+    <div class="info">
+      <span>消息渠道</span>
+      <div class="msg-type">
+        <span :class="{'on': selectedMsgType === 1 || selectedMsgType === 3}" 
+            @click="toggleMsgType(1)">短信</span>
+        <span :class="{'on': selectedMsgType === 2 || selectedMsgType === 3}" 
+            @click="toggleMsgType(2)">传真</span>
+      </div>
+    </div>
+
+    <div class="info" style="margin-top: 10px;" v-show="selectedMsgType === 2 || selectedMsgType === 3">
+      <span>传真选择</span>
+      <input type="file" name="image" accept="image/*" @change="uploadImage">
+    </div>
+    
+    <div class="btn-wrap cf">
+      <div class="btn up-btn blut-btn fl" @click="changeLevel(-1)">升级</div>
+      <div class="btn down-btn blut-btn fl" @click="changeLevel(1)">降级</div>
+      <div class="btn release-btn fl" @click="releasePlan">解除</div>
+      <div class="btn add-to-btn gray-btn fl" @click="togglePublishPopup">追加发布</div>
+    </div>
+
+  </div>
+  <component :closeFunc="togglePublishPopup" :planInfo="unfinishPlan[unfinishPlanKey]" :is="publishView"></component>
+</main>

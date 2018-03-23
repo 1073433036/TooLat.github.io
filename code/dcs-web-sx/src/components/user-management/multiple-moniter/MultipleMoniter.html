@@ -1,0 +1,218 @@
+<div class="multiple-wrap">
+  <main id="multipleMoniter">
+
+    <div class="top cf">
+
+      <div class="item-wrap" @mouseenter="togglePopup('listPopup')" @mouseleave="togglePopup('listPopup')">
+        <div class="item-com item-w item-select">
+          {{ opts[selectedOpt].text }}
+          <em></em>
+        </div>
+        <ul class="item-list" v-if="display.listPopup">
+          <li class="item-com" v-for="(item, key) in opts" 
+              v-show="key !== selectedOpt" @click="toggleOpt(key)">{{ item.text }}</li>
+        </ul>
+      </div>
+
+      <div class="item-wrap" style="margin-left: 30px;" @mouseenter="togglePopup('namePopup')" 
+          @mouseleave="togglePopup('namePopup')" v-if="selectedOpt === 'disaster' || selectedOpt === 'measure'">
+        <div class="item-com item-w item-select">
+          {{ tabs[tabSelected] ? tabs[tabSelected].name : '' }}
+          <em></em>
+        </div>
+        <ul class="item-list" v-if="display.namePopup">
+          <li class="item-com" v-for="(item, key) in tabs" 
+             v-show="tabSelected !== key" @click="toggleTab(key)">{{ item.name }}</li>
+        </ul>
+      </div>
+
+      <div class="item-wrap" style="margin-left: 30px;" @mouseenter="togglePopup('itemPopup')" 
+          @mouseleave="togglePopup('itemPopup')" v-if="selectedOpt === 'measure'">
+        <div class="item-com item-w item-select">
+          {{ subTabs[subTabsSelected] ? subTabs[subTabsSelected].name : '' }}
+          <em></em>
+        </div>
+        <ul class="item-list" v-if="display.itemPopup">
+          <li class="item-com" v-for="(item, key) in subTabs" 
+            v-show="subTabsSelected !== key" @click="toggleSubTab(key)">{{ item.name }}</li>
+        </ul>
+      </div>
+
+      <div class="search-inp cf">
+        <input type="text" placeholder="请输入关键字" v-model="searchKey" @keyup.13="search" />
+        <div class="search" @click="search"></div>
+      </div>
+    </div>
+
+    <div class="opera cf">
+      <div class="opera-cont cf" v-show="selectedOpt !== 'historyPlan'">
+        <div class="btn btn-inout" @click="toggleFilePopup" 
+            v-show="selectedOpt === 'experts' || selectedOpt === 'orgmen' || selectedOpt === 'measure'">导入</div>
+        <div class="btn btn-add" @click="togglePopup('newPopup')">＋&nbsp新增</div>
+        <div class="btn btn-delete" @click="delSelectedInfo">－&nbsp删除</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="userSystem" cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th v-show="selectedOpt !== 'historyPlan'">
+              <em :class="['sel', {'selected': allSelected}]" @click="toggleAllSelected"></em>全选
+            </th>
+            <th v-for="th in opts[selectedOpt].params">{{ th }}</th>
+            <th v-if="selectedOpt === 'measure'">传真</th>
+            <th v-show="selectedOpt !== 'historyPlan'">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="info of dealInfo">
+            <td v-show="selectedOpt !== 'historyPlan'">
+              <em :class="['sel', {'selected': info.selected}]" @click="toggleSelected(info)"></em>
+            </td>
+            <td v-for="(item, key) in info" v-if="key in opts[selectedOpt].params">
+              <div class="wrap" :title="key === 'orgid' ? relateorgs[item] : item" v-if="key !== 'img'">
+                {{ key === 'orgid' ? relateorgs[item] : (item ? item : '--') }}
+              </div>
+            </td>
+            <td v-show="selectedOpt === 'measure'">
+              <div class="watch-fax" @click="toggleFax(info.id)">查看</div>
+            </td>
+            <td v-show="selectedOpt !== 'historyPlan'">
+              <span class="editor" @click="editorInfo(info)">编辑</span>
+              <span class="delete" @click="delTheInfo(info)">删除</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="userSystem-bottom cf">
+      <div class="page-size" @mouseenter="isPageSizePopupOn = true" @mouseleave="isPageSizePopupOn = false">
+        {{ numOfPage }}
+        <ul v-show="isPageSizePopupOn">
+            <li v-for="size of pageSizes" @click="togglePageSize(size)" :class="{'on': size === pageSize}">{{ size }}</li>
+        </ul>
+      </div>
+      <div class="record">
+        共有<span>{{ infoLength }}</span>条记录，当前第<span>{{ currentPage }}</span>页
+      </div>
+      <ul class="page cf">
+        <li class="newPageBtn" @click="changePageNaum(true)">上一页</li>
+        <li class="newPageBtn newNextBtn" @click="changePageNaum(false)">下一页</li>
+      </ul>
+    </div>
+
+    <div class="popup-under" v-if="display.newPopup || display.editorPopup"></div>
+
+    <div class="userSystemPopup" v-if="display.newPopup">
+      <div class="title">新增数据信息
+        <span @click="togglePopup('newPopup')">✕</span>
+      </div>
+      <div class="content">
+        <table class="addUser" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr v-for="(item, key) in opts[selectedOpt].params">
+              <td>{{ item }}</td>
+              <td>
+                <select :id="`new_${selectedOpt}_${key}`" v-if="key === 'orgid'">
+                  <option v-for="(item, key) in relateorgs" :value="key">{{ item }}</option>
+                </select>
+                <select :id="`new_${selectedOpt}_${key}`" v-if="key === 'level'">
+                  <option v-for="opt of levels" :value="opt">{{ opt }}</option>
+                </select>
+                <textarea :id="`new_${selectedOpt}_${key}`" v-if="key === 'detail' || key === 'measure'"></textarea>
+                <template v-if="key !== 'orgid' && key !== 'img' && key !== 'level' && key !== 'detail' && key !== 'measure'">
+                  <input type="text" :id="`new_${selectedOpt}_${key}`">
+                </template>
+              </td>
+            </tr>
+            <tr v-if="selectedOpt === 'measure'">
+              <td>传真</td>
+              <td><input type="file" accept="image/*" @change="uploadImage"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="cf">
+                <div class="td-btn subBtn" @click="submitNewInfo">提交</div>
+                <div class="td-btn canBtn" @click="togglePopup('newPopup')">取消</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="userSystemPopup" v-if="display.editorPopup">
+      <div class="title">修改数据信息
+        <span @click="togglePopup('editorPopup')">✕</span>
+      </div>
+      <div class="content">
+        <table class="addUser" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr v-for="(item, key) in opts[selectedOpt].params">
+              <td>{{ item }}</td>
+              <td>
+                <select :id="`modify_${selectedOpt}_${key}`" :value="modifyInfo[key]" v-if="key === 'orgid'">
+                  <option v-for="(el, subkey) in relateorgs" :value="subkey">{{ el }}</option>
+                </select>
+                <select :id="`modify_${selectedOpt}_${key}`" :value="modifyInfo[key]" v-if="key === 'level'">
+                  <option v-for="opt of levels" :value="opt">{{ opt }}</option>
+                </select>
+                <textarea :id="`modify_${selectedOpt}_${key}`" :value="modifyInfo[key]" v-if="key === 'detail' || key === 'measure'"></textarea>
+                <template v-if="key !== 'orgid' && key !== 'img' && key !== 'level' && key !== 'detail' && key !== 'measure'">
+                  <input type="text" :id="`modify_${selectedOpt}_${key}`" :value="modifyInfo[key]">
+                </template>
+              </td>
+            </tr>
+            <tr v-if="selectedOpt === 'measure'">
+              <td>传真</td>
+              <td>
+                <input type="file" accept="image/*" @change="uploadEditorImage">
+                <span style="margin: 0;">（不传图片则不修改）</span>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="cf">
+                <div class="td-btn subBtn" @click="submitModifyInfo">提交</div>
+                <div class="td-btn canBtn" @click="togglePopup('editorPopup')">取消</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="fax-popup userSystemPopup" v-if="display.faxPopup">
+      <div class="title">传真
+        <span @click="togglePopup('faxPopup')">✕</span>
+      </div>
+      <div class="content">
+        <img :src="faxSelected">
+      </div>
+    </div>
+
+    <div class="userSystemPopup" v-if="display.filePopup">
+      <div class="title">
+          数据批量导入
+        <span @click="togglePopup('filePopup')">✕</span>
+      </div>
+      <div class="content">
+        <table class="addUser" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>文件</td>
+              <td><input type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" @change="fileChanged" style="height: 25px;"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="td-btn subBtn" @click="importExcel" style="margin-left: 150px;">上传</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>

@@ -1,0 +1,90 @@
+#BusinessClass {
+  ul.top_title{
+    width:92%;
+    height: 45px;
+    margin: 0 auto;
+    background-color: #4787E1;
+    color: #fff;
+    li{
+      float: left;
+      display: inline-block;
+      width: calc(100%/3);
+      text-align: center;
+      line-height: 45px;
+      font-size: 16px;
+    }
+  }
+  ul.products_List{
+    width:92%;
+    margin-left: 4%;
+    padding: 5px 0;
+    height: 500px;
+    li{
+      width: 96%;
+      margin-left: 4%;
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      color: #1c1c1c;
+      span{
+        display: inline-block;
+        &.list_title{
+          float: left;
+          position: relative;
+          width: 30%;
+          padding-left: 10%;
+          &:before{
+            position: absolute;
+            top: 15px;
+            left: 20%;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 15px;
+            background-color:#ccc;
+            
+          }
+        &.on{
+          &:before{ background-color:#F8CB00; }
+        }
+        }
+        &.list_url{
+          float: left;
+          width: 40%;
+
+        }
+        &.list_editor{
+          float: left;
+          width: 20%;
+          margin-top:6px;
+          i{
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            &.editor_icon{
+              background: url(~Img/home_link.png)no-repeat 0 0 /200% 300%;
+              &:hover{
+                background: url(~Img/home_link.png)no-repeat -28px 0 /200% 300%;
+              }
+            }
+            &.delete_icon{
+              margin-left: 20px;
+              background: url(~Img/home_link.png)no-repeat 0 -56px /200% 300%;
+              &:hover{
+                background: url(~Img/home_link.png)no-repeat -28px -56px /200% 300%;
+              }
+            }
+          }
+
+        }
+      }
+      
+    }
+  }
+  .product_page{
+    width: 30%;
+    float: right;
+  }
+}

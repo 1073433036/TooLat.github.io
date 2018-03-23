@@ -1,0 +1,23 @@
+<main id="RainMonitor">
+  <section class="text-container">
+    选中时次: 过去{{rainSeledTimeSelected}}小时
+    <em @click="togglePlaying" :class="{'on': isPlaying}"></em>
+  </section>
+  <section class="rain-timeline-wrapper">
+    <div class="timeline-background"></div>
+    <div :class="['timeline-colorize', {'ts': isTransitionOn}]" :style="{width: 16.2 * rainSelectedIndex + '%'}"></div>
+    <span :class="['timeline-btn', {'ts': isTransitionOn}]" :style="{transform: `translateX(${27.5 * rainSelectedIndex}px)`}"></span>
+  </section>
+  <section class="scale-wrapper cf">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+  <section class="scale-indicator-wrapper">
+    <span v-for="(el, index) in rainFstTimeRule" @click="changeRainSelectedTime(index)" >-{{el}}</span>
+  </section>
+
+</main>

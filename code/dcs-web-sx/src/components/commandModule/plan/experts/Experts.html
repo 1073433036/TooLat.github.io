@@ -1,0 +1,31 @@
+<div id="expertsModel">
+  <div class="search cf">
+    <span>关键字搜索</span>
+    <input type="text" placeholder="输入关键字" v-model="keyWord" @keyup.13="search">
+    <div class="search-btn" @click="search">搜索</div>
+  </div>
+  <!--<div class="search">
+    <span>条件筛选</span>
+    <select v-model="type" @change="toggleType">
+      <option value="rain">暴雨</option>
+      <option value="typhoon">台风</option>
+    </select>
+  </div>-->
+  <div class="name">专家库</div>
+  <div class="table-wrap">
+    <table cellspacing="0" cellpadding="0">
+      <thead><tr><th v-for="th in thead">{{ th }}</th></tr></thead>
+      <tbody>
+        <tr v-for="opt of currentPageData" v-if="opt.show">
+          <td v-for="(th, thKey) in thead">{{ opt[thKey] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-bottom cf">
+    <div class="info-desc">共<span>{{ infoLength }}</span>条数据 当前第<span>{{ currentPage + 1 }}</span>页</div>
+    <div class="page-btn" style="margin-right: 10px" @click="togglePage(1)">下页</div>
+    <div class="page-btn" @click="togglePage(0)">上页</div>
+  </div>
+  <!--<component :info="selectedInfo" :closeFunc="closeDetailPopup" :is="detailView"></component>-->
+</div>

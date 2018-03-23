@@ -1,0 +1,22 @@
+<main id="TrackingEffect" v-drag="{handle: '.draggable'} " class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>雷暴追踪 - 影响区域</span>
+    <i @click="toggleTrackingResult_global(false)"></i>
+  </header>
+  <div class="cont">
+    <div class="no-effect" v-if="!data[`t${time}0`].length">当前时次无影响区域</div>
+    <template v-if="data[`t${time}0`].length">
+      <div class="left-line"></div>
+      <ul class="effect">
+        <li>
+          <header class="cf">
+            <div class="circle-icon" :style="{background: option[time].color}"></div>
+            <span>{{ option[time].text }}</span>
+          </header>
+          <article>{{ Array.isArray(data[`t${time}0`]) ? data[`t${time}0`].join(' , ') : '' }}</article>
+        </li>
+      </ul>
+    </template>
+  </div>
+</main>

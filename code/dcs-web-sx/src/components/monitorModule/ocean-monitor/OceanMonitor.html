@@ -1,0 +1,30 @@
+<main id="oceanMonitor" v-drag="{handle: '.draggable'} " class="popup-general ">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>
+      <template>海流监控</template>
+    </span>
+    <i @click="toggleOceanMonitor_global"></i>
+  </header>
+  <div class="cont">
+    <div class="info cf">
+      <span>起报日期</span>
+      <input id="oceanPicker" @click="openCalendar" type="text" v-model="startDate">
+    </div>
+    <div class="info cf">
+      <span>起报时间</span>
+      <select v-model="startTime">
+        <option v-for="(opt, key) in startTimes" :value="opt">{{ key }}时</option>
+      </select>
+    </div>
+    <div class="info cf">
+      <span>时效</span>
+      <select v-model="leadtime">
+        <option v-for="opt of leadtimes" :value="opt">{{ opt }}时</option>
+      </select>
+    </div>
+    <div class="primary-btn">
+      <span @click="monitor">查看</span>
+    </div>
+  </div>
+</main>

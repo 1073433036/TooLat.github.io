@@ -1,0 +1,46 @@
+#MeasureArea {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  padding: 0 10px;
+  width: 200px;
+  transform: translateX(100%);
+  color: #d6dce5;
+  line-height: 36px;
+  background-color: rgba(31, 43, 61, 0.5);
+  border-radius: 2px;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 14px;
+    left: -6px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 6px solid rgba(31, 43, 61, 0.5);
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .search-drawtool {
+    li {
+      float: left;
+      margin: 8px 5px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      background: url(../../../../static/img/search_icons.png) no-repeat;
+      @for $i from 0 through 4 {
+        &:nth-child(#{$i + 1}) {
+          background-position: 0px ($i * (-20px));
+          &:hover { background-position: -20px ($i * (-20px)) !important; }
+        }
+      }
+    }
+  }
+}

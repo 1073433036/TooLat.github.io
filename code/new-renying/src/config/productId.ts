@@ -1,0 +1,22 @@
+export const windRadar = '23' //风廓线雷达
+export const localCloud = '13' //本地云模式
+export const nowCasting = '8'  //短期预报
+export const micradiation = '53'  //微波辐射计
+export const actualproduct = '22'  //实况产品
+export const ecwmfInter = '9'  //ECWMF细网格模式产品 
+export const sunflower = '19'  //葵花8红外灰度图 
+export const windradar = '23' //风廓线雷达
+// export const reservoirLevel = '2' //水库水位
+export const satelliteProduct ='20'  //卫星云反演产品
+export const grapesMode = '10' //grapes中尺度模式产品
+export const reservoirLevel = '3-2' //水库水位
+export const riverLevel = '3-3' //河流水位
+export const cityFire = '3-12' //城市火险
+export const forestFire = '3-11' //森林火险
+export const dryCondition = '3-1' //森林火险
+export const grapes1km = '18'
+export const grapes3km = '17'
+export const weatherForecast = '3-6' //气候预测
+export const agricultureAnalysis = '3-4' //气候预测
+export const satelliteCloud ='60'  //卫星云反演产品
+

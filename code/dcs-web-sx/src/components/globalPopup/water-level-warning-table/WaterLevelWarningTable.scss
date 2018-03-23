@@ -1,0 +1,114 @@
+@import'../../../styles/colorTheme';
+#WaterLevelWarningTable {
+    position: absolute;
+    top: calc(50% - 202px);
+    left: calc(50% - 289px);
+    z-index: 10;
+    overflow: visible;
+    div.table-wrapper {
+        height: 331px;
+        overflow: auto;
+    }
+    table {
+        width: 538px;
+        margin: 0 20px;
+        box-sizing: border-box;
+        border-collapse: collapse;
+        tr {
+            height: 27px;
+            line-height: 27px;
+            th {
+                border: solid 1px #e0e4eb;
+                font-size: 14px;
+                em { margin-right: 5px; }
+            }
+        }
+        tr:first-of-type {
+            th {
+                font-weight: normal;
+                color: #000;
+                background-color: #e9f2f8;
+                min-width: 55px;
+            }
+        }
+        em {
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url(../../../../static/img/userSystem/checkbox.png);
+            background-size: 100% 100%;
+            cursor: pointer;
+            &.on { 
+                background-image: url(../../../../static/img/checkbox-cover.png); 
+                background-size: 200% 100%;
+                background-position: 100% 0;
+            }
+        }
+    }
+    footer {
+        line-height: 40px;
+        line-height: 40px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+       .page-size {
+            float: left;
+            position: relative;
+            margin: 9px 10px 0 0;
+            width: 50px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border: 1px solid #999;
+            cursor: pointer;
+            ul {
+                position: absolute;
+                top: 0;
+                left: -1px;
+                transform: translateY(-100%);
+                width: 50px;
+                background: #fff;
+                border: 1px solid #999;
+                li {
+                    &.on, &:hover { background: #eee; }
+                }
+            }
+       }
+        aside {
+            float: left;
+            div {
+                float: left;
+                cursor: pointer;
+                font-size: 12px;
+                color: #a3a3a3;
+                &:first-of-type {
+                    margin-right: 10px;
+                }
+                &:hover{
+                  text-decoration: underline;
+                }
+            }
+        }
+        .btn {
+            float: right;
+            margin-top: 7px;
+            padding: 0 10px;
+            line-height: 25px;
+            color: #fff;
+            background: $theme-color;
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover { background: rgba(0, 191, 220, .8); }
+        }
+    }
+}
+
+.scrollbar {
+    &::-webkit-scrollbar { width: 6px; }
+    &::-webkit-scrollbar-thumb {
+        background: $theme-color;
+        border-radius: 3px;
+    }
+}

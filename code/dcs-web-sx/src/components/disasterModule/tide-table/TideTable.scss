@@ -1,0 +1,87 @@
+@import '../../../styles/colorTheme';
+#TideTable {
+  position: absolute;
+  top: calc(50% - 257px);
+	left: calc(50% - 340px);
+  width: 680px;
+  z-index: 10;
+  .cont {
+		position: relative;
+    padding: 10px;
+    ul {
+			box-sizing: border-box;
+			padding: 0 20px;
+			border-radius: 4px;
+			li {
+				float: left;
+				width: 80px;
+				line-height: 30px;
+				cursor: pointer;
+				&.on {
+					i { background: url(../../../../static/img/sidebar_radio_pre.png) !important; }
+					span { color: $theme-color !important; }
+				}
+				i {
+					height: 12px;
+					width: 12px;
+					transform: translateY(1px);
+					display: inline-block;
+					margin-right: 5px;
+					background-image: url(../../../../static/img/sidebar_radio.png);
+				}
+				span {
+					font-size: 14px;
+					color: #3E576F;
+				}
+				&:hover span { color: $theme-color !important; }
+			}
+		}
+		.date-btn {
+			position: absolute;
+			top: 10px;
+			width: 18px;
+			height: 30px;
+			cursor: pointer;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 10px;
+				left: 5px;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+			}
+		}
+		.prev {
+			left: 180px;
+			&:after{ border-right: 8px solid #7f90a0; }
+		}
+		.next {
+			left: 300px;
+			&:after { border-left: 8px solid #7f90a0; }
+		}
+		.date {
+			position: absolute;
+			top: 10px;
+			left: 210px;
+			width: 80px;
+			line-height: 30px;
+			font-size: 14px;
+			text-align: center;
+			cursor: pointer;
+		}
+    .wrapper {
+      position: relative;
+      width: 660px;
+      height: 420px;
+      overflow: hidden;
+			pointer-events: visible;
+			iframe {
+				position: absolute;
+				left: -320px;
+				top: -420px;
+				height: 860px;
+				width: 1000px;
+			}
+    }
+  }
+}

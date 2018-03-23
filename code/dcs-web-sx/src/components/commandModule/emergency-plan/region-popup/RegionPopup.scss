@@ -1,0 +1,82 @@
+$theme-color: #00bfdc;
+$border-style: 1px solid #b4b2b2;
+#emgAddAreaPopup {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 270px;
+  width: 300px;
+  .title { cursor: move; }
+  .content {
+    padding: 10px;
+    .radio { margin: 0 0 5px 72.5px }
+    .region {
+      position: relative;
+      line-height: 22px;
+      text-indent: 74px;
+      em {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+        text-align: center;
+        text-indent: 0;
+        line-height: 22px;
+        cursor: pointer;
+        &:hover { color: $theme-color; }
+      }
+    }
+    .area-name {
+      margin: 10px 0 10px 74px;
+      input[type="text"] {
+        width: 170px;
+        height: 20px;
+        padding: 0 5px;
+        border: $border-style;
+        border-radius: 2px;
+      }
+    }
+    .info {
+      margin: 5px 0;
+      line-height: 22px;
+      span.cn {
+        display: inline-block;
+        width: 70px;
+      }
+      span.way {
+        margin-right: 10px;
+        cursor: pointer;
+        &.on { 
+          color: $theme-color;
+          border-bottom: 1px solid $theme-color; 
+        }
+      }
+      select {
+        width: 110px;
+        height: 21px;
+        text-indent: 5px;
+        border: $border-style;
+        border-radius: 2px;
+      }
+      input[type="text"] {
+        width: 170px;
+        height: 20px;
+        padding: 0 5px;
+        border: $border-style;
+        border-radius: 2px;
+      }
+    }
+    textarea {
+      margin: 5px 0 0 74px;
+      width: 170px;
+      height: 55px;
+      padding: 5px;
+      border: $border-style;
+      border-radius: 2px;
+    }
+    .add-btn { margin: 10px 0 0 112px; }
+  }
+}

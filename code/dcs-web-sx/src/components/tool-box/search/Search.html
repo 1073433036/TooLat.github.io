@@ -1,0 +1,31 @@
+<main id="SearchBox">
+  <ul class="tab cf">
+    <li v-for="(opt, key) in tabOpt" @click="selectedTabOpt = key" :class="{'on': selectedTabOpt === key}">
+      {{ opt.text }}
+    </li>
+  </ul>
+  <span class="close" @click="closeFunc('search')">×</span>
+  <template v-if="selectedTabOpt === 'poi' || selectedTabOpt === 'station'">
+    <div class="search-input">
+      <em></em>
+      <input type="text" id="searchInput" :placeholder="tabOpt[selectedTabOpt].tip" v-model="keyword">
+      <span v-show="keyword.length" title="清除" @click="clearKeyword"></span>
+    </div>
+    <div class="search-result search-scroll" v-show="resultList.length">
+      <ul>
+        <li v-for="el of resultList" @click="flyToPoint(el)">
+          <em></em>
+          <span :title="el.name">{{el.name}}</span>
+        </li>
+      </ul>
+    </div>
+  </template>
+  <ul class="search-drawtool cf" v-if="selectedTabOpt === 'drawtool'">
+    <li v-for="opt in drawTool.options" :title="opt.text" @click="searchTool(opt.key)"></li>
+  </ul>
+  <div v-if="selectedTabOpt === 'town'">
+    <select v-model="selTown">
+      <option v-for="(opt, key) in towns" :value="key">{{ opt.name }}</option>
+    </select>
+  </div>
+</main>

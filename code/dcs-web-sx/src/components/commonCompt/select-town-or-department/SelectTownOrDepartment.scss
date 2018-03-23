@@ -1,0 +1,92 @@
+@import '../../../styles/colorTheme';
+#SelectTownOrDeprtment {
+    width: 100%;
+    height: 32px;
+    line-height: 22px;
+    box-sizing: border-box;
+    padding-top: 6px;
+    position: relative;
+    overflow: visible;
+    div {
+        float: left;
+        font-size: 14px;
+        &:first-of-type {
+            line-height: 30px;
+            cursor: pointer;
+            width: 75px;
+            color: #6d6c6c;
+            &:hover {
+                color: #000000;
+                path {
+                    fill: #000000;
+                }
+            }
+            span {
+                float: left;
+                font-size: 14px;
+            }
+            svg {
+                margin: 12px 0;
+                float: right;
+            }
+        }
+        &:last-of-type {
+            color: #000;
+            margin-left: 20px;
+            white-space: nowrap;
+            line-height: 30px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            span {
+                display: inline;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+section.select-popup {
+    position: absolute;
+    background: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #1c1c1c;
+    border-radius: 3px;
+    z-index: 20;
+    >span {
+        font-size: 14px;
+        line-height: 14px;
+        color: $theme-color;
+    }
+    >span.oprate-btn {
+        float: right;
+        transform: translateY(6px);
+        color: #f4434b;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    >svg {
+        position: absolute;
+        top: -8px;
+        left: 0;
+    }
+    article {
+        span {
+            max-width: 220px;
+            margin-right: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #a3a3a3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            &:hover {
+                color: #1c1c1c !important;
+            }
+        }
+    }
+}

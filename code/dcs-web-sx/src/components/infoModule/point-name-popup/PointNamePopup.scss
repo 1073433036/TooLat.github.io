@@ -1,0 +1,27 @@
+@import '../../../styles/colorTheme';
+#PointNamePopup {
+  position: absolute;
+  padding: 0 20px;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -100%);
+  min-width: 100px;
+  z-index: 10;
+  background: $translucent-bg;
+  border-radius: 4px;
+  &:after {
+    position: absolute;
+    left: calc(50% - 4px);
+    width: 0;
+    height: 0;
+    border-top: 8px solid $translucent-bg;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: '';
+  }
+  .address {
+    color: white;
+    line-height: 30px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,22 @@
+<main id="ShipStats" class="popup-general" v-drag="{handle: '.draggable'}">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <span>回港管理</span>
+    <i @click="closeSelf"></i>
+  </header>
+  <manage-table :tableData="tableData" :textCategory="'渔船管理'" :tableHeader="tableHeader" :selectTableRow="selectTableRow"></manage-table>
+  <div class="primary-btn"><span @click="toggleSendText">群发</span><span @click="finishPublish">结束</span></div>
+  <section :style="{left: (eleWidth-290)/2+'px'}" v-if="displaySendText" class="send-text popup-general"  v-drag="{handle: '.draggable'}">
+    <header class="draggable">
+      <span>群发信息</span>
+      <i class="close-btn" @click="toggleSendText"></i>
+    </header>
+    <div class="popup-textarea">
+      <aside>
+        <textarea name="" id="" style="margin: 0; height:100px" v-model="sendTextString" placeholder="请输入发布内容"></textarea>
+      </aside>
+    </div>
+    <div class="primary-btn" style="width: 100%; margin: 0 0 0 0;"><span @click="sendTextToPersen">发送</span></div>
+  </section>
+
+</main>

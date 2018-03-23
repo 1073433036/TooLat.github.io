@@ -1,0 +1,94 @@
+<main id="ModelAnalysisResult" v-loading="isModelAnalysing_global" :element-loading-text="loadingText" v-drag="{handle: '.draggable'}"
+  class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <span>模型分析结果</span>
+    <i @click="closeModelResultPanel"></i>
+  </header>
+  <section class="popup-tab-wraper">
+    <ul class="tab-option-container">
+      <li @click="selectTabOption('result')" class="tab-option" :class="[tabOptionSelected === 'result' ? 'tab-option-selected' : '']">影响区域</li>
+      <li @click="selectTabOption('publish')" class="tab-option" :class="[tabOptionSelected === 'publish' ? 'tab-option-selected' : '']">靶向发布</li>
+    </ul>
+  </section>
+  <fieldset class="model-result-wraper" v-if="tabOptionSelected === 'result'">
+    <section class="no-affected-town" v-if="isTownListEmpty">
+      <span>当前时次没有影响区域</span>
+    </section>
+    <section class="affected-town-container" v-if="!isTownListEmpty">
+      <div class="left-line"></div>
+      <ul>
+        <li v-for="el in levelData" v-if="el.text.length > 0" class="level-affected-town-wraper">
+          <header class="cf">
+            <div class="circle-icon" :style="{backgroundColor: el.color}"></div>
+            <span>{{el.level}} {{el.name}}</span>
+          </header>
+          <article v-html="el.text"></article>
+        </li>
+      </ul>
+    </section>
+  </fieldset>
+  <fieldset class="publish-wraper" v-if="tabOptionSelected === 'publish'">
+    <ul>
+      <li class="popup-option-wraper">
+        <a>统计分析</a>
+        <aside class="cf">
+          <div>大喇叭- <span>{{speakerCount}}</span>个</div>
+          <div>LED显示屏- <span>{{ledCount}}</span>个</div>
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a>消息渠道</a>
+        <aside>
+          <ul class="publish-chanel-wraper">
+            <li @click="speakerSelected = !speakerSelected"><span :style="{backgroundImage: speakerSelected ? 'url(../../../../static/img/sidebar_chb_pre.png)' : 'url(../../../../static/img/sidebar_chb.png)'}"></span><a>大喇叭</a></li>
+            <li @click="ledSelected = !ledSelected"><span :style="{backgroundImage: ledSelected ? 'url(../../../../static/img/sidebar_chb_pre.png)' : 'url(../../../../static/img/sidebar_chb.png)'}"></span><a>LED显示屏</a></li>
+          </ul>
+        </aside>
+        <textarea name="" id="" style="display: block"></textarea>
+      </li>
+      <li class="popup-option-wraper">
+        <a>灾害类型</a>
+        <aside>
+          <select name="" id="" v-model="disasterTypeSelected">
+            <option :value="null" disabled>请选择灾害类型</option>
+            <option v-for="(el,key) in disasters" :value="key">{{key}}</option>
+          </select>
+        </aside>
+      </li>
+      <li class="popup-option-wraper" v-show="disasterTypeSelected">
+        <a>特定灾害</a>
+        <aside>
+          <select name="" id="">
+            <option v-for="el in disasters[disasterTypeSelected]">{{el}}</option>
+          </select>
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a>灾害等级</a>
+        <aside>
+          <ul>
+            <li><span style="background-color: #f4434b"></span><a>I级</a></li>
+            <li><span style="background-color: #ffa500"></span><a>II级</a></li>
+            <li><span style="background-color: #fff000"></span><a>III级</a></li>
+            <li><span style="background-color: #0000ff"></span><a>IV级</a></li>
+          </ul>
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a>影响区域</a>
+        <aside style="display: block; margin-left: 0;">
+          <ul>
+            <li v-for="(el, index) in townListForPublish"><span>{{el.name}}</span><i @click="deleteTownForPublish(index)"></i></li>
+          </ul>
+        </aside>
+      </li>
+      <li class="publish-btn-wraper cf">
+        <div class="cf">
+          <span>发布</span>
+          <span>重置</span>
+        </div>
+      </li>
+    </ul>
+  </fieldset>
+</main>

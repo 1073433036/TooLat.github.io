@@ -1,0 +1,29 @@
+$theme-color: #00bfdc;
+#baseInfo {
+  z-index: 10;
+  position: absolute;
+  top: 26%;
+  right: 90px;
+  width: 340px; 
+  font-size: 14px;
+  line-height: 24px;
+  .wrapper {
+    &:last-child { margin-right: 10px; }
+  }
+  .cn-title { color: #b4b4ac; }
+  .lists {
+    padding: 0 20px;
+    li {
+      float: left;
+      margin-right: 18px;
+      color: #6d6c6c;
+      cursor: pointer;
+      &:hover, &.on { text-decoration: underline; }
+      &.on { color: $theme-color; }
+      &:nth-child(4n) { margin-right: 0; }
+    }
+  }
+  .primary-btn {
+    width: 300px;
+  }
+}

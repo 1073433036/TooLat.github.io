@@ -1,0 +1,160 @@
+.global-panel {
+  position: absolute;
+  z-index: 9;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .35);
+  header {
+    position: relative;
+    background: #4c4f4f;
+    cursor: move;
+    .hour-min {
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: #fff;
+      background: #555858;
+      background: linear-gradient(#626464 50%, #555858  50%);
+      cursor: pointer;
+      &.hour { left: 110px; }
+      &.minute { left: 160px; }
+      ul.list {
+        z-index: 1;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 40px;
+        line-height: 24px;
+        max-height: 240px;
+        overflow: auto;
+        background: #4c4f4f;
+        border-radius: 0 0 2px 2px;
+        li {
+          &:hover, &.on { background: #626464; }
+        }
+      }
+    }
+    .update-btn {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(~Img/stop-update.png) no-repeat center / 100% 100%;
+      cursor: pointer;
+      &:hover, &.on { background: url(~Img/auto-update.png) no-repeat center / 100% 100%; }
+    }
+  }
+  .content {
+    position: relative;
+    background: #fff;
+    ul.list {
+      li {
+        .title {
+          position: relative;
+          color: #999;
+          text-indent: 23px;
+          line-height: 50px;
+          font-weight: bold;
+          cursor: pointer;
+          &::after {
+            position: absolute;
+            content: '';
+            top: 20.5px;
+            left: 10px;
+            width: 9px;
+            height: 9px;
+            background: url(~Img/stationlive/unfold.png) no-repeat center;
+          }
+        }
+        &.on {
+          .title {
+            line-height: 30px;
+            &::after {
+              top: 10.5px;
+              background: url(~Img/stationlive/fold.png) no-repeat center;
+            }
+          }
+        }
+        ul.checkbox {
+          box-sizing: border-box;
+          li {
+            float: left;
+            position: relative;
+            width: 128px;
+            height: 22px;
+            line-height: 22px;
+            cursor: pointer;
+            em.checkbox {
+              position: absolute;
+              top: 4px;
+              left: 20px;
+              display: inline-block;
+              width: 12px;
+              height: 12px;
+              border: 1px solid #999;
+              border-radius: 6px;
+              &.on { background: url(~Img/stationlive/choose.png) no-repeat center; }
+            }
+            span {
+              position: absolute;
+              top: 0;
+              left: 40px;
+            }
+          }
+        }
+        ul.elements {
+          margin-bottom: 5px;
+          li {
+            float: left;
+            position: relative;
+            margin-top: 3px;
+            width: 128px;
+            height: 20px;
+            line-height: 20px;
+            cursor: pointer;
+            em {
+              position: absolute;
+              top: 5px;
+              left: 23px;
+              display: inline-block;
+              width: 3px;
+              height: 10px;
+            }
+            .el {
+              position: absolute;
+              top: 0;
+              left: 30px;
+              width: 100px;
+              color: #545454;
+              text-indent: 5px;
+              &.on {
+                background: #e8e8e8;
+                &::after {
+                  position: absolute;
+                  content: '×';
+                  top: 1px;
+                  right: 2px;
+                  width: 20px;
+                  height: 20px;
+                  text-align: center;
+                  font-size: 16px;
+                  color: #808080;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .scroll-bar {
+    &::-webkit-scrollbar { width: 4px; }
+    &::-webkit-scrollbar-thumb {
+      background: #f0daaa;
+      border-radius: 4px;
+    }
+  }
+}

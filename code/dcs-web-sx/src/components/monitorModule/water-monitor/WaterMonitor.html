@@ -1,0 +1,12 @@
+<main id="WaterMonitor" :style="{top: isVideoMonitorOn ? '247px' : '196px'}">
+  <section class="option-tab-container">
+    <ul class="ship-option-wraper cf">
+      <li @click="selectManageOption('reservior')"><i :style="{backgroundImage: manageOptionSelected === 'reservior' ? 'url(../../../../static/img/sidebar_radio_pre.png)' : 'url(../../../../static/img/sidebar_radio.png)'}"></i>
+        <span :style="{color: manageOptionSelected === 'reservior' ? '#00bfdc' : 'white'}">水库</span>
+      </li>
+      <li @click="selectManageOption('river')"><i :style="{backgroundImage: manageOptionSelected === 'river' ? 'url(../../../../static/img/sidebar_radio_pre.png)' : 'url(../../../../static/img/sidebar_radio.png)'}"></i>
+        <span :style="{color: manageOptionSelected === 'river' ? '#00bfdc' : 'white'}">河流</span>
+      </li>
+    </ul>
+  </section>
+</main>

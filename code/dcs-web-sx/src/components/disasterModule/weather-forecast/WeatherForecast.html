@@ -1,0 +1,61 @@
+<main id="weatherForecast"
+      class="cf rounded-corner"
+      :style="{transform: `translateY(${transformY}px)`}">
+  <main class="weather-option-container">
+    <section v-on:click.stop="isElementSelectionShow = !isElementSelectionShow"
+             class="rounded-corner">
+      <span>{{elementSelectedString}}</span>
+    </section>
+    <section v-on:click.stop="openCalendar"
+             class="rounded-corner"
+             id="weatherDatePicker">{{dateString}}</section>
+    <section v-on:click.stop="toggleHourSelection"
+             class="rounded-corner">
+      <span>{{hourSelectedString}}</span>
+    </section>
+  </main>
+  <main class="time-category">{{timeCategory}}</main>
+  <progress-panel :onPlaying="onPlaying"
+                  :forceStopPlaying="forceStopPlaying"
+                  :isComputeStartPositionNeeded="false"
+                  :isLoadData="isLoadData"
+                  :isContinuePlaying="true"
+                  :toggleLoadData="toggleLoadData"
+                  :onPlayingStart="onPlayingStart"
+                  :onPlayingChange="onPlayingChange"
+                  :onPlayingStop="onPlayingStop"
+                  :onForseeHourOver="onForseeHourOver"
+                  :playingDateString="playingDateString"
+                  :tipDateString="tipDateString"
+                  :elementSelected="elementSelected"
+                  :animationDuration="4"
+                  :dateString="dateString"
+                  :isGlobalTimeZone="elementSelected.includes('wind')"
+                  :forseeData="forseeHourData[elementSelected]"
+                  :multiplier="seedMultiplier"
+                  :startHourSelected="hourSelected"></progress-panel>
+  <main v-show="isElementSelectionShow"
+        class="element-selection-wrapper rounded-corner">
+    <div v-on:click="selectElement('qpfhour', '短临降雨')">短临降雨</div>
+    <div v-on:click="selectElement('wind', '风')">风</div>
+  </main>
+  <main class="datetime-indicator shadow"
+        v-show="isShowingTipDateString"
+        style="left: -10px; top: 10px"
+        :style="{transform: `translateX(${tipDatetimeIndex * 27}px)`}">
+    <article>
+      <div>{{tipDateString}}</div>
+      <div>{{tipHourString}}</div>
+    </article>
+    <svg width="5px"
+         height="3px">
+      <path d="M 0,0 L 5,0 L 3,2.5 Z"></path>
+    </svg>
+  </main>
+  <main v-show="isHourSelectionShow"
+        class="element-selection-wrapper hour-selection rounded-corner"
+        :style="{left: '194px', top: (elementSelected === 'qpfhour' ? '-89px' : '-45px')}">
+    <div :class="['hour-detail', {'on': hourSelected === el}]" v-on:click="selectHour(el)"
+         v-for="el in leadTimeForRender">{{elementSelected.includes('wind') ? (el == 12 ? '20' : '08') : el}}:00</div>
+  </main>
+</main>

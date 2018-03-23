@@ -1,0 +1,22 @@
+<main id="SelectTownOrDeprtment" :style="{paddingLeft: paddingWidth+'px', paddingRight: paddingWidth+'px'}">
+  <section class="cf">
+     <div class="title cf" @mouseenter="togglePopup(true)" @mouseleave="startClosePopupTimeout"><span>{{title}}</span>     
+      <svg width="6" height="6px">
+        <path d="M 0,0 L 6,0 L 3,6 Z" fill="#6d6c6c"></path>
+      </svg>
+    </div>
+    <div class="selected-text" :style="{width: parentWidth-20-80+'px'}">
+      <span style="padding-right: 10px;" v-for="el in selectedString">{{el}}</span>
+    </div>
+  </section>
+  <section class="select-popup" @mouseenter="clearClosePopupTimeout" :style="{width: parentWidth+'px'}" v-if="isPopupDisplay" @mouseleave="togglePopup(false)"> 
+    <svg :width="parentWidth" height="8">
+        <path :d="`M 80,8 L 68,8 L 74,0 Z`" fill="white"></path>
+    </svg>
+    <span>{{title}}</span>
+    <span class="oprate-btn" @click="selectionAction">{{selectActionText}}</span>
+    <article>
+      <span v-for="(el, index) of popupData" @click="selectTarget(index)" :style="{color: el.selected ? '#1c1c1c' : '#a3a3a3'}" :title="el.name">{{el.name}}</span>
+    </article>
+  </section>
+</main>

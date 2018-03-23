@@ -1,0 +1,41 @@
+<main id="UnfinishedEvent">
+  <div class="no-event" v-if="!Object.keys(unfinishedEvent).length"><span>当前无应急事件</span></div>
+  <div class="list-name">
+    <span @mouseenter="display.listPopup = true" @mouseleave="display.listPopup = false">
+      {{ unfinishedEvent[eventKey] ? unfinishedEvent[eventKey].name + ' ' + moment(unfinishedEvent[eventKey].starttime).format('MM月DD日 hh时mm分') : '' }}
+      <div class="inner-popup" v-show="display.listPopup">
+        <div class="names" v-for="(item, key) in unfinishedEvent" v-if="key !== eventKey" 
+            @click="toggleEvent(key)" :title="item.name + ' ' + moment(item.starttime).format('MM月DD日 hh时mm分')">
+          {{ item.name + ' ' + moment(item.starttime).format('MM月DD日 hh时mm分') }}
+        </div>
+      </div>
+    </span>
+  </div>
+  <div class="info">
+    <span class="info-cn">事件名称</span>
+    <span class="bl">{{ unfinishedEvent[eventKey] ? unfinishedEvent[eventKey].name : '' }}</span>
+  </div>
+  <div class="info">
+    <span class="info-cn">事件时间</span>
+    <span class="bl">{{ unfinishedEvent[eventKey] ? moment(unfinishedEvent[eventKey].starttime).format('YYYY-MM-DD hh:mm') : '' }}</span>
+  </div>
+  <div class="info">
+    <span class="info-cn">应急人</span>
+    <span class="bl">{{ unfinishedEvent[eventKey] ? unfinishedEvent[eventKey].userName : '' }}</span>
+  </div>
+  <div class="info">
+    <span class="info-cn">描述</span>
+    <span class="bl" :title="unfinishedEvent[eventKey] ? unfinishedEvent[eventKey].description : ''">
+      {{ unfinishedEvent[eventKey] ? unfinishedEvent[eventKey].description : '' }}
+    </span>
+  </div>
+  <div class="info cf">
+    <span class="info-cn">应急地点</span>
+    <div :class="['add-btn', {'on': regionView}]" @click="toggleRegionPanel" title="添加应急地点">添加</div>
+  </div>
+  <component :is="regionModelView" :regions="regions" :deleteRegions="deleteRegions"></component>
+  <div class="primary-btn">
+    <span @click="stopEventDeal">结束</span>
+  </div>
+  <component :is="regionView" :togglePanel="toggleRegionPanel" :addRegions="addRegions"></component>
+</main>

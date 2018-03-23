@@ -1,0 +1,22 @@
+#VideoScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .screen-btn {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 40px;
+    height: 34px;
+    background: url(../../../../static/img/screen.png) no-repeat center / 100% 100%;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,226 @@
+// station
+.station-el {
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+}
+// .station-temp {
+//   top: -45px;
+//   left: -15px;
+//   color: rgb(252, 48, 47);
+// }
+// .station-ps {
+//   top: -7px;
+//   left: -93px;
+//   color: rgb(48, 48, 47);
+// }
+// .station-rfhour {
+//   top: 0;
+//   left: 45px;
+//   color: rgb(1, 128, 1);
+// }
+// .station-dp {
+//   top: 36px;
+//   left: -21px;
+//   color: rgb(128, 48, 0);
+// }
+// .station-wd2df {
+//   top: 40px;
+//   left: -15px;
+//   color: rgb(0, 222, 0);
+// }
+// .station-wd10df {
+//   top: 15px;
+//   left: -70px;
+//   color: rgb(170, 58, 175);
+// }
+// .station-wd10maxdf {
+//   top: 0;
+//   left: -70px;
+//   color: rgb(170, 58, 175);
+// }
+// .station-wd3smaxdf {
+//   top: -45px;
+//   left: -15px;
+//   color: rgb(170, 58, 175);
+// }
+// .station-rh {
+//   top: -32px;
+//   left: -56px;
+//   color: rgb(153, 51, 204);
+// }
+// .station-rfday {
+//   top: -28px;
+//   left: 41px;
+//   color: rgb(1, 181, 1);
+// }
+// .station-tempdaymax {
+//   top: 13px;
+//   left: -63px;
+//   color: rgb(255, 0, 0);
+// }
+// .station-t24 {
+//   top: 18px;
+//   left: 33px;
+//   color: rgb(0, 0, 0);
+// }
+// .station-tempdaymin {
+//   top: 28px;
+//   left: -55px;
+//   color: rgb(33, 33, 251);
+// }
+
+.station-temp {
+  color: rgb(252, 48, 47);
+}
+.station-ps {
+  color: rgb(48, 48, 47);
+}
+.station-rfhour {
+  color: rgb(1, 128, 1);
+}
+.station-dp {
+  color: rgb(128, 48, 0);
+}
+.station-wd2df {
+  color: rgb(0, 222, 0);
+}
+.station-wd10df {
+  color: rgb(170, 58, 175);
+}
+.station-wd10maxdf {
+  color: rgb(170, 58, 175);
+}
+.station-wd3smaxdf {
+  color: rgb(170, 58, 175);
+}
+.station-rh {
+  color: rgb(153, 51, 204);
+}
+.station-rfday {
+  color: rgb(1, 181, 1);
+}
+.station-tempdaymax {
+  color: rgb(255, 0, 0);
+}
+.station-t24 {
+  color: rgb(0, 0, 0);
+}
+.station-tempdaymin {
+  color: rgb(33, 33, 251);
+}
+
+.station-waterlevel {
+  top: 15px;
+  left: -9px;
+  color: rgb(0, 126, 126);
+}
+.station-fluctuate {
+  top: -5px;
+  left: 20px;
+  color: rgb(140, 140, 140);
+}
+.station-alertlevel {
+  top: -24px;
+  left: -8px;
+  color: rgb(239, 77, 75);
+}
+
+// typhoon
+.typhoon_icon{
+  border: none;
+  background: none;
+  top: -9px;
+  left: -9px;
+}
+.rotate_ani { animation: rotate_ani 1s infinite linear; }
+.positive_rotate_ani { animation: positive_rotate_ani 1s infinite linear; }
+@keyframes rotate_ani{
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-180deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes positive_rotate_ani{
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+.leaflet-popup-content { margin: 10px; }
+.leaflet-popup-content-wrapper { border-radius: 4px; }
+.leaflet-popup-tip {
+  width: 12px;
+  height: 12px;
+}
+.typhoon-popup {
+  ul {
+    li {
+      &:first-child {
+        margin-bottom: 6px;
+        span {
+          color: #f3ac12 !important;
+          font-weight: bold;
+        }
+      }
+      span {
+        display: inline-block;
+        line-height: 18px;
+        &:first-child {
+          width: 70px;
+          color: #b3b3b3;
+        }
+        &:last-child {
+          width: 90px;
+          color: #545454;
+        }
+      }
+    }
+  }
+}
+
+.wm-bindPopup {
+  ul {
+    li {
+      &:first-child {
+        margin-bottom: 6px;
+        span {
+          color: #f3ac12 !important;
+          font-weight: bold;
+        }
+      }
+      span {
+        display: inline-block;
+        line-height: 18px;
+        &:first-child {
+          width: 50px;
+          color: #b3b3b3;
+        }
+        &:last-child {
+          width: 100px;
+          color: #545454;
+        }
+      }
+    }
+  }
+}
+
+// thunder-popup
+.leaflet-popup-content-wrapper {
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+.thunder-popup {
+  width: 165px;
+  line-height: 22px;
+  .name, .val {
+    float: left;
+  }
+  .name {
+    width: 40px;
+  }
+  .val {
+    text-align: center;
+    width: 125px;
+  }
+}

@@ -1,0 +1,15 @@
+<main id="rescuePopup" v-drag="{handle: '.draggable'}" class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>救援队伍</span>
+    <i @click="closeFunc"></i>
+  </header>
+  <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr v-for="(opt, key) in attr">
+        <td>{{ opt }}</td>
+        <td :title="info[key]"><div class="inner">{{ info[key] ? info[key] : '--' }}</div></td>
+      </tr>
+    </tbody>
+  </table>
+</main>

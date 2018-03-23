@@ -1,0 +1,79 @@
+@import'../../../../styles/colorTheme';
+#RegionPanel {
+  z-index: 1;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #1f2b3d;
+  .title {
+    position: relative;
+    line-height: 30px;
+    cursor: move;
+    span {
+      margin-left: 10px;
+      color: #000;
+    }
+    i {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url('../../../../../static/img/sidebar_close.png') no-repeat center;
+      cursor: pointer;
+      &:hover { background: url('../../../../../static/img/sidebar_close_pre.png') no-repeat center; }
+    }
+  }
+  .info {
+    position: relative;
+    height: 26px;
+    .info-cn {
+      position: absolute;
+      top: 0;
+      left: 20px;
+    }
+    select {
+      position: absolute;
+      top: 2px;
+      left: 90px;
+      width: 90px;
+      height: 22px;
+    }
+    .draw-btn {
+      position: absolute;
+      top: 0;
+      left: 90px;
+      cursor: pointer;
+      &.on { color: $theme-color; }
+    }
+  }
+  .area-name {
+    margin: 5px 0;
+    .center-radius {
+      text-indent: 88px;
+    }
+    input[type="text"] {
+      margin-left: 85px;
+      padding: 0 10px;
+      width: 180px;
+      height: 24px;
+      outline: none;
+      border: 1px solid #eee;
+    }
+  }
+  .add-btn {
+    margin: 10px 145px; 
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    background: $theme-color;
+    border-radius: 3px;
+    &:hover { background: rgba(0, 191, 220, 0.8); }
+  }
+}

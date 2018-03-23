@@ -1,0 +1,212 @@
+<main id="EmergencyMonitor"
+      :style="{transform: 'translateY(' + top + ')'}">
+  <div class="icon-wraper"
+       v-on:click="toggleOptionPanel"
+       :class="[isWarning ? 'warning' : 'unwarning']"></div>
+  <section class="emergency-option-wrapper"
+           v-if="isOptionPanelShow"
+           :style="{transform: haveStreamAccountApply ? 'translateY(-26px)' : ''}">
+    <ul>
+      <li v-on:click="toggleEmergencyPlan">
+        <em :style="{backgroundPositionX: haveEmergencyPlan ? '-15px' : '0px'}"></em>
+        <span :style="{color: haveEmergencyPlan ? '#f4434b' : '#cbd3de'}">预案在线</span>
+      </li>
+      <li v-on:click="toggleEmergencyDetailPopup">
+        <em :style="{backgroundPositionX: isEmergencyWarning ? '-15px' : '0px'}"></em>
+        <span :style="{color: isEmergencyWarning ? '#f4434b' : '#cbd3de'}">报警监控</span>
+      </li>
+      <li v-on:click="toggleMessagePopup">
+        <em :style="{backgroundPositionX: haveNewMessage ? '-15px' : '0px'}"></em>
+        <span :style="{color: haveNewMessage ? '#f4434b' : '#cbd3de'}">未读短信</span>
+      </li>
+      <li v-on:click="togglePhoneStreamingPopup">
+        <em :style="{backgroundPositionX: havePhoneStreamingSource ? '-15px' : '0px'}"></em>
+        <span :style="{color: havePhoneStreamingSource ? '#f4434b' : '#cbd3de'}">直播请求</span>
+      </li>
+      <li v-show="haveStreamAccountApply"
+          v-on:click="displayAccountApplyPopup = !displayAccountApplyPopup">
+        <em :style="{backgroundPositionX: havePhoneStreamingSource ? '-15px' : '0px'}"></em>
+        <span :style="{color: haveStreamAccountApply ? '#f4434b' : '#cbd3de'}">账号申请</span>
+      </li>
+    </ul>
+  </section>
+  <section class="popup-general phone-streaming-popup"
+           v-if="displayAccountApplyPopup"
+           style="width: 400px; transform: translateY(-26px)">
+    <div for="dragging"></div>
+    <header>
+      <a>账号注册申请列表</a>
+      <i v-on:click="displayAccountApplyPopup = !displayAccountApplyPopup"></i>
+    </header>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>用户名</th>
+          <th>电话</th>
+          <th>角色</th>
+          <th>操作</th>
+        </tr>
+        <tr v-for="el in accountApplyData">
+          <td>{{el.name}}</td>
+          <td>{{el.phoneNum}}</td>
+          <td>{{el.role}}</td>
+          <td>
+            <span v-on:click="streamAccountApplyOperate(el.userId, true)">通过</span>
+            <span v-on:click="streamAccountApplyOperate(el.userId, false)">拒绝</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="popup-general phone-streaming-popup"
+           v-if="displayPhoneStreamingPopup">
+    <div for="dragging"></div>
+    <header>
+      <a>直播请求列表</a>
+      <i v-on:click="togglePhoneStreamingPopup"></i>
+    </header>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>姓名</th>
+          <th>地点</th>
+          <th>时间</th>
+          <th>操作</th>
+        </tr>
+        <tr v-for="el in phoneStreamingData">
+          <td>{{el.name}}</td>
+          <td>遂溪县</td>
+          <td>{{el.requestTime}}</td>
+          <td>
+            <span v-on:click="phoneStreamingOperate(el, true)">通过</span>
+            <span v-on:click="phoneStreamingOperate(el, false)">拒绝</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="popup-general"
+           id="detailPopup"
+           v-if="displayEmergencyDetailPopup">
+    <div for="dragging"></div>
+    <header>
+      <a>报警监控</a>
+      <i v-on:click="toggleEmergencyDetailPopup"></i>
+    </header>
+    <ul>
+      <li class="popup-option-wraper">
+        <a>雷达</a>
+        <aside class="cf">
+          <span :style="{backgroundColor: cappiColor}"></span>
+          <a :style="{textDecoration: cappiArea.length ? 'underline' : 'none', cursor: cappiArea.length ? 'pointer' : 'default'}"
+            @click="openCappiPopup">{{cappiArea.length}}</a>
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a>暴雨</a>
+        <aside class="cf">
+          <span :style="{backgroundColor: rainColor}"></span>
+          <a :title="rainText">{{rainLevel.length &gt; 0 ? rainLevel : '无告警'}}</a>
+          <!-- <i v-on:click="toggleExplainPopup($event, true, 'rain')"
+             v-on:mouseleave="toggleExplainPopup($event, false)">?</i> -->
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a>水位</a>
+        <aside class="cf">
+          <span :style="{backgroundColor: waterColor}"></span>
+          <a v-on:click="toggleWaterLevelTablePopup"
+             :style="{textDecoration: waterLevel &gt; 0 ? 'underline' : 'none', cursor: waterLevel &gt; 0 ? 'pointer' : 'default'}">{{waterLevel}}</a>
+          <!-- <i v-on:click="toggleExplainPopup($event, true, 'waterLevel')"
+             v-on:mouseleave="toggleExplainPopup($event, false)">?</i> -->
+        </aside>
+        <li class="popup-option-wraper">
+          <a>台风</a>
+          <aside class="cf">
+            <span :style="{backgroundColor: typhColor}"></span>
+            <a :style="{textDecoration: typhId ? 'underline' : 'none', cursor: typhId ? 'pointer' : 'default'}"
+              @click="showTy">{{typhText}}</a>
+            <!-- <i>?</i> -->
+          </aside>
+        </li>
+      </li>
+    </ul>
+
+    <section class="popup-general cappi" v-if="isCappiPopupOn" v-drag="{handle: '.draggable'}">
+      <div for="dragging"></div>
+      <header class="draggable">
+        <a>雷达预警 ({{ cappiTime }})</a>
+        <i v-on:click="isCappiPopupOn = false"></i>
+      </header>
+      <ul>
+        <li class="cf" v-for="el of cappiArea" @click="goCappiArea(el)">
+          <span></span>
+          <a>{{ el.name }}</a>
+          <div class="close" v-if="cappiAreaId === el.id">×</div>
+        </li>
+      </ul>
+    </section>
+
+  </section>
+  <section id="explainPopup"
+           class="explain-popup box-shadow"
+           v-show="displayExplainPopup">
+    <svg width="200px"
+         height="6px">
+      <path d="M 100,0 L 105,6 L 95,6 Z"
+            fill="white"></path>
+    </svg>
+    <article>{{tipText}}</article>
+  </section>
+  <section class="popup-general msg-phone-popup"
+           v-if="messagePopup">
+    <div for="dragging"></div>
+    <header>
+      <span>未读短信</span>
+      <i v-on:click="toggleMessagePopup"></i>
+    </header>
+    <div class="table-wrap">
+      <table cellspacing="0"
+             cellpadding="0">
+        <thead>
+          <tr>
+            <th v-for="th in thead">{{ th }}</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="opt of smsPersonPhone">
+            <td v-for="(th, thKey) in thead">{{ opt[thKey] ? opt[thKey] : '--' }}</td>
+            <td v-on:click="watchMsgDetail(opt.phone)"
+                :class="{'on': opt.phone == currentPhone}">查看</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <section v-drag="{handle: '.draggable'}"
+             class="popup-general msg-popup"
+             v-show="messageHistPopup">
+      <div for="dragging"></div>
+      <header class="draggable">
+        <span>历史短信</span>
+        <i v-on:click="closeMessageHistPopup"></i>
+      </header>
+      <div class="cont">
+        <div class="ph">{{ currentPhone }}</div>
+        <div class="text-wrapper">
+          <section v-for="record of smsHistoryRecord">
+            <header class="cf">
+              <span class="name">{{ record.name ? record.name : '未知' }}</span>
+              <span class="time">{{ record.datetime }}</span>
+            </header>
+            <span class="text">{{ record.content }}</span>
+          </section>
+        </div>
+        <div class="change-page cf">
+          <span v-on:click="togglePage(1)">下页</span>
+          <span v-on:click="togglePage(0)">上页</span>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>

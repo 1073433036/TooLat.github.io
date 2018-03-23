@@ -1,0 +1,39 @@
+<main id="TyphSearch" class="cf">
+  <!--<div class="status-indicator">
+    <span class="status-text-container" v-if="typhTimeLineStatus_global !== 'history'">
+      {{typhTimeLineStatus_global === 'detail' ?  typhCurrentName_global : '历史台风'}}  
+      </span>
+    <section class="toggle-history-typh-wraper cf" v-if="typhTimeLineStatus_global === 'history'">
+      <svg @click="changeTyphCurrentYear('preYear')" width="16px" height="30px">
+        <rect x="0" y="0" width="16px" height="30px" />
+        <path d="M 10,11 L 6,15 L 10,19 Z" :class="{'canntChangeYear': changeTyphCurrentYear_global === minYear}" />
+      </svg>
+      <span>{{typhCurrentYear_global}}</span>
+      <svg @click="changeTyphCurrentYear('nextYear')" width="16px" height="30px">
+        <rect x="0" y="0" width="16px" height="30px" />
+        <path d="M 6,11 L 10,15 L 6,19 Z" :class="{'canntChangeYear': typhCurrentYear_global === maxYear}" />
+      </svg>
+    </section>
+  </div>-->
+  <div class="typh-year-wrapper cf" v-show="typhTimelineStatus_global !== 'search'">
+    <em @click="changeTyphCurrentYear('preYear')"></em>
+    <span>{{typhCurrentYear_global}}年</span>
+    <em@click="changeTyphCurrentYear('nextYear')" ></em>
+  </div>
+  <div class="search-container cf">
+    <span class="search-icon"></span>
+    <input type="text" id="searchTyph" placeholder="搜索历史台风" v-model="searchText" @focus="searching = true">
+  </div>
+  <div class="action-indicator" @click="toggleTimelineStatus" :style="{transform: typhTimelineStatus_global === 'search' ? 'rotateZ(0deg)' : (typhTimelineStatus_global === 'history' ? 'rotateZ(180deg)' : 'rotateZ(-90deg)')}">
+  </div>
+  <div class="search-result-wraper" v-show="searching">
+    <ul>
+      <li v-for="el of searchResult" @click="selectTyph_global(el.tsid)">
+        {{el.intlid}}{{(el.info && el.info.cname) ? el.info.cname : '未命名'}}
+      </li>
+      <transition name="searchNoResult">
+        <li v-if="haveNoResult" class="have-no-result">没有匹配的台风!</li>
+      </transition>
+    </ul>
+  </div>
+</main>

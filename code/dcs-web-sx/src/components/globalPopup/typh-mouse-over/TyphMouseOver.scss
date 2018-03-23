@@ -1,0 +1,31 @@
+@import'../../../styles/colorTheme';
+#TyphMouseOver {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    width: 218px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px 0 10px 20px;
+    background-color: $translucent-bg;
+    color: $font-color;
+    header{
+      color: $theme-color;
+      font-weight: bold;
+    }
+    li {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        a {
+            display: block;
+            float: left;
+            width: 52px;
+            margin-right: 10px;
+        }
+        span {
+            float: left;
+            color: white;
+        }
+    }
+}

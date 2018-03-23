@@ -1,0 +1,45 @@
+.el-date-editor.el-input {
+  margin-left: 10px;
+  width: 90px;
+  text-align: center;
+}
+.el-input__icon {
+  display: none;
+}
+.el-input__inner {
+  padding: 0;
+  color: #fff;
+  font-size: 12px;
+  border: none;
+  background: #555858;
+  margin: 0;
+  padding: 0 !important;
+  background: linear-gradient(#626464 50%, #555858  50%);
+}
+.el-input__inner {
+  text-align: center;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.el-select-dropdown__item selected {
+  height: 24px;
+  padding: 0 10px;
+  span {
+    font-size: 12px;
+    line-height: 24px!important;
+  }
+}
+
+.el-select-dropdown__item{
+  &.selected {
+    background-color: #f3ac12;
+    &.hover { background-color: #f3ac12; }
+    &:hover { background-color: #f3ac12; }
+    span {
+      color: #ffffff;
+    }
+  }
+}
+
+

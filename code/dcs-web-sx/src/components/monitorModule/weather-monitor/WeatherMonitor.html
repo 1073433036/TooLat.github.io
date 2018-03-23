@@ -1,0 +1,13 @@
+<main id="weatherMonitor" :style="{top: (isWaterMonitorOn && isVideoMonitorOn) ? '298px' : ((isWaterMonitorOn && !isVideoMonitorOn) ? '247px' : ((!isWaterMonitorOn && isVideoMonitorOn) ? '247px' : '196px')) }">
+  <ul class="weather-option-wraper cf">
+    <li @click="selectOption('station')" :class="{'on': optionSelected.station}">
+      <i></i><span>自动站</span>
+    </li>
+    <li @click="selectOption('cappi')" :class="{'on': optionSelected.cappi}">
+      <i></i><span>雷达</span>
+    </li>
+    <li @click="selectOption('clound')" :class="{'on': optionSelected.clound}">
+      <i></i><span>云图</span>
+    </li>
+  </ul>
+</main>

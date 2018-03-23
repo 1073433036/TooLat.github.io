@@ -1,0 +1,19 @@
+<main id="expertPopup" v-drag="{handle: '.draggable'}" class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>专家信息</span>
+    <i @click="closeFunc"></i>
+  </header>
+  <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td>姓名</td>
+        <td>{{ info.name }}</td>
+        <td rowspan="3" class="img"><img :src="info.image" width="70" height="80"></td>
+      </tr>
+      <tr><td>性别</td><td>{{ info.sex }}</td></tr>
+      <tr><td>出生年月</td><td>{{ info.birth }}</td></tr>
+      <tr v-for="(opt, optKey) in ExpertsInfo"><td>{{ opt }}</td><td colspan="2">{{ info[optKey] }}</td></tr>
+    </tbody>
+  </table>
+</main>

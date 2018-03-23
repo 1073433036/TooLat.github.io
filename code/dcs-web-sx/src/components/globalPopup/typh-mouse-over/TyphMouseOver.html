@@ -1,0 +1,34 @@
+<main id="TyphMouseOver" :style="{top: posY +'px', left: typhMouseOverPos_global.x - 30 + 'px',}">
+  <section class="typh-basic-info-wraper">
+    <!-- <header>{{typhMouseOverName_global.tsid}} {{typhMouseOverName_global.tscname}} </header> -->
+    <ul>
+      <li class="cf">
+        <a class="info-title">时间</a>
+        <span class="info-content">{{datetime}}</span>
+      </li>
+      <li class="cf">
+        <a class="info-title">经纬度</a>
+        <span class="info-content">{{typhMouseOverData_global.degrees[0]}}° E, {{typhMouseOverData_global.degrees[1]}}° N</span>
+      </li>
+      <li class="cf"><a class="info-title">强度</a><span class="info-content">{{typhMouseOverData_global.level}}</span></li>
+      <li class="cf"><a class="info-title">气压</a><span class="info-content">{{typhMouseOverData_global.ps}} hPa</span></li>
+      <li class="cf"><a class="info-title">最大风速</a><span class="info-content">{{Number(typhMouseOverData_global.ws).toFixed(0)}} 米/秒</span></li>
+    </ul>
+  </section>
+  <section class="typh-wind-circle-wraper">
+    <ul>
+      <li><a class="info-title">6级风圈</a>
+        <span class="info-content">{{typhMouseOverData_global.rr06 ? Number(typhMouseOverData_global.rr06).toFixed(0) +'公里' : '--'}}</span>
+      </li>
+      <li><a class="info-title">7级风圈</a>
+        <span class="info-content">{{typhMouseOverData_global.rr07 ? Number(typhMouseOverData_global.rr07).toFixed(0) +'公里' : '--'}}</span>
+      </li>
+      <li><a class="info-title">8级风圈</a>
+        <span class="info-content">{{typhMouseOverData_global.rr08 ? Number(typhMouseOverData_global.rr08).toFixed(0) +'公里': '--'}}</span>
+      </li>
+      <li><a class="info-title">10级风圈</a>
+        <span class="info-content">{{typhMouseOverData_global.rr10 ? Number(typhMouseOverData_global.rr10).toFixed(0) +'公里': '--'}}</span>
+      </li>
+    </ul>
+  </section>
+</main>

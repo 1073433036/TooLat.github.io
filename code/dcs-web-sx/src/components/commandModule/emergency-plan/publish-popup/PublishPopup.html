@@ -1,0 +1,17 @@
+<div class="popup" id="emgAddReleasePopup" v-drag="{handle: '.title'} ">
+  <div class="title">
+    <div class="text">追加发布</div>
+    <div class="close" @click="closeFunc">×</div>
+  </div>
+  <div class="content">
+    <div class="tl">成员单位</div>
+    <ul class="orgs cf scrollbar">
+      <li v-for="opt of organizations" @click="toggleOrg(Number(opt.id))" :class="{'on': orgIds.includes(Number(opt.id))}">
+        {{ opt.name }}
+      </li>
+    </ul>
+    <div class="tl">消息内容</div>
+    <textarea v-model="content" placeholder="请输入发布内容"></textarea>
+    <div class="btn" @click="addPublish">发布</div>
+  </div>
+</div>

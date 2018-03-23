@@ -1,0 +1,81 @@
+<main id="OnlinePlan">
+  <div class="info">
+    <span class="info-cn">突发事件</span>
+    <select v-model="selectedType" @change="getDisasterTypeInfo">
+      <option v-for="type of emtype" :value="type.id">{{ type.name }}</option>
+    </select>
+  </div>
+  
+  <div class="info">
+    <span class="info-cn">事件类型</span>
+    <select v-model="selectedDisaster" @change="getDisasterInfo">
+      <option v-for="opt of disaster" :value="opt.id">{{ opt.name }}</option>
+    </select>
+  </div>
+  
+  <div class="info">
+    <span class="info-cn">响应等级</span>
+    <select v-model="selectedLevel" v-show="!unFinishPlan[selectedDisaster]" @change="getDisasterInfo">
+      <option v-for="opt of level" :value="opt">{{ levelFormat[opt - 1] }}</option>
+    </select>
+    <span v-show="unFinishPlan[selectedDisaster]">{{ levelFormat[selectedLevel - 1] }}</span>
+  </div>
+
+  <div class="info">
+    <span class="info-cn">消息渠道</span>
+    <div class="msg-type">
+      <span :class="{'on': selectedMsgType === 1 || selectedMsgType === 3}" 
+          @click="toggleMsgType(1)">短信</span>
+      <span :class="{'on': selectedMsgType === 2 || selectedMsgType === 3}" 
+          @click="toggleMsgType(2)">传真</span>
+    </div>
+  </div>
+
+  <div class="info" v-show="selectedMsgType === 2 || selectedMsgType === 3">
+    <span class="info-cn">传真选择</span>
+    <input type="file" name="image" accept="image/*" @change="uploadImage" style="color: #000;">
+  </div>
+
+  <div class="info">
+    <span class="info-cn">工作备忘</span>
+    <div class="duty-btn btn" @click="openDutyPopup" v-show="!unFinishPlan[selectedDisaster]">添加</div>
+  </div>
+  <ul class="duty scrollbar" v-if="selectedDuties.length">
+    <li v-for="opt of selectedDuties">
+      <div class="duty-wrap" :title="opt">{{ opt }}</div>
+      <span @click="deleteDuty(opt)" title="删除该工作备忘" v-show="!unFinishPlan[selectedDisaster]">×</span>
+    </li>
+  </ul>
+
+  <div class="info"><span class="info-cn">成员单位</span></div>
+  <ul class="org scrollbar">
+    <li v-show="!organizations.length">无</li>
+    <li v-show="organizations.length" v-for="org of organizations">{{ org.name }}</li>
+  </ul>
+
+  <div class="info cf" style="margin: 10px 0;">
+    <div class="btn start-btn" v-show="!unFinishPlan[selectedDisaster]" @click="startPlan">启动</div> 
+    <template v-if="selectedDisaster in unFinishPlan">
+      <div class="btn end-btn" @click="finishPlan">结束</div>
+      <div class="btn level-btn" style="margin: 0 10px 0 10px;" @click="changePlanLevel('up')">升级</div>
+      <div class="btn level-btn" @click="changePlanLevel('down')">降级</div>
+    </template>
+  </div>
+
+  <div v-drag="{handle: '.draggable'}" class="popup-general duty-popup" v-if="isDutiesPopupOn"> 
+    <div for="dragging"></div>
+    <header class="draggable">
+      <span>工作备忘</span>
+      <i @click="isDutiesPopupOn = false"></i>
+    </header>
+    <ul class="scrollbar">
+      <li v-for="opt of duties">
+        {{ opt.name }}
+        <em @click="toggleDuty(opt.name)" :class="{'on': selectedDuties.includes(opt.name)}"></em>
+      </li>
+    </ul>
+    <input type="text" placeholder="输入自定义工作备忘" v-model="personDuty">
+    <div class="per-btn" @click="addPersonDuty">添加</div>
+  </div>
+
+</main>

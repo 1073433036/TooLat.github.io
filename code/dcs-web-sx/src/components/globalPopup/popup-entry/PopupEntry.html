@@ -1,0 +1,35 @@
+<main id="PopupEntry">
+  <component :is="typhMouseOverPopupView"></component>
+  <component :is="typhGrapesPopupView"></component>
+  <component :is="modelAnalysisResultView" :closeModelResultPanel="closeModelResultPanel"></component>
+  <component :is="fstTimelineView"></component>
+  <component :is="colorTableIndicatorView"></component>
+  <component :is="infoPublishView"></component>
+  <component :is="eventDealView"></component>
+  <component :is="basicInfoView" v-show="basicInfoOn"></component>
+  <component :is="basicNameView"></component>
+  <component :is="pointDetailView"></component>
+  <component :is="stationRealView"></component>
+  <component :is="aisDetailView"></component>
+  <component :is="forecastView"></component>
+  <component :is="managementView"></component>
+  <component :is="planModelView"></component>
+  <component :is="OceanMonitorView"></component>
+  <component :is="waterLevelPopupView"></component>
+  <component :is="waterLevelWarningTableView"></component>
+  <transition name="oprate-tip-fade">
+    <component :is="oprateTipPopupView"></component>
+  </transition>
+  <component :is="matchPoiInfoView"></component>
+  <component :is="windPickingView"></component>
+  <component :is="gridPickingView"></component>
+  <component :is="emergencyPlanView"></component>
+  <component :is="tideTableView"></component>
+  <component :is="trackingView"></component>
+  <component :is="videoView"></component>
+  <component :is="videoAddressView"></component>
+  <component :is="waterLevelNameView"></component>
+  <component :is="screenImageView"></component>
+  <component :is="eleTimeView"></component>
+  <component :is="oceanPickingView"></component>
+</main>

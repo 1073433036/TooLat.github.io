@@ -1,0 +1,4 @@
+<main id="PhoneLive">
+  <!--<live-panel v-show="showLivePanel" :liveData="dataForLive" :closeSelf="closeLivePanel"></live-panel>-->
+  <component  :is="livePanelView" :liveData="dataForLive" :closeSelf="closeLivePanel"></component>
+</main>

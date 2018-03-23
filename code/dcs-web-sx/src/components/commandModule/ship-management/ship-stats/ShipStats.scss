@@ -1,0 +1,26 @@
+@import '../../../../styles/colorTheme';
+#ShipStats {
+    position: absolute;
+    top: -320px;
+    right: 210px;
+    width: 350px;
+    overflow: visible;
+    >.primary-btn {
+        margin: 0;
+        width: 100%;
+        span:first-of-type {
+            margin-right: 10px;
+        }
+        span:last-of-type {
+            background-color: #f4434b;
+        }
+    }
+}
+
+.send-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 290px;
+    height: 204px;
+}

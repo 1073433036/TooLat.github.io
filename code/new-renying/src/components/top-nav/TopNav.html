@@ -1,0 +1,10 @@
+<main id="TopNav">
+  <ul>
+    <li v-for="opt of menu"
+        :class="{'on' : opt.id === menuSelected}"
+        v-on:click="toggleMenu(opt.id, opt.combinationSuns)"
+        :style="{'width': width}"
+        :title="opt.name">{{ opt.name }} 
+    <em></em></li>
+  </ul>
+</main>

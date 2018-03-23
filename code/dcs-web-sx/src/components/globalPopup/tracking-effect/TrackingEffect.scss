@@ -1,0 +1,69 @@
+@import'../../../styles/colorTheme';
+#TrackingEffect {
+  z-index: 10;
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 320px;
+  .cont {
+    position: relative;
+    margin: 10px 0 20px 0;
+    .no-effect {
+      color: #f00;
+      font-size: 18px;
+      text-align: center;
+      line-height: 100px;
+    }
+    .left-line {
+      z-index: 1;
+      position: absolute;
+      left: 26px;
+      top: 2px;
+      height: 100%;
+      width: 0;
+      border-left: solid 1px #a3a3a3;
+    }
+    ul.effect {
+      li {
+        margin-bottom: 20px;
+        width: 100%;
+        header {
+          margin-left: 20px;
+          cursor: default;
+          height: 14px;
+          position: relative;
+          div.circle-icon {
+            width: 12px;
+            height: 12px;
+            float: left;
+            border-radius: 50%;
+            background-color: chocolate;
+            position: absolute;
+            top: 1px;
+            z-index: 2;
+          }
+          span {
+            float: left;
+            margin-left: 32px;
+            line-height: 14px;
+            font-size: 14px;
+            color: $theme-color;
+          }
+        }
+        article {
+          margin-top: 15px;
+          width: 100%;
+          box-sizing: border-box;
+          padding-left: 52px;
+          padding-right: 20px;
+          font-size: 14px;
+          color: #a3a3a3;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}

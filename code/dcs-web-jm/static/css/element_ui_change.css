@@ -1,0 +1,28 @@
+/*
+折叠面板样式修改
+*/
+.el-collapse{
+  background-color:transparent!important;
+  color: white !important;
+}
+.el-collapse-item__header {
+  background-color:transparent!important;
+  color: white !important;
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+}
+.el-collapse-item__content{
+  background-color:transparent!important;
+  color: white !important;
+}
+.el-collapse-item{
+  background-color:inherit!important;
+  color: inherit !important;
+}
+.el-collapse-item__wrap{
+  background-color:transparent!important;
+  color: white !important;
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+}
+
+
+

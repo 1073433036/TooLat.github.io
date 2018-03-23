@@ -1,0 +1,55 @@
+<main id="mainMenu" :style="{transform: isTransfomingMenuNeeded ? 'translateY(-34px)' : ''}">
+  <section class="first-tier-wraper">
+    <ul class="">
+      <li class="first-tier-btn" v-tip="'自然灾害'" :style="{backgroundColor: firstTierMenuSelected === 'disaster' ? 'rgba(0,0,0,.5)': 'rgba(31, 46, 61, .5)' 
+      , backgroundImage: firstTierMenuSelected === 'disaster' ? 'url(../../../static/img/sidebar_disaster_pre.png)' : 'url(../../../static/img/sidebar_disaster.png)'}"
+        @click="selectFirstTierOption('disaster')"></li>
+      <li class="first-tier-btn" v-tip="'实况监控'" :style="{backgroundColor: firstTierMenuSelected === 'monitor' ? 'rgba(0,0,0,.5)': 'rgba(31, 46, 61, .5)' 
+      , backgroundImage: firstTierMenuSelected === 'monitor' ? 'url(../../../static/img/sidebar_monitor_pre.png)' : 'url(../../../static/img/sidebar_monitor.png)'}"
+        @click="selectFirstTierOption('monitor')"></li>
+      <li class="first-tier-btn" v-tip="'在线指挥'" :style="{backgroundColor: firstTierMenuSelected === 'command' ? 'rgba(0,0,0,.5)': 'rgba(31, 46, 61, .5)'
+      , backgroundImage: firstTierMenuSelected === 'command' ? 'url(../../../static/img/sidebar_command_pre.png)' : 'url(../../../static/img/sidebar_command.png)'}"
+        @click="selectFirstTierOption('command')"></li>
+      <li class="first-tier-btn" v-tip="'基础信息'" :style="{backgroundColor: firstTierMenuSelected === 'info' ? 'rgba(0,0,0,.5)': 'rgba(31, 46, 61, .5)'
+      , backgroundImage: firstTierMenuSelected === 'info' ? 'url(../../../static/img/sidebar_information_pre.png)' : 'url(../../../static/img/sidebar_information.png)' }"
+        @click="selectFirstTierOption('info')"></li>
+      <li class="first-tier-btn" v-tip="'信息管理'" @click="openManagementPage">...</li>
+    </ul>
+  </section>
+  <section class="second-tire-wraper" id="disasterMenu" v-if="firstTierMenuSelected === 'disaster'">
+    <ul>
+      <li @click="selectDisasterOption('tide')"><span>台风监控</span><i :class="{'on': disasterOptionSelected === 'tide'}"></i></li>
+      <li @click="selectDisasterOption('rain')"><span>降雨监控</span><i :class="{'on': disasterOptionSelected === 'rain'}"></i></li>
+      <!--<li @click="selectDisasterOption('torrent')"><span>山洪监控</span><i :class="{'on': disasterOptionSelected === 'torrent'}"></i></li>-->
+      <!--<li @click="selectDisasterOption('waterLog')"><span>内涝监控</span><i :class="{'on': disasterOptionSelected === 'waterLog'}"></i></li>-->
+      <li @click="selectDisasterOption('thunder')"><span>雷暴跟踪</span><i :class="{'on': disasterOptionSelected === 'thunder'}"></i></li>
+      <li @click="selectDisasterOption('weather')"><span>天气推演</span><i :class="{'on': disasterOptionSelected === 'weather'}"></i></li>
+    </ul>
+  </section>
+  <section class="second-tire-wraper" id="commandMenu" v-if="firstTierMenuSelected === 'command'">
+    <ul>
+      <li @click="selectCommandOption('prePlan')"><span>预案在线</span><i :class="{'on': commandOptionSelected === 'prePlan'}"></i></li>
+      <li @click="selectCommandOption('infoPublish')"><span>信息发布</span><i :class="{'on': commandOptionSelected === 'infoPublish'}"></i></li>
+      <li @click="selectCommandOption('emergency')"><span>应急处理</span><i :class="{'on': commandOptionSelected === 'emergency'}"></i></li>
+      <li @click="selectCommandOption('shipManage')"><span>渔船管理</span><i :class="{'on': commandOptionSelected === 'shipManage'}"></i></li>
+    </ul>
+  </section>
+  <section class="second-tire-wraper" id="monitorMenu" v-if="firstTierMenuSelected === 'monitor'">
+    <ul>
+      <li @click="selectMonitorOption('video')"><span>视频监控</span><i :class="{'on': monitorOptionSelected.video}"></i></li>
+      <li @click="selectMonitorOption('phone')"><span>手机直播</span><i :class="{'on': monitorOptionSelected.phone}"></i></li>
+      <li @click="selectMonitorOption('water')"><span>水文监控</span><i :class="{'on': monitorOptionSelected.water}"></i></li>
+      <li @click="selectMonitorOption('ocean')"><span>海流监控</span><i :class="{'on': monitorOptionSelected.ocean}"></i></li>
+      <li @click="selectMonitorOption('weather')"><span>气象监控</span><i :class="{'on': monitorOptionSelected.weather}"></i></li>
+      <!-- <li @click="selectMonitorOption('tide')"><span>潮汛表</span><i :class="{'on': monitorOptionSelected.tide}"></i></li> -->
+    </ul>
+  </section>
+
+  <components v-show="firstTierMenuSelected === 'disaster'" :is="disasterView"></components>
+  <components v-show="firstTierMenuSelected === 'command'"  :is="commandView"></components>
+  <components :is="phoneLiveView"></components>
+  <components v-show="firstTierMenuSelected === 'monitor'" :isWaterMonitorOn="waterMonitorView !== null" :isVideoMonitorOn="VideoMonitorView !== null" :is="weatherMonitorView"></components>
+  <components v-show="firstTierMenuSelected === 'monitor'" :isVideoMonitorOn="VideoMonitorView !== null" :is="waterMonitorView"></components>
+  <component :is="progBarView"></component>
+  <component :is="VideoMonitorView" v-show="firstTierMenuSelected === 'monitor'"></component>
+</main>

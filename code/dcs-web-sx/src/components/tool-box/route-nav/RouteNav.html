@@ -1,0 +1,37 @@
+<main id="routeNav">
+  <header class="header cf">导航<span class="close" @click="closeFunc('routeNav')">×</span></header>
+	
+	<nav class="nav">
+		<div class="pos cf">
+			<span>起</span>
+			<input type="text" placeholder="输入起点位置" v-model="startPointAddress" />
+			<i title="点击选择起点位置" @click="pickPoint('startPoint')"></i>
+		</div>
+		<div class="pos cf" style="margin: 10px 0 5px;">
+			<span>终</span>
+			<input type="text" placeholder="输入终点位置" v-model="endPointAddress" />
+			<i title="点击选择终点位置" @click="pickPoint('endPoint')"></i>
+		</div>
+	</nav>
+	<ul class="way cf">
+		<li @click="changeWay('driving')" :class="{'on': driving}"><img :src="drivingImg"></li>
+    <li @click="changeWay('walking')" :class="{'on': walking}"><img :src="walkingImg"></li>
+	</ul>
+	<div class="cf" v-if="driving">
+		<ul @click="changeStrategy('dS')" class="detail">
+			<li class="cn">时间最短</li>
+			<li :class="{'selected': speedFirst}">{{state.navPoint.speedFirst.duration}}小时</li>
+			<li :class="{'selected': speedFirst}">{{state.navPoint.speedFirst.distance}}公里</li>
+		</ul>
+		<div class="detail-line"></div>
+		<ul @click="changeStrategy('dD')" class="detail">
+			<li class="cn">距离最短</li>
+			<li :class="{'selected': distanceFirst}">{{state.navPoint.distanceFirst.duration}}小时</li>
+			<li :class="{'selected': distanceFirst}">{{state.navPoint.distanceFirst.distance}}公里</li>
+		</ul>
+	</div>
+	<ul class="walk" v-if="walking">
+		<li>{{state.navPoint.walking.duration}}小时</li>
+		<li>{{state.navPoint.walking.distance}}公里</li>
+	</ul>
+</main>

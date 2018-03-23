@@ -1,0 +1,13 @@
+<main id="ShipManagement">
+  <section class="option-tab-container">
+    <ul class="ship-option-wraper cf">
+      <li @click="selectManageOption('AIS')"><i :style="{backgroundImage: manageOptionSelected === 'AIS' ? 'url(../../../../static/img/sidebar_radio_pre.png)' : 'url(../../../../static/img/sidebar_radio.png)'}"></i>
+        <span :style="{color: manageOptionSelected === 'AIS' ? '#00bfdc' : 'white'}">AIS监控</span>
+      </li>
+      <li @click="selectManageOption('manage')"><i :style="{backgroundImage: manageOptionSelected === 'manage' ? 'url(../../../../static/img/sidebar_radio_pre.png)' : 'url(../../../../static/img/sidebar_radio.png)'}"></i>
+        <span :style="{color: manageOptionSelected === 'manage' ? '#00bfdc' : 'white'}">回港管理</span>
+      </li>
+    </ul>
+  </section>
+  <component :unfinishId="unfinishId" :finishPublishSuceess="finishPublishSuceess" :publishSuccess="publishSuccess"  :closeSelf="closePopup" :is="popupView"></component>
+</main>

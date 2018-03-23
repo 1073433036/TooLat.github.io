@@ -1,0 +1,68 @@
+<main id="ManageTable" :style="{paddingLeft: paddingWidth+'px', paddingRight: paddingWidth+'px'}">
+  <table class="table-content">
+    <tr>
+      <th><i class="check-box-icon" @click.stop="selectTableRow('all')"></i>{{tableHeader[0]}}</th>
+      <th v-for="el in tableHeaderForRender">{{el}}</th>
+      <th>操作</th>
+   </tr>
+    <tr v-for="(el, index) in tableData">
+      <td @click.stop="selectTableRow(index)" class="have-action"><i class="check-box-icon" :style="{backgroundImage: el.data.selected ? 'url(../../../static/img/sidebar_chb_pre.png)' : 'url(../../../../static/img/sidebar_chb.png)'}"></i>{{el.data.name}}</td>
+      <td v-for="(item,key) in el" v-if="key != 'data'">{{item}}</td>
+      <td class="have-action" @click="toggleOprateContainer($event, index)"><i class="oprate-icon"></i></td>
+    </tr>
+  </table>
+  <ul class="oprate-option-wraper" v-show="displayOprateContainer">
+    <li>
+      <svg width="82px" height="6px">
+        <path d="M 41,0 L 45,6 L 37,6 Z" fill="white"></path>
+      </svg>
+    </li>
+    <li @click.stop.prevent="toggleOprateContainer($event)" @mousedown="toggleHistText">查看</li>
+    <li @click.stop.prevent="toggleOprateContainer($event)" @mousedown="toggleSendText">发送</li>
+  </ul>
+
+  <section :style="{left: (eleWidth-290)/2+'px'}" id="managetablehisttext" v-if="displayHistText" class="display-hist-text popup-general" v-drag="{handle: '.draggable'}">
+    <header class="draggable">
+      <span>查看历史信息</span>
+      <i @click="toggleHistText" class="close-btn"></i>
+    </header>
+    <div class="filter-wraper cf">
+      <a>{{tableData[tableDataClickedIndex].data.person}} {{tableData[tableDataClickedIndex].phone}}</a>
+      <a class="cf"><span>分类</span><aside><i></i></aside>
+      <ul class="filter-types-wraper">
+        <li @click="changeFilterType('receive')" :class="[filterType === 'receive' ? 'selected-filter' : 'none']">接收消息</li>
+        <li @click="changeFilterType('send')" :class="[filterType === 'send' ? 'selected-filter' : 'none']">发出消息</li>
+        <li @click="changeFilterType('both')" :class="[filterType === 'both' ? 'selected-filter' : 'none']">同时显示</li>
+      </ul>
+      </a>
+      <div class="cf">
+        <span>排序</span>
+        <aside><i @click="toggleHistTextOrder('esc')" :style="{backgroundImage: histTextOrder === 'esc' ? 'url(../../../../static/img/time_up.png)' : 'url(../../../../static/img/time_up_pre.png)'}"></i>
+          <i
+            @click="toggleHistTextOrder('asc')" :style="{backgroundImage: histTextOrder === 'esc' ? 'url(../../../../static/img/time_up_pre.png)' : 'url(../../../../static/img/time_up.png)'}"></i>
+        </aside>
+      </div>
+    </div>
+    <main class="text-wraper">
+      <section v-for="el in histTextData" v-if="filterType === 'both' ? true : ((filterType === 'receive' && el.type === 0) ? 'true' : ((filterType === 'send' && el.type===1) ? true : false))">
+        <header class="cf"><a :class="[el.type === 0 ? 'send-title' : 'receive-title']">{{el.type === 0 ? '平台发送' : '用户发送'}}</a><span>{{el.datetime}}</span></header>
+        <span>{{el.text}}</span>
+      </section>
+    </main>
+    <div class="change-page"><aside><a :style="{color: histTextPageIndex === 0 ? '#a3a3a3' : '#00bfdc'}" @click="changeHistTextPage('pre')">上页</a><a :style="{color: isTheLastHistPage ? '#a3a3a3' : '#00bfdc'}" @click="changeHistTextPage('next')">下页</a></aside></div>
+  </section>
+
+  <section :style="{left: (eleWidth-290)/2+'px'}" v-if="displaySendText" class="send-text popup-general" v-drag="{handle: '.draggable'}">
+    <header class="draggable">
+      <span>发送消息</span>
+      <i class="close-btn" @click="toggleSendText"></i>
+    </header>
+    <div class="popup-textarea">
+      <aside>
+        <textarea name="" id="" style="margin: 0; height:100px" v-model="sendTextString" placeholder="请输入发布内容"></textarea>
+      </aside>
+    </div>
+    <div class="primary-btn" style="width: 100%; margin: 0 0 0 0;"><span @click="sendTextToPersen">发送</span></div>
+  </section>
+  
+</main>

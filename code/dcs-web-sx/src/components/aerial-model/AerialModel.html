@@ -1,0 +1,34 @@
+<main id="AerialModel" class="cf">
+   <div class="select" @mouseenter="display.townPopup = true" @mouseleave="display.townPopup = false">
+    <span>{{ selectedTownText }}</span>
+    <i v-if="selectedTownText !== '选择镇'" @click="clearTown"></i>
+    <ul class="options scrollbar" v-show="display.townPopup">
+      <li :class="['opt', {'on': town.townId === selectedTownKey}]" 
+          v-for="town of towns" 
+          @click="toggleTown(town)"
+          :key="town.townId">{{ town.name }}</li>
+    </ul>
+  </div>
+  <div style="margin-left: 3px" class="select" 
+      @mouseenter="display.modelPopup = true" 
+      @mouseleave="display.modelPopup = false">
+    <span>{{ selectedModel }}</span>
+    <!-- <i v-if="selectedModel !== '航拍模型'" @click="clearModel"></i> -->
+    <ul class="options scrollbar" v-show="display.modelPopup">
+      <li v-for="(opt, key) in models" 
+          :class="['opt', {'on': selectedModel === key}]" 
+          @click="flyToModel(key)">{{ key }}</li>
+    </ul>
+  </div>
+  <!-- <div style="margin-left: 3px" class="select" 
+      @mouseenter="display.waterPopup = true" 
+      @mouseleave="display.waterPopup = false"
+      v-if="selectedModel in waterFlood">
+    <span>{{ waterFloodText }}</span>
+    <ul class="options scrollbar" v-show="display.waterPopup">
+      <li v-for="type in 9" 
+          :class="['opt', {'on': selectedWaterType === type}]" 
+          @click="toggleWaterType(type)">{{ type }}级</li>
+    </ul>
+  </div>  -->
+</main>

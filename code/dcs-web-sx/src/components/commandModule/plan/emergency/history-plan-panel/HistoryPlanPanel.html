@@ -1,0 +1,46 @@
+<main id="historyPlanPanel" class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <span>历史预案</span>
+    <i @click="closeFunc"></i>
+  </header>
+  <div class="table-wrapper">
+    <table cellpadding="0" cellspacing="0">
+      <thead><th v-for="th in thead">{{ th }}</th></thead>
+      <tbody>
+        <tr v-for="plan in historyPlans">
+          <td v-for="key in tbody">{{ plan[key] }}</td>
+          <td class="opera" @click="openDetailPanel(plan)">查看</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="historyDetailPanel" class="popup-general" v-if="detailPanel.show">
+    <div for="dragging"></div>
+    <header class="draggable">
+      <span>{{ detailPanel.info.name }}</span>
+      <i @click="closeDetailPanel"></i>
+    </header>
+    <div class="cont">
+      <div class="info cf" v-for="(item, key) in detailParams">
+        <span class="cn">{{ item }}</span>
+        <div class="val" :title="detailPanel.info[key]">{{ detailPanel.info[key] }}</div>
+      </div>
+      <div class="summary-title">预案总结</div>
+      <div class="summary">
+        <div class="info cf">
+          <span class="cn">编写人</span>
+          <div class="val">{{ detailPanel.info.username }}</div>
+        </div>
+        <div class="info cf">
+          <span class="cn">编写时间</span>
+          <div class="val">{{ detailPanel.info.datetime }}</div>
+        </div>
+        <div class="info cf"><span class="cn">总结内容</span></div>
+        <div class="summary-text">{{ detailPanel.info.summary }}</div>
+      </div>
+    </div>
+  </div>
+
+</main>

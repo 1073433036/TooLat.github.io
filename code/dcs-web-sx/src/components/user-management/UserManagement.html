@@ -1,0 +1,14 @@
+<main id="userManagement">
+	<header class="hd">
+		<div class="btn" @click="toggleUserManagement_global(false)">返回</div>
+		<span>{{ systemTitle_global }}</span>
+	</header>
+	<div class="nav">
+		<div :class="['nav-btn', {'on': navOptionSelect === 'info'}]" @click="togglePanel('info')">信息管理</div>
+		<div :class="['nav-btn', {'on': navOptionSelect === 'multiple'}]" @click="togglePanel('multiple')">预案管理</div>
+		<div :class="['nav-btn', {'on': navOptionSelect === 'user'}]" @click="togglePanel('user')">用户中心</div>
+	</div>
+	<div class="cont">
+		<components :is="currentView"></components>
+	</div>
+</main>

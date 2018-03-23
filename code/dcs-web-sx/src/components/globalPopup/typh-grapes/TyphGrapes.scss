@@ -1,0 +1,116 @@
+@import'../../../styles/colorTheme';
+$black-font-color: #1c1c1c;
+#TyphGrapes {
+    position: absolute;
+    width: 360px;
+    overflow: visible;
+    border-radius: 4px;
+}
+
+.typh-point-time {
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: center;
+    a,
+    div {
+        position: absolute;
+    }
+    div {
+        width: 34px;
+        height: 34px;
+        background-image: url(../../../../static/img/typh_time_left.png);
+        background-position: center;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        &:first-of-type {
+            left: 42px;
+        }
+        &:last-of-type {
+            right: 42px;
+            transform: rotateZ(180deg);
+        }
+        &:hover {
+            background-image: url(../../../../static/img/typh_time_left_pre.png);
+        }
+    }
+    a {
+        text-align: center;
+        transform: translateX(-50%);
+        font-size: 14px;
+        color: $theme-color;
+        white-space: nowrap;
+    }
+}
+
+.slider-control {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.popup-option-wraper {
+    select {
+        width: 120px;
+    }
+    aside {
+        label {
+            font-size: 14px;
+            color: $theme-color;
+        }
+    }
+}
+
+
+/*.forsee-times-wraper{
+  border-top: solid 1px #d6dce5;
+}*/
+
+* {
+    user-select: none !important
+}
+
+.affect-title {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #6d6c6c;
+    margin-bottom: 15px;
+}
+
+.affect-detail-wrapper {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    ul {
+        width: 100%;
+    }
+    li {
+        margin-bottom: 7px;
+        float: left;
+        width: 50%;
+        color: #1c1c1c;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        span {
+            color: #f4434b;
+        }
+    }
+}
+.publish-popup {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    textarea {
+        margin: 0 20px;
+        padding: 5px;
+        width: 198px;
+        height: 50px;
+        border: 1px solid #999;
+    }
+}

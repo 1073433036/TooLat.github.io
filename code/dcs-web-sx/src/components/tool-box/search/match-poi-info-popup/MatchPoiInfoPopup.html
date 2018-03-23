@@ -1,0 +1,32 @@
+<main id="matchPoiPopup" v-drag="{handle: '.draggable'} " class="popup-general">
+  <div for="dragging"></div>
+  <header class="title draggable">
+    <span>数据统计</span>
+    <i class="close-icon" @click="toggleGeoPopup_global(false)"></i>
+  </header>
+  <div class="content">
+    <ul class="poi-list cf">
+      <li v-for="(opt, key) in matchPoiCollection_global" :class="{'on': poi[key].selected}" @click="togglePoi(key)">
+        {{ poi[key].text }} 数量：{{ Object.keys(matchPoiCollection_global[key]).length }}
+      </li>
+    </ul>
+    <div class="btn-wrapper cf">
+      <div class="select-btn" style="margin: 0 20px 0 70px;" @click="toggleAllSelected">{{ allSelected ? '清空' : '全选' }}</div>
+      <div class="select-btn" @click="isPublishPopupOn = !isPublishPopupOn">靶向发布</div>
+    </div>
+  </div>
+
+  <main v-drag="{handle: '.draggable'} " class="publish-popup popup-general" v-if="isPublishPopupOn">
+    <div for="dragging"></div>
+    <header class="title draggable">
+      <span>靶向发布</span>
+      <i class="close-icon" @click="isPublishPopupOn = false"></i>
+    </header>
+    <div class="cont">
+      <textarea v-model="content" placeholder="请填写说明"></textarea>
+      <div class="primary-btn" style="margin: 0; text-align: center; width: 100%;">
+        <span @click="publish">发布</span>
+      </div>
+    </div>
+  </main>
+</main>

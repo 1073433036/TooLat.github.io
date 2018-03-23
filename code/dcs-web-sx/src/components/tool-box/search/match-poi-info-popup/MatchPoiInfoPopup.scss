@@ -1,0 +1,61 @@
+@import'../../../../styles/colorTheme.scss';
+#matchPoiPopup {
+  position: absolute;
+  top: 120px;
+  right: 100px;
+  width: 300px;
+  z-index: 10;
+  overflow: visible;
+  .content {
+    padding: 10px;
+    .poi-list {
+      li {
+        float: left;
+        width: 50%;
+        padding: 4px 0;
+        cursor: pointer;
+        &.on { color: $theme-color; }
+        span {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 6px;
+          border: 1px solid rgb(186, 204, 207);
+          background: url(../../../../../static/img/sidebar_close.png) no-repeat center / 7px 7px;
+          &:hover {
+            border: 1px solid $theme-color;
+            background: url(../../../../../static/img/sidebar_close_pre.png) no-repeat center / 7px 7px;
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      padding-top: 10px;
+      .select-btn {
+        float: left;
+        width: 60px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        background-color: $theme-color;
+        border-radius: 3px;
+        &:hover { background: rgba(0, 191, 220, .8) }
+      }
+    }
+  }
+  .publish-popup {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    textarea {
+      margin: 0 20px;
+      padding: 5px;
+      width: 198px;
+      height: 50px;
+      border: 1px solid #999;
+    }
+  }
+}

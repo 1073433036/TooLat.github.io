@@ -1,0 +1,27 @@
+<div id="userLogin" v-if="loginPage">
+  <div class="login-title"></div>
+  <div class="cont">
+    <div class="login-win">
+      <div style="position: relative">
+        <div class="login-win-title">账户登录</div>
+        <div class="userName login-opt">
+          <em></em>
+          <input type="text" v-model="account" placeholder="请输入用户名" @keyup.13="login">
+        </div>
+        <div class="password login-opt">
+          <em></em>
+          <input type="password" v-model="password" placeholder="请输入密码" @keyup.13="login">
+        </div>
+        <div class="remeber-password">
+          <input type="checkbox" id="loginRemPw" v-model="remPw">
+          <label for="loginRemPw">记住账号密码</label>
+        </div>
+        <div class="tip" v-if="loginTip">
+          <div class="logo"></div>
+          <div class="text">账号或密码错误</div>
+        </div>
+        <div class="btn-login" @click="login">登录</div>
+      </div>
+    </div>
+  </div>
+</div>

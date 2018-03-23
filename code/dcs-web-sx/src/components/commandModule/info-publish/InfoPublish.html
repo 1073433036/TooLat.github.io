@@ -1,0 +1,126 @@
+<main id="InfoPublish" v-drag="{handle: '.draggable'} " class="popup-general ">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>信息发布</span>
+    <i @click="toggleInfoPublish_global(false)"></i>
+  </header>
+  <section class="popup-tab-wraper" style="margin-bottom: 0;">
+    <ul class="tab-option-container">
+      <li @click="selectTabOption('responsible') " class="tab-option " :class="[tabOptionSelected==='responsible' ?
+  'tab-option-selected' : ''] ">靶向发布</li>
+      <li @click="selectTabOption('province') " class="tab-option " :class="[tabOptionSelected==='province' ?
+  'tab-option-selected' : ''] ">省突发布</li>
+      <li @click="selectTabOption('textManage') " class="tab-option " :class="[tabOptionSelected==='textManage' ?
+  'tab-option-selected' : ''] ">短信管理</li>
+    </ul>
+  </section>
+
+  <fieldset class="province-wraper" v-if="tabOptionSelected === 'province'">
+    <ul>
+      <li class="popup-option-wraper">
+        <a>统计分析</a>
+        <aside class="cf">
+          <div>大喇叭- <span>{{speakerCount}}</span>个</div>
+          <div>LED显示屏- <span>{{ledCount}}</span>个</div>
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a>消息渠道</a>
+        <aside>
+          <ul class="publish-chanel-wraper">
+            <li v-for="(opt, key) in disastersPubways" @click="togglePubways(key)"
+                 :class="{'on': disastersPubwaysSelected.includes(key)}">
+              <span></span><a>{{ opt }}</a>
+            </li>
+          </ul>
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a>灾害类型</a>
+        <aside>
+          <select v-model="disasterTypeSelected" @change="toggleDisasterType">
+            <option :value="null" disabled>请选择灾害类型</option>
+            <option v-for="(el, key) in disasters" :value="key">{{ el.show }}</option>
+          </select>
+        </aside>
+      </li>
+      <li class="popup-option-wraper" v-show="disasterTypeSelected">
+        <a>特定灾害</a>
+        <aside>
+          <select v-model="subTypeSelected">
+            <option v-for="el of (disasters[disasterTypeSelected] ? disasters[disasterTypeSelected].subs : [])" 
+                :value="el.val">{{ el.show }}</option>
+          </select>
+        </aside>
+      </li>
+       <li class="popup-level-wraper cf">
+        <a>灾害等级</a>
+        <aside>
+          <ul>
+            <li v-for="(opt, key) in disastersLevels" 
+                :class="{'on': disasterLevelSelected === key}" 
+                @click="disasterLevelSelected = key">
+              <span :style="{backgroundColor: opt}"></span><a>{{ levelFormat[Number(key) - 1] }}级</a>
+            </li>
+          </ul>
+        </aside>
+      </li>
+      <li>
+        <select-publish-target style="padding-top: 0;" :title="'发布区域'" :selectType="'town'" :selectionChange="provinceTownSelectionChange"></select-publish-target>
+      </li>
+      <li><textarea v-model="textOfProvince" style="display: block" placeholder="填写发布内容"></textarea></li>
+      <li class="publish-btn-wraper cf">
+        <div class="cf">
+          <span @click="publishProvince">发布</span>
+        </div>
+      </li> 
+    </ul>
+  </fieldset>
+
+   <fieldset v-if="tabOptionSelected === 'responsible'">
+    <select-publish-target :title="'政府部门'" :selectType="'orgs'" :selectionChange="orgsSelectedChanged"></select-publish-target>
+    <select-publish-target :title="'发布区域'" :selectType="'town'" :selectionChange="townSelectedChanged"></select-publish-target>
+    <select-publish-target :title="'单位企业'" :selectionChange="departmentTypeSelectedChanged"></select-publish-target>
+    <div class="popup-textarea">
+      <a>信息内容</a>
+      <aside>
+        <textarea cols="30" rows="10" placeholder="填写发布内容" v-model="textOfPublish"></textarea>
+      </aside>
+    </div>
+    <div class="primary-btn" style="margin: 0; text-align: center; width: 100%;">
+      <span @click="publishMessage">发布</span>
+    </div>
+  </fieldset>
+
+  <fieldset v-if="tabOptionSelected === 'textManage'" id="textManage">
+    <ul>
+      <li class="popup-option-wraper">
+        <a style="margin-left: 10px">部门单位</a>
+        <aside style="float: left; margin-left: 20px;">
+          <select style="width: 204px" v-model="msgDepartmentSelected">
+            <option :value="''">请选择部门单位</option>
+            <option v-for="el in msgDepartmentData" :value="el">{{el}}</option>   
+          </select>
+        </aside>
+      </li>
+      <li class="popup-option-wraper">
+        <a style="margin-left: 10px">选择分类</a>
+        <aside style="float: left; margin-left: 20px;"><select style="width: 204px" v-model="msgCategorySelected">
+          <option :value="''">请选择分类</option>
+          <option v-for="el in msgCategoryData" :value="el">{{el}}</option>   
+        </select></aside>
+      </li>
+      <li class="popup-option-wraper search-wraper">
+        <a style="margin-left: 10px">模糊查找</a>
+        <aside><select name="" id="" v-model="searchTextType">
+          <option value="name">人名</option>
+          <option value="tag">标签</option>   
+        </select><input type="text" placeholder="请输入关键字（可为空）" v-model="searchText"></aside>
+      </li>
+    </ul>
+    <div class="primary-btn" style=" text-align: center; width: 100%"><span @click="searchTextPublishTarget">搜索</span></div>
+  </fieldset>
+  <component :searchText="searchText" :searchTextType="searchTextType" :msgDepartmentSelected="msgDepartmentSelected" :msgCategorySelected="msgCategorySelected"
+    :closeFunc="closeSearchResultPanel" :is="searchResultView"></component> 
+
+</main>

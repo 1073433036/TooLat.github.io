@@ -1,0 +1,10 @@
+<div class="popup" id="emgSummaryPopup">
+  <div class="title">
+    <div class="text">预案总结</div>
+    <div class="close" @click="closeFunc">×</div>
+  </div>
+  <div class="content">
+    <textarea placeholder="输入总结内容" v-model="content"></textarea>
+    <div class="save-btn" @click="finishPlan">保存</div>
+  </div>
+</div>

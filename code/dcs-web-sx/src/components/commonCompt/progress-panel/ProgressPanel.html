@@ -1,0 +1,71 @@
+<main id="ProgressPanel">
+  <main class="play-control-container rounded-corner">
+    <fieldset class="play-time-line-wrapper">
+      <section class="play-time-line">
+        <div class="datetime-indicator shadow"
+             :style="{transition: isProgressTransition ? `all ${animationDuration - 1}s linear` : '', transform: `translateX(${progress}px)`}"
+             v-show="isPlaying !== 'stop'">
+          <article>
+            <div>{{playingDateString.date}}</div>
+            <div>{{playingDateString.hour}}</div>
+          </article>
+          <svg width="5px"
+               height="3px">
+            <path d="M 0,0 L 5,0 L 3,2.5 Z"></path>
+          </svg>
+        </div>
+        <div style="position: absolute; z-index: 28"
+             class="background-bar-wrapper"
+             v-on:click.stop="changeRangeByClick">
+          <span class="gray-bar"
+                :style="{transition: isProgressTransition ? `all ${animationDuration - 1}s linear` : '', width: progress + 'px'}"></span>
+          <span class="color-bar"
+                :style="{transition: isProgressTransition ? `all ${animationDuration - 1}s linear` : '', width: progress + 'px'}"></span>
+          <em class="end-point-wrapper">
+            <span class="end-point"
+                  :style="{transition: isProgressTransition ? `all ${animationDuration - 1}s linear` : '', transform: `translateX(${progress}px)`}"></span>
+          </em>
+        </div>
+      </section>
+      <section class="time-indicator">
+        <span class="time-indicator-item"
+              v-for="el in 9"></span>
+      </section>
+      <section class="time-wrapper"
+               style="position: absolute; z-index: 30">
+        <span v-for="el in forseeData"
+              v-on:mouseout="isShowingTipDateString = false"
+              v-on:mouseover="displayTipDateStringPanel(el)"
+              v-on:click="changeRangeByHour(el)">{{el * multiplier}}</span>
+      </section>
+      <section class="scroll-bar">
+        <span class="start-box"></span>
+        <div class="scroll-btn"
+             v-on:mousedown="startScroll"
+             :style="{width: scrollBtnWidth + '%', left: actualPositionX + 'px'}"></div>
+        <span class="end-box"></span>
+      </section>
+    </fieldset>
+    <fieldset class="play-btn-wrapper"
+              v-on:click="togglePlaying">
+      <span :class="[isPlaying === 'playing' ? 'playing' : 'stop']"></span>
+    </fieldset>
+    <fieldset class="stop-btn-wrapper"
+              v-on:click="isPlaying = 'stop'">
+      <span></span>
+    </fieldset>
+  </main>
+  <main class="datetime-indicator shadow"
+        v-show="isShowingTipDateString"
+        style="z-index: 29;left: -10px; top: 10px"
+        :style="{transform: `translateX(${tipDatetimeIndex * 27}px)`}">
+    <article>
+      <div>{{tipDateString.date}}</div>
+      <div>{{tipDateString.hour}}</div>
+    </article>
+    <svg width="5px"
+         height="3px">
+      <path d="M 0,0 L 5,0 L 3,2.5 Z"></path>
+    </svg>
+  </main>
+</main>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>WebSocket Image Display</h1>
+        <input type="button" id="button" value="image" ><br>
+        <img id="image"></<img>
+		
+        <script>
+		var ws = new WebSocket("ws://10.148.83.228:8086/websocket");
+ 
+		ws.onopen = function() {
+			console.log('open')
+			ws.send("I'm client");
+		};
+		
+		ws.onmessage = function (e) { // display the image
+			var res = JSON.parse(e.data)
+			console.log(res)
+		};
+		 
+		ws.onclose = function() {
+			alert("Closed");
+		};
+		 
+		ws.onerror = function(err) {
+			alert("Error: " + err);
+		};
+		
+		ws.binaryType = "arraybuffer";
+		var button = document.getElementById("button");
+		button.onclick = function() {
+			ws.send("image"); // send the fetch request
+		};
+		</script>
+    </body>
+</html>

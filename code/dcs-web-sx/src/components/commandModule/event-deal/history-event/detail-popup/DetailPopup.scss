@@ -1,0 +1,38 @@
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#HistoryEventPopup {
+  position: absolute;
+  top: -85px;
+  left: calc(-100% + 40px);
+  width: 300px;
+  .cont {
+    padding: 10px;
+    .info {
+      position: relative;
+      margin-bottom: 7px;
+      height: 26px;
+      line-height: 26px;
+      .info-cn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 70px;
+        text-indent: 10px;
+      }
+      .bl { 
+        position: absolute;
+        top: 0;
+        left: 70px;
+        display: inline-block;
+        width: 210px;
+        text-indent: 10px;
+        @extend .text-overflow;
+        color: #000; 
+      }
+    }
+  }
+}

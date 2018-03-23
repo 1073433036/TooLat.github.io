@@ -1,0 +1,49 @@
+@import'../../../../styles/colorTheme.scss';
+#VideoPopup {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 280px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #1f2b3d;
+  header {
+    position: relative;
+    padding: 0 10px;
+    line-height: 26px;
+    cursor: move;
+    span {
+
+    }
+    .close {
+      position: absolute;
+      top: 3px;
+      right: 10px;
+      display: inline-block;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 24px;
+      color: #999;
+      cursor: pointer;
+      &:hover { color: $theme-color; }
+    }
+  }
+  .cont {
+    height: calc(100% - 26px);
+  }
+  img {
+    margin-left: 10px;
+  }
+  .screen-btn {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 20px;
+    height: 17px;
+    background: url(../../../../../static/img/screen.png) no-repeat center / 100% 100%;
+    cursor: pointer;
+  }
+}

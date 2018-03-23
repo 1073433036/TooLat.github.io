@@ -1,0 +1,6 @@
+<main id="TyphTimelineEntry" :style="{transform: timelineTransform, transition: timelineTransition}">
+  <typh-search :maxTyphYear="maxTyphYear" :minTyphYear="minTyphYear" />
+  <keep-alive>
+    <components :is="timelineView" :storeTyphYearData="storeTyphYearData" />
+  </keep-alive>
+</main>

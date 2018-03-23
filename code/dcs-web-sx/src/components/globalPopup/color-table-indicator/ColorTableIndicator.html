@@ -1,0 +1,21 @@
+<main id="ColorTableIndicator" v-if="colorTableData.length > 0" :style="{transform: typhTimelineStatus_global !== 'search' ? 'translateY(-104px)' : ''}">
+  <section class="pre-btn" v-bind:class="{'n-pre': pageIndex === 0}" @click="pageGoUp"></section>
+  <section class="content-wraper cf">
+    <ul class="color-bar">
+      <li v-for="el in colorData[pageIndex]" v-bind:style="{backgroundColor: el.color}"></li>
+    </ul>
+    <ul class="color-unit">
+      <li v-for="el in colorData[pageIndex]">{{el.value}}</li>
+      <li style="text-align:  center !important">{{elementUnit[colorTableData[colorTableIndex].enName]}}</li>
+    </ul>
+  </section>
+  <section class="next-btn" v-bind:class="{'n-next': pageIndex === (hasPages-1)}" @click="pageGoDown"></section>
+  <section class="category-control" @click="toggleColorBarCategory"><span>...</span></section>
+  <section class="color-bar-category" v-if="displayColorBarCategory">
+    <ul :style="{width: colorTableData.length * 80 + 'px'}">
+      <li v-for="(el, index) in colorTableData" :style="{backgroundColor: colorTableIndex === index ? 'rgba(0,0,0,.5)' : 'rgba(31,43,61,.5)'}"
+        @click="changeColorTable(index)">{{el.cnName}}</li>
+    </ul>
+  </section>
+
+</main>

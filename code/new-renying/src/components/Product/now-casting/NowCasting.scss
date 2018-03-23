@@ -1,0 +1,89 @@
+#NowCasting {
+  position: absolute;
+  height: 610px;
+  width: 440px;
+  z-index: 1200;
+  right: 20px;
+  top: 120px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px #ddd;
+  
+  .nowActual{
+   
+    .nowActual_title{
+      
+    }
+    .nowActual_con{
+      .nowActual_con_top{
+        height: 260px;
+        .nowActual_con_topleft{
+          position: relative;
+          width: 30px;
+          writing-mode: vertical-rl;
+          -ms-writing-mode: lr-tb;
+          height: 260px;
+          letter-spacing: 7px;
+          p{
+            position: absolute;
+            top: 80px;
+            left: -6px;
+          }
+          
+        }
+        .nowActual_con_topright{
+          ul.radar_products{
+            li.iconProductO{
+              i{
+                background: url(~Img/home_chb.png)no-repeat 0 0/300% 100%;
+              }
+            &.on{
+              i{
+                background: url(~Img/home_chb.png)no-repeat -36px 0/300% 100%;
+              }
+            }
+            }
+          }
+        }
+      }
+      .nowActual_con_bottom{
+        .nowActual_con_bottomleft{
+          height: 230px;
+          span:nth-child(1){
+            position: absolute;
+            top: 63px;
+            left: -4px;
+            display: inline-block;
+            writing-mode: vertical-lr;
+            -ms-writing-mode: tb-rl;
+            letter-spacing: 3px;
+          }
+          span:nth-child(2){
+            position: absolute;
+            top: 135px;
+            left: -5px;
+            writing-mode: vertical-rl;
+            -ms-writing-mode: lr-tb;
+            letter-spacing: 3px;
+          }
+
+        }
+        .nowActual_con_bottomright{
+          ul.qpef_products{
+            li.iconProductT{
+              i{
+                width: 20px;
+                height: 20px;
+                background: url(~Img/home_radio.png)no-repeat 0 0/200% 100%;
+              }
+            &.on{
+              i{
+                background: url(~Img/home_radio.png)no-repeat -20px 0/200% 100%;
+              }
+            }
+            }
+          }
+        }
+      }
+    }
+  }
+}

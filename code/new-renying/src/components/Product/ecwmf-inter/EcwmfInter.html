@@ -1,0 +1,87 @@
+<main id="EcwmfInter" class="popup_content" v-drag>
+  <div class="Ecwmf_title">
+    <header>
+      <p class="popup_title">
+        <span class="popup_titleIn">ECWMF 细网络模式产品</span>
+        <i class="close_btn"   v-on:click="toggleProductView_global({id: productId, action: false})"></i>
+        <i class="hide_btn"></i></p>
+      
+    </header>
+  </div>
+  <div class="popup_con">
+    <div class="popup_con_left">
+
+    </div>
+    <div class="popup_con_right">
+      <ul>
+        <li class="cf">
+          <dl>
+            <dt>日期</dt>
+            <dd>
+              <el-date-picker
+                v-model="date"
+                type="date"
+                placeholder="选择日期">
+              </el-date-picker>
+            </dd>
+          </dl>
+        </li>
+        <li class="cf">
+          <dl>
+            <dt>UTC</dt>
+            <dd>
+              <span class="utc_zero ecwmf_check" @click="toggleUtcTime(0)" :class="{'on' : 0 === utcSelected}"><i></i><span>00时</span></span>
+              <span class="utc_twelve ecwmf_check" @click="toggleUtcTime(12)" :class="{'on' : 12 === utcSelected}"><i></i><span>12时</span></span>
+            </dd>
+          </dl>
+        </li>
+        <li class="cf">
+          <dl>
+            <dt>范围</dt>
+            <dd>
+              <div>
+                <span class="ecwmf_check" @click="toggleScope('eurasian')" :class="{'on' : 'eurasian' === scopeSelected}"><i></i><span>欧亚</span></span>
+                <span class="ecwmf_check" @click="toggleScope('china')" :class="{'on' : 'china' === scopeSelected}"><i></i><span>中国</span></span>
+              </div>
+              <div>
+                <span class="ecwmf_check" @click="toggleScope( 'southchina')" :class="{'on' : 'southchina' === scopeSelected}"><i></i><span>华南</span></span>
+                <span class="ecwmf_check" @click="toggleScope('ocean')" :class="{'on' : 'ocean' === scopeSelected}"><i></i><span>海洋</span></span>
+              </div>
+              <div>
+                <span class="ecwmf_check" @click="toggleScope('guangdong')" :class="{'on' : 'guangdong' === scopeSelected}"><i></i><span>广东</span></span>
+                <span class="ecwmf_check" @click="toggleScope('monostatic')" :class="{'on' : 'monostatic' === scopeSelected}"><i></i><span>单站</span></span>
+              </div>
+            </dd>
+          </dl>
+        </li>
+        <li class="cf">
+          <dl>
+            <dt>预报产品</dt>
+            <dd>
+              <!-- <div class="forecase_product"> -->
+                <!-- <span>海平面气压</span><i></i> -->
+                <select class="forecase_product">
+                  <option value="">海平面气压</option>
+                </select>
+              <!-- </div> -->
+            </dd>
+          </dl>
+        </li>
+        <li class="cf">
+          <dl>
+            <dt>时效</dt>
+            <dd>
+                <!-- <div class="time_effect"> -->
+                  <!-- <span>048</span><i></i> -->
+                  <select class="time_effect">
+                      <option value="">048</option>
+                    </select>
+                <!-- </div> -->
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</main>

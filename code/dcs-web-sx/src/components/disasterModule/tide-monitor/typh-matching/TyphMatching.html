@@ -1,0 +1,28 @@
+<main id="TyphMatching"
+      class="popup-general"
+      v-drag="{handle: '.draggable'}">
+  <div class="dragging"
+       for="dragging"></div>
+  <header class="draggable">
+    <span>台风匹配</span>
+    <i v-on:click="toggleTyphMatching(false)"></i>
+  </header>
+  <fieldset v-loading="loading">
+    <section class="matching-result-container">
+      <ul>
+        <li v-for="el in matchingResultData"
+            class="popup-option-wraper">
+          <a>{{el.name}}</a>
+          <aside>
+            <select v-on:change="effectOptionChange(el.type, el.value)"
+                    v-model="el.value"
+                    style="width: 160px; padding-left: 6px;">
+              <option v-for="item in el.option"
+                      :value="item.value">{{item.name ? item.name : item.value.intId + ' ' + item.value.name}}</option>
+            </select>
+          </aside>
+        </li>
+      </ul>
+    </section>
+  </fieldset>
+</main>

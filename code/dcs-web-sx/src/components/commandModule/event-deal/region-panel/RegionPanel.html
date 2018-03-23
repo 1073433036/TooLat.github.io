@@ -1,0 +1,28 @@
+<main id="RegionPanel" v-drag="{handle: '.draggable'}">
+  <div class="title draggable">
+    <span>添加应急区域</span>
+    <i @click="togglePanel"></i>
+  </div>
+  <div class="info">
+    <span class="info-cn">标注方式</span>
+    <select v-model="nav" @change="toggleNav">
+      <option v-for="item of navs" :value="item">{{ item }}</option>
+    </select>
+  </div>
+  <div class="info" v-show="nav === '绘制标注'">
+    <span class="info-cn">绘制标注</span>
+    <span :class="['draw-btn', {'on': circle}]" @click="drawCircle">圈选</span>
+  </div>
+  <div class="area-name" v-show="isAddCircle">
+    <div class="center-radius">{{ circleInfo.lon + ',' + circleInfo.lat + ' 半径' + circleInfo.radius + 'km' }}</div>
+    <input type="text" v-model="areaName" placeholder="请输入绘制区域描述"></input>
+  </div>
+  <div class="info" v-show="nav === '行政地区'">
+    <span class="info-cn">行政地区</span>
+    <select v-model="area" @change="toggleArea">
+      <option value="all">全县</option>
+      <option v-for="(town, key) in towns" :value="key">{{ town }}</option>
+    </select>
+  </div>
+  <div class="add-btn" @click="addRegion">添加</div>
+</main>

@@ -1,0 +1,101 @@
+<main id="TyphGrapes"
+      v-drag="{handle: '.draggable'}"
+      class="popup-general"
+      :style="{top: 200 + 'px', left: 200 + 'px'}">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <span>台风影响分析</span>
+    <i v-on:click="toggleTyphGrapesPopup_global(false)"></i>
+  </header>
+  <fieldset class="loading-modal"
+            v-loading="loading"
+            :element-loading-text="loadingText">
+    <section class="typh-point-time cf">
+      <a>{{ typhClickingData_global.pointData.datetime.slice(0,13) }}时</a>
+      <!-- <div v-on:click="toggleTyphPoint('pre')" :class="{'diable-moving-action': isClickingLastTyphPoint_global}">
+      </div> -->
+      <!-- <a>{{datetimeSelected.text}}</a> -->
+      <!-- <div v-on:click="toggleTyphPoint('next')" :class="{'diable-moving-action': index === 0 }">
+      </div> -->
+    </section>
+    <section class="popup-tab-wraper" v-show="windCircleTabOption.length"
+             style="padding-bottom: 0">
+      <div class="tab-option-container">
+        <span :class="[windLevelSelected === el.level ? 'tab-option-selected' : '']"
+              class="tab-option"
+              v-for="el in windCircleTabOption"
+              v-on:click="selectWindLevel(el.level, el.value)">{{el.name}}</span>
+      </div>
+    </section>
+    <section class="affect-title" v-show="!windCircleTabOption.length">无风圈信息</section>
+    <section class="affect-title" v-show="Object.keys(windDetailData).length">受影响的企业单位</section>
+    <section class="affect-detail-wrapper">
+      <ul class="cf">
+        <li v-for="el in windDetailData" v-if="el.number">{{el.name}} <span :title="el.number">{{el.number}}</span></li>
+      </ul>
+    </section>
+    <!--     <section class="popup-tab-wraper" style="margin-bottom: 0">
+      <div class="tab-option-container"><span v-on:click="tabOptionSelected = 'grapes'" class="tab-option" :class="[tabOptionSelected === 'grapes' ? 'tab-option-selected' : '']" style="width: 100px">Grapes模式</span><span v-on:click="tabOptionSelected = 'tide'" class="tab-option" :class="[tabOptionSelected === 'tide' ? 'tab-option-selected' : '']" style="width: 100px">风暴潮</span></div>
+    </section>
+    <section class="option-container cf" v-show="tabOptionSelected === 'grapes'">
+      <ul>
+        <li class="popup-option-wraper" style="padding-top: 0">
+          <a>元素</a>
+          <aside>
+            <select id="" v-on:change="optionChange" v-model="elementSelected">
+              <option v-for="(el,index) in typhEleData"
+                      :value="el.value">{{el.text}}</option>
+            </select>
+          </aside>
+        </li>
+        <li class="popup-option-wraper" >
+          <a>高度</a>
+          <aside>
+            <select v-on:change="optionChange" id="" v-model="heightSelected">
+              <option v-for="(el,index) in typhHeightHolder"
+                      :value="el.value">{{el.text}}</option>
+            </select>
+          </aside>
+        </li>
+      </ul>
+    </section>
+    <transition name="fade">
+      <section class="forsee-times-wraper cf" v-show="isClickingLastTyphPoint_global && tabOptionSelected === 'tide'" style="border-radius: 0;">
+        <div class="popup-option-wraper">
+          <a>预报时次</a>
+          <aside>
+            <label>{{forseeDatetime}}</label>
+          </aside>
+        </div>
+        <div class="slider-control">
+          <el-slider v-model="hourSelected" :format-tooltip="formatTooltip" :min="0" :max="72">
+          </el-slider>
+        </div>
+      </section>
+    </transition>
+    <section class="primary-btn" v-show="tabOptionSelected === 'tide'" style="border-radius: 0 0 4px 4px; border-top: solid 1px white">
+      <span v-on:click="modelAnalysis" style="padding: 0 10px;">分析</span>
+    </section> -->
+
+    <div class="btn-wrapper cf" v-show="Object.keys(windDetailData).length">
+      <div class="primary-btn" style="margin: 0; text-align: center; width: 100%;">
+        <span @click="togglePublishPopup">靶向发布</span>
+      </div>
+    </div>
+  </fieldset>
+
+  <main v-drag="{handle: '.draggable'} " class="publish-popup popup-general" v-if="isPublishPopupOn">
+    <div for="dragging"></div>
+    <header class="title draggable">
+      <span>靶向发布</span>
+      <i class="close-icon" @click="isPublishPopupOn = false"></i>
+    </header>
+    <div class="cont">
+      <textarea v-model="content" placeholder="请填写发布内容"></textarea>
+      <div class="primary-btn" style="margin: 0; text-align: center; width: 100%;">
+        <span @click="publish">发布</span>
+      </div>
+    </div>
+  </main>
+  
+</main>

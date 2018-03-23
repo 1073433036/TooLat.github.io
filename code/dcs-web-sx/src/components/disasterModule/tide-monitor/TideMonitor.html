@@ -1,0 +1,85 @@
+<main id="TideMonitor">
+  <section class="option-tab-container">
+    <div class="cx-table typh-option">
+      <span>潮汐表</span>
+      <i class="typh-matching-img"
+         v-on:click="toggleTideTable_global"
+         v-tip="'打开潮汐表'"></i>
+    </div>
+    <div class="typh-option">
+      <span>历史台风</span>
+      <i class="typh-history-img"
+         v-on:click="toggleTyphTimelineStatus_global('history')"
+         v-tip="'打开历史台风'"></i>
+    </div>
+    <ul class="current-typh cf"
+        style="padding-top: 5px">
+      <li class="cancel-hover">
+        <span>当前台风 :</span>
+      </li>
+      <li class="cancel-hover"
+          v-if="currentTyph.length === 0">
+        <span style="color: #f4435b">当前没有台风</span>
+      </li>
+      <li :class="[ typhSelected_global == el.tsId ? 'typh-selected' : '']"
+          v-for="el in currentTyph">
+        <span v-on:click="selectTyph(el.tsId)">{{el.id}} {{el.name}}</span>
+        <em v-on:click="toggleTyphMatching(true, el.tsId)"
+            style="right: 20px">
+          <figure></figure>
+        </em>
+      </li>
+      <li :class="[ typhSelected_global == el.tsId ? 'typh-selected' : '']"
+          v-for="el in containedTyph_global"
+          v-if="!el.isCurrentTyph">
+        <span v-on:click.stop="selectTyph(el.tsId)"
+              style="width: 100px">{{el.id}} {{el.name}}</span>
+        <em v-on:click.stop="toggleTyphMatching(true, el.tsId)">
+          <figure></figure>
+        </em>
+        <i v-if="!el.isCurrentTyph"
+           v-on:click.stop="deleteHistTyph_global(el.tsId)">
+          <figure></figure>
+        </i>
+      </li>
+    </ul>
+  </section>
+  <section style="position: absolute; right: 126px; z-index: 30"
+           v-if="totalPointCount &gt; 0 & typhSelected_global !== null"
+           :style="{top: playingTimeLineY + 'px', transform: typhTimelineStatus_global !== 'search' ? 'translateY(-112px)': 'translateY(0)'}"
+           class="progress-panel">
+    <fieldset>
+      <section class="element-wrapper rounded-corner"
+               style="cursor: pointer ;border-radius: 3px"
+               v-on:click="isElementSelectionShow = !isElementSelectionShow">
+        <span>{{elementSelectedString}}</span>
+      </section>
+    </fieldset>
+    <fieldset v-show="isElementSelectionShow"
+              class="element-selection-wrapper rounded-corner">
+      <div v-on:click="selectElement(el.type, el.name)"
+           v-for="el in elementOption">{{el.name}}</div>
+    </fieldset>
+    <fieldset>
+      <progress-panel :forseeData="totalPointCount"
+                      :isLoadData="isLoadData"
+                      :toggleLoadData="toggleLoadData"
+                      :onPlaying="onPlaying"
+                      :isContinuePlaying="true"
+                      :onPlayingStop="onPlayingStop"
+                      :onForseeHourOver="onForseeHourOver"
+                      :playingDateString="playingDateString"
+                      :tipDateString="tipDateString"
+                      :isGlobalTimeZone="true"
+                      :onPlayingStart="onPlayingStart"
+                      :forceStopPlaying="forceStopPlaying"
+                      :elementSelected="elementSelected"
+                      :onPlayingChange="onPlayingChange"
+                      :animationDuration="5" />
+    </fieldset>
+  </section>
+  <component :is="typhMatchingView"
+             :typhTsIdForMatching="typhTsIdForMatching"
+             :isTyphMatchingPopupOn="isTyphMatchingPopupOn"
+             :toggleTyphMatching="toggleTyphMatching"></component>
+</main>

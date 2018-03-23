@@ -1,0 +1,23 @@
+<main id="TideTable" v-drag="{handle: '.draggable'} " class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>潮汐表</span>
+    <i @click="toggleTideTable_global"></i>
+  </header>
+  <div class="cont">
+    <ul class="cf">
+      <li @click="selectOption('湛江')" :class="{'on': option === '湛江'}">
+        <i></i><span>湛江</span>
+      </li>
+      <li @click="selectOption('下泊')" :class="{'on': option === '下泊'}">
+        <i></i><span>下泊</span>
+      </li>
+    </ul>
+    <div class="prev date-btn" @click="changeDate('prev')"></div>
+    <div id="tideDate" class="date" @click="openCalendar">{{ date }}</div>
+    <div class="next date-btn" @click="changeDate('next')"></div>
+    <div class="wrapper">
+      <iframe :src="`http://ocean.cnss.com.cn/index.php?m=resource&amp;c=tide&amp;port=${option}&amp;date=${date}`" frameborder="0"></iframe>
+    </div>
+  </div>
+</main>

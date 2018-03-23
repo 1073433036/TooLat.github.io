@@ -1,0 +1,13 @@
+.oprate-tip-fade-enter-active {
+    transition: opacity, transform .2s ease-out;
+}
+
+.oprate-tip-fade-leave-active {
+    transition: opacity, transform .2s ease-out;
+}
+
+.oprate-tip-fade-enter,
+.oprate-tip-fade-leave-active {
+    transform: translateY(30px);
+    opacity: 0;
+}

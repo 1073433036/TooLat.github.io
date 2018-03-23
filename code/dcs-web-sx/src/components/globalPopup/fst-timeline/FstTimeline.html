@@ -1,0 +1,27 @@
+<main id="FstTimeline" v-show="listItemForRender.length >0">
+  <ul class="timeline cf">
+    <li v-for="(el, index) in listItemForRender" :style="{width: 100/listItemForRender.length +'%', backgroundColor: (isRainFstTime ? rainSeledTimeSelected : seledTime_global) === el.seledTime ? '#00bfdc' : 'rgba(31,34,61,.5)'}"
+      @mouseover="indicateOtherTime(index)" @mouseout="closeIndicator" @click="selectSeledTime(index)"></li>
+  </ul>
+    <ul class="rain-fst-indicator">
+      <li v-for="el in listItemForRender">-1</li>
+    </ul>
+  <div class="datetime-indicator shadow" for="actual-selected" :style="{transform: `translateX(${seledTimeSelectedIndex* 28+ 'px'})`}">
+    <article>
+      <div>{{dateString}}</div>
+      <div>{{timeString}}</div>
+    </article>
+    <svg width="5px" height="3px">
+      <path d="M 0,0 L 5,0 L 3,2.5 Z"></path>
+    </svg>
+  </div>
+  <div class="datetime-indicator" for="mouseOverTip" v-if="displaySeledTimeForMouseOver" :style="{transform: `translateX(${mouseOverIndex*28+ 'px'})`}">
+    <article>
+      <div>{{dateStringForMouseOver}}</div>
+      <div>{{timeStringForMouseOver}}</div>
+    </article>
+    <svg width="5px" height="3px" >
+      <path d="M 0,0 L 5,0 L 3,2.5 Z"></path>
+    </svg>
+  </div>
+</main>

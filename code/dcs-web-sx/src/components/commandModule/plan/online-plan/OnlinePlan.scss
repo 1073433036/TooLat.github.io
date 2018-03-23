@@ -1,0 +1,179 @@
+@import'../../../../styles/colorTheme.scss';
+#OnlinePlan {
+  position: relative;
+  color: #6d6c6c;
+  font-size: 14px;
+  line-height: 26px;
+  .info {
+    position: relative;
+    margin-bottom: 7px;
+    height: 26px;
+    .info-cn {
+      position: relative;
+      padding: 0 25px 0 20px;
+    }
+    select {
+      width: 150px;
+      height: 26px;
+      color: #000;
+      text-indent: 10px;
+      border: 1px solid #dfe6ec;
+      border-radius: 2px;
+    }
+    .msg-type {
+      position: absolute;
+      top: 0;
+      left: 105px;
+      height: 26px;
+      span {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        text-indent: 18px;
+        cursor: pointer;
+        &:before {
+          position: absolute;
+          content: '';
+          top: 7px;
+          left: 0;
+          width: 12px;
+          height: 12px;
+          background: url(../../../../../static/img/sidebar_chb.png) no-repeat center / 100%;
+        }
+        &:hover, &.on { color: $theme-color; }
+        &.on:before { background: url(../../../../../static/img/sidebar_chb_pre.png) no-repeat center / 100%; }
+      }
+    }
+    .btn {
+      float: left;
+      width: 58px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .start-btn {
+      margin-left: 170px;
+      color: #fff;
+      background: $theme-color;
+      border: 1px solid $theme-color;
+      &:hover { background: rgba(0, 191, 220, 0.8); }
+    }
+    .end-btn {
+      margin-left: 100px;
+      color: #fff;
+      background: #f4434b;
+      border: 1px solid #f4434b;
+      &:hover { background: rgba(244, 67, 75, 0.8); }
+    }
+    .level-btn {
+      background: #fff;
+      border: 1px solid $theme-color;
+    }
+  }
+  .duty-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #fff;
+    background: $theme-color;
+    &:hover { background: rgba(0, 191, 220, 0.8); }
+  }
+  ul.duty {
+    margin: 0 0 7px 28px;
+    max-height: 78px;
+    width: 320px;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: auto;
+    li {
+      position: relative;
+      .duty-wrap {
+        width: 270px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #000;
+      }
+      span {
+        position: absolute;
+        padding: 0 5px;
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover { color: $theme-color; }
+      }
+    }
+  }
+  ul.org {
+    margin: 0 0 7px 28px;
+    max-height: 78px;
+    width: 320px;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: auto;
+    li {
+      float: left;
+      color: #000;
+      padding-right: 5px;
+    }
+  }
+  .duty-popup {
+    position: absolute;
+    top: 30px;
+    left: 75px;
+    width: 250px;
+    ul {
+      margin-left: 20px;
+      width: calc(100% - 40px);
+      max-height: 104px;
+      border: 1px solid #eee;
+      overflow: auto;
+      li {
+        position: relative;
+        em {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+          background: url(../../../../../static/img/sidebar_complete.png) no-repeat 0 0 / 200% 100%;
+          &.on { background: url(../../../../../static/img/sidebar_complete.png) no-repeat 100% 0 / 200% 100%; }
+        }
+      }
+    }
+    input[type="text"] {
+      margin: 10px 0;
+      margin-left: 20px;
+      padding: 0 5px;
+      width: calc(100% - 52px);
+      line-height: 22px;
+      border: 1px solid #eee;
+      border-radius: 2px;
+    }
+    .per-btn {
+      margin: 0 0 10px 95px;
+      width: 60px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
+      color: #fff;
+      background: $theme-color;
+      &:hover { background: rgba(0, 191, 220, 0.8); }
+      cursor: pointer;
+    }
+  }
+}
+
+.scrollbar {
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-thumb {
+    background: $theme-color;
+    border-radius: 3px;
+  }
+}

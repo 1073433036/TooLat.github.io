@@ -1,0 +1,57 @@
+@import'../../../styles/colorTheme';
+#LivePanel {
+    position: absolute !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+    right: 225px;
+    top: -350px;
+    width: 1000px;
+    height: 600px;
+    z-index: 10;
+}
+
+.live-container {
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    height: 540px;
+    background-color: lightblue;
+    position: relative;
+}
+
+.self-live-wraper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    z-index: 22;
+    height: 190px;
+}
+
+span.live-btn {
+    display: inline-block;
+    width: 36px;
+    height: 36px; // background-position-x: 0;
+    background-position-x: 0;
+    background-image: url(../../../../static/img/sidebar_PIP.png);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 999;
+    cursor: pointer;
+    &:hover {
+        background-position-x: -36px;
+    }
+}
+
+span.publish-btn {
+    background-position-y: 0;
+}
+
+span.stop-btn {
+    background-position-y: -36px;
+    right: 30px;
+    top: 40px;
+}

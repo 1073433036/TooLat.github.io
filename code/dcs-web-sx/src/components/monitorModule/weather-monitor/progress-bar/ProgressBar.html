@@ -1,0 +1,64 @@
+<main id="progBar" class="cf rounded-corner" :style="{transform: `translateY(${transformY}px)`}">
+  <main class="weather-option-container ">
+    <section @click.stop="openCalendar" class="rounded-corner" id="progbarDatePicker">{{dateString}}</section>
+    <section v-if="elementSelected === 'ocean'" @click.stop="isHourSelectionShow = !isHourSelectionShow" class="rounded-corner">
+      </span>{{hourSelectedString}}</span>
+    </section>
+    <section v-if="elementSelected === 'tracking'" @click.stop="toggleHourPanel" class="rounded-corner" style="width: 56px;">
+      <span>{{ trackingHourSelectedString }}时</span>
+    </section>
+    <section v-if="elementSelected === 'tracking'" @click.stop="toggleMinutePanel" class="rounded-corner" style="width: 56px;">
+      <span>{{ trackingMinuteSelectedString }}分</span>
+    </section>
+  </main>
+  <main class="time-category">{{timeCategory}}</main>
+  <main class="play-control-container rounded-corner">
+    <fieldset class="play-time-line-wrapper">
+      <section class="play-time-line">
+        <div class="datetime-indicator shadow" :class="[isProgressTransition ? 'progress-transition' : '']" v-show="isPlaying" :style="{transform: `translateX(${progress}px)`}">
+          <article>
+            <div>{{playingDateString}}</div>
+            <div>{{playingHourString}}</div>
+          </article>
+          <svg width="5px" height="3px">
+            <path d="M 0,0 L 5,0 L 3,2.5 Z"></path>
+          </svg>
+        </div>
+        <div class="background-bar-wrapper"  @click.stop="changeRangeByClick" :style="{'width': 8 + (forseeHourNum > 10 ? 9 : forseeHourNum - 1) * 27 + 'PX' }">
+          <span class="gray-bar" :class="[isProgressTransition ? 'progress-transition' : '']" :style="{width: progress + 'px'}"></span>
+          <span class="the-color-bar" :class="[isProgressTransition ? 'progress-transition' : '']" :style="{width: progress + 'px'}"></span>
+          <em class="end-point-wrapper">
+          <span class="end-point":class="[isProgressTransition ? 'progress-transition' : '']" :style="{transform: `translateX(${progress}px)`}"></span>
+          </em>
+        </div>
+      </section>
+      <section class="time-indicator">
+        <span class="time-indicator-item" v-for="el in 9" v-if="forseeHourNum > 10"></span>
+        <span class="time-indicator-item" v-for="el in 6" v-if="elementSelected === 'tracking'"></span>
+      </section>
+      <section class="the-time-wrapper">
+        <span v-if="elementSelected === 'tracking'" @click="changeRangeByHour(0)" style="margin-right: 6px;">0</span>
+        <span v-for="el in forseeHourData[elementSelected]" @click="changeRangeByHour(el)">{{el * hourMultiplier}}</span>
+      </section>
+      <section class="the-scroll-bar" v-show="forseeHourNum > 10">
+        <span class="the-start-box"></span>
+        <div class="the-scroll-btn" @mousedown="startScroll" :style="{width: ((259 / hourItemTotalWidth) * 100).toFixed(1) + '%', left: actualPositionX + 'px'}"></div>
+        <span class="the-end-box"></span>
+      </section>
+    </fieldset>
+    <fieldset class="play-btn-wrapper" @click="togglePlaying">
+      <span :class="[isPlaying ? 'playing' : 'stop']"></span>
+    </fieldset>
+  </main>
+  <main v-show="isHourSelectionShow" class="element-selection-wrapper hour-selection rounded-corner" style="left: 96px; top: -45px">
+    <div :class="{'on': el === hourSelected}" @click="selectHour(el, text)" v-for="(el, text) in leadTimeForRender">{{ text }}时</div>
+  </main>
+  <main v-show="isTrackingHourShow" id="hourSel" class="element-selection-wrapper hour-selection rounded-corner" style="left: 97px; top: -89px; width: 56px; max-height: 88px;">
+    <div :class="{'on': trackingHourSelected === 0}" style="text-align: center;" @click="selectTrackingTime('hour', 0)">00</div>
+    <div :class="{'on': hour === trackingHourSelected}" style="text-align: center;" @click="selectTrackingTime('hour', hour)" v-for="hour in 23">{{ hour > 9 ? hour : '0' + hour }}</div>
+  </main>
+  <main v-show="isTrackingMinuteShow" id="minSel" class="element-selection-wrapper hour-selection rounded-corner" style="left: 154px; top: -89px; width: 56px; max-height: 88px;">
+    <div :class="{'on': trackingMinuteSelected === 0}" style="text-align: center;" @click="selectTrackingTime('min', 0)">00</div>
+    <div :class="{'on': minute === trackingMinuteSelected}" style="text-align: center;" @click="selectTrackingTime('min', minute)" v-for="minute in 59">{{ minute > 9 ? minute : '0' + minute }}</div>
+  </main>
+</main>

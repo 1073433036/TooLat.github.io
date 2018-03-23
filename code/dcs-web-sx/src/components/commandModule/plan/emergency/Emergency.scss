@@ -1,0 +1,352 @@
+$theme-color: #00bfdc;
+$boder-style: 1px solid #dfe6ec;
+.i-popup {
+  z-index: 10;
+  position: absolute;
+  top: 100%;
+}
+
+#templatePopup {
+  color: #6d6c6c;
+  font-size: 14px;
+  line-height: 26px;
+  .temp-name {
+    position: relative;
+    margin-bottom: 5px;
+    text-align: center;
+    span {
+      margin-left: -10px;
+      position: relative;
+      color: $theme-color;
+      cursor: pointer;
+      &:after {
+        position: absolute;
+        top: 8px;
+        right: -15px;
+        border-top: 6px solid $theme-color;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: '';
+      }
+      .inner-popup {
+        @extend .i-popup;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        background-color: #fff;
+        box-shadow: 0 0 4px -2px #aaa;
+        cursor: pointer;
+        .names {
+          line-height: 24px;
+          border-top: $boder-style;
+          border-right: $boder-style;
+          border-left: $boder-style;
+          &:last-child { border-bottom: $boder-style; }
+          &:hover { background: #eee; }
+        }
+      }
+    }
+  }
+  .info {
+    position: relative;
+    margin-bottom: 7px;
+    height: 26px;
+    .info-cn {
+      position: relative;
+      padding: 0 25px 0 20px;
+      &.extend {
+        cursor: pointer;
+        .cn {
+          position: relative;
+          padding-right: 12px;
+          &:after {
+            position: absolute;
+            top: 6px;
+            right: 0;
+            content: '';
+            border-top: 4px solid $theme-color;
+            border-right: 3px solid transparent;
+            border-left: 3px solid transparent;
+          }
+        }
+        .inner-popup {
+          @extend .i-popup;
+          left: 15px;
+          .top {
+            position: relative;
+            height: 12px;
+            &:after {
+              position: absolute;
+              bottom: -1px;
+              left: 20px;
+              content: '';
+              border-right: 6px solid transparent;
+              border-bottom: 10px solid #dfe6ec;
+              border-left: 6px solid transparent;
+            }
+          }
+          .cont {
+            padding: 5px 10px 8px;
+            width: 348px;
+            background-color: #fff;
+            border: $boder-style;
+            box-shadow: 0 0 4px -2px #aaa;
+            .desc { 
+              color: $theme-color; 
+              span {
+                float: right;
+                color: #e8212a;
+                cursor: pointer;
+                &:hover { text-decoration: underline }
+              }
+            }
+            .list li { 
+              float: left;
+              padding: 0 5px;
+              color: #a3a3a3;
+              &:hover,&.on { color: #000; }
+            }
+          }
+        }
+      }
+    }
+    input[type="text"] {
+      padding: 0 10px;
+      width: 128px;
+      height: 24px;
+      border: $boder-style;
+      border-radius: 2px;
+      &.lg { width: 155px !important; }
+    }
+    select {
+      width: 150px;
+      height: 26px;
+      color: #6c6c6c;
+      text-indent: 10px;
+      border: $boder-style;
+      border-radius: 2px;
+    }
+    .val {
+      position: absolute;
+      top: 0;
+      left: 114px;
+      width: 240px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      span { padding-right: 7px; }
+    }
+    .add-btn {
+      float: right;
+      margin-right: 15px;
+      padding: 0 10px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
+      border: 1px solid $theme-color;
+      cursor: pointer;
+      &:hover { background: rgba(223,233,235, 0.8); }
+    }
+  }
+  .duties {
+    margin: 5px 20px 0;
+    width: 90%;
+    max-height: 122px;
+    overflow: auto;
+    border: $boder-style;
+    border-radius: 2px;
+    &::-webkit-scrollbar { width: 6px; }
+    &::-webkit-scrollbar-thumb {
+      background: $theme-color;
+      border-radius: 3px;
+    }
+    .duty {
+      position: relative;
+      height: 30px;
+      &:hover { background-color: #eee; }
+      .duty-cn {
+        padding: 0 15px;
+        width: 290px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 30px;
+      }
+      .close {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        color: $theme-color;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  .btns{
+    margin: 10px 0;
+    div {
+      float: left;
+      width: 69px;
+      color: #fff;
+      line-height: 26px;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .start-btn {
+      margin-left: 125px;
+      background: $theme-color;
+      &:hover { background: rgba(0, 191, 220, 0.8); }
+    }
+    .history-btn {
+      margin-left: 10px;
+      width: 77px;
+      height: 24px;
+      color: #6d6c6c;
+      border: 1px solid $theme-color;
+      &:hover { background: rgba(223, 233, 235, 0.8); }
+    }
+    .add-temp-btn {
+      margin-left: 80px;
+      background: $theme-color;
+      &:hover { background: rgba(0, 191, 220, 0.8); }
+    }
+    .del-temp-btn {
+      margin-left: 10px;
+      background: #f4434b;
+      &:hover { background: rgba(244, 67, 75, 0.8); }
+    }
+    .new-temp-btn { 
+      margin-left: 10px;
+      width: 77px;
+      height: 24px;
+      color: #6d6c6c;
+      border: 1px solid $theme-color;
+      &:hover { background: rgba(223, 233, 235, 0.8); }
+    }
+  }
+  .duties-popup {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px #1f2b3d;
+    .title {
+      position: relative;
+      margin-bottom: 10px;
+      .text {
+        float: left;
+        color: #2c3e50;
+        text-indent: 15px;
+        font-weight: bold;
+      }
+      .close {
+        float: right;
+        width: 30px;
+        line-height: 30px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    .cont {
+      padding: 0 10px 10px;
+      ul {
+        &.manage-ul {
+          max-height: 208px;
+          li {
+            margin-top: 2px;
+            &:last-child { margin-top: 10px; }
+          }
+        }
+        &.duty-ul {
+          max-height: 182px;
+        }
+        &.manage-ul,&.duty-ul {
+          overflow: auto;
+          &::-webkit-scrollbar { width: 6px; }
+          &::-webkit-scrollbar-thumb {
+            background: $theme-color;
+            border-radius: 3px;
+          }
+        }
+      }
+      li {
+        position: relative;
+        em {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+          background: url(../../../../../static/img/sidebar_complete.png) no-repeat 0 0 / 200% 100%;
+          &.on { background: url(../../../../../static/img/sidebar_complete.png) no-repeat 100% 0 / 200% 100%; }
+        }
+        .duty-input {
+          margin: 0;
+          padding: 0 5px;
+          width: 178px;
+          line-height: 28px;
+        }
+        .edit,.del,.add {
+          display: inline-block;
+          padding-left: 5px;
+          cursor: pointer;
+        }
+        .edit,.add { 
+          color: $theme-color; 
+          &:hover { color: rgba(0, 191, 220, 0.8); }
+        }
+        .del { 
+          color: #f4434b;
+          &:hover { color: rgba(244, 67, 75, 0.8); }
+        }
+        .add { padding-left: 20px; }
+      }
+      textarea {
+        margin-top: 10px;
+        padding: 10px;
+        width: 218px;
+        height: 48px;
+      }
+      input[type="text"] {
+        margin: 5px 0;
+        width: 228px;
+        padding: 5px;
+        line-height: 22px;
+        border: $boder-style;
+        border-radius: 2px;
+      }
+      .btn-wrap {
+        margin-top: 10px;
+        div {
+          float: left;
+          width: 65px;
+          line-height: 25px;
+          text-align: center;
+          color: #fff;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        .add-duty-btn {
+          margin-left: 45px;
+          background-color: $theme-color;
+          &:hover { background-color: rgba(0, 191, 220, 0.8); }
+        }
+        .close-duty-btn {
+          margin-left: 20px;
+          background-color: rgb(244, 67, 75);
+          &:hover { background-color: rgba(244, 67, 75, 0.8); }
+        }
+      }
+    }
+  }
+}

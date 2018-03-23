@@ -1,0 +1,55 @@
+<main id="SatelliteProduct" class="popup_content" v-drag>
+  <div class="Satellite_title">
+    <header>
+        <p class="popup_title">
+          <span class="popup_titleIn">卫星云反演产品</span>
+          <i class="close_btn" v-on:click="toggleProductView_global({id: productId, action: false})"></i>
+          <i class="hide_btn"></i>
+        </p>          
+    </header>
+  </div>
+  <div class="popup_con">
+    <div class="popup_con_left">
+      <img :src="imgUrl">
+    </div>
+    <div class="popup_con_right">
+        <ul>
+            <li class="cf">
+              <dl>
+                <dt>监测产品</dt>
+                <dd>
+                  <select class="satellite_img" v-model="productSelected">
+                    <option>云顶温度</option>
+                  </select>
+                </dd>
+              </dl>
+            </li>
+            <li class="cf">
+              <dl>
+                <dt>日期</dt>
+                <dd>
+                  <el-date-picker
+                    v-model="value1"
+                    type="date"
+                    placeholder="选择日期"
+                    :picker-options="pickerOptions0">
+                  </el-date-picker>
+                </dd>
+                
+              </dl>
+            </li>
+            <li class="cf">
+              <dl>
+                <dt>时间</dt>
+                <dd>
+                  <select class="time_selected" v-model="unitSelected">
+                    <option>{{i}}</option>
+                  </select>
+                </dd>
+              </dl>
+            </li>
+            
+          </ul>
+    </div>
+  </div>
+</main>

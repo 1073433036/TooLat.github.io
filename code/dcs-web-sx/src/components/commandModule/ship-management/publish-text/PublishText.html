@@ -1,0 +1,22 @@
+<main id="PublishText" class="popup-general" v-drag="{handle: '.draggable'}">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <span>回港管理</span>
+    <i @click="closeSelf"></i>
+  </header>
+  <ul>
+    <li>
+      <select-town :title="'选择镇'" :selectType="'fisherTown'" :selectionChange="townSelectedChange"></select-town>
+    </li>
+    <li class="popup-textarea">
+      <a>发布内容</a>
+      <aside>
+        <textarea v-model="textContent" name="" id="" placeholder="请输入内容"> 
+        </textarea>
+      </aside>
+    </li>
+    <li class="primary-btn" style="margin: 0; width: 100%; text-align:  center">
+      <span @click="publishContent">发布</span>
+    </li>
+  </ul>
+</main>

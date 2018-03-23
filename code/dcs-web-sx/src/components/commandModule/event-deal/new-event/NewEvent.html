@@ -1,0 +1,21 @@
+<main id="NewEvent">
+  <div class="info">
+    <div class="info-cn">事件名称</div>
+    <input class="name" type="text" v-model="name" placeholder="请输入事件名称">
+  </div>
+  <div class="info">
+    <div class="info-cn">描述</div>
+  </div>
+  <div class="textarea">
+    <textarea class="description" type="text" v-model="description" placeholder="请输入事件描述"></textarea>
+  </div>
+  <div class="info">
+    <div class="info-cn">应急点</div>
+    <div :class="['add-btn', {'on': regionView}]" @click="toggleRegionPanel" title="添加应急地点">添加</div>
+  </div>
+  <region-model :regions="regions" :deleteRegions="deleteRegions" />
+  <div class="primary-btn">
+    <span @click="startEventDeal">新建</span>
+  </div>
+  <component :is="regionView" :togglePanel="toggleRegionPanel" :addRegions="addRegions"></component>
+</main>

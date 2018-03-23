@@ -1,0 +1,58 @@
+@import'../../../../styles/colorTheme.scss';
+#emgAddReleasePopup {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 270px;
+  width: 280px;
+  .title { cursor: move; }
+  .content {
+    padding: 0 20px 10px;
+    .tl {
+      line-height: 26px;
+    }
+    ul.orgs {
+      height: 88px;
+      border-radius: 4px;
+      border: 1px solid #eee;
+      overflow: auto;
+      li {
+        line-height: 22px;
+        float: left;
+        cursor: pointer;
+        &.on {
+          color: $theme-color;
+          text-decoration: underline;
+        }
+        &:hover { text-decoration: underline; }
+      }
+    }
+    textarea {
+      margin: 5px 0 10px;
+      padding: 5px 10px;
+      width: 218px;
+      height: 30px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+    }
+    .btn {
+      margin-left: 90px;
+      width: 60px;
+      line-height: 22px;
+      text-align: center;
+      color: #fff;
+      background: $theme-color;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover { background: rgba(0, 191, 220, .8) }
+    }
+  }
+}
+
+.scrollbar {
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-thumb {
+    background: $theme-color;
+    border-radius: 3px;
+  }
+}

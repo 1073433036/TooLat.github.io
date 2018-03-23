@@ -1,0 +1,41 @@
+<main id="WaterLevelWarningTable" v-drag="{handle: '.draggable'}" class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <a>水位报警点</a>
+    <i @click="toggleWaterLevelTablePopup_global(false)"></i>
+  </header>
+  <div class="table-wrapper scrollbar">
+    <table>
+      <tr>
+        <th><em @click="selectOpt('all')" :class="{'on': isSelectAll}"></em>全选</th>
+        <th>名称</th>
+        <th>管理员</th>
+        <th>电话</th>
+        <th>警告水位</th>
+        <th>当前水位</th>
+      </tr>
+      <tr v-for="el in warningDataForRender">
+          <th><em @click="selectOpt(el.id)" :class="{'on': selectedKey.includes(el.id)}"></em></th>
+          <th>{{el.name}}</th>
+          <th>{{el.manager}}</th>
+          <th>{{el.cellphone}}</th>
+          <th>{{el.warnwaterlevel}}</th>
+          <th>{{el.curwaterlevel}}</th>
+      </tr>
+    </table>
+  </div>
+  <footer>
+    <div class="page-size" @mouseenter="isPageSizePopupOn = true" @mouseleave="isPageSizePopupOn = false">
+      {{ pageSize }}
+      <ul v-show="isPageSizePopupOn">
+        <li v-for="size of pageSizes" @click="togglePageSize(size)" :class="{'on': size === pageSize}">{{ size }}</li>
+      </ul>
+    </div>
+    <aside>
+      <div @click="toggleIndex('prev')" :style="{color: pageIndex === 1 ? '#a3a3a3' : '#00bfdc'}">上页</div>
+      <div @click="toggleIndex('next')" :style="{color: pageIndex === pageCount ? '#a3a3a3' : '#00bfdc'}">下页</div>
+    </aside>
+    <div class="btn" @click="sendInfo">靶向发布</div>
+  </footer>
+  <component :is="infoView" :closeFn="closeInfoPopup" :warningDataFormat="warningDataFormat" :selectedKey="selectedKey"></component>
+</main>

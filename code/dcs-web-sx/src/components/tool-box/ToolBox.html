@@ -1,0 +1,13 @@
+<main id="ToolBox">
+  <ul class="cf">
+    <!--<li class="map-layer" @mouseenter="isMapLayerOn = true" @mouseleave="isMapLayerOn = false">
+      <ul class="layers" v-if="false"><li @click="toggleLayer"></li></ul>
+    </li>-->
+    <li :class="['map-layer', {'on': selectedOpt === 'layer'}]" title="地图" @click="toggleOpt('layer')"></li>
+    <li :class="['route-nav', {'on': selectedOpt === 'routeNav'}]" title="导航" @click="toggleOpt('routeNav')"></li>
+    <li :class="['ranging', {'on': selectedOpt === 'ranging'}]" title="测距" @click="toggleOpt('ranging')"></li>
+    <li :class="['measure', {'on': selectedOpt === 'measure'}]" title="面积测量" @click="toggleOpt('measure')"></li>
+    <li :class="['search', {'on': selectedOpt === 'search'}]" title="搜索" @click="toggleOpt('search')"></li>
+  </ul>
+  <component :is="currentView" :closeFunc="toggleOpt"></component>
+</main>

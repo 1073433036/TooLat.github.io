@@ -1,0 +1,260 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  font-family: "Microsoft YaHei", "微软雅黑";
+  min-width: 1000px;/*no*/
+  overflow: hidden;
+}
+
+textarea {
+  font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+fieldset, img {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-weight: normal;
+  font-style: normal;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+abbr, acronym {
+  border: 0;
+}
+
+.cf:after, .cf:before {
+    content: '';
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.ns {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}
+.el-table__body, .el-table__footer, .el-table__header{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  table-layout:inherit;
+}
+.el-textarea__inner{
+  overflow-x: hidden !important;
+}
+
+//表格的按钮样式
+.infoTab_btn{
+  width: 31px;
+  height:30px;
+  background-size:30px;
+  background-repeat:no-repeat;
+  overflow: hidden;
+  padding: 0px;
+  //float: left;
+  background-position: 0px;
+}
+.el-button{
+  transition: all .3s !important;
+}
+.tab_btn_1{
+  background-image: url("../assets/imgs/infoManage/table_edit_1.png");
+}
+.tab_btn_1:hover{
+  background-image: url("../assets/imgs/infoManage/table_edit_2.png");
+}
+.tab_btn_1:active{
+  background-image: url("../assets/imgs/infoManage/table_edit_3.png");
+}
+.tab_btn_2{
+  background-image: url("../assets/imgs/infoManage/table_delet_1.png");
+}
+.tab_btn_2:hover{
+  background-image: url("../assets/imgs/infoManage/table_delet_2.png");
+}
+.tab_btn_2:active{
+  background-image: url("../assets/imgs/infoManage/table_delet_3.png");
+}
+.tab_btn_3{
+  background-image: url("../assets/imgs/infoManage/table_look_1.png");
+}
+.tab_btn_3:hover{
+  background-image: url("../assets/imgs/infoManage/table_look_2.png");
+}
+.tab_btn_3:active{
+  background-image: url("../assets/imgs/infoManage/table_look_3.png");
+}
+.tab_btn_4{
+  background-image: url("../assets/imgs/infoManage/table_download_1.png");
+}
+.tab_btn_4:hover{
+  background-image: url("../assets/imgs/infoManage/table_download_2.png");
+}
+.tab_btn_4:active{
+  background-image: url("../assets/imgs/infoManage/table_download_3.png");
+}
+
+
+//element ui 输入框
+.el-input__inner{
+  box-sizing: border-box!important;
+}
+
+//element时间选择下拉滚动的样式修改
+.el-time-spinner__list::after, .el-time-spinner__list::before{
+  display: none;
+}
+.el-time-panel__content::after, .el-time-panel__content::before{
+  display: none;
+}
+.el-time-spinner__wrapper .el-scrollbar__wrap:not(.el-scrollbar__wrap--hidden-default){
+  padding-bottom: 0px;
+}
+
+//灾情上报部分element表单label字体大小样式
+#DisasterInformationReport .el-form-item__label{
+  font-size: 12px!important;/*no*/
+  width: 120px!important;/*no*/
+}
+#DisasterInformationReport .el-form-item__error{
+  margin-left: 20px;/*no*/
+}
+#DisasterInformationReport .width200 .el-form-item__error{
+  margin-left: 0px;/*no*/
+}
+
+
+//信息管理按钮样式新增 删除 导入 升级 降级
+.infoManageBtn{
+  height: 30px;
+  width: 100px;
+  line-height: 29px;
+  border: none;
+  outline: none;
+  text-align: center;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  float: left;
+  border-radius: 3px;/*no*/
+  overflow: hidden;
+}
+.infoManageBtn.infoManageBtn_del{
+  background: #EB414F;
+  color: #ffffff;
+}
+.infoManageBtn_del:hover{
+  background: #d93c48;
+}
+.infoManageBtn_del:active{
+  background: #EB414F;
+}
+.infoManageBtn_add{
+  background: #11A9F5;
+  color: #ffffff;
+}
+.infoManageBtn_add:hover{
+  background: #0f9adf;
+}
+.infoManageBtn_add:active{
+  background: #11A9F5;
+}
+.infoManageBtn_entry{
+  background: white;
+  color:#11A9F5 ;
+  border: 1px solid #11A9F5!important;/*no*/
+  line-height: 27px;
+}
+.infoManageBtn_entry:hover{
+  color:#000;
+  border: 1px solid #000!important;/*no*/
+}
+.infoManageBtn_entry:active{
+  color:#11A9F5;
+  border: 1px solid #11A9F5!important;/*no*/
+}
+.buttonUpLoad{
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  float: left;
+  .el-upload{
+    float: left;
+  }
+}
+
+
+//信息管理灾情上报审核按钮样式
+.auditBtn{
+  text-align: center;
+  width: 60px;/*no*/
+  background: white;
+  outline: none;
+  border:none;
+  height: 26px;/*no*/
+  cursor: pointer;
+}
+.auditBtn_ok{
+  border: 1px solid #11A9F5;
+  color: #11A9F5;
+}
+.auditBtn_ok:active{
+  background:#11A9F5;
+  color: white;
+}
+.auditBtn_nok{
+  border: 1px solid #EB414F;
+  color: #EB414F;
+}
+.auditBtn_nok:active{
+  background:#EB414F;
+  color: white;
+}
+
+//信息管理表头文字居中
+.tableHeader div{
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>广东山洪地质灾害气象预警系统</title>
+    <link rel="shortcut icon" href="./static/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./static/zmap/zmap.css" />
+    <script src="./static/zmap/zmap.js"></script>
+    <!--<script src="./static/zmap/workerShader.min.js"></script>-->
+    <script src="./static/zmap/zmap.meteo.min.js"></script>
+
+
+    <script src="./static/zmap/lib/leaflet.latlng-graticule.js"></script>
+    <link rel="stylesheet" href="./static/zmap/lib/MarkerCluster.css">
+    <script src="./static/zmap/lib/leaflet.markercluster.js"></script>
+    <style>
+      #browser-update-tip {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div id="browser-update-tip">您的浏览器版本过低，请升级</div>
+    <script>
+      (function() {
+        if(navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<9)
+          document.getElementById('browser-update-tip').style.display = 'block'
+      })()
+    </script>
+  </body>
+</html>

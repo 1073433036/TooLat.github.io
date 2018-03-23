@@ -1,0 +1,19 @@
+<main id="RegionModel">
+  <div class="region" v-for="item in regions">
+    <span :title="item.name" @click="drawArea(item)">{{ item.name }}</span>
+    <i title="查看附近物资">
+      <div class="inner-popup">
+        <ul>
+          <li v-if="item.radius === -1" 
+              :class="{'on': item.id + '' === poiRegionKey}" 
+              @click="togglePoiRegion(item)">附近物资</li>
+          <li v-if="item.radius !== -1" 
+              v-for="(opt, key) in poiRegion" 
+              :class="{'on': item.id + '_' + key === poiRegionKey}" 
+              @click="togglePoiRegion(item, key)">{{ opt }}</li>
+        </ul>
+      </div>
+    </i>
+    <em title="删除该区域" @click="deleteDrawRegion(item.id)">×</em>
+  </div>
+</main>

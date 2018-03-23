@@ -1,0 +1,22 @@
+<main id="ManagecenterPopup" v-drag="">
+  <header>
+      <p class="manage_title"><span class="popup_titleIn">管理中心</span><i class="close_btn"></i><i class="hide_btn"></i></p>
+  </header>
+  <div class="top_class">
+    <ul>
+      <li :class="[{'on': classSelected === 'product'},'product_class']" @click="toggleClass('product')">产品分类</li>
+      <li  :class="[{'on':  classSelected === 'business'},'business_class']" @click="toggleClass('business')">业务产品</li>
+    </ul>
+    <span class="add_class" @click="toggleClassPopup">新增</span>
+  </div>
+  <div>
+    
+  </div>
+  <div class="managecenter_con">
+    <component :is="currentView" />
+  </div>
+
+  <component :is="addClassView" :closeFn="toggleClassPopup" />
+ 
+
+</main>

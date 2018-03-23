@@ -1,0 +1,38 @@
+$borderStyle: 1px solid #ccc;
+#rescuePopup {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  right: 420px;
+  width: 340px;
+  table {
+    margin: 5px 0 15px 5%;
+    width: 90%;
+    text-align: center;
+    line-height: 30px;
+    tr {
+      td {
+        border-bottom: $borderStyle;
+        border-left: $borderStyle;
+        &:first-child { 
+          width: 118px;
+          color: #fff;
+          background-color: #00bfdc; 
+        }
+        &:last-child {
+          padding: 0 10px; 
+          width: 166px;
+          border-right: $borderStyle; 
+        }
+        .inner {
+          max-width: 166px;
+          height: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      &:first-child td { border-top: $borderStyle; }
+    }
+  }
+}

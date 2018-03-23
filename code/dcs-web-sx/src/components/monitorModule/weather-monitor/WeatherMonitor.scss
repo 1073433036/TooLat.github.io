@@ -1,0 +1,42 @@
+@import '../../../styles/colorTheme';
+#weatherMonitor {
+    position: absolute;
+    top: 196px;
+    right: 56px;
+    width: 200px;
+}
+
+ul.weather-option-wraper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: $translucent-bg;
+    border-radius: 4px;
+    li {
+        float: left;
+        line-height: 30px;
+        cursor: pointer;
+        &.on {
+          i { background: url(../../../../static/img/sidebar_radio_pre.png) !important; }
+          span { color: $theme-color !important; }
+        }
+        &:nth-child(2) { margin: 0 10px; }
+        i {
+            height: 12px;
+            width: 12px;
+            transform: translateY(1px);
+            display: inline-block;
+            margin-right: 5px;
+            background-image: url(../../../../static/img/sidebar_radio.png);
+        }
+        span {
+            font-size: 14px;
+            color: white;
+        }
+        &:hover span { color: $theme-color !important; }
+    }
+}
+
+ul.elements {
+    margin-top: 2px;
+}

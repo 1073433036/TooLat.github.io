@@ -1,0 +1,12 @@
+<div id="app">
+  <h1 class="text-shadow">{{ systemTitle_global }}</h1>
+  <z-earth />
+  <main-menu />
+  <global-datetime />
+  <component :is="typhTimelineView"></component>
+  <emergency-monitor />
+  <component :is="userLoginView"></component>
+  <tool-box />
+  <aerial-model />
+  <popup-entry />
+</div>

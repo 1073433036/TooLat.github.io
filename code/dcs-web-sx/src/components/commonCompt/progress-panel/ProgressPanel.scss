@@ -1,0 +1,312 @@
+@import '../../../styles/colorTheme';
+.datetime-indicator {
+    position: absolute;
+    width: 68px;
+    height: 32px;
+    text-align: center;
+    box-shadow: 0 0 5px gray;
+    left: -18px; // transition: transform .2s ease-out;
+    top: -2px;
+    transform: translateX(0);
+    z-index: 2;
+    article {
+        background-color: white;
+        color: #6d6c6c;
+        font-size: 12px;
+    }
+    svg {
+        transform: translateY(-10px);
+        display: inline-block;
+        path {
+            fill: white;
+        }
+    }
+}
+
+.play-control-container {
+    height: 46px;
+    width: 326px;
+    background-color: $translucent-bg;
+    .play-time-line-wrapper {
+        float: left;
+        height: 100%;
+        width: 280px;
+        .end-point-wrapper {
+            display: block;
+            width: 100%;
+            position: relative;
+            transform: translateX(-9px);
+        }
+        .end-point {
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            box-sizing: border-box;
+            border: solid white 3px;
+            background-color: transparent;
+            border-radius: 50%;
+            top: -3px;
+            left: -1.5px;
+        }
+        .background-bar-wrapper {
+            width: 250px;
+            margin: 9px 0 0 20px;
+            height: 6px;
+            background-color: $translucent-bg;
+            border-radius: 5px;
+            position: relative;
+            cursor: pointer;
+            .gray-bar,
+            .color-bar {
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 5px;
+            }
+            .gray-bar {
+                background-color: #d9e0ea;
+            }
+            .color-bar {
+                background-color: $theme-color;
+            }
+        }
+        .time-indicator {
+            transform: translateY(15px);
+            margin-left: 23px;
+            width: 248px;
+            height: 4px;
+            white-space: nowrap;
+            .time-indicator-item {
+                height: 100%;
+                width: 26px;
+                float: left;
+                border-left: solid 1px #3f587a;
+                &:last-of-type {
+                    border-right: solid 1px #3f587a;
+                }
+            }
+        }
+        .time-wrapper {
+            transform: translateY(15px);
+            width: 263px;
+            overflow-x: hidden;
+            margin-left: 16px;
+            white-space: nowrap;
+            span {
+                color: #d9e0ea;
+                display: inline-block;
+                font-size: 10px;
+                line-height: 14px;
+                height: 14px;
+                width: 17px;
+                cursor: pointer;
+                text-align: center;
+                padding-right: 5px;
+                margin-right: 5px;
+                &:hover {
+                    background-color: $translucent-bg;
+                    color: $theme-color;
+                }
+            }
+        }
+        .scroll-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 10px;
+            width: 279px;
+            background-color: $translucent-bg;
+            .scroll-btn {
+                height: 10px;
+                position: absolute;
+                left: 10px;
+                background-color: black;
+                border-radius: 5px;
+                width: 100px;
+            }
+            .start-box,
+            .end-box {
+                height: 100%;
+                width: 10px;
+                display: block;
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .start-box {
+                border-radius: 0 0 0 3px;
+                background-image: url(../../../../static/img/date_left.png);
+            }
+            .end-box {
+                right: 0;
+                transform: rotateZ(180deg);
+                background-image: url(../../../../static/img/date_left.png);
+            }
+        }
+    }
+}
+
+.play-btn-wrapper {
+    height: 100%;
+    float: left;
+    width: 46px;
+    border-radius: 0 3px 3px 0;
+    background-color: $translucent-bg;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        span {
+            background-position-x: -18px !important;
+        }
+    }
+    span {
+        margin: 14px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        background-position: 0 0;
+    }
+}
+
+.stop-btn-wrapper {
+    height: 26px;
+    float: left;
+    width: 26px;
+    border-radius: 3px;
+    background-color: rgba(31, 43, 61, 0.76);
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: -27px;
+    &:hover {
+        span {
+            background-color: $theme-color;
+        }
+    }
+    span {
+        margin: 8px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        background-position: 0 0;
+        background-color: #d6dce5;
+    }
+}
+
+.playing {
+    background-image: url(../../../../static/img/sidebar_stop.png);
+}
+
+.stop {
+    background-image: url(../../../../static/img/sidebar_play.png);
+}
+
+.rounded-corner {
+    border-radius: 3px;
+}
+
+.weather-option-container {
+    margin-bottom: 1px;
+    height: 26px;
+    width: 100%;
+    cursor: pointer;
+    section {
+        &:hover {
+            color: $theme-color;
+        }
+        background-color: $translucent-bg;
+        color: #d9e0ea;
+        height: 26px;
+        width: 96px;
+        float: left;
+        position: relative;
+        margin-right: 1px;
+        line-height: 26px;
+        text-align: center;
+        .toggle-left,
+        .toggle-right {
+            width: 23px;
+            height: 100%;
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &:hover {
+                background-color: $translucent-bg;
+                background-image: url(../../../../static/img/date_left_pre.png);
+            }
+        }
+        .toggle-left {
+            left: 0;
+            background-image: url(../../../../static/img/date_left.png);
+        }
+        .toggle-right {
+            right: 0;
+            transform: rotateZ(180deg);
+            background-image: url(../../../../static/img/date_left.png);
+        }
+    }
+}
+
+.progress-transition {
+    transition: all 1.8s linear;
+}
+
+.element-selection-wrapper {
+    position: absolute;
+    top: -113px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background-color: $translucent-bg;
+    color: #d6dce5;
+    width: 96px;
+    div {
+        font-size: 12px;
+        height: 28px;
+        line-height: 28px;
+        cursor: pointer;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+
+.hour-selection {
+    max-height: 56px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $theme-color;
+        border-radius: 4px;
+    }
+}
+
+.element-selection-wrapper {
+    position: absolute;
+    top: -113px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background-color: $translucent-bg;
+    color: #d6dce5;
+    width: 96px;
+    div {
+        font-size: 12px;
+        height: 28px;
+        line-height: 28px;
+        cursor: pointer;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}

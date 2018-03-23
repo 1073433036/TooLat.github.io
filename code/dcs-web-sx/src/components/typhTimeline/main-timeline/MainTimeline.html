@@ -1,0 +1,214 @@
+<main id="MainTimeline">
+  <!--<div class="typh-year-control-wraper" v-if="typhTimelineStatus_global === 'history'">
+    <ul class="cf">
+      <li class="text-shadow" @click="changeTyphCurrentYear('preYear')"></li>
+      <li class="text-shadow">{{typhCurrentYear_global}}年</li>
+      <li class="text-shadow" @click="changeTyphCurrentYear('nextYear')"></li>
+    </ul>
+  </div>-->
+  <transition name="timelineFade">
+    <section class="timeline-typhofyear-wraper cf" key='typhofyear' mode="in-out" v-if="typhTimelineStatus_global === 'history'">
+      <div v-for="month in typhOfCurYear" :style="{width: itemWidth + '%'}">
+        <svg wdith="14px" height="90px" v-for="(el,index) in month" :style="{top: (el.itemNum-(Math.floor(el.itemNum/4))*4)*20 + 20 + 'px',left: 100/el.daysInMonth*el.startTime+'%'}">
+          <path d="M 0,0 L 14,0 L 0, 13 Z" :fill="el.color"></path>
+          <path d="M 0,13 L 0, 90" stroke="rgba(31,43,61,0.5)" fill="none" stroke-width="2px"></path>
+        </svg>
+        <span v-for="(el,index) in month" :style="{top: (el.itemNum-(Math.floor(el.itemNum/4))*4)*20 + 20 + 'px',left: 100/el.daysInMonth*el.startTime+'%'}"
+          @click="showTyphDetail(el.tsId)" class="text-shadow" v-tip="el.levelName">
+            {{el.id}}号{{el.name}}
+          </span>
+      </div>
+    </section>
+    <section class="timeline-typhdetail-wraper cf" key="detail" mode="out-in" v-else-if="typhTimelineStatus_global === 'detail'">
+      <!--<div class="typh-detail-container cf" :style="{width: itemWidth + '%'}" v-for="(item, key) in currentTyphData">-->
+      <!--台风等级标识-->
+      <div class="detail-name">{{detailTyphString}}</div>
+      <svg version="1.1" width="25" height="90" v-if="el.level == 0" :style="{left: el.left + '%', top: (el.level)*10 + 20 +'px'}" v-for="el in typhDetailData"
+        xml:space="preserve">
+        <g id="XMLID_24_">
+          <g id="XMLID_25_">
+            <path :fill="el.color" id="XMLID_112_" d="M15.7,86.8c0,1.8-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2s3.2-5.8,3.2-5.8S15.7,85,15.7,86.8z"
+            />
+          </g>
+        </g>
+        <g id="XMLID_22_">
+          <rect id="XMLID_23_" :fill="el.color" x="12" y="20" width="1" height="65" />
+        </g>
+        <g id="XMLID_20_"  v-tip="'超强台风'">
+          <g id="XMLID_21_">
+            <circle id="XMLID_85_" :fill="el.color" cx="12.6" cy="12" r="12" />
+          </g>
+        </g>
+        <g id="XMLID_1_">
+          <g id="XMLID_15_">
+            <g id="XMLID_16_" v-tip="'超强台风'">
+              <path id="XMLID_17_" class="st0" d="M9.8,17.7c-0.6-0.3-1.2-0.7-1.7-1.1l0,0c-1.1-0.9-1.8-2-2.1-3.3c-0.2-0.6-0.2-1.2-0.2-1.8
+				c0-3.9,3.5-7.1,7.9-7.1c3.1,0,5.7,1.6,7,3.9c-1.2-1.2-3-1.9-4.9-1.9c0,0-0.1,0-0.1,0c0.6,0.3,1.2,0.7,1.7,1.1l0,0
+				c1.1,0.9,1.8,2,2.1,3.3c0.2,0.6,0.2,1.2,0.2,1.8c0,3.9-3.5,7.1-7.9,7.1c-3.1,0-5.7-1.6-7-3.9c1.2,1.2,3,1.9,4.9,1.9
+				C9.7,17.7,9.7,17.7,9.8,17.7L9.8,17.7L9.8,17.7L9.8,17.7z M12.7,14.7c1.6,0,2.8-1.3,2.8-2.8s-1.3-2.8-2.8-2.8
+				c-1.6,0-2.8,1.3-2.8,2.8S11.2,14.7,12.7,14.7L12.7,14.7L12.7,14.7z" fill="white" />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg version="1.1" width="25"  height="80" v-if="el.level == 1" :style="{left: el.left + '%', top: (el.level)*10 + 20 +'px'}" v-for="el in typhDetailData"
+        xml:space="preserve">
+        <g id="XMLID_26_">
+          <g id="XMLID_27_">
+            <path id="XMLID_28_" :fill="el.color" d="M15.7,77.3c0,1.8-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2s3.2-5.8,3.2-5.8S15.7,75.5,15.7,77.3z"
+            />
+          </g>
+        </g>
+        <g id="XMLID_24_">
+          <rect id="XMLID_25_" :fill="el.color" x="12" y="12.5" width="1" height="63" />
+        </g>
+        <g id="XMLID_21_" v-tip="'强台风'">
+          <g id="XMLID_22_">
+            <circle id="XMLID_23_" :fill="el.color" cx="12.6" cy="12.4" r="12" />
+          </g>
+        </g>
+        <g id="XMLID_15_">
+          <g id="XMLID_16_">
+            <g id="XMLID_17_" v-tip="'强台风'">>
+              <path id="XMLID_18_" fill="white" class="st0" d="M9.8,18c-0.6-0.3-1.2-0.7-1.7-1.1l0,0c-1.1-0.9-1.8-2-2.1-3.3c-0.2-0.6-0.2-1.2-0.2-1.8
+				c0-3.9,3.5-7.1,7.9-7.1c3.1,0,5.7,1.6,7,3.9c-1.2-1.2-3-1.9-4.9-1.9c0,0-0.1,0-0.1,0c0.6,0.3,1.2,0.7,1.7,1.1l0,0
+				c1.1,0.9,1.8,2,2.1,3.3c0.2,0.6,0.2,1.2,0.2,1.8c0,3.9-3.5,7.1-7.9,7.1c-3.1,0-5.7-1.6-7-3.9c1.2,1.2,3,1.9,4.9,1.9
+				C9.7,18,9.7,18,9.8,18L9.8,18L9.8,18L9.8,18z M12.7,15.1c1.6,0,2.8-1.3,2.8-2.8s-1.3-2.8-2.8-2.8c-1.6,0-2.8,1.3-2.8,2.8
+				S11.2,15.1,12.7,15.1L12.7,15.1L12.7,15.1z" />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg version="1.1" width="25" height="70" v-if="el.level == 2" :style="{left: el.left + '%', top: (el.level)*10 + 20 +'px'}" v-for="el in typhDetailData"
+        xml:space="preserve">
+        <g id="XMLID_40_">
+          <g id="XMLID_41_">
+            <path id="XMLID_42_" :fill="el.color" d="M15.7,67.3c0,1.8-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2s3.2-5.8,3.2-5.8S15.7,65.5,15.7,67.3z"
+            />
+          </g>
+        </g>
+        <g id="XMLID_38_">
+          <rect id="XMLID_39_" :fill="el.color" x="12" y="12.5" width="1" height="53" />
+        </g>
+        <g id="XMLID_35_" v-tip="'台风'">
+          <g id="XMLID_36_">
+            <circle id="XMLID_37_" :fill="el.color" cx="12.6" cy="12.4" r="12" />
+          </g>
+        </g>
+        <g id="XMLID_29_">
+          <g id="XMLID_30_">
+            <g id="XMLID_31_" v-tip="'台风'" >
+              <path id="XMLID_32_" class="st0" d="M9.8,18c-0.6-0.3-1.2-0.7-1.7-1.1l0,0c-1.1-0.9-1.8-2-2.1-3.3c-0.2-0.6-0.2-1.2-0.2-1.8
+				c0-3.9,3.5-7.1,7.9-7.1c3.1,0,5.7,1.6,7,3.9c-1.2-1.2-3-1.9-4.9-1.9c0,0-0.1,0-0.1,0c0.6,0.3,1.2,0.7,1.7,1.1l0,0
+				c1.1,0.9,1.8,2,2.1,3.3c0.2,0.6,0.2,1.2,0.2,1.8c0,3.9-3.5,7.1-7.9,7.1c-3.1,0-5.7-1.6-7-3.9c1.2,1.2,3,1.9,4.9,1.9
+				C9.7,18,9.7,18,9.8,18L9.8,18L9.8,18L9.8,18z M12.7,15.1c1.6,0,2.8-1.3,2.8-2.8s-1.3-2.8-2.8-2.8c-1.6,0-2.8,1.3-2.8,2.8
+				S11.2,15.1,12.7,15.1L12.7,15.1L12.7,15.1z" fill="white" />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg version="1.1" width="25" height="60" v-if="el.level == 3" :style="{left: el.left + '%', top: (el.level)*10 + 20 +'px'}" v-for="el in typhDetailData"
+        xml:space="preserve">
+        <g id="XMLID_68_">
+          <g id="XMLID_69_">
+            <path id="XMLID_1_" :fill="el.color" j d="M12.5,60.5" />
+          </g>
+        </g>
+        <g id="XMLID_54_">
+          <g id="XMLID_55_">
+            <path id="XMLID_56_" :fill="el.color" d="M15.7,57.3c0,1.8-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2s3.2-5.8,3.2-5.8S15.7,55.5,15.7,57.3z"
+            />
+          </g>
+        </g>
+        <g id="XMLID_52_">
+          <rect id="XMLID_53_" :fill="el.color" x="12" y="2.5" width="1" height="53" />
+        </g>
+        <g id="XMLID_49_" v-tip="'强热带风暴'">
+          <g id="XMLID_50_">
+            <circle id="XMLID_51_" :fill="el.color" cx="12.6" cy="12.4" r="12" />
+          </g>
+        </g>
+        <g id="XMLID_43_">
+          <g id="XMLID_44_">
+            <g id="XMLID_45_" v-tip="'热带低压'">
+              <path id="XMLID_46_" class="st0" d="M9.8,18c-0.6-0.3-1.2-0.7-1.7-1.1l0,0c-1.1-0.9-1.8-2-2.1-3.3c-0.2-0.6-0.2-1.2-0.2-1.8
+				c0-3.9,3.5-7.1,7.9-7.1c3.1,0,5.7,1.6,7,3.9c-1.2-1.2-3-1.9-4.9-1.9c0,0-0.1,0-0.1,0c0.6,0.3,1.2,0.7,1.7,1.1l0,0
+				c1.1,0.9,1.8,2,2.1,3.3c0.2,0.6,0.2,1.2,0.2,1.8c0,3.9-3.5,7.1-7.9,7.1c-3.1,0-5.7-1.6-7-3.9c1.2,1.2,3,1.9,4.9,1.9
+				C9.7,18,9.7,18,9.8,18L9.8,18L9.8,18L9.8,18z M12.7,15.1c1.6,0,2.8-1.3,2.8-2.8s-1.3-2.8-2.8-2.8c-1.6,0-2.8,1.3-2.8,2.8
+				S11.2,15.1,12.7,15.1L12.7,15.1L12.7,15.1z" fill="white" />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg version="1.1" width="25" height="50" v-if="el.level == 4" :style="{left: el.left + '%', top: (el.level)*10 + 20 +'px'}" v-for="el in typhDetailData"
+        xml:space="preserve">
+        <g id="XMLID_68_">
+          <g id="XMLID_69_">
+            <path id="XMLID_70_" :fill="el.color" d="M15.7,47.3c0,1.8-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2s3.2-5.8,3.2-5.8S15.7,45.5,15.7,47.3z"
+            />
+          </g>
+        </g>
+        <g id="XMLID_66_">
+          <rect id="XMLID_67_" :fill="el.color" x="12" y="10.5" width="1" height="35" />
+        </g>
+        <g id="XMLID_63_" v-tip="'热带风暴'">
+          <g id="XMLID_64_">
+            <circle id="XMLID_65_" :fill="el.color" cx="12.6" cy="12.4" r="12" />
+          </g>
+        </g>
+        <g id="XMLID_57_">
+          <g id="XMLID_58_">
+            <g id="XMLID_59_" v-tip="'热带风暴'">
+              <path id="XMLID_60_" class="st0" d="M9.8,18c-0.6-0.3-1.2-0.7-1.7-1.1l0,0c-1.1-0.9-1.8-2-2.1-3.3c-0.2-0.6-0.2-1.2-0.2-1.8
+				c0-3.9,3.5-7.1,7.9-7.1c3.1,0,5.7,1.6,7,3.9c-1.2-1.2-3-1.9-4.9-1.9c0,0-0.1,0-0.1,0c0.6,0.3,1.2,0.7,1.7,1.1l0,0
+				c1.1,0.9,1.8,2,2.1,3.3c0.2,0.6,0.2,1.2,0.2,1.8c0,3.9-3.5,7.1-7.9,7.1c-3.1,0-5.7-1.6-7-3.9c1.2,1.2,3,1.9,4.9,1.9
+				C9.7,18,9.7,18,9.8,18L9.8,18L9.8,18L9.8,18z M12.7,15.1c1.6,0,2.8-1.3,2.8-2.8s-1.3-2.8-2.8-2.8c-1.6,0-2.8,1.3-2.8,2.8
+				S11.2,15.1,12.7,15.1L12.7,15.1L12.7,15.1z" fill="white" />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg version="1.1" width="25" height="40" v-if="el.level == 5" :style="{left: el.left + '%', top: (el.level)*10 + 20 +'px'}" v-for="el in typhDetailData"
+        xml:space="preserve">
+        <g id="XMLID_82_">
+          <g id="XMLID_83_">
+            <path id="XMLID_84_" :fill="el.color" d="M15.7,37.3c0,1.8-1.4,3.2-3.2,3.2s-3.2-1.4-3.2-3.2s3.2-5.8,3.2-5.8S15.7,35.5,15.7,37.3z"
+            />
+          </g>
+        </g>
+        <g id="XMLID_80_">
+          <rect id="XMLID_81_" :fill="el.color" x="12" y="0.5" width="1" height="35" />
+        </g>
+        <g id="XMLID_77_" v-tip="'热带低压'">
+          <g id="XMLID_78_">
+            <circle id="XMLID_79_" :fill="el.color" cx="12.6" cy="12.4" r="12" />
+          </g>
+        </g>
+        <g id="XMLID_71_">
+          <g id="XMLID_72_">
+            <g id="XMLID_73_" v-tip="'热带低压'">
+              <path id="XMLID_74_" class="st0" d="M9.8,18c-0.6-0.3-1.2-0.7-1.7-1.1l0,0c-1.1-0.9-1.8-2-2.1-3.3c-0.2-0.6-0.2-1.2-0.2-1.8
+				c0-3.9,3.5-7.1,7.9-7.1c3.1,0,5.7,1.6,7,3.9c-1.2-1.2-3-1.9-4.9-1.9c0,0-0.1,0-0.1,0c0.6,0.3,1.2,0.7,1.7,1.1l0,0
+				c1.1,0.9,1.8,2,2.1,3.3c0.2,0.6,0.2,1.2,0.2,1.8c0,3.9-3.5,7.1-7.9,7.1c-3.1,0-5.7-1.6-7-3.9c1.2,1.2,3,1.9,4.9,1.9
+				C9.7,18,9.7,18,9.8,18L9.8,18L9.8,18L9.8,18z M12.7,15.1c1.6,0,2.8-1.3,2.8-2.8s-1.3-2.8-2.8-2.8c-1.6,0-2.8,1.3-2.8,2.8
+				S11.2,15.1,12.7,15.1L12.7,15.1L12.7,15.1z" fill="white" />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <!--台风标识结束-->
+      <!--<span v-for="el in typhDetailData" class="text-shadow" :style="{left: el.left + '%'}">
+            {{el.name}}
+          </span>-->
+      <!--</div>-->
+    </section>
+  </transition>
+  <transition name="timelineFade">
+    <section class="timeline-datetime-wraper cf" key='typhofyear' mode="in-out" v-if="typhTimelineStatus_global === 'history'">
+      <span :style="{width: itemWidth + '%'}" v-for="(el, key) in typhOfCurYear"><a>{{key}}月</a></span>
+    </section>
+    <section class="timeline-datetime-wraper detail-datetime cf" key="detail" mode="out-in" v-else-if="typhTimelineStatus_global === 'detail'">
+      <span :style="{width: itemWidth + '%'}" v-for="(el, key) in currentTyphData"><a>{{key}}</a></span>
+    </section>
+  </transition>
+</main>

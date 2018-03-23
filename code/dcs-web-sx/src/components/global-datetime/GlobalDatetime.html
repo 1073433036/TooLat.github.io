@@ -1,0 +1,29 @@
+<main id="GlobalDatetime" class="cf" :style="{transform: typhTimelineStatus_global !== 'search' ? 'translateY(-112px)': 'translateY(0)'}">
+  <section class="date-wraper">
+    <ul class="cf">
+      <li><i @click="changeDatetime('pre', 'days')"></i></li>
+      <li><span>{{dayStr}}</span><span>{{monthStr}}月</span><input id="datePicker" @click="openCalendar" type="text"></li>
+      <li><i @click="changeDatetime('next', 'days')"></i></li>
+    </ul>    
+  </section>
+  <section class="time-wraper">
+    <ul>
+      <li><span @click="changeDatetime('pre', 'hours')"></span><span @click="changeDatetime('pre', 'minute')"></span></li>
+      <li>
+        <span @click="displayHourPopup">{{hourStr}}</span>:
+        <span @click="displayMinPopup">{{minuteStr}}</span>
+      </li>
+      <li><span @click="changeDatetime('next', 'hours')"></span><span @click="changeDatetime('next', 'minute')"></span></li>
+    </ul>
+  </section>
+  <div class="out-wrapper" v-show="isHourPickerOn">
+    <ul class="scrollbar hour-wrapper">
+      <li :class="{'on': h === hourStr}" v-for="h in hoursStr" @click="pickHour(h)">{{ h }}</li>
+    </ul>
+  </div>
+  <div class="out-wrapper min" v-show="isMinutePickerOn">
+    <ul class="scrollbar min-wrapper">
+      <li :class="{'on': m === minuteStr}" v-for="m in minutesStr" @click="pickMin(m)">{{ m }}</li>
+    </ul>
+  </div>
+</main>

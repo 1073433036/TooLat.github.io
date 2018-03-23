@@ -1,0 +1,16 @@
+<main id="LivePanel" class="popup-general box-shadow" v-drag="{handle: '.draggable'}">
+  <div for="dragging"></div>
+  <header class="draggable"><span>直播者: {{liver}}</span> <span>应急事件: {{prePlan}}</span> <span>地址: {{address}}</span><i @click="closeSelf"></i></header>
+  <section class="live-container">
+    <object class="self-live-wraper" :style="{opacity: isHidingPublishWindow ? '1': '0'}">
+     <embed wmode="transparent"  id="rtmp-streamer" src="./static/RtmpStreamer.swf" 
+           width="100%" height="100%" allowScriptAccess="always" quality="best" type="application/x-shockwave-flash"></embed>
+    </object>
+    <span :style="{backgroundPositionY: (isPublished && isHidingPublishWindow) ? '-36px' : '0', top: !(isPublished && isHidingPublishWindow) ? '20px' : '40px', right: !(isPublished && isHidingPublishWindow) ? '20px' : '40px'}"
+      @click="publishStream" class="live-btn publish-btn"></span>
+    <object width="100%" height="100%">
+      <embed wmode="transparent" bgcolor="#000"  id="rtmp-player" src="./static/RtmpStreamer.swf" 
+          width="100%" height="100%" allowScriptAccess="always" quality="best" type="application/x-shockwave-flash"></embed>
+    </object>
+  </section>
+</main>

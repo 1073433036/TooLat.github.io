@@ -1,0 +1,5 @@
+.main-body {
+  width: 100%;
+  height: calc(100% - 90px);
+  overflow-y: auto;
+}

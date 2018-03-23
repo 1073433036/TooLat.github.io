@@ -1,0 +1,22 @@
+<main id="AisDetail" :style="{top: top, left: left}">
+  <i class="close-icon" @click="toggleAISDetailPanel_global({action: false, position: {x:0,y:0}})"></i>
+  <section class="text-wraper">
+    <ul>
+      <li><span>船舶唯一标识</span><span>{{AISDetailData_global.MMSI}}</span></li>
+      <li><span>船舶名称代码</span><span>{{AISDetailData_global.IMO}}</span></li>
+      <li><span>船身长度</span><span>{{AISDetailData_global.LENGTH}}</span></li>
+      <li><span>船身宽度</span><span>{{AISDetailData_global.WIDTH}}</span></li>
+      <li><span>吃水受限</span><span>{{AISDetailData_global.DRAUGHT}}</span></li>
+      <li><span>船舶类型</span><span>{{AISDetailData_global.VESSELTYPE}}</span></li>
+      <li><span>目的地</span><span>{{AISDetailData_global.DEST}}</span></li>
+      <li><span>预计到达时间</span><span>{{AISDetailData_global.ETA}}</span></li>
+      <li><span>航线</span><span>{{AISDetailData_global.COURSE}}</span></li>
+      <li><span>对地航速</span><span>{{AISDetailData_global.SOG}}</span></li>
+      <li><span>状态</span><span>{{AISDetailData_global.STATE}}</span></li>
+      <li><span>对地航向</span><span>{{AISDetailData_global.COG}}</span></li>
+      <li><span>船舶设备</span><span>{{AISDetailData_global.AISCLASS}}</span></li>
+      <li><span>设备类型</span><span>{{AISDetailData_global.DEVICETYPE}}</span></li>
+      <li><span>观察船呼号</span><span>{{AISDetailData_global.CALLSIGN}}</span></li>
+    </ul>
+  </section>
+</main>

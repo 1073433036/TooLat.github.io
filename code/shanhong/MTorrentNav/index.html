@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>广东山洪地质灾害气象预警系统</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      min-width: 1000px;
+      min-height: 600px;
+      overflow: auto;
+      background: url(./static/background.jpg) no-repeat center / 100% 100%;
+    }
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 14px;
+      color: #eee;
+    }
+    a {
+      position: absolute;
+      top: calc(40% - 110px);
+      width: 220px;
+      height: 280px;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 220px;
+      text-align: center;
+      color: rgba(255, 255, 255, .8);
+      text-decoration: none;
+      background: url(./static/back.png) no-repeat center / 100% 100%;
+      cursor: pointer;
+    }
+    a.reform {
+      left: calc(40% - 220px);
+    }
+    a.update {
+      left: 60%;
+    }
+    a:hover {
+      top: calc(40% - 112px);
+      border: 2px solid rgba(243, 172, 18, 0.5);
+    }
+    a.reform:hover {
+      left: calc(40% - 222px);
+    }
+    a.update:hover {
+      left: calc(60% - 2px);
+    }
+    .line {
+      position: absolute;
+      top: 20%;
+      left: calc(50% - 0.5px);
+      width: 1px;
+      height: 60%;
+      background: rgba(255, 255, 255, .1);
+    }
+  </style>
+</head>
+<body>
+  <header>广东省山洪地质灾害防治县级非工程措施建设期限监测预警平台</header>
+  <a class="reform" href="../reform" target="_blank">旧版系统</a>
+  <a class="update" href="../update" target="_blank">升级版系统</a>
+  <div class="line"></div>
+  <script>
+    function clearUserInfo() {
+      sessionStorage.removeItem("userId")
+      sessionStorage.removeItem("username")
+      sessionStorage.removeItem("password")
+      sessionStorage.removeItem("cityid")
+      sessionStorage.removeItem("cityName")
+      sessionStorage.removeItem("countyId")
+      sessionStorage.removeItem("countyName")
+    }
+    clearUserInfo()
+  </script>
+</body>
+</html>

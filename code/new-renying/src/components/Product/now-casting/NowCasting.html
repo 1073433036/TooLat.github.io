@@ -1,0 +1,52 @@
+<!-- 短时预报 -->
+<main id="NowCasting" class="popup_content" v-drag>
+  <div class="nowActual">
+    <header>
+        <p class="nowActual_title">
+          <span class="popup_titleIn">短时预报</span>
+          <i class="close_btn"   v-on:click="toggleProductView_global({id: productId, action: false})"></i>
+          <i class="hide_btn"></i></p>
+    </header>
+    <div class="nowActual_con">
+      <div class="nowActual_con_top">
+        <div class="nowActual_con_topleft"><p>雷达产品</p></div>
+        <div class="nowActual_con_topright">
+          <div><span>日</span><span>时</span><span>分</span></div>
+          <ul class="radar_products nowActual_top_products">
+            <li :class="['iconProductO',{'on': cappi3}]"><i @click="toggleCappi3"></i>CAPPI3公里</li>
+            <li :class="['iconProductO',{'on': echoHeight}]"><i @click="toggleEchoHeight"></i>回波顶高</li>
+            <li :class="['iconProductO',{'on': cappi1}]"><i @click="toggleCappi1"></i>CAPPI1公里</li>
+            <li :class="['iconProductO',{'on': reflex}]"><i @click="toggleReflex"></i>组合反射率</li>
+            <li :class="['iconProductO',{'on': cappi5}]"><i @click="toggleCappi5"></i>CAPPI5公里</li>
+            <li :class="['iconProductO',{'on': vil}]"><i @click="toggleVil"></i>VIL</li>
+            <li :class="['iconProductO',{'on': scit}]"><i @click="toggleScit"></i>雷暴跟踪(SCIT)</li>
+            <li :class="['iconProductO',{'on': titan}]"><i @click="toggleTitan"></i>雷暴跟踪(TITAN)</li>
+            <li :class="['iconProductO',{'on': hail}]"><i @click="toggleHail"></i>冰雹</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cf nowActual_con_bottom">
+        <div class="cf nowActual_con_bottomleft">
+          <span>QPEQF</span><span>产品</span>
+        </div>
+        <div class="nowActual_con_bottomright">
+          <div><span>日</span><span>时</span><span>分</span></div>
+          <ul class="qpef_products nowActual_bottom_products">
+            <li :class="['iconProductT',{'on': qpe}]"><i @click="toggleQpe"></i>QPE逐小时</li>
+            <li :class="['iconProductT',{'on': qpeAdd}]"><i @click="toggleQpeAdd"></i>QPE逐小时累计</li>
+            <li :class="['iconProductT',{'on': qpeSix}]"><i @click="toggleQpeSix"></i>QPE逐6分钟</li>
+            <li :class="['iconProductT',{'on': qpeSixAdd}]"><i @click="toggleQpeSixAdd"></i>QPE逐6分钟累计</li>
+            <li :class="['iconProductT',{'on': qpf}]"><i @click="toggleQpf"></i>QPF逐小时</li>
+            <li :class="['iconProductT',{'on': qpfAdd}]"><i @click="toggleQpfAdd"></i>QPF逐小时累计</li>
+            <li :class="['iconProductT',{'on': qpfSix}]"><i @click="toggleQpfSix"></i>QPF逐6分钟</li>
+            <li :class="['iconProductT',{'on': qpfSixAdd}]"><i @click="toggleQpfSixAdd"></i>QPF逐6分钟累计</li>
+            <li :class="['iconProductT',{'on': mixRain}]"><i @click="toggleMixRain"></i>融合降水逐小时</li>
+            <li :class="['iconProductT',{'on': mixRainAdd}]"><i @click="toggleMixRainAdd"></i>融合降水逐小时累计</li>
+          </ul>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</main>

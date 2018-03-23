@@ -1,0 +1,160 @@
+@import'../../../styles/colorTheme';
+#MainTimeline {
+    height: 122px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+section.timeline-typhofyear-wraper {
+    position: absolute;
+    height: 108px;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    transform: translateY(-1px);
+    div {
+        float: left;
+        box-sizing: border-box;
+        height: 100%;
+        background-color: $translucent-bg;
+        position: relative;
+        padding-bottom: 1px;
+        svg {
+            position: absolute;
+            transform: translate(-12px, 2px);
+        }
+        span {
+            font-size: 12px;
+            color: white; // width: 70px;
+            height: 14px;
+            white-space: nowrap;
+            z-index: 5;
+            line-height: 14px;
+            position: absolute;
+            display: block;
+            text-align: left;
+            cursor: pointer;
+            color: $font-color;
+            font-weight: bold;
+            &:hover {
+                z-index: 6;
+            }
+        }
+    }
+}
+
+section.timeline-datetime-wraper {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    height: 14px;
+    width: 100%;
+    span {
+        float: left;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        color: $font-color;
+        line-height: 14px;
+        height: 14px;
+        box-sizing: border-box;
+        border-left: solid 1px transparent;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $translucent-bg;
+        }
+        &:last-of-type {
+            border-right: solid 1px transparent;
+        }
+    }
+}
+
+section.timeline-typhdetail-wraper {
+    box-sizing: border-box;
+    position: relative;
+    height: 108px;
+    top: 0;
+    width: 100%;
+    transform: translateY(-1px);
+    background-color: $translucent-bg;
+    .detail-name {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: #d6dce5;
+    }
+    ul {
+        position: absolute;
+        left: 0px;
+        width: 10px;
+        height: 100%;
+        li {
+            width: 100%;
+            height: 18px;
+        }
+    }
+    svg {
+        position: absolute;
+    }
+    span {
+        position: absolute;
+        font-size: 12px;
+        color: $font-color;
+        width: 62px;
+        height: 18px;
+        top: 0;
+        line-height: 18px;
+        text-align: center;
+        z-index: 5;
+    }
+}
+
+.typh-year-control-wraper {
+    position: absolute;
+    bottom: 14px;
+    color: $font-color;
+    height: 22px;
+    display: block;
+    line-height: 22px;
+    z-index: 10;
+    li {
+        background-repeat: no-repeat;
+        background-position: center;
+        float: left;
+        height: 22px;
+        line-height: 22px;
+        &:not(:nth-child(2)) {
+            width: 15px;
+            background-image: url(../../../../static/img/date_left.png);
+            cursor: pointer;
+            &:hover {
+                background-image: url(../../../../static/img/date_left_pre.png);
+            }
+        }
+        &:nth-child(2) {
+            white-space: nowrap;
+            padding: 0 5px;
+        }
+        &:nth-child(3) {
+            transform: rotateZ(180deg);
+        }
+    }
+}
+
+.timelineFade-enter-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.timelineFade-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.timelineFade-enter,
+.timelineFade-leave-active {
+    transform: translateX(10px);
+    opacity: 0;
+}

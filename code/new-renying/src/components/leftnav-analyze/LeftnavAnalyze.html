@@ -1,0 +1,65 @@
+<main id="LeftnavAnalyze">
+  <ul>
+    <li v-for="opt of subMenu_global"
+        :class="['for_article','cf',{'on': leftNavSelected === opt.id}]"
+        v-on:click.stop="toggleleftNav(opt)"
+        v-if="opt.isdocument">
+      <div class="wrapper">
+        <div class="leftNaveIcon">
+          <i class="article_files"></i>
+        </div>
+        <div class="leftNaveTitle"
+             :title="opt.name">{{ opt.name}}</div>
+      </div>
+      <!-- <transition name="fade"> -->
+      <div class="require_analyze"
+           v-if="leftNavSelected === opt.id">
+        <ul>
+          <li :class="['create_article',{'on': 'create' === leftNavSubSelected}]"
+              v-on:click.stop="toggleArticle('create', opt.id)">
+            <i class="leftNav_subIcon"></i>
+            <span>生成文档</span>
+          </li>
+          <li :class="['history_article',{'on': 'history' === leftNavSubSelected}]"
+              v-on:click.stop="toggleArticle('history', opt.id)">
+            <i class="leftNav_subIcon"></i>
+            <span>历史文档</span>
+          </li>
+        </ul>
+      </div>
+      <!-- </transition> -->
+    </li>
+    <div class="border_bot"></div>
+    <li v-for="opt of subMenu_global"
+        :class="['cf',{'on': (leftNavSelected === opt.id && !opt.thirdCombinations) }]"
+        v-on:click.stop="toggleleftNav(opt)"
+        v-if="!opt.isdocument">
+      <template v-if="opt.isSecondMenu">
+        <div class="analyze_twodiv">
+          <span class="analyze_twolist">{{ opt.name }}</span>
+        </div>
+        <div class="border_bot"></div>
+        <div class="wrapper"
+             v-for="item in opt.thirdCombinations"
+             v-if="leftNavSelected === opt.id"
+             :class="['cf', thridMenuSelected === item.id ? 'on' : 'off']"
+             v-on:click.stop="toggleSubNav(item)">
+          <!-- <div class="wrapper" v-for="item in opt.thirdCombinations"> -->
+          <div class="leftNaveIcon">
+            <i :class="thridMenuClassName[item.id]"></i>
+          </div>
+          <div class="leftNaveTitle"
+               :title="item.name">{{ item.name }}</div>
+        </div>
+      </template>
+      <div class="wrapper"
+           v-if="!opt.isSecondMenu">
+        <div class="leftNaveIcon">
+          <i :class="secondMenuClassName[opt.id]"></i>
+        </div>
+        <div class="leftNaveTitle"
+             :title="opt.name">{{ opt.name }}</div>
+      </div>
+    </li>
+  </ul>
+</main>

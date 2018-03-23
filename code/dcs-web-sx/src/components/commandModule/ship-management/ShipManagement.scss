@@ -1,0 +1,44 @@
+@import '../../../styles/colorTheme';
+#ShipManagement {
+    width: 200px;
+    background-color: $translucent-bg;
+    position: absolute;
+    top: 241px;
+    border-radius: 4px;
+    right: 56px;
+    padding: 10px 0 10px 0;
+}
+
+ul.ship-option-wraper {
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    li {
+        line-height: 30px;
+        cursor: pointer;
+        i {
+            height: 12px;
+            width: 12px;
+            transform: translateY(1px);
+            display: inline-block;
+            margin-right: 5px;
+            background-image: url(../../../../static/img/sidebar_radio.png);
+        }
+        span {
+            font-size: 14px;
+            color: white;
+        }
+        &:first-of-type {
+            float: left;
+        }
+        &:last-of-type {
+            float: right;
+        }
+        &:hover {
+            span {
+                color: $theme-color !important;
+            }
+        }
+    }
+}

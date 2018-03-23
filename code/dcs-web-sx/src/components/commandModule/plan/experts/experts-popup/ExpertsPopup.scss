@@ -1,0 +1,34 @@
+$borderStyle: 1px solid #ccc;
+#expertPopup {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  right: 420px;
+  width: 340px;
+  table {
+    margin: 5px 0 15px 5%;
+    width: 90%;
+    text-align: center;
+    line-height: 30px;
+    tr {
+      td {
+        border-bottom: $borderStyle;
+        border-left: $borderStyle;
+        &:first-child { 
+          color: #fff;
+          background-color: #00bfdc; 
+        }
+        &:last-child { border-right: $borderStyle; }
+        &.img {
+          width: 80px;
+          height: 90px;
+          img { margin-top: 5px; }
+        }
+      }
+      &:first-child td { border-top: $borderStyle; }
+      &:nth-child(2),&:nth-child(3) {
+        td { border-right: none !important; }
+      }
+    }
+  }
+}

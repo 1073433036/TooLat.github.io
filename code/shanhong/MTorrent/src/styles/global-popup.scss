@@ -1,0 +1,42 @@
+.global-popup {
+  position: absolute;
+  z-index: 10;
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .35);  
+  header {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background: #4c4f4f;
+    cursor: move;
+    span {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+    em {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      &::after {
+        position: absolute;
+        content: '×';
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    background: #fff;
+  }
+}

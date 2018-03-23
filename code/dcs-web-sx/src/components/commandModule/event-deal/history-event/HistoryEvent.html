@@ -1,0 +1,34 @@
+<main id="HistoryEvent">
+  <div class="search cf">
+    <span>关键字搜索</span>
+    <input type="text" placeholder="输入关键字" v-model="keyWord" @keyup.13="search">
+    <div class="search-btn" @click="search">搜索</div>
+  </div>
+  <div class="name">历史事件</div>
+  <div class="table-wrap">
+    <table cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
+          <th v-for="th in thead">{{ th }}</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="opt of currentPageData" v-if="opt.show">
+          <td v-for="(th, thKey) in thead">
+            <div class="wrap" :title="thKey === 'starttime' ? moment(opt[thKey]).format('YYYY-MM-DD') : opt[thKey]">
+              {{ thKey === 'starttime' ? moment(opt[thKey]).format('YYYY-MM-DD') : opt[thKey] }}
+            </div>
+          </td>
+          <td class="opera" @click="watchDetail(opt)">查看</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-bottom cf">
+    <div class="info-desc">共<span>{{ infoLength }}</span>条数据 当前第<span>{{ currentPage + 1 }}</span>页</div>
+    <div class="page-btn" style="margin-right: 10px" @click="togglePage(1)">下页</div>
+    <div class="page-btn" @click="togglePage(0)">上页</div>
+  </div>
+  <component :is="detailView" :event="event" :closeFn="closeDetailPopup"></component>
+</main>

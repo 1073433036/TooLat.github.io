@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>123</title>
+  <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+<script>
+  //window.onunload
+  window.onbeforeunload = function() {
+    $.ajax({ 
+      url: 'http://10.148.83.228:8086/user/logout/web/user/post/,/',
+      data: {
+        userId: '7e2a9092-a0ce-496d-9d9e-d235069c5c82',
+        password: 'admin'
+      }
+    }).then(function(res) {
+      console.log(res);
+    });
+  }
+</script> 
+
+</html>

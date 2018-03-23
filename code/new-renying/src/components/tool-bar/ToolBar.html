@@ -1,0 +1,16 @@
+<!-- 工具栏 -->
+<main id="ToolBar">
+    <ul>
+      <li title="清空"  @click="toggleClear" :class="['clears',{'on': clear}]"><i></i></li>
+      <li title="搜索"  @click="toggleSearch" :class="['searchs',{'on': search}]"><i></i></li>
+      <measure />
+      <!-- <li title="清空" @click="toggleClear" :class="{'on': clear}"><i></i>清空</li> -->
+      <li title="地形" @click="toggleTopography" :class="['topographys',{'on': topography}]"><i></i></li>
+      <li title="经纬线" @click="toggleLatlon" :class="['latlons',{'on': latlon}]"><i></i></li>
+      <li title="机场" @click="toggleAirdrome" :class="['airdromes',{'on': airdrome}]"><i></i></li>
+      <li title="飞行区域" @click="toggleAirspace" :class="['airspaces',{'on': airspace}]"><i></i></li>
+      <li title="炮点" @click="toggleShotpoint" :class="['shotpoints',{'on': shotpoint}]"><i></i></li>
+      <li title="电台" @click="toggleRadios" :class="['radioss',{'on': radios}]"><i></i></li>
+    </ul>
+    <component :is="searchView"></component>
+</main>

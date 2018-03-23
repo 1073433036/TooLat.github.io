@@ -1,0 +1,16 @@
+@import './styles/cleanDefaultStyle';
+@import './styles/shadow';
+@import './styles/colorTheme';
+@import './styles/imgSpirit';
+@import './styles/popupStyle';
+@import './styles/popupGeneral';
+
+
+.flatpickr-calendar {
+  background-color: $translucent-bg !important;
+  color: $font-color !important;
+  .flatpickr-day:hover,{
+    background-color: $translucent-bg-hover !important;
+    border-color: $translucent-bg !important;
+  }
+}

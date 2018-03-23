@@ -1,0 +1,12 @@
+<main id="VideoPopup" v-drag="{handle: '.draggable'}" @contextmenu="rightClick"
+    :style="{'left': getVideoInfo_global.x + 'px', 'top': getVideoInfo_global.y + 'px'}">
+  <header class="draggable">
+    <span>{{ getVideoInfo_global ? getVideoInfo_global.address + '（设备ID-' + getVideoInfo_global.deviceId + '）' : '' }}</span>
+    <div class="close" @click="closeSelf(false)">×</div>
+  </header>
+  <div v-show="getVideoInfo_global.type === 'right'" class="cont"></div>
+  <img v-if="getVideoInfo_global.type === 'left'" :src="imageUrl" width="360" height="244">
+  <!-- <video controls="controls" v-if="getVideoInfo_global.type === 'left'" :src="imageUrl" width="360" height="244"></video> -->
+  <div v-if="getVideoInfo_global.type === 'left'" title="全屏播放" 
+      class="screen-btn" @click="toggleScreen"></div>
+</main>

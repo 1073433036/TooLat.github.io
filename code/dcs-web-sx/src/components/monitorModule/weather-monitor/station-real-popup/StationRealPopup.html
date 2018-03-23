@@ -1,0 +1,22 @@
+<div id="stationRealPopup" 
+    :style="{'top': realPopup.pos.top + 10 + 'px', 'left': realPopup.pos.left + 10 + 'px'}" 
+    v-show="realPopup.show" :class="realPopup.className">
+  <div class="info cf">
+    <div class="title">{{ realPopup.name }}</div>
+  </div>
+  <div class="info cf" 
+      v-for="(ele, key) in realPopup.elements" 
+      :key="key" 
+      v-if="key !== 'windVelLevel' && key !== 'windDirLevel'">
+    <div class="cn">{{ ele.text }}</div>
+    <div class="val" v-if="key !== 'windvel' && key !== 'winddir'">
+      {{ ele.value ? ele.value + ele.unit : ((key === 'rain' || key === 'rain1h' || key === 'rain3h' || key === 'rain12h') ? '无' : '缺测') }}
+    </div>
+    <div class="val" v-if="key === 'windvel'">
+      {{ ele.value ? realPopup.elements.windVelLevel.value + realPopup.elements.windVelLevel.unit + ' ( ' + ele.value + ele.unit + ' ) ' : '缺测' }}
+    </div>
+    <div class="val" v-if="key === 'winddir'">
+      {{ ele.value ? realPopup.elements.windDirLevel.value + ' ( ' + ele.value + ele.unit + ' ) ' : '缺测' }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,207 @@
+<div class="info-moniter-wrap">
+    <div id="infoMoniter">
+        <div class="top cf">
+            <div class="item-wrap" 
+                    @mouseenter="toggleList('itemList')" 
+                    @mouseleave="toggleList('itemList')">
+                <div class="item-com item-select">
+                    {{ selcetItem.text }}
+                    <em></em>
+                </div>
+                <ul class="item-list" v-if="display.itemList">
+                    <li class="item-com" 
+                            v-for="(item, key) in menu" 
+                            v-show="key !== selcetItem.key" 
+                            @click="toggleItem(key)">
+                        {{ item.text }}
+                    </li>
+                </ul>
+            </div>
+            <div class="item-wrap" 
+                    @mouseenter="toggleList('optList')" 
+                    @mouseleave="toggleList('optList')">
+                <div class="item-com item-select opt-select">
+                    {{ selectOpt.text }}
+                    <em></em>
+                </div>
+                <ul class="opt-list" v-if="display.optList">
+                    <li class="item-com" 
+                            v-for="(opt, subKey) in selcetItem.menu" 
+                            v-show="subKey !== selectOpt.key" 
+                            @click="toggleOpt(subKey, selcetItem.key)">
+                            {{ opt.text }}
+                    </li>
+                </ul>
+            </div>
+            <div class="search-inp cf">
+                <input type="text" placeholder="请输入关键字" v-model="message" @keyup.13="search" />
+                <div class="search" @click="search"></div>
+            </div>
+        </div>
+        <div class="opera cf">
+            <div class="opera-cont cf">
+                <div class="btn btn-add" @click="toggleInfoPopup(true)">＋&nbsp新增</div>
+                <div class="btn btn-delete" @click="deleteAllSelect">－&nbsp删除</div>
+                <div class="btn btn-inout btn-in" @click="isFilePopupOn = !isFilePopupOn" 
+                    style="text-indent: 0;text-align: center;" 
+                    v-show="selectOpt.key !== 'Monitorvideo' && selectOpt.key !== 'River'">导入</div>
+                <!--<div class="btn btn-inout btn-out" @click="exportTable">导出</div>-->
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table class="userSystem" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th><em :class="['sel', {'selected': allSelect}]" @click="toggleAllSel"></em>全选</th>
+                        <th v-for="(geo, geoKey) in ((geoParams.conf && geoParams.conf[selectOpt.parentKey]) ? geoParams.conf[selectOpt.parentKey] : {})" 
+                                v-if="!excludeTh.includes(geoKey)">{{ geo }}</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(sg, sgKey) in dealSelectGeo[currentPage]">
+                        <td>
+                            <em :class="['sel', {'selected': sg.select}]" @click="toggleDetailSel(sgKey)"></em>
+                        </td>
+                        <td v-for="(dsg, dsgKey) in sg" v-if="!exclude.includes(dsgKey)">{{ dsg !== null ? ( dsgKey === 'state' ? (dsg ? '使用中' : '停用') : dsg ) : '--' }}</td>
+                        <td>
+                            <span class="editor" @click="toggleModifyPopup(true, sgKey),addModifyMsg(sg)">编辑</span>
+                            <span class="delete" @click="deleteUserMsg(sgKey)">删除</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 此table为导出Excel用 -->
+            <!-- <table id="infoTable">
+                <thead>
+                    <tr><th v-for="(geo, geoKey) in ((geoParams.conf && geoParams.conf[selectOpt.parentKey]) ? geoParams.conf[selectOpt.parentKey] : {})">{{ geo }}</th></tr>
+                </thead>
+                <tbody>
+                    <tr v-for="sg in selectGeo">
+                        <td v-for="(dsg, dsgKey) in sg" v-if="!exclude.includes(dsgKey)">{{ dsg }}</td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </div>
+        <div class="userSystem-bottom cf">
+            <div class="page-size" @mouseenter="isPageSizePopupOn = true" @mouseleave="isPageSizePopupOn = false">
+                {{ numOfPage }}
+                <ul v-show="isPageSizePopupOn">
+                    <li v-for="size of pageSizes" @click="togglePageSize(size)" :class="{'on': size === pageSize}">{{ size }}</li>
+                </ul>
+            </div>
+            <div class="record">
+                共有<span>{{ selectGeoLen }}</span>条记录，当前第<span>{{ currentPage + 1 }}</span>页
+            </div>
+            <ul class="page cf">
+                <li class="newPageBtn" @click="changePageNaum(0)">上一页</li>
+                <li class="newPageBtn newNextBtn" @click="changePageNaum(1)">下一页</li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-under" v-if="display.popup || display.modifyPopup"></div>
+    <div class="userSystemPopup infoSystemPopup" v-if="display.popup">
+        <div class="title">
+            新增数据信息
+            <span @click="toggleInfoPopup(false)">✕</span>
+        </div>
+        <div class="content">
+            <table class="addUser" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr v-if="selectOpt.key !== 'River'">
+                        <td>镇</td>
+                        <td>
+                            <select class="countySel" v-model="town">
+                                <option v-for="(ct, ctKey) in townObj" :value="ctKey">{{ ct }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr v-if="'state' in geoParams.conf[selectOpt.parentKey]">
+                        <td>使用状态</td>
+                        <td>
+                            <select class="countySel" id="newstate">
+                                <option v-for="(el, key) in videoStates" :value="el">{{ key }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr v-for="(geo, geoKey) in geoParams.conf[selectOpt.parentKey]" v-if="geoKey !== 'state' && geoKey !== 'town' && geoKey !== 'townname'">
+                        <td>{{ geo }}</td>
+                        <td><input type="text" :id="'new' + geoKey"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="cf">
+                            <div class="td-btn subBtn" @click="submitInfo">提交</div>
+                            <div class="td-btn canBtn" @click="toggleInfoPopup(false)">取消</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="userSystemPopup infoSystemPopup" v-if="display.modifyPopup">
+        <div class="title">
+            修改数据信息
+            <span @click="toggleModifyPopup(false)">✕</span>
+        </div>
+        <div class="content">
+            <table class="addUser" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr v-if="selectOpt.key === 'Monitorvideo'">
+                        <td>镇</td>
+                        <td>
+                            <select class="countySel" id="modtown" :value="selectGeo[modifyKey].town">
+                                <option v-for="(ct, ctKey) in townObj" :value="ctKey">{{ ct }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr v-if="'state' in selectGeo[modifyKey]">
+                        <td>使用状态</td>
+                        <td>
+                            <select class="countySel" id="modstate" :value="selectGeo[modifyKey].state">
+                                <option v-for="(el, key) in videoStates" :value="el">{{ key }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr v-for="(modInfo, modKey) in selectGeo[modifyKey]" v-if="modKey !== 'select' && modKey !== 'show' && modKey !== 'state' && modKey !== 'town'">
+                        <td>{{ geoParams.conf[selectOpt.parentKey][modKey] }}</td>
+                        <td><input type="text" :id="'mod' + modKey" :value="modInfo"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="cf">
+                            <div class="td-btn subBtn" @click="submitModifyInfo">提交</div>
+                            <div class="td-btn canBtn" @click="toggleModifyPopup(false)">取消</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div :class="['alertPopup', {'showPopup' :display.alertPopup}]" v-if="display.alertPopup">
+        <div class="title"><span @click="toggleAlertPopup(false)">✕</span></div>
+        {{ alertPopupText }}
+    </div>
+
+    <div class="userSystemPopup infoSystemPopup" v-if="isFilePopupOn">
+        <div class="title">
+            数据批量导入
+            <span @click="isFilePopupOn = false">✕</span>
+        </div>
+        <div class="content">
+            <table class="addUser" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td>文件</td>
+                        <td><input type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" @change="fileChanged" style="height: 25px;"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><div class="td-btn subBtn" @click="importExcel" style="margin-left: 150px;">上传</div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

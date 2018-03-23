@@ -1,0 +1,7 @@
+<main id="EleTimeTip">
+  <ul>
+    <li v-for="(item, key) in weatherElementTime_global" :class="{'no-data': !item.value}">
+      <span class="name">{{ key }}</span> : {{ item.time }}<span class="nodata" v-show="!item.value"> 无数据</span>
+    </li>
+  </ul>
+</main>

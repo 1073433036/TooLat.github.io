@@ -1,0 +1,199 @@
+<div id="templatePopup" class="cf">
+  <div class="temp-name">
+    <span @mouseenter="display.namesPopup = true" @mouseleave="display.namesPopup = false">
+      {{ tempNames[selectedTempNameKey].text }}
+      <div class="inner-popup" v-if="display.namesPopup">
+        <div class="names" v-for="(name, key) in tempNames" v-if="name.text !== tempNames[selectedTempNameKey].text" 
+            @click="initLevels({ name: name.text, newTemp: name.new })">{{name.text}}</div>
+      </div>
+    </span>
+  </div>
+  <div class="info">
+    <span class="info-cn">预案名称</span>
+    <input type="text" :value="tempNames[selectedTempNameKey].text" disabled>
+  </div>
+  <div class="info">
+    <span class="info-cn">预案等级</span>
+    <select v-model="template.level" 
+        @change="initTemplate({name: tempNames[selectedTempNameKey].text, level: Number(template.level)})">
+      <template v-if="!addTempPopup"><option v-for="lv in levels" :value="lv">{{ levelFmt[String(lv)] }}</option></template>
+      <template v-if="addTempPopup"><option v-for="lv in allLevels" :value="lv">{{ levelFmt[String(lv)] }}</option></template>
+    </select>
+  </div>
+  <div class="info">
+    <span class="info-cn">预案类型</span>
+    <select v-model="template.measure">
+      <option v-for="type of types" :value="type">{{ type }}</option>
+    </select>
+  </div>
+  <div class="info">
+    <span class="info-cn extend" @mouseenter="display.orgPopup = true" @mouseleave="display.orgPopup = false">
+      <span class="cn">政府部门</span>
+      <div class="inner-popup" v-if="display.orgPopup">
+        <div class="top"></div>
+        <div class="cont">
+          <div class="desc cf">
+            选择政府部门<span @click="toggleAllSelect('org')">{{ allOrg ? '清空' : '全选' }}</span>
+          </div>
+          <ul class="list cf">
+            <li :class="{on: template.relateOrdIds.includes(Number(orgKey))}" 
+                v-for="(org, orgKey) in relateorgs" 
+                @click="toggleDetailSelect('relateOrdIds', Number(orgKey))">{{ org }}</li>
+          </ul>
+        </div>
+      </div>
+    </span>
+    <div class="val"><span v-for="orgId of template.relateOrdIds">{{ relateorgs[String(orgId)] }}</span></div>
+  </div>
+  <div class="info">
+    <span class="info-cn extend" @mouseenter="display.influPopup = true" @mouseleave="display.influPopup = false">
+      <span class="cn">单位企业</span>
+      <div class="inner-popup" v-if="display.influPopup">
+        <div class="top"></div>
+        <div class="cont">
+          <div class="desc cf">
+            选择单位企业<span @click="toggleAllSelect('influ')">{{ allInflu ? '清空' : '全选' }}</span>
+          </div>
+          <ul class="list cf">
+            <li :class="{on: template.influenceIds.includes(Number(influKey))}" 
+                v-for="(influ, influKey) in influences" 
+                @click="toggleDetailSelect('influenceIds', Number(influKey))">{{ influ }}</li>
+          </ul>
+        </div>
+      </div>
+    </span>
+    <div class="val"><span v-for="influId of template.influenceIds">{{ influences[String(influId)] }}</span></div>
+  </div>
+  <div class="info">
+    <span class="info-cn extend" @mouseenter="display.townPopup = true" @mouseleave="display.townPopup = false">
+      <span class="cn">行政区域</span>
+      <div class="inner-popup" v-if="display.townPopup">
+        <div class="top"></div>
+        <div class="cont">
+          <div class="desc cf">
+            选择行政区域<span @click="toggleAllTowns">{{ allTown ? '清空' : '全选' }}</span>
+          </div>
+          <ul class="list cf">
+            <li :class="{on: selectedTowns.includes(townKey)}" 
+                v-for="(town, townKey) in towns" 
+                @click="toggleTowns(townKey)">{{ town.name }}</li>
+          </ul>
+        </div>
+      </div>
+    </span>
+    <div class="val"><span v-for="town of selectedTowns">{{ towns[town].name }}</span></div>
+  </div>
+  <div class="info" v-if="addTempPopup">
+    <span class="info-cn">升级提示</span>
+    <input class="lg" type="text" placeholder="输入提示信息" v-model="template.upMsg">
+  </div>
+  <div class="info" v-if="addTempPopup">
+    <span class="info-cn">降级提示</span>
+    <input class="lg" type="text" placeholder="输入提示信息" v-model="template.downMsg">
+  </div>
+  <div class="info" v-if="addTempPopup">
+    <span class="info-cn">结束提示</span>
+    <input class="lg" type="text" placeholder="输入提示信息" v-model="template.finishMsg">
+  </div>
+  <div class="info cf">
+    <span class="info-cn">工作备忘</span>
+    <div class="add-btn" @click="toggleDutyPanel"  v-if="!addTempPopup">添加</div>
+    <div class="add-btn" @click="toggleTempDutyPopup" title="为该模板添加工作备忘" v-if="addTempPopup">添加</div>
+    <div class="add-btn" @click="toggleManageDutyPanel" title="管理工作备忘库" v-if="addTempPopup">管理</div>
+  </div>
+  <template v-if="!addTempPopup">
+    <div class="duties" v-if="Object.keys(currentDuties).length">
+      <div class="duty" v-for="(duty, dutyId) in currentDuties">
+        <div class="duty-cn" :title="duty">{{ duty }}</div>
+        <div class="close" title="删除该工作备忘" @click="deleteDuty(Number(dutyId))">×</div>
+      </div>
+    </div>
+  </template>
+  <template v-if="addTempPopup">
+    <div class="duties" v-if="Object.keys(duties).length">
+      <div class="duty" v-for="(duty, dutyId) in duties">
+        <div class="duty-cn" :title="duty">{{ duty }}</div>
+        <div class="close" title="删除该工作备忘" @click="deleteTempDuty(Number(dutyId))">×</div>
+      </div>
+    </div>
+  </template>
+  <div class="btns cf">
+    <div class="start-btn" @click="startPlan" v-if="!addTempPopup">启动</div>
+    <div class="history-btn" @click="toggleHistoryPlanPanel" v-if="!addTempPopup">历史预案</div>
+    <div class="add-temp-btn" @click="saveTemplate" v-if="addTempPopup">保存</div>
+    <div class="del-temp-btn" @click="deleteTemplate" v-if="addTempPopup">删除</div>
+    <div class="new-temp-btn" @click="display.namePopup = !display.namePopup" v-if="addTempPopup">新增模板</div>
+  </div>
+  
+  <div class="duties-popup" v-if="display.dutyPopup">
+    <div class="title cf">
+      <div class="text">工作备忘</div>
+      <div class="close" @click="display.dutyPopup = false">×</div>
+    </div>
+    <div class="cont">
+      <ul class="duty-ul">
+        <li v-for="(duty, dutyKey) in duties">
+          {{ duty }}
+          <em :class="{on: currentDuties[dutyKey]}" @click="toggleDuty(dutyKey)"></em>
+        </li>
+      </ul>
+      <textarea v-model="newDuty" placeholder="输入新增工作备忘"></textarea>
+      <div class="btn-wrap cf">
+        <div class="add-duty-btn" @click="addNewDuty(newDuty)">新增</div>
+        <div class="close-duty-btn" @click="display.dutyPopup = false">关闭</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="duties-popup" style="width: 300px;" v-if="display.manageDutyPanel">
+    <div class="title cf">
+      <div class="text">工作备忘管理</div>
+      <div class="close" @click="display.manageDutyPanel = false">×</div>
+    </div>
+    <div class="cont" style="padding: 0 10px 20px">
+      <ul class="manage-ul">
+        <li v-for="(duty, dutyKey) in allDuties">
+          <input class="duty-input" type="text" placeholder="工作备忘" v-model="allDuties[dutyKey]">
+          <span class="edit" @click="updateDuty(dutyKey)">修改</span>
+          <span class="del" @click="delDuty(dutyKey)">删除</span>
+        </li>
+        <li>
+          <input class="duty-input" type="text" placeholder="输入新增工作备忘" v-model="newLibDuty">
+          <span class="add" @click="addDuty">新增</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="duties-popup" v-if="display.tempDutyPopup">
+    <div class="title cf">
+      <div class="text">添加工作备忘</div>
+      <div class="close" @click="display.tempDutyPopup = false">×</div>
+    </div>
+    <div class="cont">
+      <ul class="duty-ul">
+        <li v-for="(duty, dutyKey) in allDuties">
+          {{ duty }}
+          <em :class="{on: duties[dutyKey]}" @click="toggleTempDuty(dutyKey)"></em>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="duties-popup" v-if="display.namePopup">
+    <div class="title cf">
+      <div class="text cf">新增模板</div>
+      <div class="close" @click="display.namePopup = false">×</div>
+    </div>
+    <div class="cont">
+      <input type="text" placeholder="输入新增模板名称" v-model="newName">
+      <div class="btn-wrap cf">
+        <div class="add-duty-btn" @click="addTemplateName">新增</div>
+        <div class="close-duty-btn" @click="display.namePopup = false">关闭</div>
+      </div>
+    </div>
+  </div>
+
+  <component :closeFunc="toggleHistoryPlanPanel" :is="historyPlanView"></component>
+
+</div>

@@ -1,0 +1,29 @@
+#emgSummaryPopup {
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  left: 270px;
+  width: 250px;
+  border-top: none;
+  border: 1px solid #d7d4d4;
+  textarea {
+    margin-left: 15px;
+    width: 205px;
+    height: 65px;
+    padding: 5px;
+    color: #6c6c6c;
+    border: 1px solid #c8c5c5;
+    border-radius: 4px;
+  }
+  .save-btn {
+    margin: 10px 0 10px 95px;
+    width: 60px;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    background: #00bfdc;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover { background: rgba(0, 191, 220, 0.8); }
+  }
+}

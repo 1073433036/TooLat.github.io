@@ -1,0 +1,58 @@
+#userManagement {
+  z-index: 2000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .hd {
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+    color: #fff;
+    background: #2f2f2f;
+    .btn {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      width: 64px;
+      line-height: 26px;
+      border: 1px solid #eee;
+      border-radius: 2px;
+      color: #2f2f2f;
+      background: #eee; 
+      cursor: pointer;
+      &:hover {
+        color: #2c9eff;
+      }
+    }
+  }
+  .nav {
+    float: left;
+    width: 190px;
+    height: calc(100% - 50px);
+    background: #e8eef2;
+    .nav-btn {
+      height: 82px;
+      color: #1c1c1c;
+      font-size: 14px;
+      line-height: 82px;
+      text-indent: 55px;
+      cursor: pointer;
+      &.on {
+        color: #2c9eff;
+        background: #fff;
+        border-left: 4px solid #2c9eff;
+      }
+    }
+  }
+  .cont {
+    position: relative;
+    float: left;
+    width: calc(100% - 190px);
+    height: calc(100% - 50px);
+    overflow: auto;
+  }
+}

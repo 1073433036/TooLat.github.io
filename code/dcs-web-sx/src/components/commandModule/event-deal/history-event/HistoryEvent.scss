@@ -1,0 +1,108 @@
+@import'../../../../styles/colorTheme';
+$border-style: 1px solid #dfe6ec;
+#HistoryEvent {
+  color: #6d6c6c;
+  font-size: 14px;
+  .search {
+    padding: 5px 10px 0 10px;
+    span {
+      display: inline-block;
+      min-width: 90px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 115px;
+      height: 24px;
+      padding: 0 10px;
+      border: $border-style;
+      border-radius: 4px;
+    }
+    .search-btn {
+      float: right;
+      width: 60px;
+      line-height: 24px;
+      color: #fff;
+      text-align: center;
+      background: $theme-color;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover { background: #06cceb; }
+    }
+    select {
+      width: 137px;
+      height: 24px;
+      color: #6c6c6c;
+      text-indent: 10px;
+      border: $border-style;
+      border-radius: 4px;
+    }
+  }
+  .name {
+    margin-top: 10px;
+    line-height: 26px;
+    text-indent: 15px;
+    color: $theme-color;
+    border-top: $border-style;
+  }
+  .table-wrap {
+    height: 276px;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+    border-right: $border-style;
+    border-bottom: $border-style;
+    thead { 
+      th {
+        color: #fff;
+        line-height: 24px;
+        font-weight: normal;
+        background-color: $theme-color;
+        border-top: $border-style;
+        border-bottom: $border-style;
+        border-left: $border-style;
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 0 5px;
+          line-height: 24px;
+          border-bottom: $border-style;
+          border-left: $border-style;
+          &.opera {
+            color: $theme-color;
+            cursor: pointer;
+          }
+          .wrap {
+            width: 100%;
+            max-width: 110px;
+            height: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        &:last-child td { border-bottom: none; }
+        &:hover,&.on {
+          td { background-color: #eee; }
+        } 
+      }
+    }
+  }
+  .table-bottom {
+    line-height: 34px;
+    .info-desc {
+      float: left;
+      text-indent: 20px;
+      span { color: $theme-color; }
+    }
+    .page-btn {
+      float: right;
+      padding: 0 10px;
+      cursor: pointer;
+      &:hover { color: $theme-color; }
+    }
+  }
+}

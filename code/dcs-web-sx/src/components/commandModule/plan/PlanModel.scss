@@ -1,0 +1,15 @@
+@import '../../../styles/popupStyle';
+@import '../../../styles/extendStyle';
+
+$borderStyle: 1px solid #000;
+#planPopup {
+	z-index: 10;
+	position: absolute;
+	top: 30.5%;
+	right: 300px;
+	width: 400px;
+	overflow: visible;
+	.popup-tab-wraper {
+		height: 26px;
+	}
+}

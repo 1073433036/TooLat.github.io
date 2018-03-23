@@ -1,0 +1,9 @@
+<main id="mapLayer">
+  <ul class="cf">
+    <li v-for="(opt, key) in mapLayerOpts"
+        v-show="key !== selected && opt.show"
+        v-text="opt.text"
+        @click="changeMapLayer(key, opt)">
+    </li>
+  </ul>
+</main>

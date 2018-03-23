@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+old_src/
+old_static/
+dist/
+.idea/
+.vscode/
+npm-debug.log
+yarn-error.log

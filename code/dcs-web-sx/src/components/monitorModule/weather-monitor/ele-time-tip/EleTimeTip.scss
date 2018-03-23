@@ -1,0 +1,25 @@
+#EleTimeTip {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: rgba(31, 43, 61, 0.7);
+  border-radius: 4px;
+  ul {
+    li {
+      padding: 5px 15px;
+      border-bottom: 1px dashed #aba6a6;
+      &:last-child {
+        border-bottom: none;
+      }
+      &.no-data {
+        color: #f00;
+      }
+      .name {
+        display: inline-block;
+        min-width: 50px;
+      }
+    }
+  }
+}

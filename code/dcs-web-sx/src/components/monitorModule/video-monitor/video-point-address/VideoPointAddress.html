@@ -1,0 +1,5 @@
+<main id="VideoPointAddress"
+    @contextmenu="rightClick"
+    :style="{'left': getVideoAddress_global.x + 'px', 'top': getVideoAddress_global.y - 13 + 'px'}">
+  <div class="address">{{ getVideoAddress_global ? getVideoAddress_global.address : '' }}</div>
+</main>

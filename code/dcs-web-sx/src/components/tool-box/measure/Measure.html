@@ -1,0 +1,6 @@
+<main id="MeasureArea">
+  <span class="close" @click="closeFunc('measure')">×</span>
+  <ul class="search-drawtool cf">
+    <li v-for="opt in drawTool" :title="opt.text" @click="measureTool(opt.key)"></li>
+  </ul>
+</main>

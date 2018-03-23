@@ -1,0 +1,110 @@
+@import '../../../styles/colorTheme.scss';
+#routeNav {
+  position: absolute;
+  top: 0;
+  left: 36px;
+  transform: translateX(100%);
+  width: 164px;
+  color: #d6dce5;
+  line-height: 24px;
+  background-color: rgba(31, 43, 61, 0.5);
+  border-radius: 2px;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 14px;
+    left: -6px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 6px solid rgba(31, 43, 61, 0.5);
+  }
+  .header {
+     text-indent: 10px;
+    .close {
+      float: right;
+      margin-right: 5px;
+      font-size: 24px;
+      text-indent: 0;
+      cursor: pointer;
+    }
+  }
+  .nav {
+    padding: 0 10px;
+    .pos {
+      position: relative;
+      height: 26px;
+      input[type="text"] {
+        position: absolute;
+        top: 0;
+        left: 22px;
+        padding: 0 5px;
+        width: 88px;
+        height: 24px;
+        color: #d6dce5;
+        font-size: 12px;
+        background: rgba(31, 43, 61, 0.5);
+        border: 1px solid rgba(31, 43, 61, 0.5);
+        border-radius: 2px;
+        outline: none;
+        &::-webkit-input-placeholder { color: #d6dce5 }
+      }
+      i {
+        position: absolute;
+        top: 3px;
+        left: 130px;
+        display: inline-block;
+        width: 14px;
+        height: 20px;
+        background: url(../../../../static/img/navigation/pick.png) no-repeat center / 100% 100%;
+        cursor: pointer;
+      }
+      .adress {
+        float: right;
+        width: 120px;
+        height: 24px;
+        margin-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  .way {
+    margin: 5px 0 0 30px;
+    display: inline-block;
+    border: 1px solid $theme-color;
+    border-radius: 2px;
+    li {
+      float: left;
+      width: 50px;
+      height: 22px;
+      cursor: pointer;
+      &.on { background: $theme-color; }
+      img { margin: 1px 0 0 15px; }
+    }
+  }
+  .detail {
+    float: left;
+    margin-bottom: 10px;
+    width: 80px;
+    text-indent: 10px;
+    cursor: pointer;
+    li {
+      line-height: 24px;
+      &.cn { color: $theme-color; }
+      &.selected { color: #fff; }
+    }
+  }
+  .detail-line {
+    margin-top: 10px;
+    float: left;
+    width: 1px;
+    height: 60px;
+    background: rgba(31, 43, 61, 0.5);
+  }
+  .walk {
+    margin-bottom: 5px;
+    text-indent: 15px;
+    li { line-height: 24px; }
+  }
+}

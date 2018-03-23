@@ -1,0 +1,50 @@
+<main id="WaterLevel" :style="{left: ((winWidth - eleWidth)/2) + 'px'}" v-drag="{handle: '.draggable'}">
+  <header class="draggable">
+    <span>{{waterLevelData_global.name}}</span>
+    <i class="close-icon" @click="toggleWaterLevelPopup_global(false)"></i>
+  </header>
+  <fieldset class="content-wrapper">
+    <div class="diagram">
+      <!--<svg width="284px" height="170px">
+        <clipPath id="circleClip">
+          <circle cx="92" id="circle" cy="77" r="64" stroke="black" stroke-width="8px" fill="none"></circle>
+        </clipPath>
+        <mask id="reservoirClip">
+          <circle cx="92" id="circle" cy="77" r="64" stroke="black" stroke-width="8px" fill="white"></circle>
+          <rect x="133" y="47" width="25" height="40" fill="black"></rect>
+        </mask>
+        <g for="diagram" clip-path="url(#circleClip)">
+          <path :d="levelSvgString" stroke="black" stroke-width="4px" :mask="waterLevelData_global.name.match('水库') && !isOverFlow ? 'url(#reservoirClip)' : ''"
+            :fill="levelSvgColor"></path>
+          <path v-if="waterLevelData_global.name.match('水库')" d="M 103 49, h 30 Q 135 71, 153 82 h 10 v 68 h -106 L 51 124 Q 95.5 100.5, 103 49 Z"
+            stroke-width="4px" stroke="black" fill="#49a737"></path>
+          <use xlink:href="#circle"></use>
+        </g>
+      </svg-->
+      <img :src="levelImg" alt="">
+      <article class="diagram-text">
+        <div class="distance-wrapper"><span>警戒水位</span><span>{{waterLevelData_global.warnwaterlevel}}m</span></div>
+        <div class="current-level"><span>当前水位</span><span>{{waterLevelData_global.curwaterlevel}}m</span></div>
+        <div class="update-time"><span>更新时间</span><span>{{updateDateTime}}</span></div>
+      </article>
+    </div>
+    <div class="detail">
+      <ul class="cf">
+        <li><em>电话号码 </em><span>{{waterLevelData_global.cellphone}}</span></li>
+        <li><em>管理员</em><span>{{waterLevelData_global.manager}}</span></li>
+      </ul>
+      <ul class="cf">
+        <li><em>经度</em><span>{{waterLevelData_global.gcjLon.toFixed(3)}}</span></li>
+        <li><em>纬度</em><span>{{waterLevelData_global.gcjLat.toFixed(3)}}</span></li>
+      </ul>
+      <ul class="cf">
+        <li v-show="waterLevelData_global.grade"><em>等级</em><span>{{waterLevelData_global.grade}}</span></li>
+        <li v-show="waterLevelData_global.totalcapacity"><em>总库容</em><span>{{waterLevelData_global.totalcapacity}}万m³</span></li>
+      </ul>
+      <ul class="cf">
+        <li v-show="waterLevelData_global.upwaterlevel"><em>防限水位</em><span>{{waterLevelData_global.upwaterlevel}}m</span></li>
+        <li v-show="waterLevelData_global.upcapacity"><em>防限库容</em><span>{{waterLevelData_global.upcapacity}}万m³</span></li>
+      </ul>
+    </div>
+  </fieldset>
+</main>

@@ -1,0 +1,20 @@
+<main id="EventDeal" v-drag="{handle: '.draggable'} " class="popup-general ">
+  <div for="dragging"></div>
+  <header class="draggable ">
+    <span>应急处理</span>
+    <i @click="toggleEventDeal_global(false)"></i>
+  </header>
+  <section class="popup-tab-wraper" style="margin-bottom: 0;">
+    <ul class="tab-option-container">
+      <li @click="selectTabOption('unfinishedEvent') " class="tab-option " :class="[tabOptionSelected==='unfinishedEvent' ?
+  'tab-option-selected' : ''] ">当前事件</li>
+      <li @click="selectTabOption('newEvent') " class="tab-option " :class="[tabOptionSelected==='newEvent' ?
+  'tab-option-selected' : ''] ">新建事件</li>
+      <li @click="selectTabOption('finishedEvent') " class="tab-option " :class="[tabOptionSelected==='finishedEvent' ?
+  'tab-option-selected' : ''] ">历史事件</li>
+    </ul>
+  </section>
+  <div class="cont">
+    <component :is="currentView" :selectTabOption="selectTabOption"></component>
+  </div>
+</main>

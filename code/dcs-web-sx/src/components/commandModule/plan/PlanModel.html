@@ -1,0 +1,20 @@
+<main id="planPopup" v-drag="{handle: '.draggable'}" class="popup-general">
+  <div for="dragging"></div>
+  <header class="draggable">
+    <span>预案在线</span>
+    <i @click="togglePlanModel_global(false)"></i>
+  </header>
+	<section class="popup-tab-wraper">
+    <ul class="tab-option-container">
+			<li @click="selectTabOption('plan')" 
+				:class="['tab-option', { 'tab-option-selected': tabOptionSelected === 'plan' }]">预案在线</li>
+			<li @click="selectTabOption('template')" 
+				:class="['tab-option', { 'tab-option-selected': tabOptionSelected === 'template' }]">预案库</li>
+			<li @click="selectTabOption('expert')" 
+				:class="['tab-option', { 'tab-option-selected': tabOptionSelected === 'expert' }]">专家库</li>
+			<li @click="selectTabOption('rescue')" 
+				:class="['tab-option', { 'tab-option-selected': tabOptionSelected === 'rescue' }]">救援库</li>
+    </ul>
+  </section>
+	<components :is="currentView"></components>
+</main>

@@ -1,0 +1,23 @@
+#app {
+  font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  font-size: 12px;
+}
+
+h1 {
+  background-color: transparent;
+  position: absolute;
+  display: block;
+  z-index: 2;
+  color: #cce7f1;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+}
+
+
