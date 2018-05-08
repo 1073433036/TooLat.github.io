@@ -1,0 +1,160 @@
+@import "~assets/styles/_bootstrap";
+
+.payment_progress_detail_page {
+  box-sizing: border-box;
+  height: 100%;
+  background: #eeeff1;
+
+    .wrapper {
+      width: 100%;
+      min-height: 100%;
+      padding-top: rem(90px);
+    }
+
+    .top {
+      width: 100%;
+      height: rem(270px);
+      padding: rem(20px) rem(20px) 0 rem(20px);
+      box-shadow: 0 rem(-4px) rem(1px) #999 inset;
+
+      .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-top: rem(20px);
+        background-color: #252a29;
+        border-radius: rem(15px) rem(15px) 0 0;
+        color: #fff;
+
+        .amount{
+          width: 100%;
+          font-size: rem(60px);
+          text-align: center;
+
+          span:nth-child(2) {
+            display: block;
+            font-size: rem(24px);
+            color: #9a9a9a;
+          }
+        }
+
+        .card {
+          position: absolute;
+          bottom: rem(5px);
+          left: rem(30px);
+          width: 100%;
+          height: rem(110px);
+          padding-top: rem(10px);
+          padding-left: rem(100px);
+
+          .logo {
+            position: absolute;
+            top: rem(20px);
+            left: 0;
+            width: rem(70px);
+            height: rem(70px);
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #edf0f0;
+            padding: rem(10px);
+
+            > img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              vertical-align: top;
+            }
+          }
+
+          .bank-name {
+            width: rem(270px);
+            height: rem(46px);
+            line-height: rem(46px);
+            font-size: rem(28px);
+          }
+
+          .number {
+            float: left;
+            font-size: rem(28px);
+            letter-spacing: rem(2px);
+          }
+
+          .state {
+            position: absolute;
+            bottom: rem(20px);
+            right: rem(50px);
+            color: #56c6f5;
+          }
+
+          .underway-state {
+            color: #fcbe16;
+          }
+        }
+
+
+      }
+    }
+
+    .detail {
+      box-sizing: border-box;
+      width: 100%;
+      padding-left: rem(30px);
+      background-color: #fff;
+      color: #333;
+
+      > h3 {
+        padding: rem(28px) 0;
+        font-size: rem(28px);
+        border-bottom: rem(2px) solid #ccc;
+      }
+
+      .list{
+
+        .item {
+          width: 100%;
+          height: rem(185px);
+          padding: rem(13px) 0;
+          border-bottom: rem(2px) solid #ccc;
+
+          .block {
+            width: 100%;
+            height: rem(50px);
+            line-height: rem(46px);
+
+            span.bf {
+              float: left;
+            }
+
+            span.bs {
+              float: right;
+              margin-right: rem(30px);
+              font-size: rem(28px);
+              color: #333;
+            }
+
+            .time {
+              padding-left: rem(30px);
+            }
+
+            span.state {
+              color: #56c6f5;
+            }
+
+            span.underway-state {
+              color: #fcbe16;
+            }
+          }
+
+          .block1 {
+            font-size: rem(24px);
+            color: #5d5d5d;
+          }
+        }
+
+        .bordernone {
+          border: none;
+        }
+      }
+    }
+
+}

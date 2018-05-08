@@ -1,0 +1,227 @@
+@import "~assets/styles/_bootstrap";
+
+.user-certify-page {
+  height: 100%;
+  background: #edf0f0;
+
+  .wrapper {
+    padding: rem(90px) 0;
+    height: 100%;
+
+    .controller {
+
+      .form-group {
+
+        .input-group {
+          margin-top: rem(20px);
+        }
+
+        .input-item {
+          padding: 0 rem(20px);
+          width: 100%;
+          height: rem(130px);
+          line-height: rem(130px);
+          border-bottom: 1px solid #eee;
+          background: #fff;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .sp-right {
+            position: absolute;
+            right: rem(40px);
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          &.w280 {
+            > span {
+              width: rem(300px);
+            }
+
+            .right {
+              width: rem(320px);
+            }
+          }
+
+
+          > span {
+            position: absolute;
+            display: inline-block;
+            left: rem(100px);
+            width: rem(200px);
+            font-size: rem(28px);
+            color: #333;
+            vertical-align: middle;
+
+
+            > em {
+              padding-left: rem(10px);
+              font-size: rem(28px);
+              color: #ffa60e;
+              vertical-align: middle;
+            }
+          }
+
+          .right {
+            position: absolute;
+            display: inline-block;
+            right: rem(80px);
+            width: rem(420px);
+            height: 100%;
+            text-align: right;
+            color: #333;
+
+            > input {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto 0;
+              right: 0;
+              padding: 0 rem(5px);
+              width: 100%;
+              height: rem(68px);
+              font-size: rem(28px);
+              text-align: right;
+              border: none;
+              vertical-align: middle;
+            }
+
+            .cropper {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: rem(60px);
+              margin: auto 0;
+              width: rem(80px);
+              height: rem(80px);
+            }
+
+          }
+        }
+
+        .button-item {
+          padding-top: rem(95px);
+
+          .btn {
+            display: block;
+            margin: 0 auto;
+            width: rem(710px);
+            height: rem(95px);
+            line-height: rem(95px);
+            font-size: rem(32px);
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: rem(10px);
+            background: #c9c9c9;
+            cursor: pointer;
+
+          }
+        }
+
+      }
+
+
+    .certify-content {
+      padding-top: rem(20px);
+
+      .certify-head {
+        padding-left: rem(20px);
+        height: rem(100px);
+        line-height: rem(100px);
+        font-size: rem(28px);
+        border-bottom: 1px solid $bc;
+        background: #fff;
+      }
+
+      .certify-body {
+        .item {
+          height: rem(160px);
+          line-height: rem(160px);
+          border-bottom: 1px solid $bc;
+          background: #fff;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .img {
+            position: absolute;
+            top: 50%;
+            left: rem(20px);
+            width: rem(170px);
+            height: rem(106px);
+            transform: translate(0, -50%);
+
+            > img {
+              margin: 0 auto;
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+
+          .txt {
+            position: absolute;
+            display: inline-block;
+            left: rem(320px);
+          }
+
+          .sp-right {
+            position: absolute;
+            top: 0;
+            right: rem(20px);
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          .sp-success {
+            position: absolute;
+            top: 0;
+            right: rem(60px);
+            bottom: 0;
+            margin: auto 0;
+            width: rem(50px);
+            height: rem(50px);
+          }
+
+          > input {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .certify-btn {
+      padding: rem(80px) rem(50px);
+      text-align: center;
+
+      > a  {
+        display: block;
+        height: rem(100px);
+        line-height: rem(100px);
+        background-color: #01b3f0;
+        color: #fff;
+        font-size: rem(32px);
+        border-radius: rem(10px);
+      }
+    }
+
+    }
+  }
+
+}
+
+
+@keyframes myHorn
+{
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}

@@ -1,0 +1,202 @@
+@import "~assets/styles/_bootstrap";
+
+.car-insurance-detail-page {
+  width: 100%;
+  height: 100%;
+  background: #edf0f0;;
+
+  .wrapper {
+    padding-top: rem(110px);
+    padding-bottom: rem(50px);
+    height: 100%;
+    font-size: rem(28px);
+    color: #333;
+    line-height: 1.67;
+
+    .order-info {
+      padding-bottom: rem(20px);
+      margin-bottom: rem(3px);
+      background-color: #fff;
+
+      .info-list {
+        width: 100%;
+        padding-left: rem(20px);
+        padding-top: rem(20px);
+
+        .item {
+          display: flex;
+          align-items: center;
+          height: rem(63px);
+          line-height: rem(63px);
+
+          .item-h {
+            color: #999;
+            margin-right: rem(20px);
+          }
+
+          .color-1 {
+            color: #e29300;
+          }
+
+          .item-image {
+            margin-left: rem(20px);
+            height: rem(50px);
+            width: rem(50px);
+
+            &.on {
+              height: rem(40px);
+            }
+
+            > img {
+              display: inline-block;
+              height: 100%;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .car-insurance-detail {
+
+      .h-group {
+        overflow: auto;
+
+        > h3 {
+          float: left;
+          width: 50%;
+          height: rem(90px);
+          line-height: rem(90px);
+          font-size: rem(28px);
+          background-color: #fff;
+          color: #666;
+
+          > span {
+            display: block;
+            width: rem(175px);
+            height: 100%;
+            margin: 0 auto;
+            text-align: center;
+          }
+
+          .active {
+            color: #2ea7e0;
+            border-bottom: rem(2px) solid #2ea7e0;
+          }
+        }
+      }
+
+      .basic-info {
+
+        > h3 {
+          height: rem(77px);
+          padding-left: rem(20px);
+          line-height: rem(77px);
+          font-size: rem(28px);
+          color: #999;
+        }
+
+        .carinfo-list {
+          padding: rem(30px) rem(20px);
+          background-color: #fff;
+
+          .item {
+            height: rem(63px);
+            line-height: rem(63px);
+
+            .item-h {
+              color: #999;
+              margin-right: rem(20px);
+            }
+          }
+
+        }
+      }
+
+      .insurance-type-info {
+
+        h3 {
+          height: rem(77px);
+          padding-left: rem(20px);
+          line-height: rem(77px);
+          font-size: rem(28px);
+          color: #999;
+
+          .tips {
+            color: #e29300;
+          }
+        }
+
+        .titile-item, .item {
+          overflow: auto;
+          width: 100%;
+          height: rem(68px);
+          padding: 0 rem(20px);
+          margin-bottom: rem(3px);
+          line-height: rem(68px);
+          background-color: #fff;
+
+          .item-h {
+            float: left;
+            width: 30%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+
+          .item-c1 {
+            float: left;
+            width: 25%;
+            text-align: center;
+            white-space: nowrap;
+          }
+
+          .item-c2 {
+            float: left;
+            width: 25%;
+            text-align: center;
+            white-space: nowrap;
+          }
+
+          .item-c3 {
+            float: left;
+            width: 20%;
+            text-align: center;
+            white-space: nowrap;
+          }
+        }
+
+        .titile-item {
+          margin-top: rem(20px);
+        }
+
+        .item {
+          margin-bottom: rem(2px);
+
+          .item-h {
+            color: #999;
+          }
+
+          .item-c1 {
+            color: #999;
+          }
+        }
+
+        .footer-item {
+          height: rem(130px);
+          padding-left: rem(20px);
+          margin-top: rem(18px);
+          line-height: rem(130px);
+          background-color: #fff;
+
+          > span {
+            margin-left: rem(20px);
+          }
+        }
+
+      }
+    }
+
+  }
+
+}

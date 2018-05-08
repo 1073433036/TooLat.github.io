@@ -1,0 +1,344 @@
+@import "~assets/styles/_bootstrap";
+
+.comfirm_payment_plan_page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #eeeff1;
+	color: #323232;
+
+	.slot {
+		// margin-right: rem(-20px) !important;
+
+		.right {
+
+			> a{
+				display: block;
+				width: 100%;
+				font-size: rem(32px);
+				color: #fff;
+
+				> i {
+					width: rem(34px);
+					height: rem(34px);
+				}
+			}
+		}
+	}
+
+  .content {
+    padding-top: rem(90px);
+  }
+
+  .list {
+    background-color: #fff;
+    font-size: rem(28px);
+    color: #323232;
+    box-shadow: 0 rem(4px) rem(4px) #ccc;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+      height: rem(127px);
+      line-height: rem(127px);
+      margin-left: 5%;
+      border-bottom: rem(2px) solid #eee;
+    }
+
+    .left {
+      color: #333;
+    }
+
+    .right {
+      margin-right: 5%;
+    }
+
+    .readyonly-input {
+      padding-left: rem(15px);
+      border: none;
+      text-align: right;
+    }
+
+    .input {
+      float: left;
+    }
+
+    .input1 {
+      display: flex;
+      justify-content: flex-end;
+      float: right;
+      width: rem(220px);
+    }
+
+    .sub-input {
+      width: rem(70px);
+      border: none;
+      text-align: center;
+
+    }
+
+    .subtract {
+      width: rem(26px);
+      height: 100%;
+      font-size: rem(36px);
+      text-align: center;
+      color: #ff4348;
+    }
+
+    .plus {
+      width: rem(26px);
+      height: 100%;
+      font-size: rem(36px);
+      text-align: center;
+      color: #01b5f1;
+    }
+  }
+
+  .display-payment {
+		box-sizing: border-box;
+		padding: rem(30px) 0;
+    width: 100%;
+    height: rem(164px);
+    padding: 0 rem(30px);
+    background-color: #fff;
+
+    .expense {
+			padding-top: rem(30px);
+		}
+
+		.box {
+
+			.select {
+				padding-top: rem(20px);
+				width: 100%;
+				display: flex;
+
+				.choose {
+					width: 33.3333%;
+
+					.radio-group {
+						float: left;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: rem(50px);
+						// margin-left: rem(55px);
+						color: #333;
+
+						:checked + .circle-radio .hook {
+							display: block;
+						}
+
+						.circle-radio {
+							display: block;
+							width: rem(37px);
+							height: rem(37px);
+							margin-right: rem(23px);
+							border-radius: 100%;
+							background-color: #01b3f0;
+
+							.hook {
+									display: block;
+									display: none;
+									width: rem(10px);
+									height: rem(22px);
+									margin: 0 auto;
+									margin-top: rem(4px);
+									border-right: rem(2px) solid #fff;
+									border-bottom: rem(2px) solid #fff;
+									transform: rotate(45deg);
+								}
+						}
+
+						.radio-h {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+  }
+
+  .protocol-group {
+		margin-top: rem(25px);
+		padding: 0 rem(20px);
+
+    .plan {
+			width: 100%;
+			height: rem(120px);
+
+			.project {
+				overflow: hidden;
+
+				.choice {
+					float: left;
+					margin-right: rem(15px);
+					width: rem(226px);
+					height: rem(100px);
+					line-height: rem(100px);
+					text-align: center;
+					border-radius: rem(14px);
+					background-color: #fff;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+  }
+
+  .h3 {
+    margin: rem(20px);
+  }
+
+  .list-payment-plan {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: rem(30px);
+    background-color: #fff;
+
+    .info {
+
+			.money {
+				padding: rem(15px) 0;
+				height: rem(150px);
+				border-bottom: rem(2px) solid #eee;
+				font-size: rem(30px);
+
+				.deploy {
+					padding-top: rem(26px);
+				}
+
+				> span {
+					color: #999;
+				}
+			}
+		}
+
+    .item {
+      height: rem(150px);
+      padding: rem(15px) 0;
+      padding-right: rem(20px);
+      border-bottom: rem(2px) solid #eee;
+
+      .top, .bottom{
+        height: rem(58px);
+        line-height: rem(58px);
+
+        > span:nth-child(1) {
+          float: left;
+        }
+
+        > span:nth-child(2) {
+          float: right;
+        }
+
+        .color-1 {
+          color: #999;
+        }
+      }
+    }
+
+    .bordernone {
+      border: none;
+    }
+  }
+
+  .previous-plan {
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background: #eeeff1;
+    color: #323232;
+
+    .previous-plan-header {
+      position: fixed;
+      z-index: 99999999;
+      width: 100%;
+      height: rem(90px);
+      background-color: #000;
+      font-size: rem(36px);
+      text-align: center;
+      line-height: rem(90px);
+      color: #fff;
+
+      .rect {
+        position: absolute;
+        top: rem(32px);
+        left: rem(20px);
+        width: rem(28px);
+        height: rem(28px);
+        border-left: rem(2px) solid #fff;
+        border-bottom: rem(2px) solid #fff;
+        transform: rotate(45deg);
+      }
+    }
+
+    .content {
+      padding-top: rem(90px);
+    }
+
+    .h3 {
+      margin: rem(20px);
+      color: #666;
+    }
+
+    .list-payment-plan {
+      box-sizing: border-box;
+      width: 100%;
+      padding-left: rem(30px);
+      background-color: #fff;
+
+      .info {
+
+        .money {
+          padding: rem(15px) 0;
+          height: rem(150px);
+          border-bottom: rem(2px) solid #eee;
+          font-size: rem(30px);
+
+          .deploy {
+            padding-top: rem(26px);
+          }
+
+          > span {
+            color: #999;
+          }
+        }
+      }
+
+      .item {
+        height: rem(150px);
+        padding: rem(15px) 0;
+        padding-right: rem(20px);
+        border-bottom: rem(2px) solid #eee;
+
+        .top, .bottom{
+          height: rem(58px);
+          line-height: rem(58px);
+
+          > span:nth-child(1) {
+            float: left;
+          }
+
+          > span:nth-child(2) {
+            float: right;
+          }
+
+          .color-1 {
+            color: #999;
+          }
+        }
+      }
+
+      .bordernone {
+        border: none;
+      }
+    }
+
+  }
+}

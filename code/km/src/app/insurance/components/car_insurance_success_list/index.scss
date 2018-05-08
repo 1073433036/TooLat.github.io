@@ -1,0 +1,156 @@
+@import "~assets/styles/_bootstrap";
+
+.car-insurance-success-list-page {
+  width: 100%;
+  height: 100%;
+  background: #edf0f0;
+
+  .wrapper {
+    padding-top: rem(110px);
+    height: 100%;
+    font-size: rem(28px);
+    color: #333;
+    line-height: 1.67;
+
+    .insurance-company-info {
+
+    }
+
+    .company-item {
+      overflow: auto;
+      position: relative;
+      padding: rem(35px) rem(20px);
+      margin-bottom: rem(20px);
+      background-color: #fff;
+
+      .logo {
+        float: left;
+        width: 15%;
+      }
+
+      .insurance-info {
+        float: left;
+        width: 85%;
+        padding-left: rem(20px);
+
+        > h3 {
+          margin-bottom: rem(13px);
+          font-size: rem(30px);
+        }
+
+        .limit {
+          margin-bottom: rem(15px);
+
+          > h4 {
+            margin-bottom: rem(12px);
+            font-size: rem(28px);
+            color: #59b4e4;
+          }
+
+          > p {
+            font-size: rem(26px);
+            color: #e29300;
+          }
+        }
+
+        .btn-group {
+          overflow: auto;
+
+          .detail-btn {
+            float: right;
+            width: rem(130px);
+            height: rem(54px);
+            border: rem(2px) solid #2ea7e0;
+            margin-right: rem(20px);
+            line-height: rem(54px);
+            text-align: center;
+            background-color: #fff;
+            color: #2ea7e0;
+            border-radius: rem(8px);
+          }
+
+          .modify-btn {
+            float: right;
+            width: rem(130px);
+            height: rem(54px);
+            border: rem(2px) solid #2ea7e0;
+            line-height: rem(54px);
+            text-align: center;
+            background-color: #2ea7e0;
+            color: #fff;
+            border-radius: rem(8px);
+          }
+
+        }
+      }
+
+      .tips {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: rem(35px);
+        right: rem(65px);
+        width: rem(210px);
+        height: rem(40px);
+        border: rem(1px) solid #febd17;
+        font-size: rem(26px);
+        line-height: rem(40px);
+        color: #febd17;
+        border-radius: rem(15px);
+
+        .sp {
+          vertical-align: middle;
+        }
+
+        > span {
+          margin: 0 rem(13px) 0 rem(8px);
+        }
+      }
+    }
+  }
+
+  .filter-detail {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+
+    .content-container {
+      padding-top: rem(90px);
+
+      .filter-list {
+        background-color: #edf0f0;
+
+        > li {
+          width: 100%;
+          height: rem(90px);
+          margin-bottom: rem(2px);
+          background-color: #fff;
+          line-height: rem(90px);
+          text-align: center;
+
+          > span {
+            font-size: rem(22px);
+            color: #999;
+          }
+        }
+
+        .checked {
+          background-color: #01b3f0;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .slide-enter-active, .slide-leave-active {
+    transition: all .6s ease;
+  }
+
+  .slide-enter, .slide-leave-to {
+    transform: translate(0, -100%);
+  }
+
+}

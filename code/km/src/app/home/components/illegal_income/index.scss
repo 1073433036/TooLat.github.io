@@ -1,0 +1,141 @@
+@import "~assets/styles/_bootstrap";
+
+.illegal_income {
+  height: 100%;
+  .top-img{
+    width:rem(70px);
+    height:rem(90px);
+  }
+
+  .illegal_income_wrapper {
+
+
+    .notice{
+      width:rem(462px);
+      font-size: rem(30px);
+      color:#333;
+      display:block;
+      height:100%;
+      line-height:rem(47px);
+    }
+    .info-header {
+      height:rem(155px);
+      margin-top: rem(94px);
+      border-bottom: 1px solid $bc;
+      display:flex;
+      position: relative;
+      padding-top:rem(30px);
+
+      padding-left:rem(40px);
+      background:#fff;
+      img{
+        height:rem(84px);
+        width:rem(74px);
+      }
+      .text{
+        position: absolute;
+        right:rem(50px);
+        color:#666;
+        font-size: rem(20px);
+      }
+      p{
+        padding-right:rem(40px);
+        margin-left: rem(40px);
+        line-height: rem(50px);
+      }
+      span{
+        color:#f8042c;
+      }
+    }
+
+    .info_box {
+      margin-top:rem(20px);
+      padding-bottom: rem(40px);
+      .info {
+        padding: 0 rem(20px);
+        font-size: rem(28px);
+        background: #fff;
+
+        .list {
+          position: relative;
+          height: rem(126px);
+          line-height: rem(126px);
+          font-size: rem(28px);
+          border-bottom: 1px solid $bc;
+          color: #000;
+          overflow: hidden;
+
+          .title {
+            float: left;
+          }
+
+          input.input-item {
+            position: absolute;
+            top: rem(26px);
+            right: rem(20px);
+            width: rem(400px);
+            height: rem(70px);
+            font-size: rem(28px);
+            text-align: right;
+            border: none;
+            outline: none;
+            &::-webkit-input-placeholder { color: #c3c3c3; }
+            &::-moz-placeholder { color: #c3c3c3; }
+            &:-moz-placeholder { color: #c3c3c3; }
+            &:-ms-input-placeholder { color: #c3c3c3; }
+            &.school {
+              right: rem(65px);
+              &::-webkit-input-placeholder { color: #000; }
+              &::-moz-placeholder { color: #000; }
+              &:-moz-placeholder { color: #000; }
+              &:-ms-input-placeholder { color: #000; }
+            }
+            &.verificationCode {
+              right: rem(225px);
+              width: rem(200px);
+            }
+            &:disabled { background-color: #fff; }
+          }
+
+          .arrow {
+            position: absolute;
+            top: rem(45px);
+            right: rem(20px);
+            width: rem(18px);
+            height: rem(32px);
+            background: url('~assets/images/credit-card/arrow-left-little.png') no-repeat center / 100% 100%;
+          }
+
+
+        }
+
+      }
+
+      .btn {
+        width: rem(710px);
+        height: rem(90px);
+        line-height: rem(90px);
+        text-align: center;
+        font-size: rem(32px);
+        color: #fff;
+        margin: rem(80px) rem(20px) 0 rem(20px);
+        background-color: #c9c9c9;
+        border: 1px solid #c9c9c9;
+        border-radius: rem(10px);
+
+        &.on {
+          background-color: #01b3f0;
+          border: 1px solid #01b3f0;
+        }
+      }
+    }
+  }
+
+}
+.header-back{
+  display:block !important;
+}
+.utilitybar-page{
+  display:none;
+}
+

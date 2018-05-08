@@ -1,0 +1,192 @@
+@import "~assets/styles/_bootstrap";
+
+.add-deposit-card-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .top {
+        position: relative;
+        padding-bottom: rem(18px);
+        background: linear-gradient(#0a0f12, #2a3f4b);
+        color: #fff;
+        overflow: hidden;
+
+        .image {
+          margin: auto;
+          margin-top: rem(20px);
+          width: rem(204px);
+          height: rem(208px);
+        }
+
+        .profile {
+          padding: rem(20px) rem(20px);
+          line-height: rem(50px);
+          text-align: center;
+          color: #febd17;
+          font-size: rem(24px);
+        }
+
+        .dredge {
+          margin: auto;
+          padding: rem(20px);
+          width: rem(706px);
+          height: rem(140px);
+          font-size: rem(24px);
+          border: 1px solid #febd17;
+
+          .approve {
+            color: #fff;
+          }
+
+          .insurance {
+            padding-top: rem(15px);
+            font-size: rem(30px);
+            color: #febd17;
+          }
+        }
+      }
+
+      .mode {
+        padding: rem(30px) rem(20px);
+
+        .info {
+          font-size: rem(24px);
+          line-height: rem(42px);
+        }
+
+        > a {
+          position: relative;
+          display: block;
+          margin-top: rem(30px);
+          padding-top: rem(20px);
+          padding-left: rem(40px);
+          padding-bottom: rem(30px);
+          background-color: #fff;
+          border-radius: rem(10px);
+          margin-bottom: rem(20px);
+          box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .1);
+
+          .title-h {
+            height: rem(50px);
+            line-height: rem(50px);
+            font-size: rem(28px);
+            color: #333;
+          }
+
+          .title {
+            height: rem(50px);
+            line-height: rem(50px);
+            font-size: rem(28px);
+            color: #333;
+            margin-bottom: rem(26px);
+          }
+
+          .btn {
+
+            .name {
+              display: inline-block;
+              width: rem(180px);
+              line-height: rem(50px);
+              font-size: rem(28px);
+              color: #01b3f0;
+              text-align: center;
+              border-radius: rem(10px);
+              border: 1px solid #01b3f0;
+            }
+          }
+
+          i.icon {
+            display: block;
+            position: absolute;
+            bottom: rem(30px);
+            right: rem(30px);
+
+            &.icon-bank_card {
+              color: #febd17;
+              font-size: rem(70px);
+            }
+
+            &.icon-creditcard {
+              color: #fe7917;
+              font-size: rem(100px);
+            }
+          }
+        }
+      }
+
+      .hint {
+        padding: 0 rem(30px);
+
+        .warm-prompt {
+          font-size: rem(30px);
+          font-weight: bold;
+          color: #000;
+        }
+
+        .text {
+          padding-top: rem(10px);
+          padding-bottom: rem(32px);
+          text-indent: rem(60px);
+          line-height: rem(42px);
+          font-size: rem(26px);
+          border-bottom: 1px solid $bc;
+          color: #666;
+        }
+      }
+
+      .way {
+        padding: rem(30px);
+
+        .item {
+          display: flex;
+          justify-content: space-between;
+
+          .list {
+            width: rem(100px);
+            height: rem(80px);
+            border-radius: rem(10px);
+            background-color: #e0e0e0;
+
+            > a {
+              display: block;
+              padding: rem(18px);
+              width: 100%;
+              height: 100%;
+
+              > img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .insurance {
+              padding: rem(18px);
+            }
+
+            .unionpay {
+              padding: rem(18px) rem(14px);
+            }
+
+            .wechat {
+              padding: rem(12px) rem(15px);
+            }
+
+            .alipay {
+              padding: rem(15px) rem(24px);
+            }
+
+            .wallet {
+              padding: rem(14px) rem(28px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

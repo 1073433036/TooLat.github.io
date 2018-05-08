@@ -1,0 +1,231 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-share-invite-page {
+  padding-top: rem(90px);
+  height: 100%;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .banner {
+        background-color: #fff;
+
+        > img {
+          display: block;
+          vertical-align: top;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .box {
+        padding-top: rem(30px);
+        background-color: #fff;
+
+        &.mb20 {
+          margin-bottom: rem(20px);
+        }
+
+        .big-title {
+          position: relative;
+          height: rem(50px);
+          line-height: rem(50px);
+          text-align: center;
+          color: #333;
+          font-size: rem(32px);
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: rem(66px);
+            right: rem(66px);
+            height: 1px;
+            background-color: $bc;
+          }
+
+          > span {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 rem(20px);
+            background-color: #fff;
+          }
+
+          &.text {
+            font-size: rem(28px);
+            color: #999;
+          }
+        }
+
+        ul.list {
+          display: flex;
+
+          li.item {
+            flex: 1;
+            min-width: 1px;
+
+            > a {
+              display: block;
+              padding-bottom: rem(33px);
+
+              .image {
+
+                > img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .info {
+                padding: 0 rem(20px);
+                overflow: hidden;
+                text-align: center;
+
+                .title {
+                  width: 100%;
+                  height: rem(46px);
+                  line-height: rem(46px);
+                  font-size: rem(28px);
+                  color: #333;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+
+                .profile {
+                  width: 100%;
+                  height: rem(38px);
+                  line-height: rem(38px);
+                  font-size: rem(24px);
+                  color: #999;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+
+        .reward-top {
+          padding: rem(20px);
+        }
+
+        .share-btn {
+          padding: rem(50px) 0;
+          text-align: center;
+
+          > a {
+            display: inline-block;
+            width: rem(620px);
+            height: rem(80px);
+            line-height: rem(80px);
+            background: linear-gradient(to right, #f4b34a , #f97836);
+            color: #fff;
+            font-size: rem(32px);
+            border-radius: rem(40px);
+
+            i, span {
+              display: inline-block;
+              vertical-align: top;
+            }
+
+            i.icon {
+              height: rem(80px);
+              line-height: rem(80px);
+              font-size: rem(42px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .layer {
+    position: relative;
+    z-index: 2001;
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(588px);
+      height: rem(742px);
+      margin-top: rem(-371px);
+      margin-left: rem(-294px);
+      padding-top: rem(30px);
+      background-color: #fff;
+      border-radius: rem(20px);
+      text-align: center;
+
+      .title {
+        height: rem(52px);
+        line-height: rem(52px);
+        margin-bottom: rem(24px);
+        font-size: rem(32px);
+        color: #333;
+      }
+
+      .image {
+        margin-bottom: rem(20px);
+        text-align: center;
+
+        > img {
+          display: inline-block;
+          vertical-align: top;
+          width: rem(444px);
+          height: rem(444px);
+        }
+      }
+
+      .name {
+        height: rem(44px);
+        line-height: rem(44px);
+        margin-bottom: rem(14px);
+        font-size: rem(32px);
+        color: #333;
+      }
+
+      .text {
+        height: rem(40px);
+        line-height: rem(40px);
+        font-size: rem(28px);
+        color: #999;
+
+        .money {
+          color: #ff2a34;
+        }
+      }
+
+      i.icon {
+        position: absolute;
+        bottom: rem(-120px);
+        left: 50%;
+        margin-left: rem(-42px);
+        display: block;
+        width: rem(84px);
+        height: rem(84px);
+        line-height: rem(84px);
+        border-radius: 50%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .6);
+        overflow: hidden;
+        color: #fff;
+        font-size: rem(50px);
+      }
+    }
+  }
+}

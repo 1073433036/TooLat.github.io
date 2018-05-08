@@ -1,0 +1,139 @@
+@import "~assets/styles/_bootstrap";
+
+.tax-rate-page {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: #eeeff1;
+
+  .wrapper {
+    padding-bottom: rem(200px);
+    margin-top: rem(90px);
+
+    .list-h3 {
+      width: 100%;
+      height: rem(102px);
+      line-height: rem(102px);
+      margin-left: 5%;
+      color: #666;
+      font-size: rem(28px);
+    }
+
+    .list {
+      background-color: #fff;
+      font-size: rem(28px);
+
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        height: rem(127px);
+        line-height: rem(127px);
+        margin-left: 5%;
+        border-bottom: rem(3px) solid #eee;
+      }
+
+      .bordernone {
+        border: none;
+      }
+
+      .left {
+        color: #333;
+      }
+
+      .right {
+        margin-right: 5%;
+      }
+
+      .readyonly-input {
+        padding-left: rem(15px);
+        padding-right: rem(20px);
+        border: none;
+        text-align: right;
+      }
+
+      .input, .tips {
+        float: left;
+      }
+
+      .width {
+        width: rem(230px);
+        height: rem(72px);
+        padding-left: rem(5rem);
+        padding-right: rem(25rem);
+        border: none;
+        margin-right: rem(12px);
+        text-align: right;
+      }
+    }
+
+    .input-rate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      padding-top: rem(40px);
+      background-color: #eeeff1;
+      z-index: 99999;
+
+      .input-group {
+        overflow: auto;
+        width: 90%;
+        height: rem(126px);
+        border-radius: rem(12px);
+        margin: 0 auto;
+        background-color: #fff;
+
+        .title-span {
+          float: left;
+          width: 18%;
+          height: 100%;
+          line-height: rem(126px);
+          text-align: center;
+          color: #333;
+        }
+
+        .width1 {
+          float: left;
+          width: 82%;
+          height: 100%;
+          border: none;
+          color: #ccc;
+          font-size: rem(28px);
+        }
+      }
+
+      em {
+        clear: both;
+        display: block;
+        margin-top: rem(26px);
+        margin-left: 5%;
+        color: #999;
+        font-size: rem(24px);
+      }
+
+      .save-rate {
+        display: block;
+        width: 90%;
+        height: rem(92px);
+        line-height: rem(92px);
+        border-radius: rem(12px);
+        margin: 0 auto;
+        margin-top: rem(208px);
+        background-color: #01b3f0;
+        color: #fff;
+        text-align: center;
+        font-size: rem(32px);
+      }
+    }
+
+  }
+
+
+}

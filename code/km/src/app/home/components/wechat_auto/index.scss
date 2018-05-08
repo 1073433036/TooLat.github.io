@@ -1,0 +1,85 @@
+@import "~assets/styles/_bootstrap";
+
+.wechat-auto-page {
+  width: 100%;
+  height: 100%;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+
+    .container {
+      width: 100%;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        height: 100%;
+        overflow: auto;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          .swiper-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          .jump {
+            position: absolute;
+            top: 38%;
+            left: 6%;
+            display: block;
+            width: rem(320px);
+            height: rem(120px);
+          }
+        }
+
+        .image-auto {
+          position: relative;
+          width: 100%;
+          height: auto;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .upward {
+          position: absolute;
+          left: 0;
+          bottom: rem(60px);
+          width: 100%;
+          text-align: center;
+
+          span {
+            animation: start 1.5s infinite ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes start {
+  0%, 30% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-20);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+}

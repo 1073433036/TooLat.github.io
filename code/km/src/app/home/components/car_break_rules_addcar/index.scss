@@ -1,0 +1,225 @@
+
+@import "~assets/styles/_bootstrap";
+
+.add-car-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f3f5f7;
+
+  .header-page{
+    background-color: #0a0f12;
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+    .head-add-car{
+      background: #fff;
+      height: rem(389px);
+      border-bottom: #dddddd solid 1px;
+
+      .photo-cont {
+        width: rem(354px);
+        height: rem(243px);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      > input {
+        opacity: 0;
+      }
+
+      .tip-btn {
+        position: absolute;
+        top: rem(15px);
+        right: rem(15px);
+        padding: 0 rem(15px);
+        line-height: rem(30px);
+        color: #03b2f1;
+      }
+    }
+    .car-number{
+      display: flex;
+      align-items: center;
+      padding: 0 rem(30px);
+      height: rem(122px);
+      background-color: #fff;
+      border-bottom: #dddddd solid 1px;
+
+      .title{
+        padding-left: rem(72px);
+        >img{
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: rem(52px);
+          width: rem(52px);
+        }
+      }
+
+      .prov {
+        position: absolute;
+        top: rem(37px);
+        right: rem(245px);
+        width: rem(78px);
+        height: rem(52px);
+        line-height: rem(52px);
+        text-align: center;
+        color: #1261a2;
+        background: #cfe5fe;
+      }
+
+      input {
+        position: absolute;
+        right: rem(20px);
+        border: none;
+        width: rem(200px);
+      }
+
+      // &:before{
+      //   content: '';
+      //   display: block;
+      //   width: rem(18px);
+      //   height: rem(18px);
+      //   position: absolute;
+      //   right: rem(30px);
+      //   top: 50%;
+      //   transform: translateY(-50%) rotate(45deg);
+      //   border-right: 1px solid #c3c3c3;
+      //   border-top: 1px solid #c3c3c3;
+      // }
+    }
+    .new-save{
+      button{
+        width: rem(650px);
+        height: rem(102px);
+        background-color: #03b2f1;
+        color: #fff;
+        font-size: rem(32px);
+        margin: 0 auto;
+        border: none;
+        display: block;
+        margin-top: rem(134px);
+        border-radius: rem(12px);
+      }
+    }
+  }
+
+  .region-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+  }
+  .region {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-bottom: rem(10px);
+    background: #c9c9c9;
+    width: 100%;
+
+    >ul{
+      height: 100%;
+      display: flex;
+      flex-wrap:wrap;
+      align-items: center;
+
+      >li {
+        margin: rem(10px) 0 0 rem(22px);
+        border-radius: rem(5px);
+        width: rem(98px);
+        height: rem(74px);
+        background-color: #ededed;
+        text-align: center;
+        line-height: rem(74px);
+        color: #000;
+        font-size: rem(26rem);
+        box-shadow: 1px 1px 2px #ccc;
+      }
+    }
+  }
+
+  .car-dialog {
+    .bg {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 9999;
+    }
+
+    .take-photo-wrapper {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(650px);
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      background: #fff;
+
+      >header {
+        position: relative;
+        height: rem(100px);
+        line-height: rem(100px);
+        text-align: center;
+        font-size: rem(32px);
+        color: #03b2f1;
+
+        i.close-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-block;
+          width: rem(100px);
+          height: rem(100px);
+          background: url('~assets/images/car-verification/close.png') no-repeat center / rem(33px) rem(32px);
+        }
+      }
+      .take-photo-content {
+        padding: 0 rem(30px);
+
+        .take-photo-tip {
+          margin-bottom: rem(10px);
+          padding:0 rem(15px);
+          color: #999;
+        }
+
+        .photo-card-wrapper {
+          position: relative;
+          width: rem(590px);
+          height: rem(406px);
+          margin: rem(20px) 0 rem(15px);
+          background: url('~assets/images/car-verification/outline.png') no-repeat center / 100% 100%;
+
+          .photo-card {
+            position: absolute;
+            top: rem(15px);
+            left: rem(15px);
+            width: rem(560px);
+            height: rem(376px);
+          }
+        }
+      }
+    }
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: all 0.3s linear;
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0;
+  }
+}

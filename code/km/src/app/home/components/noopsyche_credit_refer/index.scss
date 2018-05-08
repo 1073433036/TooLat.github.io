@@ -1,0 +1,208 @@
+@import "~assets/styles/_bootstrap";
+
+.noopsyche-credit-refer-page {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: #edf0f0;
+
+  .wrapper {
+    padding-top: rem(90px);
+  
+		.refer {
+
+			.item {
+
+				.list {
+					margin: rem(20px) 0;
+					padding: rem(20px) rem(30px);
+					background-color: #fff;
+          padding-bottom: 0;
+          padding-bottom: rem(54px);
+
+					.top {
+						padding-bottom: rem(20px);
+						text-align: center;
+
+						.title {
+							padding-bottom: rem(20px);
+							font-size: rem(34px);
+							color: #000;
+
+
+							.name {
+								position: relative;
+								display: inline-block;
+
+								.info-tips {
+			            position: absolute;
+			            top: 0;
+			            left: 100%;
+
+			            > span {
+			              position: absolute;
+			              top: rem(-10px);
+			              left: 0px;
+			              display: inline-block;
+			              font-size: rem(24px);
+			              color: #fff;
+			              background-color: red;
+			              height: rem(32px);
+			              line-height: rem(32px);
+			              min-width: rem(32px);
+			              text-align: center;
+			              border-radius: rem(16px);
+			              padding: 0 rem(8px);
+			            }
+			          }
+							}
+						}
+
+
+
+						.state {
+							position: relative;
+							font-size: rem(24px);
+
+							> span {
+								position: absolute;
+								bottom: 0;
+								left: rem(308px);
+								width: rem(76px);
+								border: 1px solid #01b3f0;
+							}
+						}
+					}
+
+					.photo {
+						width: rem(690px);
+						height: rem(258px);
+						margin: auto;
+
+						img {
+							display: block;
+							width: rem(690px);
+							height: rem(258px);
+						}
+					}
+
+          .remind {
+            margin: rem(20px) 0;
+            background: #f3f3f3;
+            padding: rem(12px);
+            border: rem(1px) solid #eee;
+            border-radius: rem(10px);
+
+            p {
+              height: rem(40px);
+              line-height: rem(40px);
+              color: #999;
+              font-size: rem(24px);
+            }
+          }
+
+				}
+			}
+		}
+  }
+
+  .notice-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    .inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(635px);
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border-radius: rem(10px);
+      box-shadow: 0 0 rem(20px) rgba(0, 0, 0, .5);
+
+      .content {
+        .head {
+          height: rem(80px);
+
+          .head-inner {
+            position: absolute;
+            top: rem(50px);
+            width: 100%;
+            z-index: 1000;
+
+            > span {
+              position: absolute;
+              height: rem(60px);
+              line-height: rem(60px);
+              width: 100%;
+              text-align: center;
+              color: #fff;
+              z-index: 1000;
+            }
+
+            > i {
+              display: block;
+              margin: auto;
+            }
+          }
+
+          > i {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: rem(20px);
+            margin: auto 0;
+          }
+        }
+
+        .body {
+          padding: 0 rem(35px) rem(35px) rem(35px);
+
+          .body-inner {
+            padding: rem(65px) rem(30px) rem(30px) rem(30px);
+            border: 1px dashed #ddd;
+            border-radius: rem(10px);
+
+            .time {
+              > span {
+                color: #999;
+              }
+            }
+
+            .text {
+
+              > p {
+                line-height: rem(50px);
+                color: #333;
+              }
+            }
+          }
+        }
+
+        .foot {
+          padding-bottom: rem(40px);
+
+          .link {
+            display: block;
+            margin: 0 auto;
+            padding: rem(10px) rem(20px);
+            width: rem(160);
+            color: #fff;
+            text-align: center;
+            border-radius: rem(10px);
+            background: #01b3f0;
+          }
+        }
+      }
+    }
+
+  }
+
+
+}

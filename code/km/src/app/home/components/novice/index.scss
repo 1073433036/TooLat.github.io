@@ -1,0 +1,14 @@
+@import "~assets/styles/_bootstrap";
+
+.novice-page {
+  width: 100%;
+  height: 100%;
+
+  .controller {
+    padding-top: rem(90px);
+
+    img {
+      width:  100%;
+    }
+  }
+}

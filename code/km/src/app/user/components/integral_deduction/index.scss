@@ -1,0 +1,59 @@
+@import "~assets/styles/_bootstrap";
+
+.integral_deduction {
+  height: 100%;
+	background: #edf0f0;
+
+	._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+
+    .controller {
+
+      .main {
+				margin-top: rem(20px);
+				
+				.item {
+
+					.list {
+						position: relative;
+						margin-bottom: rem(20px);
+						padding: 0 rem(22px);
+						height: rem(156px);
+						color: #000;
+						background: #fff;					
+
+						.left {
+							position: absolute;
+							top: rem(40px);
+							left: rem(20px);
+
+							.time {
+								padding-top: rem(8px);
+								color: #999;
+							}
+						}
+
+						.middle {
+							margin: auto;
+							width: rem(280px);
+							text-align: center;
+							line-height: rem(156px);
+							color: #999;
+						}
+
+						.right {
+							position: absolute;
+							top: 0;
+							right: rem(20px);
+							width: rem(100px);
+							line-height: rem(156px);
+						}
+					}
+				}
+      }
+    }
+  }
+}

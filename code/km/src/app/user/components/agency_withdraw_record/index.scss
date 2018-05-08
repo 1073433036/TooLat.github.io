@@ -1,0 +1,78 @@
+@import "~assets/styles/_bootstrap";
+
+.agency_withdraw_record-page {
+	height: 100%;
+	background: #edf0f0;
+
+	.header-page {
+		background: url('~assets/images/wallet-header.png') no-repeat;
+	}
+
+	.wrapper {
+		padding: rem(90px) 0;
+		height: 100%;
+
+		.controller {
+
+			.list-group {
+				margin-top: rem(20px);
+
+				.list {
+
+					.item {
+						position: relative;
+						margin-top: rem(20px);
+						padding: rem(40px) rem(48px);
+						height: rem(176px);
+						background-color: #fff;
+						border-bottom: 1px solid $bc;
+
+						&:after {
+							display: block;
+							clear: both;
+							content: ' ';
+						}
+
+						.left {
+							position: absolute;
+							top: rem(40px);
+							left: rem(48px);
+							height: rem(96px);
+							font-size: rem(32px);
+							color: #000;
+
+							.date {
+								font-size: rem(34px);
+								color: #000;
+							}
+
+							.time {
+								padding-top: rem(10px);
+								color: #999;
+							}
+						}
+
+						.middle {
+							position: absolute;
+							top: rem(60px);
+							left: rem(360px);
+							font-size: rem(32px);
+							color: #000;
+						}
+
+						.right {
+							position: absolute;
+							top: rem(60px);
+							right: rem(48px);
+							font-size: rem(32px);
+							color: #000;
+						}
+					}
+				}
+			}
+
+			
+		}
+	}
+
+}

@@ -1,0 +1,330 @@
+@import "~assets/styles/_bootstrap";
+
+.student-credit-card-apply-page {
+  height: 100%;
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .com-header {
+    position: relative;
+    line-height: rem(92px);
+    text-indent: rem(50px);
+    font-size: rem(30px);
+    color: #000;
+
+    &::after {
+      position: absolute;
+      top: rem(31px);
+      left: rem(28px);
+      content: '';
+      width: rem(6px);
+      height: rem(30px);
+      border-radius: rem(2px);
+      background: linear-gradient(to bottom, #26e6fb, #40beff);;
+    }
+  }
+
+  .card-type-wrapper {
+    background: #fff;
+
+    .card-selector {
+
+      >ul {
+        display: flex;
+        justify-content: space-around;
+        margin: rem(10px) 5%;
+        width: 90%;
+        >li {
+          position: relative;
+          display: inline-block;
+          width: rem(167px);
+          height: rem(57px);
+          line-height: rem(57px);
+          text-align: center;
+          border: 1px solid #e8e8e8;
+          border-radius: rem(5px);
+          color: #000;
+          box-sizing: border-box;
+
+          &.on {
+            color: #01b3f0;
+            border: 0;
+            background: url('~assets/images/credit-card/outline.png') no-repeat center / 100% 100%;
+          }
+        }
+      }
+    }
+
+    .barner-wrapper {
+      width: 100%;
+      height: rem(320px);
+      padding: rem(50px) rem(90px);
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .barner {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        width: 70%;
+        height: 100%;
+      }
+
+      .swiper-button-prev, .swiper-button-next {
+        width: rem(28px);
+        height: rem(38px);
+        margin-top: rem(-19px);
+      }
+
+      .swiper-button-prev {
+        left: 0;
+        background: url('~assets/images/credit-card/arrow-left.png') no-repeat center / 100% 100%;
+      }
+
+      .swiper-button-next {
+        right: 0;
+        background: url('~assets/images/credit-card/arrow-right.png') no-repeat center / 100% 100%;
+      }
+    }
+
+  }
+
+  .basic-info-wrapper {
+
+    .info-header {
+      margin: rem(20px) 0 rem(5px);
+      background: #fff;
+      border-bottom: 1px solid $bc;
+      display:flex;
+      position: relative;
+      span{
+        flex:1;
+      }
+      .text{
+        position: absolute;
+        right:rem(50px);
+        color:#666;
+        font-size: rem(20px);
+      }
+    }
+
+    .info_box {
+      margin-top: rem(20px);
+      padding-bottom: rem(40px);
+
+      .info {
+        padding: 0 rem(20px);
+        font-size: rem(28px);
+        background: #fff;
+
+        .receiver {
+          position: relative;
+          height: rem(126px);
+          line-height: rem(126px);
+          font-size: rem(28px);
+          border-bottom: 1px solid $bc;
+          color: #000;
+          overflow: hidden;
+
+          em {
+            display: inline-block;
+            float: left;
+            margin-right: rem(25px);
+            width: rem(50px);
+            height: 100%;
+            &.name { background: url('~assets/images/credit-card/name.png') no-repeat center / rem(46px) rem(53px); }
+            &.phone { background: url('~assets/images/credit-card/phone.png') no-repeat center / rem(44px) rem(49px); }
+            &.identity { background: url('~assets/images/credit-card/identity.png') no-repeat center / rem(50px) rem(35px); }
+            &.school { background: url('~assets/images/credit-card/school.png') no-repeat center / rem(49px) rem(49px); }
+            &.QQ { background: url('~assets/images/credit-card/QQ.png') no-repeat center / rem(45px) rem(47px); }
+            &.studentId { background: url('~assets/images/credit-card/studentId.png') no-repeat center / rem(50px) rem(50px); }
+            &.verificationCode { background: url('~assets/images/credit-card/verificationCode.png') no-repeat center / rem(41px) rem(49px); }
+          }
+
+          .people {
+            float: left;
+          }
+
+          input.input-item {
+            position: absolute;
+            top: rem(26px);
+            right: rem(20px);
+            width: rem(400px);
+            height: rem(70px);
+            font-size: rem(28px);
+            text-align: right;
+            border: none;
+            outline: none;
+            &::-webkit-input-placeholder { color: #c3c3c3; }
+            &::-moz-placeholder { color: #c3c3c3; }
+            &:-moz-placeholder { color: #c3c3c3; }
+            &:-ms-input-placeholder { color: #c3c3c3; }
+            &.school {
+              right: rem(65px);
+              &::-webkit-input-placeholder { color: #000; }
+              &::-moz-placeholder { color: #000; }
+              &:-moz-placeholder { color: #000; }
+              &:-ms-input-placeholder { color: #000; }
+            }
+            &.verificationCode {
+              right: rem(225px);
+              width: rem(200px);
+            }
+            &:disabled { background-color: #fff; }
+          }
+
+          .arrow {
+            position: absolute;
+            top: rem(45px);
+            right: rem(20px);
+            width: rem(18px);
+            height: rem(32px);
+            background: url('~assets/images/credit-card/arrow-left-little.png') no-repeat center / 100% 100%;
+          }
+
+          .get-code {
+            position: absolute;
+            top: rem(29px);
+            right: rem(20px);
+            width: rem(180px);
+            height: rem(64px);
+            line-height: rem(64px);
+            text-align: center;
+            color: #fff;
+            background-color: #01b3f0;
+            border-radius: rem(10px);
+            &.active { background-color: #c9c9c9; }
+          }
+        }
+
+      }
+
+      .btn {
+        width: rem(710px);
+        height: rem(90px);
+        line-height: rem(90px);
+        text-align: center;
+        font-size: rem(32px);
+        color: #fff;
+        margin: rem(80px) rem(20px) 0 rem(20px);
+        background-color: #c9c9c9;
+        border: 1px solid #c9c9c9;
+        border-radius: rem(10px);
+
+        &.on {
+          background-color: #01b3f0;
+          border: 1px solid #01b3f0;
+        }
+      }
+    }
+
+  }
+
+  .apply-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    &:before {
+      position: fixed;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 999;
+    }
+
+    .inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(640px);
+      background: #fff;
+      z-index: 999;
+      border-radius: rem(10px);
+      overflow: hidden;
+      background: #fff;
+      transform: translate(-50%, -50%);
+
+      .head {
+        width: 100%;
+        height: rem(100px);
+        line-height: rem(100px);
+        text-align: center;
+        background: linear-gradient(to bottom, #f9f9f9, #e9e9e9);
+
+        > span {
+          font-size: rem(30px);
+          color: #333;
+        }
+
+        > i {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: rem(30px);
+          margin: auto 0;
+        }
+      }
+
+      .body {
+        padding: rem(45px);
+
+        > p {
+          font-size: rem(24px);
+          line-height: rem(40px);
+        }
+      }
+
+      .foot {
+        padding-bottom: rem(40px);
+
+        .btn-group {
+          text-align: center;
+
+          .btn-item {
+            display: inline-block;
+            margin: 0 rem(20px);
+            width: rem(238px);
+            height: rem(64px);
+            text-indent: -9999px;
+
+            &.close {
+              background: url('~assets/images/card-apply-btn-colse.jpg') no-repeat;
+              background-size: 100%;
+            }
+
+            &.ok {
+              background: url('~assets/images/card-apply-btn-ok.jpg') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+
+}

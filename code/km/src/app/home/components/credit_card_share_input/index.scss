@@ -1,0 +1,121 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-share-input-page {
+  padding-top: rem(90px);
+  height: 100%;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+      min-height: 100vh;
+      padding-top: rem(567px);
+      padding-bottom: rem(40px);
+      background: url(~assets/images/creditcard-share-input-bg.jpg) no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+
+      .box {
+        display: inline-block;
+        width: rem(570px);
+        height: rem(593px);
+        vertical-align: top;
+        background-color: #fff;
+        border-radius: rem(20px);
+        overflow: hidden;
+
+        .title {
+          height: rem(113px);
+          line-height: rem(113px);
+          padding: 0 rem(20px);
+          background: linear-gradient(to right, #01b3f0 , #3d90ec);
+          color: #fff;
+          font-size: rem(32px);
+          text-align: left;
+        }
+
+        .form-group {
+
+          .input-item {
+            position: relative;
+            padding: rem(20px) rem(20px);
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            text-align: left;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            > span {
+              margin-left: rem(20px);
+              font-size: rem(28px);
+              color: #333;
+              vertical-align: middle;
+            }
+
+            > input {
+              margin-left: rem(20px);
+              padding: 0 rem(5px);
+              height: rem(68px);
+              font-size: rem(28px);
+              border: none;
+              vertical-align: middle;
+            }
+
+            i.icon {
+              display: inline-block;
+              vertical-align: top;
+              height: rem(68px);
+              line-height: rem(68px);
+              font-size: rem(40px);
+            }
+
+            .code {
+              position: absolute;
+              right: rem(20px);
+              bottom: rem(30px);
+
+              .phone-code {
+                height: rem(68px);
+                background-color: #ffa50d;
+                color: #fff;
+                font-size: rem(28px);
+                border-radius: rem(10px);
+                padding: 0 rem(30px);
+
+                &.active {
+                  background: #c9c9c9;
+                }
+              }
+            }
+          }
+
+          .button-item {
+            padding: rem(28px) rem(40px);
+
+            .btn {
+              display: block;
+              margin: 0 auto;
+              width: 100%;
+              height: rem(95px);
+              line-height: rem(95px);
+              font-size: rem(32px);
+              color: #fff;
+              text-align: center;
+              border: none;
+              border-radius: rem(50px);
+              background: #c9c9c9;
+              cursor: pointer;
+
+              &.on {
+                background: #25a0fb;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

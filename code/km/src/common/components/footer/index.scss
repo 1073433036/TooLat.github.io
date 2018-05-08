@@ -1,0 +1,160 @@
+@import "~assets/styles/_bootstrap";
+
+.footer-page {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: rem(110px);
+  z-index: 1000;
+  background: #f8f8f8;
+
+  .controller {
+    .list {
+      border-top: 1px solid #e8e8e8;
+
+      .item {
+        position: relative;
+        float: left;
+        padding-top: rem(15px);
+        width: 19%;
+        height: rem(100px);
+        text-align: center;
+
+        .foot-menu {
+          display: inline-block;
+
+          &.foot-menu-home {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-home.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+          &.foot-menu-home-act {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-home-act.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+          &.foot-menu-rob {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-rob.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+          &.foot-menu-rob-act {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-rob-act.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+          &.foot-menu-msg {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-msg.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+          &.foot-menu-msg-act {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-msg-act.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+          &.foot-menu-me {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-me.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+          &.foot-menu-me-act {
+            width: rem(45px);
+            height: rem(39px);
+            background: url('~assets/images/menu-me-act.png') no-repeat;
+            background-size: 100%;
+            vertical-align: middle;
+          }
+
+        }
+
+        .act {
+          display: none;
+        }
+
+        &.active {
+          color: #ffa60e;
+
+          .foot-menu {
+            display: none;
+          }
+
+          .act {
+            display: inline-block;
+          }
+        }
+
+        > em {
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+
+        .tips {
+          position: absolute;
+          top: 0;
+          left: 50%;
+
+          > span {
+            position: absolute;
+            top: rem(4px);
+            left: rem(10px);
+            display: inline-block;
+            font-size: rem(24px);
+            color: #fff;
+            background-color: red;
+            height: rem(32px);
+            line-height: rem(32px);
+            min-width: rem(32px);
+            text-align: center;
+            border-radius: rem(16px);
+            padding: 0 rem(8px);
+          }
+        }
+      }
+
+      .car-insurance-mid {
+        position: relative;
+        width: 24%;
+        height: rem(110px);
+
+        .foot-car-insurance {
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: rem(134px);
+          height: rem(134px);
+          transform: translate(-50%, 0);
+          background: url('~assets/images/car-insurance.gif') no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+
+}

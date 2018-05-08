@@ -1,0 +1,412 @@
+@import "~assets/styles/_bootstrap";
+
+.user-home-page {
+  height: 100%;
+
+  .wrapper {
+    padding-bottom: rem(110px);
+    height: 100%;
+  }
+
+  .header-page {
+    background: none;
+
+    .slot {
+
+      &.shake {
+        animation-iteration-count: 1;
+      }
+
+      .sp-mark {
+        width: rem(36px);
+        height: rem(36px);
+        right: rem(10px);
+      }
+
+      > span {
+        font-size: rem(24px);
+      }
+    }
+  }
+
+  .head {
+    padding-top: rem(452px);
+    padding-bottom: rem(40px);
+    width: 100%;
+
+    &.wechat {
+      padding-top: rem(320px);
+    }
+
+    &:before {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 100%;
+      background: url('~assets/images/user-home-bg.jpg') top center no-repeat;
+      background-size: cover;
+      content: ' ';
+    }
+
+    .content {
+      position: absolute;
+      top: rem(140px);
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+
+    .top {
+      margin: 0 auto;
+      padding: 0 rem(20px) rem(50px) rem(20px);
+      padding-bottom: rem(50px);
+      // width: rem(680px);
+      border-bottom: 1px solid #3f3f3f;
+
+      .avatar {
+        display: inline-block;
+        width: rem(120px);
+        height: rem(120px);
+        border-radius: 50%;
+				overflow: hidden;
+        z-index: 1000;
+
+				> a {
+					display: block;
+					width: 100%;
+					height: 100%;
+
+					> img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+      }
+
+      .user-info {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        padding-left: rem(160px);
+        width: 100%;
+
+        .name {
+
+          > span {
+            margin-right: rem(20px);
+            max-width: rem(140px);
+            font-size: rem(32px);
+            color: #ffdb00;
+            vertical-align: middle;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+          }
+
+          .practice {
+
+            > em {
+              font-size: rem(24px);
+              color: #fecb31;
+            }
+          }
+
+        }
+
+        .evaluate {
+          position: absolute;
+          top: 0;
+          right: rem(25px);
+          padding: rem(6px) rem(20px);
+          font-size: rem(24px);
+          color: #fff;
+          border-radius: rem(20px);
+          background: linear-gradient(to right, #0391e3 0%,#00caf9 100%);
+        }
+
+        .tags {
+          margin: 0 rem(-15px);
+          padding-top: rem(20px);
+
+          > span {
+            display: inline-block;
+            margin: 0 rem(15px);
+            max-width: rem(188px);
+            min-width: rem(100px);
+            padding: rem(5px) rem(15px);
+            font-size: rem(24px);
+            text-align: center;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:last-child {
+              max-width: rem(250px);
+              text-overflow: inherit;
+            }
+
+            &.evaluate {
+              > em {
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+			}
+
+			.recommend-code {
+				position: absolute;
+				bottom: rem(10px);
+				right: rem(40px);
+				padding: rem(4px) rem(10px);
+				font-size: rem(24px);
+				color: #fff;
+				border: 1px solid #fff;
+				border-radius: rem(10px);
+			}
+    }
+
+    .bot {
+
+      .tabs {
+        &:after {
+          display: block;
+          clear: both;
+          content: ' ';
+        }
+
+        .tab-item {
+          float: left;
+          padding-top: rem(40px);
+          width: calc(100% / 3);
+          text-align: center;
+
+          .tit {
+            font-size: rem(28px);
+            color: #bbb;
+          }
+
+          .desc {
+            padding-top: rem(10px);
+
+            > em {
+              font-size: rem(24px);
+              color: #ffdb00;
+            }
+
+            > span {
+              font-size: rem(32px);
+              color: #ffdb00;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .main {
+    padding-top: rem(20px);
+
+    &.no-filter .menu-group .item .icon {
+      filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=0);
+      -webkit-filter: initial;
+    }
+
+    .menu-group {
+      background: #fff;
+
+      &:after {
+        display: block;
+        clear: both;
+        content: ' ';
+      }
+
+      .item {
+        float: left;
+        width: calc(100% / 3);
+        height: rem(170px);
+        text-align: center;
+
+        > a {
+          position: relative;
+          display: block;
+        }
+
+        .icon {
+          position: relative;
+          margin: rem(20px) auto;
+          width: rem(60px);
+          height: rem(60px);
+          // filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+          // -webkit-filter: grayscale(0);
+
+          &.no-filter {
+            // filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=0);
+            // -webkit-filter: initial;
+          }
+
+          .sp {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+          }
+
+          .tips {
+            position: absolute;
+            top: rem(-5px);
+            right: rem(-5px);
+            display: block;
+            width: rem(16px);
+            height: rem(16px);
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #ff232e;
+          }
+
+          .prompt {
+            position: absolute;
+            top: 0;
+            right: rem(16px);
+
+            > span {
+              position: absolute;
+              top: rem(-8px);
+              left: 0;
+              display: inline-block;
+              font-size: rem(24px);
+              color: #fff;
+              background-color: red;
+              height: rem(32px);
+              line-height: rem(32px);
+              min-width: rem(32px);
+              text-align: center;
+              border-radius: rem(16px);
+              padding: 0 rem(8px);
+            }
+          }
+        }
+
+        > span {
+          font-size: rem(28px);
+          color: #333;
+        }
+      }
+      .sp-user-appdown {
+          background: url('~assets/images/appdown.png') no-repeat;
+          background-size: 100%;
+        }
+    }
+    .tiptxt{
+      text-align: center;
+      padding: rem(20px) 0;
+      box-sizing: border-box;
+    }
+  }
+
+
+  .notice-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    .inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(635px);
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border-radius: rem(10px);
+      box-shadow: 0 0 rem(20px) rgba(0, 0, 0, .5);
+
+      .content {
+        .notice-head {
+          height: rem(80px);
+
+          .head-inner {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            > span {
+              position: absolute;
+              height: rem(60px);
+              line-height: rem(60px);
+              width: 100%;
+              text-align: center;
+              color: #fff;
+              z-index: 1000;
+            }
+
+            > i {
+              display: block;
+              margin: auto;
+            }
+          }
+
+          > i {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: rem(20px);
+            margin: auto 0;
+            z-index: 1001;
+          }
+        }
+
+        .body {
+          padding: 0 rem(35px) rem(35px) rem(35px);
+
+          .body-inner {
+            padding: rem(65px) rem(30px) rem(30px) rem(30px);
+            border: 1px dashed #ddd;
+            border-radius: rem(10px);
+
+            .time {
+              > span {
+                color: #999;
+              }
+            }
+
+            .text {
+
+              > p {
+                line-height: rem(50px);
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+.fade-left-enter-active, .fade-left-leave-active {
+  transition: all .5s linear;
+}
+.fade-left-enter, .fade-left-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}

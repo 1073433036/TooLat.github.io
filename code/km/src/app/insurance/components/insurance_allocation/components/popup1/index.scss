@@ -1,0 +1,41 @@
+@import "~assets/styles/_bootstrap";
+
+.popup1-page {
+  position: fixed;
+  z-index: 9999999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+
+  .popup-wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: rem(12px);
+    transform: translate(-50%, -50%);
+
+    > h2 {
+      height: rem(110px);
+      line-height: rem(110px);
+      font-size: rem(32px);
+    }
+
+    .insure, .no-insure {
+      height: rem(90px);
+      border-top: rem(2px) solid #edf0f0;
+      line-height: rem(90px);
+      font-size: rem(30px);
+    }
+
+    // .click-color {
+    //   background-color: #01b0f3;
+    //   color: #fff;
+    // }
+  }
+}

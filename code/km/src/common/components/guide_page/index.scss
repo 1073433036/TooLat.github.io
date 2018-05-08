@@ -1,0 +1,225 @@
+@import "~assets/styles/_bootstrap";
+
+.guide-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3000;
+
+  .controller {
+    width: 100%;
+    height: 100%;
+
+    .guide-close {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 2000;
+
+    }
+
+    .list {
+      height: 100%;
+
+      .item {
+        display: none;
+        width: 100%;
+
+        &.active {
+          position:fixed;
+          display: block;
+          height: 100%;
+
+          /* &:before, &:after {
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 0;
+            border-left: rem(2px) dashed #b5a9a9;
+            content: ' ';
+          } */
+
+          &:after {
+            height: rem(40px);
+            opacity: 0;
+            transform: rotate(90deg);
+          }
+
+          > img {
+            position: absolute;
+            opacity: 0;
+
+            &.touch {
+              width: rem(60px);
+              height: rem(60px);
+            }
+
+            &.info {
+              width: rem(290px);
+              height: rem(130px);
+            }
+          }
+
+          &.item-01 {
+
+            &:before {
+              bottom: rem(100px);
+              right: rem(68px);
+              animation: before 1s 0s alternate forwards;
+            }
+
+            &:after {
+              bottom: rem(160px);
+              right: rem(90px);
+              animation: after .5s 1s alternate forwards;
+            }
+
+            > img {
+              animation: after 1s 1.5s alternate forwards, myScale 1s 0s alternate infinite;
+
+              &.touch {
+                bottom: rem(36px);
+                right: rem(40px);
+              }
+
+              &.info {
+                bottom: rem(120px);
+                right: rem(120px);
+              }
+            }
+          }
+
+          &.item-02 {
+
+            &:before {
+              top: rem(610px);
+              left: rem(370px);
+              animation: before 1s 0s alternate forwards;
+            }
+
+            &:after {
+              top: rem(670px);
+              left: rem(394px);
+              animation: after .5s 1s alternate forwards;
+            }
+
+            > img {
+              animation: after 1s 1.5s alternate forwards, myScale 1s 0s alternate infinite;
+
+              &.touch {
+                top: rem(550px);
+                left: rem(344px);
+              }
+
+              &.info {
+                top: rem(620px);
+                left: rem(410px);
+              }
+            }
+
+          }
+
+          &.item-03 {
+
+            &:before {
+              bottom: rem(310px);
+              left: rem(620px);
+              animation: before 1s 1.5s alternate forwards;
+            }
+
+            &:after {
+              bottom: rem(290px);
+              left: rem(594px);
+              animation: after .5s 2.5s alternate forwards;
+            }
+
+            > img {
+              animation: after 1s 1.5s alternate forwards, myScale 1s 0s alternate infinite;
+
+              &.touch {
+                top: rem(880px);
+                left: rem(346px);
+              }
+
+              &.info {
+                bottom: rem(256px);
+                left: rem(270px);
+              }
+            }
+
+          }
+
+          &.item-04 {
+
+            &:before {
+              bottom: rem(110px);
+              left: rem(374px);
+              animation: before 1s 1.5s alternate forwards;
+            }
+
+            &:after {
+              bottom: rem(180px);
+              left: rem(400px);
+              animation: after .5s 2.5s alternate forwards;
+            }
+
+            > img {
+              animation: after 1s 1.5s alternate forwards, myScale 1s 0s alternate infinite;
+
+              &.touch {
+                top: rem(880px);
+                left: rem(594px);
+              }
+
+              &.info {
+                bottom: rem(140px);
+                left: rem(400px);
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}
+
+
+@keyframes before {
+  0% {height: 0}
+  100% {height: rem(80px)}
+}
+
+
+@keyframes after {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes elementImg {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes myTouch {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes myScale {
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(0.8,0.8);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}

@@ -1,0 +1,123 @@
+@import "~assets/styles/_bootstrap";
+
+.payment_progress_query_page {
+  box-sizing: border-box;
+  height: 100%;
+  background: #eeeff1;
+
+  .wrapper {
+    height: 100%;
+    padding-top: rem(90px);
+
+    .sub-router-component {
+      height: 100%;
+    }
+
+    .container {
+
+      .bank-list {
+        padding: rem(10px);
+
+        li.item {
+          padding: rem(10px);
+          color: #fff;
+
+          > .btn {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: rem(230px);
+            padding-top: rem(20px);
+            padding-left: rem(128px);
+            background-color: #fff;
+            border-radius: rem(10px);
+            box-shadow: 0 rem(4px) rem(3px) #d8d8d8;
+
+            .logo {
+              position: absolute;
+              top: rem(20px);
+              left: rem(30px);
+              width: rem(80px);
+              height: rem(80px);
+              border-radius: 50%;
+              overflow: hidden;
+              background-color: #fff;
+              padding: rem(10px);
+
+              > img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                vertical-align: top;
+              }
+            }
+
+            .bank-name {
+              width: rem(270px);
+              height: rem(46px);
+              line-height: rem(46px);
+              font-size: rem(30px);
+              margin-bottom: rem(6px);
+            }
+
+            .number {
+              float: left;
+              font-size: rem(28px);
+              letter-spacing: rem(2px);
+            }
+
+            .payment-amount {
+              position: absolute;
+              top: rem(100px);
+              left: rem(30px);
+              width: 90%;
+              height: rem(62px);
+              border-bottom: rem(2px) solid #ccc;
+              margin: 0 auto;
+              line-height: rem(62px);
+            }
+
+            .del {
+              position: absolute;
+              right: rem(40px);
+              top: 50%;
+              padding: 0 rem(20px);
+              height: rem(50px);
+              line-height: rem(50px);
+              background: #01b3f0;
+              border-radius: rem(10px);
+              transform: translate(0, -50%);
+              cursor: pointer;
+            }
+
+            .date {
+              position: absolute;
+              bottom: 0;
+              left: rem(30px);
+              height: rem(60px);
+              line-height: rem(60px);
+              font-size: rem(24px);
+              color: #999;
+
+              > .cutline {
+                margin-left: rem(90px);
+              }
+            }
+
+            .state {
+              position: absolute;
+              top: rem(20px);
+              right: rem(30px);
+              color: #56c6f5;
+            }
+
+            .underway-state {
+              color: #fcbe16;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

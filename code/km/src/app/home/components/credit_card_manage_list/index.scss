@@ -1,0 +1,43 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-list-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: rem(90px);
+
+  .creditcard-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    .creditcard-list-box{
+      .creditcard-list{
+        width:rem(700px);
+      }
+      .submit-btn{
+        width: rem(650px);
+        margin:rem(60px) auto;
+        text-align: center;
+        padding:rem(35px) 0;
+        background:#fff;
+        border-radius: rem(15px);
+        border: rem(2px) dashed $bc;
+        font-size: rem(32px);
+        .sp-add{
+          width: rem(45px);
+          height: rem(45px);
+          margin-right: rem(30px);
+        }
+      }
+    }
+
+    .nocard-add{
+      width: rem(620px);
+      margin: rem(60px) auto;
+    }
+    
+  }
+
+
+}

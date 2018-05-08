@@ -1,0 +1,117 @@
+@import "~assets/styles/_bootstrap";
+
+.user-insure-name-page {
+  height: 100%;
+  background: #eee;
+  z-index: 2000;
+
+  ._v-content {
+    padding-top: rem(90px);
+    padding-bottom: rem(130px);
+  }
+
+
+  .controller {
+
+    .inner {
+
+      .head {
+        padding: 0 rem(20px);
+        height: rem(125px);
+        line-height: rem(125px);
+        border-bottom: 1px solid $bc;
+        background: #fff;
+
+        > span {
+          padding-left: rem(20px);
+          vertical-align: middle;
+
+          > em {
+            font-size: rem(24px);
+          }
+        }
+      }
+
+
+      .list {
+        margin-top: rem(20px);
+        background: #fff;
+
+        .item {
+          padding: 0 rem(20px);
+          width: 100%;
+          height: rem(125px);
+          border-bottom: 1px solid $bc;
+
+          > i {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          .body {
+            display: inline-block;
+            top: 50%;
+            vertical-align: middle;
+            transform: translate(0, -50%);
+
+            .tit {
+              color: #333;
+            }
+
+            .desc {
+              display: block;
+              padding-top: rem(15px);
+              font-size: rem(24px);
+              color: #2ea7e0;
+            }
+          }
+
+          .right {
+            position: absolute;
+            top: 50%;
+            right: rem(20px);
+            transform: translate(0, -50%);
+
+            > span {
+              padding-right: rem(10px);
+              color: #2ea7e0;
+              vertical-align: middle;
+
+              &.del {
+                color: #999;
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: rem(20px) 0;
+    background: #fff;
+
+    > button {
+      display: block;
+      margin: 0 auto;
+      width: rem(710px);
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      font-size: rem(32px);
+      color: #fff;
+      border: none;
+      border-radius: rem(10px);
+      background: #01b3f0;
+    }
+  }
+
+}

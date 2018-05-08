@@ -1,0 +1,75 @@
+@import "~assets/styles/_bootstrap";
+
+.calculator-page {
+  height: 100%;
+  background-color: #eeeff1;
+
+  > ._v-container > ._v-content {
+    position: relative;
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+    height: 100%;
+
+    .top {
+      overflow: hidden;
+      height: rem(250px);
+      padding-top: rem(52px);
+      background: linear-gradient(#0a0f12, #2a3f4b);
+
+      .item {
+        float: left;
+        width: 25%;
+				text-align: center;
+
+				.house {
+					margin: auto;
+					width: rem(100px);
+					height: rem(100px);
+					border-radius: rem(20px);
+					background-color: #eee;
+
+					> i {
+						margin-top: rem(15px);
+					}
+				}
+
+        > em {
+          display: block;
+          padding-top: rem(20px);
+          font-size: rem(30px);
+          color: #fff;
+        }
+      }
+    }
+
+    .menu-group {
+      margin-top: rem(20px);
+
+      .item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: rem(125px);
+        padding: 0 rem(22px) 0 rem(20px);
+        margin-bottom: rem(2px);
+        background-color: #fff;
+
+        > em {
+          display: inline-block;
+          margin-left: rem(42px);
+          color: #333333;
+        }
+
+        > .sp-right {
+          position: absolute;
+          top: rem(45px);
+          right: rem(20px);
+          // bottom: 0px;
+        }
+      }
+    }
+  }
+}

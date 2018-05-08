@@ -1,0 +1,149 @@
+@import "~assets/styles/_bootstrap";
+
+.prize_get {
+  height: 100%;
+	background: #edf0f0;
+
+	> ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+
+    .controller {
+
+      .main {
+
+				.photo_box {
+					position: relative;
+					width: 100%;
+					height: 100%;;
+					padding: rem(30px);
+					background: #fff;
+
+					.photo {
+						width: rem(690px);
+						height: rem(200px);
+						overflow: hidden;
+
+						.shop_img {
+							display: block;
+							width: 100%;
+							height: 100%;
+							background: url('~assets/images/backdrop-02.png') no-repeat;
+							background-size: 100% 100%;
+
+							> img {
+								display: block;
+								width: 100%;
+								height: 100%;
+							}
+						}
+
+						.info {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							padding: rem(26px) 0  0 rem(50px);
+							font-size: rem(28px);
+							color: #fff;
+
+							.shop {
+								padding-bottom: rem(24px);
+								font-size: rem(36px);
+							}
+
+							.shop_info {
+								padding-bottom: rem(20px);
+							}
+						}
+					}
+				}
+
+				.info_box {
+					background: #fff;
+
+					.info {
+						margin: 0 rem(20px);
+						padding-bottom: rem(30px);
+						font-size: rem(28px);
+
+						.title {
+							font-size: rem(28px);
+							padding: rem(58px) 0 rem(28px) rem(40px);
+							border-top: 1px solid $bc;
+						}
+
+						.receiver {
+							padding: rem(30px) 0;
+							font-size: rem(28px);
+							border-bottom: 1px solid $bc;
+							color: #000;
+							overflow: hidden;
+
+							.people {
+								width: rem(140px);
+								height: rem(50px);
+								line-height: rem(50px);
+								float: left;
+							}
+
+							.recipients {
+								width: rem(560px);
+								height: rem(50px);
+								line-height: rem(50px);
+								float: left;
+								border: none;
+
+								&.on {
+									color: #666;
+								}
+							}
+						}
+
+						.btn {
+							display: block;
+							width: rem(400px);
+							height: rem(80px);
+							line-height: rem(80px);
+							text-align: center;
+							border: 1px solid $bc;
+							border-radius: rem(10px);
+							margin: auto;
+							margin-top: rem(50px);
+							background-color: #ccc;
+
+							> a {
+								color: #fff;
+							}
+						}
+
+						.active {
+							color: #fff;
+							background-color: #01b3f0;
+							border: 1px solid #01b3f0;
+						}
+					}
+				}
+
+				.inform {
+					margin-top: rem(20px);
+					background-color: #fff;
+					padding: rem(30px) rem(40px);
+
+					.message {
+						font-size: rem(28px);
+						padding-bottom: rem(30px);
+						color: #000;
+					}
+
+					.text {
+						font-size: rem(24px);
+						line-height: rem(44px);
+					}
+				}
+      }
+    }
+  }
+}

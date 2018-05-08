@@ -1,0 +1,69 @@
+@import "~assets/styles/_bootstrap";
+
+.loan-step-desc-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: rem(90px);
+  box-sizing: border-box;
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .increase_list {
+
+    .item {
+
+      .list {
+        height: rem(220px);
+        margin-top: rem(10px);
+        padding: rem(20px);
+        background-color: #fff;
+
+        > .article-item {
+          display: block;
+          position: relative;
+
+          .bank-photo {
+            width: rem(180px);
+            height: rem(180px);
+
+            > img{
+              width: rem(180px);
+              height: rem(180px);
+            }
+          }
+
+          .bank_cheats {
+            position: absolute;
+            top:0;
+            left: rem(210px);
+            font-size: rem(32px);
+            color:#333;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+          }
+
+          .read {
+            position: absolute;
+            bottom: 0;
+            left: rem(210px);
+            font-size: rem(24px);
+            color: #999;
+          }
+
+          .time {
+            position: absolute;
+            bottom:0;
+            right: 0;
+            font-size: rem(24px);
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}

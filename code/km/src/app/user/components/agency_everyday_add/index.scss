@@ -1,0 +1,91 @@
+@import "~assets/styles/_bootstrap";
+
+.agency_everyday_add-page {
+	height: 100%;
+	background: #edf0f0;
+
+	.header-page {
+		background: url('~assets/images/wallet-header.png') no-repeat;
+	}
+
+	.wrapper {
+		padding: rem(90px) 0;
+		height: 100%;
+
+		.controller {
+
+			.main {
+				margin-top: rem(20px);
+
+				.list {
+
+					.item {
+						padding: rem(48px) rem(20px);
+						height: rem(144px);
+						background-color: #fff;
+						border-bottom: 1px solid $bc;
+
+						.left {
+							float: left;
+							font-size: rem(32px);
+							color: #000;
+
+							.number {
+								padding-left: rem(20px);
+								vertical-align: middle;
+							}
+						}
+
+						.right {
+							float: right;
+							font-size: rem(32px);
+							color: #000;
+
+							> span {
+								color: #999
+							}
+						}
+					}
+				}
+			}
+
+			.list-group {
+				margin-top: rem(20px);
+
+				.list {
+
+					.item {
+						padding: rem(48px) rem(20px);
+						height: rem(144px);
+						background-color: #fff;
+						border-bottom: 1px solid $bc;
+
+						.left {
+							float: left;
+							font-size: rem(32px);
+							color: #000;
+
+							.number {
+								padding-left: rem(20px);
+								vertical-align: middle;
+							}
+						}
+
+						.right {
+							float: right;
+							font-size: rem(32px);
+							color: #000;
+
+							> span {
+								color: #999
+							}
+						}
+					}
+				}
+			}
+
+			
+		}
+	}
+
+}

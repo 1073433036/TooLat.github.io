@@ -1,0 +1,364 @@
+@import "~assets/styles/_bootstrap";
+
+.user-business-page {
+  position: relative;
+  height: 100%;
+  background: #edf0f0;
+
+  .wrapper {
+    padding-top: rem(90px);
+    padding-bottom: rem(30px);
+    height: 100%;
+  }
+
+  .container {
+    &:before {
+      display: block;
+      content: ' ';
+      height: rem(170px);
+      background: linear-gradient(#0a0f12, #2a3f4b);
+    }
+  }
+
+  .user-info {
+    margin: rem(-80px) auto 0 auto;
+    width: rem(691px);
+    border-radius: rem(10px);
+    background: #fff;
+
+    .head {
+      padding-top: rem(50px);
+
+      .avatar {
+        display: inline-block;
+        margin-left: rem(40px);
+        width: rem(130px);
+        height: rem(130px);
+        border-radius: 50%;
+        overflow: hidden;
+
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .info  {
+        position: absolute;
+        top: rem(50px);
+        bottom: 0;
+        left: rem(210px);
+        margin: auto 0;
+        width: rem(395px);
+        height: rem(100px);
+        border-bottom: 1px solid $bc;
+
+        .name {
+          font-size: rem(32px);
+          color: #333;
+
+          .sp-task-name {
+            margin-left: 0;
+            width: rem(35px);
+            height: rem(35px);
+          }
+
+          .nick {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 50%;
+          }
+
+          > i {
+            margin-left: rem(45px);
+          }
+
+          .age {
+            margin-left: rem(50px);
+            padding: 0 rem(20px);
+            font-size: rem(24px);
+            color: #fff;
+            background: #2ea7e0;
+          }
+        }
+
+        .tag {
+          display: inline-block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 100%;
+          font-size: rem(28px);
+          color: #999;
+        }
+      }
+    }
+
+
+    .body {
+      padding: rem(35px);
+
+      .item {
+				position: relative;
+        height: rem(50px);
+        line-height: rem(50px);
+
+        .left {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				.right {
+					position: absolute;
+					top: 0;
+					left: rem(250px);
+
+					.sp-invite-02 {
+						width: rem(32px);
+						height: rem(26px);
+					}
+				}
+
+        // > span {
+        //   padding-left: rem(10px);
+        //   font-size: rem(28px);
+        //   color: #333;
+
+        //   &.text {
+        //     color: #999;
+				// 	}
+
+				// 	.wechat-logo {
+				// 		margin-left: rem(10px);
+				// 	}
+        // }
+      }
+    }
+  }
+
+
+  .content {
+    padding-top: rem(20px);
+
+    .item {
+      padding: rem(40px) rem(30px);
+      border-bottom: 1px solid $bc;
+      background: #fff;
+      color: #333;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      >h3 {
+        width: 100%;
+        font-size: rem(28px);
+      }
+
+      > span, > em {
+        padding-left: rem(10px);
+        font-size: rem(28px);
+        color: #333;
+        vertical-align: middle;
+      }
+
+      > em {
+        position: absolute;
+        right: rem(30px);
+        padding-right: rem(30px);
+
+        &.text {
+          color: #999;
+        }
+			}
+
+			.introduce {
+				padding-top: rem(20px);
+        text-indent: 2em;
+        color: #999;
+
+        &.on {
+          color: #333;
+        }
+			}
+
+      .text {
+        color: #999;
+      }
+
+			.photo {
+				padding-top: rem(30px);
+				overflow: hidden;
+
+				.list {
+					text-align: right;
+					overflow: hidden;
+
+					.photo-item {
+            display: inline-block;
+						margin: 0 rem(15px) rem(20px) rem(15px);
+						width: rem(130px);
+						height: rem(130px);
+						border: 1px solid $bc;
+            vertical-align: top;
+
+            &.no-border {
+              border: none;
+            }
+
+						> img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+			}
+    }
+
+    .company {
+
+      .item {
+
+        .profile {
+
+          > span {
+            padding-left: rem(10px);
+          }
+        }
+      }
+
+      .name {
+        border-bottom: 1px solid $bc;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .title {
+      position: relative;
+      padding: rem(30px);
+      font-size: rem(28px);
+      color: #999;
+
+      i.icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: rem(-40px);
+        display: inline-block;
+        width: rem(80px);
+        height: rem(80px);
+        line-height: rem(80px);
+        text-align: center;
+        font-size: rem(40px);
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .foot {
+    margin-top: rem(20px);
+    padding: rem(10px) rem(20px);
+
+    > button {
+      display: block;
+      margin: 0 auto;
+      width: rem(710px);
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      font-size: rem(32px);
+      color: #fff;
+      border: none;
+      border-radius: rem(10px);
+      background: #01b5f1;
+    }
+  }
+
+  .layer {
+    position: relative;
+    z-index: 2001;
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(590px);
+      height: rem(350px);
+      margin-top: rem(-175px);
+      margin-left: rem(-295px);
+      padding-top: rem(260px);
+      background: url(~assets/images/card-share-layer.png) no-repeat;
+      background-size: 100%;
+      text-align: center;
+      font-size: 0;
+      z-index: 2001;
+
+      > a {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(240px);
+        line-height: rem(62px);
+        font-size: rem(32px);
+        margin: 0 rem(15px);
+        border-radius: rem(40px);
+        overflow: hidden;
+
+        &:first-child {
+          border: 1px solid $bc;
+          color: #999;
+        }
+
+        &:last-child {
+          border: 1px solid #01b3f0;
+          background-color: #01b3f0;
+          color: #fff;
+        }
+      }
+    }
+
+    .share-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .scalePhoto {
+    position: fixed;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .7);
+
+    .content-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}

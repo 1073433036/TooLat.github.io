@@ -1,0 +1,194 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-instalment-page {
+  padding-top: rem(90px);
+  height: 100%;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .head {
+        padding: rem(20px) rem(20px) 0;
+        overflow: hidden;
+        box-shadow: inset 0px rem(-20px) rem(10px) rem(-20px) rgba(0, 0, 0, .3);
+
+        .card {
+          position: relative;
+          padding: rem(30px);
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(~assets/images/instalment-headbg.png) no-repeat;
+            background-size: 100% 100%;
+          }
+
+          .avatar {
+            position: absolute;
+            top: rem(30px);
+            left: rem(30px);
+            width: rem(80px);
+            height: rem(80px);
+            border-radius: 50%;
+            overflow: hidden;
+
+            > img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              vertical-align: top;
+            }
+          }
+
+          .user {
+            padding-left: rem(100px);
+            padding-bottom: rem(30px);
+            color: #fff;
+
+            .name {
+              height: rem(30px);
+              line-height: rem(30px);
+              margin-bottom: rem(10px);
+              font-size: rem(30px);
+            }
+
+            .tips {
+              height: rem(30px);
+              line-height: rem(30px);
+              font-size: rem(24px);
+              color: #ccc;
+            }
+          }
+
+          .title {
+            height: rem(30px);
+            line-height: rem(30px);
+            margin-bottom: rem(10px);
+            font-size: rem(28px);
+            color: #fff;
+          }
+
+          .profile {
+            line-height: rem(42px);
+            color: #ccc;
+            font-size: rem(24px);
+          }
+        }
+      }
+
+      .body {
+        padding-top: rem(112px);
+
+        .box {
+          position: relative;
+          height: rem(733px);
+          padding-top: rem(68px);
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(~assets/images/instalment-image01.png) no-repeat;
+            background-size: 100% 100%;
+          }
+
+          .company {
+            padding-right: rem(60px);
+            margin-bottom: rem(38px);
+            text-align: right;
+            font-size: 0;
+
+            > span {
+              display: inline-block;
+              height: rem(42px);
+              line-height: rem(42px);
+              padding-right: rem(20px);
+              vertical-align: top;
+            }
+
+            .line {
+              font-size: rem(28px);
+              color: #000;
+            }
+
+            .logo {
+
+              > img {
+                display: block;
+                height: 100%;
+                width: auto;
+              }
+            }
+          }
+
+          .call {
+            margin-bottom: rem(265px);
+            padding-right: rem(60px);
+            text-align: right;
+
+            > a {
+              position: relative;
+              display: inline-block;
+              line-height: rem(78px);
+              padding: 0 rem(60px);
+              border: 1px solid #01b3f0;
+              border-radius: rem(40px);
+              vertical-align: top;
+              color: #01b3f0;
+              font-size: rem(36px);
+              min-width: rem(400px);
+
+              i, span {
+                display: inline-block;
+                vertical-align: top;
+              }
+
+              i.icon {
+                line-height: rem(78px);
+              }
+
+              span.tips {
+                position: absolute;
+                left: 0;
+                bottom: -100%;
+                width: 100%;
+                text-align: center;
+                color: #666;
+                font-size: rem(28px);
+              }
+            }
+          }
+
+          .profile {
+            padding: 0 rem(40px);
+            text-align: center;
+
+            .title {
+              height: rem(52px);
+              line-height: rem(52px);
+              font-size: rem(32px);
+              color: #666;
+            }
+
+            .text {
+              line-height: rem(42px);
+              font-size: rem(24px);
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+}

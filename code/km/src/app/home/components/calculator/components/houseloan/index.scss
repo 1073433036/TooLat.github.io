@@ -1,0 +1,24 @@
+@import "~assets/styles/_bootstrap";
+
+.houseloan-page {
+  height: 100%;
+
+  .main {
+    margin-top: rem(90px);
+
+    .calculate-btn {
+      display: block;
+      width: 90%;
+      height: rem(93px);
+      line-height: rem(93px);
+      border: none;
+      border-radius: rem(10px);
+      margin: 0 auto;
+      margin-top: rem(103px);
+      background-color: #01b3f0;
+      text-align: center;
+      color: #fff;
+      font-size: rem(32px);
+    }
+  }
+}

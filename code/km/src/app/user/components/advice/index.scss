@@ -1,0 +1,299 @@
+@import "~assets/styles/_bootstrap";
+
+.advice-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: rem(90px);
+
+  > header {
+    box-sizing: border-box;
+    height: rem(100px);
+    padding-top: rem(20px);
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    z-index: 1;
+
+    > p {
+      color: #ccc;
+      font-size: rem(24px);
+      line-height: rem(30px);
+    }
+  }
+
+  > ._v-container > ._v-content {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: rem(190px) 0 rem(80px);
+  }
+
+  &.extend {
+    > ._v-container > ._v-content {
+      padding: rem(190px) 0 rem(350px);
+    }
+  }
+
+  &.resize {
+    > ._v-container > ._v-content {
+      padding: rem(190px) 0 rem(130px);
+    }
+  }
+
+  .wrapper {
+    box-sizing: border-box;
+    position: relative;
+
+    .text-wrapper {
+      padding: rem(30px);
+
+      ul.feed-wrapper {
+        > li {
+          position: relative;
+
+          &:not(:first-child) {
+            margin-top: rem(20px);
+          }
+
+          > img {
+            position: absolute;
+            top: rem(10px);
+            width: rem(60px);
+            height: rem(60px);
+            border-radius: 50%;
+          }
+
+          .feed {
+
+            .top {
+              line-height: rem(48px);
+
+              .name {
+                color: #03b2f1;
+                font-size: rem(24px);
+              }
+
+              .time {
+                font-size: rem(22px);
+                color: #999;
+              }
+            }
+
+            .bottom {
+              position: relative;
+            }
+
+            .dialog-content {
+              display: inline-block;
+              box-sizing: border-box;
+              padding: rem(10px) rem(15px);
+              max-width: rem(440px);
+              color: #fff;
+              font-size: rem(24px);
+              word-wrap: break-word;
+              line-height: rem(40px);
+              background: #03b2f1;
+              border-bottom-left-radius: rem(10px);
+              border-bottom-right-radius: rem(10px);
+
+              &.image-content {
+                max-width: rem(240px);
+              }
+            }
+          }
+
+          // 客服
+          &.left {
+            > img {
+              left: 0;
+            }
+
+            .feed {
+              margin-left: rem(80px);
+
+              .dialog-content {
+                border-top-right-radius: rem(10px);
+
+                &::after {
+                  position: absolute;
+                  top: 0;
+                  left: -6px;
+                  width: 0;
+                  height: 0;
+                  content: '';
+                  border-bottom: 8px solid transparent;
+                  border-right: 6px solid #03b2f1;
+                }
+              }
+            }
+          }
+
+          // 本人
+          &.right {
+            > img {
+              right: 0;
+            }
+
+            .feed {
+              margin-right: rem(80px);
+
+              .top {
+                text-align: right;
+              }
+
+              .bottom {
+                float: right;
+              }
+
+              .dialog-content {
+                float: right;
+                border-top-left-radius: rem(10px);
+
+                &::after {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  transform: translate(6px);
+                  width: 0;
+                  height: 0;
+                  content: '';
+                  border-bottom: 8px solid transparent;
+                  border-left: 6px solid #03b2f1;
+                }
+              }
+
+              .submit-status {
+                margin-top: rem(12px);
+                margin-right: rem(20px);
+                float: right;
+                display: block;
+                width: rem(36px);
+                height: rem(36px);
+                background: #eee;
+              }
+
+              .submit-loading {
+                background: url(~assets/images/svg/loading.svg) no-repeat center / 100% 100%;
+              }
+
+              .submit-fail {
+                background: url(~assets/images/wechat-icon-warn.png) no-repeat center / 100% 100%;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .send_message {
+      position: fixed;
+      bottom: 0;
+    }
+  }
+
+  .send-msg-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #eee;
+
+    &.resize {
+      bottom: rem(50px);
+    }
+
+    .send-msg {
+      box-sizing: border-box;
+      height: rem(80px);
+      border-bottom: 1px solid #ccc;
+
+      textarea {
+        margin: rem(13px) 0  0 rem(30px);
+        width: rem(550px);
+        height: rem(54px);
+        border-radius: rem(10px);
+        box-sizing: border-box;
+        padding: rem(10px) rem(20px);
+        border: 0;
+
+        &::-webkit-input-placeholder { color: #c3c3c3; }
+        &::-moz-placeholder { color: #c3c3c3; }
+        &:-moz-placeholder { color: #c3c3c3; }
+        &:-ms-input-placeholder { color: #c3c3c3; }
+      }
+
+      .extend-btn {
+        position: absolute;
+        top: rem(22px);
+        left: rem(590px);
+        width: rem(36px);
+        height: rem(36px);
+        background: url(~assets/images/advice/advice-extend.png) no-repeat center / 100% 100%;
+      }
+
+      .send-btn {
+        position: absolute;
+        top: rem(16px);
+        left: rem(640px);
+        padding: 0 rem(15px);
+        height: rem(48px);
+        line-height: rem(48px);
+        color: #fff;
+        background: #03b2f1;
+        border-radius: rem(10px);
+      }
+    }
+
+    .extend-wrapper {
+      height: rem(270px);
+      box-sizing: border-box;
+      padding: rem(30px) rem(35px);
+
+      >ul {
+        li {
+          display: inline-block;
+          width: rem(100px);
+          height: rem(100px);
+
+          &.iamges {
+            background: url(~assets/images/advice/advice-image.png) no-repeat center / 100% 100%;
+          }
+
+          input[type="file"] {
+            opacity: 0;
+            width: rem(100px);
+            height: rem(100px);
+          }
+        }
+      }
+    }
+  }
+
+  .image-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 2001;
+
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: rem(720px);
+    }
+  }
+
+  .cf::after, .cf::before {
+    display: table;
+    content: '';
+  }
+  .cf::after {
+    clear: both;
+  }
+}

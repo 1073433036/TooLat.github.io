@@ -1,0 +1,189 @@
+@import "~assets/styles/_bootstrap";
+
+.add-credit-card-page {
+  height: 100%;
+  background: #eeeff1;
+
+  .container {
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
+
+    .form-group {
+
+      .list {
+        margin-bottom: rem(20px);
+        box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .1);
+
+        .item {
+          padding-left: rem(30px);
+          background-color: #fff;
+
+          &:not(:last-child) .box {
+            border-bottom: 1px solid $bc;
+          }
+
+          .box {
+            display: flex;
+            align-items: stretch;
+            padding: rem(15px) rem(20px) rem(15px) 0;
+
+            .name, .content {
+              height: rem(70px);
+              line-height: rem(70px);
+              font-size: rem(30px);
+              color: #333;
+            }
+
+            .content {
+              flex: 1;
+              min-width: 1px;
+              padding-left: rem(40px);
+
+              .input-item {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                color: #333;
+              }
+            }
+
+            .sp-sea {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto 0;
+              right: rem(170px);
+            }
+
+            .content1 {
+              width: rem(400px);
+
+              .input-readonly {
+                float: right;
+                display: inline-block;
+                height: 100%;
+                border: none;
+                margin-right: rem(10px);
+                outline: none;
+                text-align: right;
+                color: #333;
+              }
+
+              .sp-right {
+                float: right;
+                margin-top: rem(17px);
+                vertical-align: middle;
+              }
+            }
+
+            .code {
+
+              .phone-code {
+                height: rem(60px);
+                background-color: #01b3f0;
+                color: #fff;
+                padding: 0 rem(20px);
+                border-radius: rem(10px);
+              }
+            }
+          }
+
+          .box1 {
+            justify-content: space-between;
+          }
+        }
+
+        .item1 {
+          overflow: auto;
+          width: 100%;
+          padding-bottom: rem(8px);
+          background-color: #fff;
+
+          .left {
+            float: left;
+            width: rem(180px);
+            height: rem(175px);
+            padding-left: rem(30px);
+
+            > span {
+              height: 100%;
+              line-height: rem(90px);
+              font-size: rem(28px);
+              color: #333;
+            }
+          }
+
+          .right {
+            float: right;
+            width: rem(560px);
+            padding-bottom: rem(20px);
+            border-bottom: rem(2px) solid $bc;
+          }
+
+          .select-group {
+            margin-bottom: rem(20px);
+            width: 100%;
+
+            &:after {
+              display: block;
+              clear: both;
+              content: ' ';
+            }
+
+            .select-item {
+              float: left;
+              width: calc(100% / 3);
+              line-height: rem(80px);
+              cursor: pointer;
+
+              > span {
+                vertical-align: middle;
+              }
+            }
+          }
+
+          .input {
+            > input {
+              width: 100%;
+              height: 100%;
+              font-size: rem(28px);
+              border: none;
+              background: none;
+            }
+
+          }
+        }
+
+      }
+
+      .submit-btn {
+        padding-top: rem(40px);
+        text-align: center;
+
+        .btn {
+          display: inline-block;
+          vertical-align: top;
+          width: rem(400px);
+          height: rem(80px);
+          line-height: rem(80px);
+          background-color: #ccc;
+          font-size: rem(36px);
+          color: #fff;
+          border-radius: rem(10px);
+          border: none;
+          outline: none;
+
+          &.active {
+            background-color: #01b3f0;
+          }
+        }
+      }
+    }
+
+  }
+  .selecter-page {
+      padding-top: 0;
+    }
+}

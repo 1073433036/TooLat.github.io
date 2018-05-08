@@ -1,0 +1,154 @@
+@import "~assets/styles/_bootstrap";
+
+.set-amount {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeff1;
+  z-index: 9999;
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 2;
+
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(90px);
+      height: rem(90px);
+      z-index: 2;
+
+      &:before {
+        content: '';
+        display: block;
+        width: rem(28px);
+        height: rem(28px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: rem(-14px);
+        margin-left: rem(-14px);
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+      }
+    }
+
+    .title {
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      color: #fff;
+      font-size: rem(36px);
+		}
+
+    .save-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      height: rem(90px);
+      padding: 0 rem(20px);
+      align-items: center;
+
+      > a {
+        display: block;
+        width: rem(120px);
+        height: rem(60px);
+        line-height: rem(60px);
+        text-align: center;
+        color: #fff;
+        font-size: rem(28px);
+        border-radius: rem(4px);
+        background-color: #2ea7e0;
+      }
+    }
+  }
+
+  .box {
+		padding-top: rem(110px);
+
+		.identity-card {
+			position: relative;
+			padding: rem(36px) rem(20px);
+			height: rem(179px);
+			background-color: #fff;
+			border-bottom: 1px solid $bc;
+      cursor: pointer;
+
+				> input {
+					position: absolute;
+					top: rem(56px);
+          left: rem(20px);
+					width: 100%;
+					height: rem(65px);
+					opacity: 0;
+					z-index: 99;
+          display: none;
+				}
+
+
+			.uploading {
+				position: absolute;
+				top: rem(36px);
+				left: rem(20px);
+				width: 100%;
+				height: rem(105px);
+
+				> i {
+					position: absolute;
+					top: rem(36px);
+					right: rem(40px);
+				}
+
+				.head {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: rem(170px);
+					height: rem(105px);
+
+					> img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.front {
+					position: absolute;
+					top: 0;
+					left: rem(250px);
+					line-height: rem(105px);
+					font-size: rem(30px);
+					color: #333;
+				}
+			}
+		}
+	}
+
+	.btn {
+		padding: rem(100px) 0;
+		text-align: center;
+
+    > a {
+      display: inline-block;
+      vertical-align: top;
+      width: rem(710px);
+      height: rem(92px);
+      line-height: rem(92px);
+      text-align: center;
+      font-size: rem(32px);
+      color: #fff;
+      border-radius: rem(10px);
+      background-color: #2ea7e0;
+    }
+	}
+}

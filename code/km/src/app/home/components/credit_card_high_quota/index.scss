@@ -1,0 +1,117 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-highquota-page {
+  padding-top: rem(90px);
+  height: 100%;
+
+  ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .ranking {
+
+    ul.ranking-list {
+      background-color: #fff;
+
+      li.item {
+        padding-left: rem(20px);
+
+        &:not(:last-child) > a {
+          border-bottom: 1px solid $bc;
+        }
+
+        > a {
+          display: block;
+          padding: rem(40px) rem(10px);
+
+          .box {
+            display: flex;
+
+            .image {
+              flex: 0 0 rem(216px);
+              width: rem(216px);
+              height: rem(136px);
+            }
+
+            .content {
+              flex: 1;
+              padding-left: rem(20px);
+
+              .title {
+                height: rem(46px);
+                line-height: rem(46px);
+                font-size: rem(30px);
+                color: #333;
+                margin-bottom: rem(4px);
+
+                span.name {
+                  display: inline-block;
+                  vertical-align: top;
+                }
+
+                i.icon {
+                  display: inline-block;
+                  vertical-align: top;
+                  height: rem(46px);
+                  line-height: rem(46px);
+                  font-size: rem(46px);
+                }
+              }
+
+              .focus {
+                font-size: 0;
+                margin-bottom: rem(10px);
+
+                > span {
+                  display: inline-block;
+                  line-height: rem(30px);
+                  padding: 0 rem(10px);
+                  font-size: rem(24px);
+                  color: #00b3f0;
+                  border: 1px solid #00b3f0;
+                  border-radius: rem(5px);
+
+                  &:not(:last-child) {
+                    margin-right: rem(10px);
+                  }
+                }
+              }
+
+              .text {
+                height: rem(32px);
+                line-height: rem(32px);
+                color: #999;
+                font-size: rem(24px);
+
+                > span {
+                  color: #ff4249;
+                }
+              }
+            }
+
+            .apply-btn {
+              flex: 0 0 rem(136px);
+              position: relative;
+              width: rem(136px);
+
+              > span {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                display: block;
+                width: 100%;
+                line-height: rem(60px);
+                margin-top: rem(-30px);
+                color: #ff4249;
+                font-size: rem(28px);
+                border: 1px solid #ff4249;
+                border-radius: rem(30px);
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

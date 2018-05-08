@@ -1,0 +1,148 @@
+@import "~assets/styles/_bootstrap";
+
+.increase-cheats {
+  height: 100%;
+  background: #edf0f0;
+
+  .slot {
+
+    .right {
+
+      > a{
+				display: block;
+				width: 100%;
+				font-size: rem(32px);
+				color: #fff;
+
+				> i {
+					width: rem(34px);
+					height: rem(34px);
+				}
+      }
+    }
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .controller {
+
+      .photo {
+        width: 100%;
+        height: rem(300px);
+        overflow-x: hidden;
+			}
+
+			.tips {
+				position: relative;
+				height: rem(60px);
+				line-height: rem(60px);
+				padding-left: rem(64px);
+				overflow: hidden;
+				background-color: #2d3940;
+
+				i.icon {
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: block;
+					width: rem(64px);
+					height: rem(60px);
+					line-height: rem(60px);
+					text-align: center;
+					color: #fff;
+					font-size: rem(32px);
+					background-color: #2d3940;
+				}
+
+				.notice {
+					position: absolute;
+					top: 0;
+					left: rem(64px);
+					width: 100%;
+					height: rem(60px);
+					overflow: hidden;
+
+					.marquee {
+						height: rem(60px);
+						word-break:keep-all;
+						white-space:nowrap;
+						font-size: rem(24px);
+						color: #fff;
+						text-align: left;
+						animation: marquee 24s linear infinite;
+					}
+
+					@keyframes marquee {
+						0% {
+								transform: translateX(100%);
+						}
+						100% {
+								transform: translateX(-280%);
+						}
+					}
+				}
+			}
+
+      .main {
+        margin-top: rem(20px);
+
+        .list {
+
+          .item {
+            width: 100%;
+            height: rem(126px);
+            line-height: rem(128px);
+            background: #fff;
+            border-bottom: 1px solid $bc;
+
+            > a {
+              display: block;
+            }
+
+            .content-group {
+              display: block;
+              position: relative;
+              width: 100%;
+              height: rem(128px);
+
+              > img {
+                position: absolute;
+                top: rem(24px);
+                left: rem(20px);
+                width: rem(77px);
+                height: rem(77px);
+              }
+
+              .name {
+                display: inline-block;
+                margin-left: rem(140px);
+                font-size: rem(30px);
+                color: #333;
+              }
+
+              .count {
+                display: inline-block;
+                margin-left: rem(20px);
+                width: rem(40px);
+                height: rem(40px);
+                line-height: rem(40px);
+                border-radius: 50%;
+                color: #fff;
+                background: #f00;
+                font-size: rem(24px);
+                text-align: center;
+              }
+
+              .sp-right {
+                position: absolute;
+                top: rem(46px);
+                right: rem(20px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

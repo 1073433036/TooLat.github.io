@@ -1,0 +1,226 @@
+@import "~assets/styles/_bootstrap";
+
+.overall-page {
+
+  .wrapper {
+		padding-top: 0;
+
+		.controller {
+			padding-bottom: rem(38px);
+
+			.risks {
+				padding-left: rem(20px);
+				height: rem(66px);
+				line-height: rem(66px);
+				font-size: rem(28px);
+				color: #000;
+				border-bottom: 1px solid $bc;
+				background-color: #fff;
+			}
+
+			.normal {
+
+				.list {
+					padding: 0 rem(20px);
+					background-color: #fff;
+					overflow: hidden;
+
+					.item {
+						font-size: rem(28px);
+						border-bottom: 1px solid $bc;
+						overflow: hidden;
+
+						.glass {
+							float: left;
+							width: 40%;
+							padding: rem(40px) 0;
+							color: #000;
+						}
+
+						.no-insure {
+							float: left;
+							width: 30%;
+							padding: rem(40px) 0;
+							text-align: center;
+							color: #fe2a2a;
+						}
+
+						.vehicle {
+							float: left;
+							width: 40%;
+							padding: rem(40px) 0;
+							color: #000;
+						}
+
+						.right {
+							float: left;
+							width: 60%;
+
+							.insure, .insure-val {
+								float: left;
+								width: 50%;
+								padding: rem(40px) 0;
+								text-align: center;
+								color: #fe2a2a;
+							}
+
+							.insure-val {
+								color: #01b0f3;
+							}
+
+							.select {
+								float: left;
+								width: 50%;
+
+								.radio-group {
+
+									.label {
+										display: block;
+										display: flex;
+										justify-content: flex-end;
+										align-items: center;
+										padding: rem(40px) 0;
+										color: #333;
+									}
+
+									:checked + .circle-radio .hook {
+										display: block;
+									}
+
+									.circle-radio {
+										display: block;
+										width: rem(32px);
+										height: rem(32px);
+										margin-right: rem(10px);
+										border-radius: 100%;
+										background-color: #01b3f0;
+
+										.hook {
+												display: block;
+												display: none;
+												width: rem(12px);
+												height: rem(20px);
+												margin: 0 auto;
+												margin-top: rem(4px);
+												border-right: rem(3px) solid #fff;
+												border-bottom: rem(3px) solid #fff;
+												transform: rotate(45deg);
+											}
+									}
+
+									.radio-h {
+										position: absolute;
+										top: rem(-8px);
+										right: rem(140px);
+										width: rem(80px);
+										height: rem(80px);
+										opacity: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.box {
+				margin-top: rem(20px);
+				font-size: rem(30px);
+				color: #000;
+
+				.tallage {
+					padding-left: rem(20px);
+					height: rem(66px);
+					line-height: rem(66px);
+					border-bottom: 1px solid $bc;
+					background-color: #fff;
+				}
+
+				.list {
+					padding: 0 rem(20px);
+					font-size: rem(30px);
+					background-color: #fff;
+
+					.item {
+						height: rem(86px);
+						line-height: rem(86px);
+						border-bottom: 1px solid $bc;
+
+						.name {
+							float: left;
+							width: 50%;
+						}
+
+						.buy {
+							float: right;
+							width: 50%;
+							text-align: right;
+							color: #01b0f3;
+						}
+					}
+				}
+			}
+
+			.btn {
+				margin: auto;
+				margin-top: rem(60px);
+				width: rem(400px);
+				height: rem(80px);
+				line-height: rem(80px);
+				text-align: center;
+				font-size: rem(32px);
+				color: #fff;
+				border-radius: rem(10px);
+				background-color: #01b0f3;
+			}
+		}
+	}
+
+	.modal-box {
+		position: absolute;
+		top: rem(-154px);
+		left: 0;
+		width: 100%;
+		height: 52%;
+		background-color: rgba(0,0,0,.5);
+		z-index: 999999999;
+		overflow-y: hidden;
+
+		.choose-box {
+			position: absolute;
+			top: 32%;
+			left: rem(76px);
+			width: rem(600px);
+			height: rem(364px);
+			border-radius: rem(10px);
+			background-color: #fff;
+
+			.title {
+				padding-top: rem(40px);
+				padding-bottom: rem(30px);
+				font-size: rem(32px);
+				text-align: center;
+				color: #000;
+			}
+
+			.list {
+
+				.item {
+					height: rem(86px);
+					line-height: rem(86px);
+					text-align: center;
+					color: #000;
+					border-bottom: 1px solid $bc;
+
+					&:first-child {
+						color: #01b3f0;
+					}
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+}

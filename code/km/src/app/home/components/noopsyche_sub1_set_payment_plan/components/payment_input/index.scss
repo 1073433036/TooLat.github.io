@@ -1,0 +1,169 @@
+@import "~assets/styles/_bootstrap";
+
+  // .input-pay-password {
+  //   box-sizing: border-box;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 9999;
+  //   width: 100%;
+  //   height: 100%;
+  //   max-height: 100%;
+    // background-color: rgba(0,0,0,0.5);
+
+    // .hide {
+    //     display: none;
+    // }
+
+    .payment {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,.5);
+    }
+
+    // .pay-entry {
+    //     display: block;
+    // }
+
+    .payment:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #000;
+        position: fixed;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .payment-main {
+        width: 100%;
+        position: fixed;
+        background: #fff;
+        z-index: 10;
+        left: 0;
+        bottom: 0;
+    }
+
+    .payment-title {
+      position: relative;
+      width: rem(560px);
+      height: rem(400px);
+      margin: 0 auto;
+      margin-top: rem(120px);
+      background-color: #fff;
+      color: #333333;
+      border-radius: rem(12px);
+
+      > h1 {
+        width: 100%;
+        height: rem(85px);
+        border-bottom: rem(2px) solid #ccc;
+        font-size: rem(34px);
+        text-align: center;
+        line-height: rem(85px);
+
+        > i {
+          position: absolute;
+          left: rem(30px);
+          width: rem(35px);
+          height: rem(35px);
+          margin-top: rem(29px);
+        }
+      }
+
+      .block-tx {
+        width: 100%;
+
+         .item1 {
+          width: 100%;
+          height: rem(75px);
+          font-size: rem(28px);
+          line-height: rem(75px);
+          text-align: center;
+        }
+
+         .item2 {
+          width: 100%;
+          height: rem(75px);
+          font-size: rem(60px);
+          line-height: rem(75px);
+          text-align: center;
+        }
+
+         .item3 {
+          width: 100%;
+          font-size: rem(24px);
+          color: #b8b8b8;
+          text-align: center;
+        }
+      }
+    }
+
+    /*密码框*/
+
+    .payment-input {
+      width: rem(407px);
+      height: rem(70px);
+      margin: 0 auto;
+      margin-top: rem(34px);
+      border: rem(1px) solid #ccc;
+
+      .list {
+        overflow: auto;
+        height: 100%;
+
+        > li {
+          float: left;
+          width: rem(67px);
+          height: 100%;
+          border-right: rem(1px) solid #ccc;
+
+          > input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: rem(50px);
+            text-align: center;
+            color: #888;
+            background-color: #fafafa;
+          }
+        }
+
+        > li:last-child {
+          border-right: none;
+        }
+      }
+    }
+
+
+  .payment-keyboard {
+      overflow: hidden;
+      padding-top: 40px;
+  }
+
+  .payment-keyboard li {
+      width: 33.333333%;
+      float: left;
+      border-right: 1px solid #dbdbdb;
+      border-top: 1px solid #dbdbdb;
+      line-height: 40px;
+      text-align: center;
+      font-size: 18px;
+      box-sizing: border-box;
+  }
+
+  .payment-keyboard li:nth-child(3n) {
+      border-right: none;
+  }
+
+  .payShow {
+      animation-name: paybounceInUp;
+      animation-duration: .6s;
+      animation-fill-mode: both;
+  }

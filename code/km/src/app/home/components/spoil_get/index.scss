@@ -1,0 +1,47 @@
+@import "~assets/styles/_bootstrap";
+
+.spoil_get {
+  height: 100%;
+	background: #edf0f0;
+
+	._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+
+    .controller {
+
+      .main {
+
+				.present {
+					width: 100%;
+					height: rem(910px);
+					background: url('~assets/images/present-01.png') no-repeat;
+					background-position: rem(40px) rem(110px);
+					background-size: rem(620px) rem(800px);
+					overflow: hidden;
+
+					.shop {
+						width: rem(202px);
+						height: rem(172px);
+						margin: rem(200px) auto;
+					}
+				}
+			}
+
+			.backtrack {
+				width: rem(398px);
+				height: rem(78px);
+				line-height: rem(78px);
+				text-align: center;
+				font-size: rem(36px);
+				color: #ff4249;
+				border: 1px solid #ff4249;
+				margin: auto;
+				border-radius: rem(10px);
+				margin-top: rem(80px);
+			}
+    }
+  }
+}

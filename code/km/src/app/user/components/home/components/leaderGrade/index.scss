@@ -1,0 +1,335 @@
+@import "~assets/styles/_bootstrap";
+
+.leader-grade-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, .3);
+
+  .leader-grade {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    width: rem(700px);
+    min-height: rem(784px);
+    box-sizing: border-box;
+    padding: 0 rem(25px);
+    background: url(~assets/images/user/leader-bg.png) no-repeat center / 100% 100%;
+
+    > header {
+      box-sizing: border-box;
+      height: rem(140px);
+      line-height: rem(140px);
+      text-align: center;
+      color: #333;
+      font-size: rem(32px);
+      border-bottom: 1px solid #ddd;
+
+      .leaders {
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: rem(-52px);
+          content: '';
+          width: rem(39px);
+          height: rem(39px);
+          background: url(~assets/images/user/leader-grade.png) no-repeat center / 100% 100%;
+        }
+      }
+
+      > i {
+        position: absolute;
+        top: rem(50px);
+        right: rem(10px);
+        display: inline-block;
+        width: rem(40px) !important;
+        height: rem(40px) !important;
+      }
+    }
+
+    .content {
+      box-sizing: border-box;
+      padding: rem(30px) 0;
+
+      .detail-wrapper {
+        height: rem(110px);
+
+        &:not(:first-child) {
+          margin-top: rem(40px);
+        }
+
+        > img {
+          display: inline-block;
+          width: rem(110px);
+          height: rem(110px);
+          border-radius: 50%;
+        }
+
+        .manager-info {
+          display: inline-block;
+          position: absolute;
+          top: rem(10px);
+          left: rem(130px);
+          height: rem(90px);
+
+          > div {
+            height: rem(45px);
+            line-height: rem(45px);
+
+            span.name {
+              display: inline-block;
+              height: 100%;
+              width: rem(140px);
+              color: #333;
+              font-size: rem(28px);
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            span.level {
+              color: #999;
+            }
+
+            .sp {
+              display: inline-block;
+              width: rem(54px);
+              height: rem(24px);
+              margin-left: rem(10px);
+            }
+
+            .btn {
+              display: inline-block;
+              position: absolute;
+              top: rem(3.5px);
+              left: rem(150px);
+              width: rem(119px);
+              height: rem(38px);
+              background: url(~assets/images/user/leader-grade-btn.png) no-repeat center / 100% 100%;
+            }
+          }
+        }
+
+        .c-wrapper {
+          position: absolute;
+          top: rem(10px);
+          width: rem(90px);
+          height: rem(90px);
+
+          > i {
+            display: inline-block;
+            width: rem(90px);
+            height: rem(60px);
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          .text {
+            height: rem(30px);
+            line-height: rem(30px);
+            text-align: center;
+          }
+        }
+
+        .wechat-wrapper {
+          right: rem(120px);
+
+          i {
+            background-image: url(~assets/images/user/leader-wechat.png);
+            background-size: rem(59px) rem(48px);
+          }
+          .text { color: #23d60a; }
+        }
+
+        .talk-wrapper {
+          right: rem(10px);
+
+          i {
+            background-image: url(~assets/images/user/leader-talk.png);
+            background-size: rem(47px) rem(47px);
+          }
+          .text { color: #01b3f0; }
+        }
+      }
+
+      .no-leader {
+        margin: rem(160px) 0;
+        text-align: center;
+        color: #333;
+      }
+
+      .parent-wrapper {
+
+        .tip-wrapper {
+          position: relative;
+          margin-top: rem(40px);
+
+          > i {
+            position: absolute;
+            top: 50%;
+            left: rem(40px);
+            transform: translateY(-50%);
+            width: rem(37px);
+            height: rem(30px);
+            background: url(~assets/images/user/leader-lond.png) no-repeat center / 100% 100%;
+          }
+
+          .green-tip {
+            margin-left: rem(120px);
+            display: inline-block;
+            padding: rem(20px);
+            box-sizing: border-box;
+            max-width: rem(480px);
+            background: #bef978;
+            border-radius: rem(10px);
+            font-size: rem(24px);
+            color: #000;
+            box-shadow: rem(5px) rem(5px) 2px #cac3c3;
+
+            &::after {
+              position: absolute;
+              top: 50%;
+              margin-top: rem(-6px);
+              left: rem(-12px);
+              content: '';
+              width: 0;
+              height: 0;
+              border-top: rem(6px) solid transparent;
+              border-right: rem(12px) solid #bef978;
+              border-bottom: rem(6px) solid transparent;
+            }
+          }
+        }
+
+        .grade-btn {
+          margin: rem(40px) rem(60px) rem(30px);
+          width: rem(530px);
+          height: rem(80px);
+          line-height: rem(80px);
+          box-sizing: border-box;
+          color: #03b2f1;
+          background: #fff;
+          text-align: center;
+          border: 1px dashed #03b2f1;
+          border-radius: rem(10px);
+        }
+      }
+
+      .grade-tip {
+        text-indent: 2em;
+        font-size: rem(24px);
+        color: #999;
+        line-height: rem(30px);
+
+        > span {
+          color: #f00;
+        }
+
+        &.top {
+          margin-top: rem(30px);
+        }
+      }
+
+      .extend-wrapper {
+        margin-top: rem(20px);
+        position: relative;
+        height: rem(70px);
+
+        &::before {
+          position: absolute;
+          top: rem(14px);
+          left: rem(30px);
+          content: '';
+          width: rem(590px);
+          height: rem(2px);
+          background: #ccc;
+        }
+
+        > p {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: rem(240px);
+          color: #a6a6a6;
+          height: rem(30px);
+          line-height: rem(30px);
+          text-align: center;
+          background: #fff;
+        }
+
+        > i {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0;
+          display: inline-block;
+          width: rem(35px);
+          height: rem(20px);
+          background: url(~assets/images/user/leader-extend.png) no-repeat center / 100% 100%;
+        }
+
+        &.top {
+          > i {
+            transform: translateX(-50%) rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .tip-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .1);
+    z-index: 1002;
+
+    .tip-popup-inner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1003;
+      box-sizing: border-box;
+      padding: rem(20px) rem(40px) rem(30px);
+      width: rem(700px);
+      background: #e5e5e5;
+      border: 1px solid #eee;
+
+      > header {
+        position: relative;
+        height: rem(54px);
+        line-height: rem(54px);
+        text-align: center;
+        font-size: rem(28px);
+        color: #000;
+
+        > i {
+          position: absolute;
+          top: rem(12px);
+          right: rem(10px);
+          display: inline-block;
+          width: rem(30px) !important;
+          height: rem(30px) !important;
+        }
+      }
+
+      .content {
+        > p {
+          margin-top: rem(10px);
+        }
+      }
+    }
+  }
+}

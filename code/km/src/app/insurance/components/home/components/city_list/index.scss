@@ -1,0 +1,89 @@
+@import "~assets/styles/_bootstrap";
+
+.city-list-page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  background: #fff;
+  z-index: 2000;
+
+
+  .location-layer {
+    padding-top: rem(90px);
+    height: 100%;
+
+    .inner {
+      height: 100%;
+
+      .head {
+        width: 100%;
+        background: #fff;
+        z-index: 1000;
+
+        .city-nav {
+          border-bottom: 1px solid $bc;
+
+          &:after {
+            display: block;
+            clear: both;
+            content: ' ';
+          }
+
+          .nav-item {
+            float: left;
+            width: calc(100% / 2);
+            height: rem(90px);
+            line-height: rem(90px);
+            text-align: center;
+
+            &.active {
+              color: #f23030;
+
+              &:after {
+                display: block;
+                margin: -1px auto 0;
+                width: 60%;
+                content: ' ';
+                border-bottom: 2px solid #f23030;
+              }
+            }
+          }
+
+
+        }
+      }
+
+      .list {
+        padding-top: rem(90px);
+
+        .item {
+          padding: 0 rem(20px);
+          height: rem(90px);
+          line-height: rem(90px);
+          border-bottom: 1px solid $bc;
+          cursor: pointer;
+
+          &.active {
+            color: #f23030;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .tips {
+        padding: rem(40px) rem(40px) 0 rem(40px);
+        font-size: rem(24px);
+        color: #999;
+      }
+    }
+  }
+
+}

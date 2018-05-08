@@ -1,0 +1,111 @@
+@import "~assets/styles/_bootstrap";
+
+.calculate-loan-result-page {
+  height: 100%;
+  background-color: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(38px);
+    height: 100%;
+
+    h3 {
+      width: 100%;
+      text-indent: 5%;
+      color: #666;
+      font-size: rem(24px);
+    }
+
+    .change-btn-group {
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+      zoom: 1;
+      width: rem(350px);
+      margin: 0 auto;
+      margin-bottom: rem(30px);
+      color: #333;
+
+      .gone-btn, .forward-btn {
+        float: left;
+        width: rem(175px);
+        height: rem(67px);
+        line-height: rem(67px);
+        text-align: center;
+        font-size: rem(30px);
+        background-color: #fff;
+      }
+
+      .gone-btn {
+        border-radius: rem(8px) 0 0 rem(8px);
+      }
+
+      .forward-btn {
+        border-radius: 0 rem(8px) rem(8px) 0;
+      }
+
+      .active-btn {
+        background-color: #01b3f0;
+        color: #fff;
+      }
+    }
+
+    .echart-graph {
+      box-size: border-box;
+      position: relative;
+      width: 100%;
+      height: rem(375px);
+      margin-top: rem(22px);
+      background-color: #fff;
+      z-index: 9999999;
+    }
+
+    .result-detail {
+      box-size: border-box;
+      width: 100%;
+      padding-top: rem(48px);
+      margin-top: rem(3px);
+      background-color: #fff;
+
+      .detail-list {
+
+        li {
+          width: 100%;
+          height: rem(70px);
+          line-height: rem(65px);
+
+          .rect1, .rect2 {
+            display:block;
+            float: left;
+            width: rem(44px);
+            height: rem(44px);
+            margin-top: rem(13px);
+            margin-right: rem(28px);
+            margin-left: 5%;
+            border-radius: rem(12px);
+            background-color: #ffa40c;
+          }
+
+          .rect2 {
+            background-color: #01b3f0;
+          }
+
+          .hide {
+            visibility: hidden;
+          }
+
+          .right {
+            float: right;
+            margin-right: 5%;
+
+            .color-a {
+              margin-right: rem(5px);
+              color: #01b3f0;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+}

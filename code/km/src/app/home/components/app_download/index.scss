@@ -1,0 +1,134 @@
+@import "~assets/styles/_bootstrap";
+
+.app-download-page {
+  height: 100%;
+
+    width: 100%;
+  height: 100%;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+
+    .container {
+      width: 100%;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        position: relative;
+        height: 100%;
+        overflow: auto;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          .swiper-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          .jump {
+            position: absolute;
+            top: 82%;
+            left: 29%;
+            display: block;
+            width: rem(320px);
+            height: rem(80px);
+          }
+        }
+
+        .upward {
+          position: absolute;
+          left: 0;
+          bottom: rem(60px);
+          width: 100%;
+          text-align: center;
+
+          span {
+            animation: start 1.5s infinite ease-in-out;
+          }
+        }
+
+        .ios-download {
+          display: block;
+          width: 59%;
+          height: 7%;
+          position: absolute;
+          top: 78.3%;
+          left: 20.5%;
+        }
+
+        .android-download {
+          display: block;
+          width: 59%;
+          height: 7%;
+          position: absolute;
+          top: 89.3%;
+          left: 20.5%;
+        }
+      }
+    }
+  }
+
+  .layer {
+    position: relative;
+    z-index: 2001;
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .share-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      > img {
+        position: absolute;
+        top: rem(20px);
+        right: rem(20px);
+        width: rem(171px);
+        height: rem(170px);
+      }
+
+      .tip {
+        display: inline-block;
+        position: absolute;
+        top: rem(205px);
+        width: 100%;
+        text-align: center;
+        font-size: rem(30px);
+        line-height: rem(50px);
+        color: #fff;
+      }
+    }
+  }
+}
+@keyframes start {
+  0%, 30% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-20);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+}

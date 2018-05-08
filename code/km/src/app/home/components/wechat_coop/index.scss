@@ -1,0 +1,266 @@
+@import "~assets/styles/_bootstrap";
+
+.wechat-coop-page {
+  width: 100%;
+  height: 100%;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+
+    .container {
+      width: 100%;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          img.swiper-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          .jump {
+            position: absolute;
+            top: 38%;
+            left: 6%;
+            display: block;
+            width: rem(320px);
+            height: rem(120px);
+          }
+        }
+
+        .upward {
+          position: absolute;
+          left: 0;
+          bottom: rem(60px);
+          width: 100%;
+          text-align: center;
+
+          span {
+            animation: start 1.5s infinite ease-in-out;
+          }
+        }
+
+        .auto-img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .content {
+          padding: rem(44px) rem(48px);
+          background-color: #eeeff1;
+
+          .title {
+            position: relative;
+            height: rem(54px);
+            line-height: rem(54px);
+            margin-bottom: rem(30px);
+            text-align: center;
+
+            &:before {
+              content: '';
+              display: block;
+              height: 1px;
+              position: absolute;
+              top: 50%;
+              left: rem(30px);
+              right: rem(30px);
+              background-color: #333;
+            }
+
+            > span {
+              display: inline-block;
+              padding: 0 rem(30px);
+              background-color: #eeeff1;
+              font-size: rem(32px);
+              color: #333;
+            }
+          }
+
+          .form-group {
+
+            .input-item {
+              padding: rem(20px) rem(24px);
+              border: 1px solid #ddd;
+              border-radius: rem(10px);
+              overflow: hidden;
+              background-color: #fff;
+              margin-bottom: rem(20px);
+              font-size: rem(28px);
+
+              .input-text {
+                display: block;
+                width: 100%;
+                height: rem(60px);
+                border: none;
+                outline: none;
+              }
+
+              .input-textarea {
+                display: block;
+                width: 100%;
+                height: rem(180px);
+                border: none;
+                resize: none;
+              }
+            }
+
+            .select-list {
+              margin: 0 rem(-16px);
+              font-size: 0;
+              margin-bottom: rem(20px);
+
+              .item {
+                display: inline-block;
+                width: 50%;
+                padding: 0 rem(16px);
+                vertical-align: top;
+
+                .box {
+                  position: relative;
+                  border: 1px solid #ddd;
+                  border-radius: rem(10px);
+                  overflow-x: hidden;
+                  background-color: #fff;
+                  text-align: center;
+                  font-size: rem(28px);
+                  color: #333;
+
+                  .text {
+                    display: inline-block;
+                    width: 100%;
+                    height: rem(100px);
+                    line-height: rem(100px);
+                  }
+                }
+              }
+            }
+
+            .radio-list {
+              border: 1px solid $bc;
+              border-radius: rem(10px);
+              overflow: hidden;
+              background-color: #fff;
+              margin-bottom: rem(20px);
+
+							.item {
+								padding-left: rem(26px);
+								height: rem(98px);
+								line-height: rem(98px);
+								color: #333;
+
+                &:not(:last-child) {
+                  border-bottom: 1px solid $bc;
+                }
+
+								> i {
+									position: absolute;
+									top: 50%;
+									right: rem(30px);
+                  transform: translate(0, -50%);
+								}
+
+								.info {
+									float: left;
+									width: 50%;
+									overflow: hidden;
+								}
+
+								.select {
+									width: 50%;
+									height: rem(98px);
+									float: right;
+                  padding-right: rem(40px);
+                  text-align: right;
+
+                  .radio-wrappe {
+
+                    .radio {
+                      margin-right: rem(60px);
+
+                      &:last-child {
+                        margin-right: 0;
+                      }
+                    }
+                  }
+
+                  .file-state {
+                    padding-right: rem(40px);
+                    color: #999;
+
+                    &.on {
+                      color: #333;
+                    }
+                  }
+								}
+
+                .input-file {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  opacity: 0;
+                }
+							}
+						}
+
+            .submit-btn {
+              padding-top: rem(50px);
+
+              .btn {
+                width: 100%;
+                height: rem(104px);
+                line-height: rem(104px);
+                text-align: center;
+                font-size: rem(32px);
+                color: #fff;
+                background-color: #c9c9c9;
+                border-radius: rem(10px);
+                border: none;
+
+                &.on {
+                  background-color: #01b3f0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .selecter-page {
+    padding: 0;
+    z-index: 10;
+  }
+}
+@keyframes start {
+  0%, 30% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-20);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+}

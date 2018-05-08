@@ -1,0 +1,197 @@
+
+
+@import "~assets/styles/_bootstrap";
+.InsuranceListDetails{
+  width: 100%;
+  height: 100%;
+  padding-top: rem(90px);
+  position: relative;
+  > ._v-container > ._v-content {
+    position: relative;
+    padding-top: rem(90px);
+  }
+
+  .InsuranceListDetails_wrap {
+    .Insurance_cost{
+      text-align: center;
+      height: rem(103px);
+      line-height: rem(103px);
+      background: #fff;
+      span{
+        color: #fa0808;
+      }
+    }
+
+
+    .Insurance_nav {
+      padding-top: rem(20px);
+      width: 100%;
+      background: #edf0f0;
+
+      .Insurance_guarantee {
+        margin-top:rem(20px);
+        .list {
+          height:rem(100px);
+          line-height:rem(100px);
+          border-bottom:rem(1px) dashed #ccc;
+          color:#666;
+          font-size: rem(28px);
+        }
+        .guarantee_list,.medical_list {
+          background:#fff;
+          padding: rem(20px);
+          font-size: rem(30px);
+
+          .list_title {
+            color:#333;
+          }
+
+          .list_detail {
+            padding:rem(30px) rem(30px) rem(40px) rem(30px);
+            border-bottom:rem(1px) dashed #ccc;
+          }
+
+          .price{
+            color:#fa0808;
+            font-size: rem(30px);
+            position:absolute;
+            right:rem(70px);
+          }
+
+          .down{
+            width:rem(40px);
+            height:rem(30px);
+            display:inline-block;
+            position:absolute;
+            right:rem(10px);
+            background:url(~assets/images/insurance/down.png) no-repeat;
+            background-size:90%;
+            z-index: 10000;
+            top:rem(40px);
+          }
+
+        }
+      }
+      
+      &:after {
+        display: block;
+        clear: both;
+        content: ' ';
+      }
+
+      .nav-group {
+        width: 100%;
+        border-bottom: 1px solid $bc;
+        background: #fff;
+        overflow: hidden;
+        display:flex;
+      }
+
+      .item {
+        flex:1;
+        font-size: rem(28px);
+        text-align: center;
+
+
+        .title {
+          height:rem(130px);
+          line-height:rem(130px);
+          font-size: rem(21px);
+        }
+
+        &.active {
+          color: #2ea7e0;
+
+          &:after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0 auto;
+            width: rem(180px);
+            content: ' ';
+            border-bottom: 1px solid #2ea7e0;
+          }
+        }
+      }
+    }
+
+    .insure {
+      background: #fa0808;
+      color: #fff;
+      padding: 0;
+    }
+
+    .more_detail {
+      height: rem(97px);
+      line-height: rem(97px);
+      padding:0 rem(55px);
+      background: #fff;
+      span{
+        color: #00b2ee;
+      }
+    }
+    
+    .Insuranc_introduction {
+      margin: rem(20px) 0 rem(40px) 0;
+      background: #fff;
+      padding: rem(30px);
+      .title {
+        height: rem(100px);
+        line-height: rem(100px);
+        text-align: center;
+        border-bottom: rem(1px) solid #ccc;
+      }
+      .content {
+        margin-top: rem(40px);
+        p{
+          line-height: rem(50px);
+        }
+      }
+    }
+  }
+  .information_insure {
+     border-top: rem(1px) solid #e8e8e8;
+     position: fixed;
+     bottom: 0;
+     text-align: center;
+     height: rem(103px);
+     line-height: rem(103px);
+     background: #fff;
+     width: 100%;
+     display: flex;
+     span{
+       color: #fa0808;
+     }
+
+     .insure {
+       text-align: center;
+       padding:0 rem(70px);
+
+       span {
+         background: #fa0808;
+         position:absolute;
+         display:block;
+         height:100%;
+         width:86%;
+         // right: rem(-20px);
+         color: #fff;
+       }
+     }
+
+     .price {
+       width: rem(200px);
+     }
+
+     p {
+       flex: 1;
+     }
+
+  }
+  .foot {
+    height: rem(120px);
+  }
+ .header-back {
+   display: block !important;
+  }
+}

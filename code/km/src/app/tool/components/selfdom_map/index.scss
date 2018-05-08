@@ -1,0 +1,45 @@
+@import "~assets/styles/_bootstrap";
+
+.selfdom_map-page {
+  height: 100%;
+	background: #edf0f0;
+
+	._v-container > ._v-content {
+    padding-top: rem(166px);
+  }
+
+  .nav-group {
+  	padding-top: rem(90px);
+  	background-color: #fff;
+  	z-index: 1000;
+
+  	.nav-item {
+
+  		&:after {
+  			display: block;
+  			clear: both;
+  			content: ' ';
+  		}
+
+  		.nav-list {
+  			float: left;
+  			width: 50%;
+  			height: rem(76px);
+  			line-height: rem(76px);
+  			text-align: center;
+  			color: #999;
+  		}
+
+  		.active {
+  			color:#000;
+  			border-bottom: 2px solid #000;
+  		}
+  	}
+  }
+
+  .wrapper {
+
+    .controller {
+    }
+  }
+}

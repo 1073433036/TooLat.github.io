@@ -1,0 +1,117 @@
+@import "~assets/styles/_bootstrap";
+
+.mask-bank {
+  height: 100%;
+
+  .inner {
+    height: 100%;
+
+    &:before {
+      position: fixed;
+      display: block;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 2100;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: rem(655px);
+      height: rem(670px);
+      border-radius: rem(10px);
+      background: #fff;
+      z-index: 2200;
+
+      .head {
+        height: rem(120px);
+        line-height: rem(120px);
+        text-align: center;
+        border-bottom: 1px solid $bc;
+
+        > span {
+          font-size: rem(32px);
+          color: #333;
+        }
+
+        > i {
+          position: absolute;
+          top: 0;
+          right: rem(30px);
+          bottom: 0;
+          margin: auto 0;
+        }
+
+      }
+
+      .main {
+        height: rem(550px);
+
+        .list {
+          height: 100%;
+
+          .item {
+            padding: 0 rem(30px);
+            height: rem(110px);
+            line-height: rem(110px);
+            border-bottom: 1px solid $bc;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .img {
+              display: inline-block;
+              width: rem(50px);
+              height: rem(50px);
+              vertical-align: middle;
+
+              > img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .name {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: rem(120px);
+              margin: auto 0;
+              width: rem(550px);
+              height: rem(50px);
+              line-height: rem(50px);
+              vertical-align: middle;
+
+              > span {
+                font-size: rem(28px);
+                color: #333;
+              }
+            }
+
+            > i {
+              position: absolute;
+              top: 0;
+              right: rem(30px);
+              bottom: 0;
+              margin: auto 0;
+              width: rem(40px);
+              height: rem(40px);
+              border-radius: 50%;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+

@@ -1,0 +1,102 @@
+@import "~assets/styles/_bootstrap";
+
+.zx-page {
+  width: 100%;
+  height: 100%;
+
+  > ._v-content > ._v-content {
+    position: relative;
+  }
+
+  .wrapper {
+    padding-top: rem(200px);
+    width: 100%;
+    height: 100%;
+    background: url('~assets/images/zx_bg.jpg') no-repeat;
+		background-size: cover;
+
+		.controller {
+			.login {
+				margin: 0 auto;
+				width: rem(413px);
+				height: rem(147px);
+			}
+
+			.main {
+				padding-top: rem(65px);
+				text-align: center;
+
+				.title {
+					font-weight: bold;
+					font-size: rem(30px);
+					color: #000;
+				}
+
+				.item {
+					padding-top: rem(30px);
+
+					> a {
+						padding: rem(5px) rem(10px);
+						color: #01b3f0;
+						border: 1px solid #01b3f0;
+						border-radius: rem(12px);
+					}
+
+					&:before {
+						display: inline-block;
+						margin-right: rem(20px);
+						width: rem(10px);
+						height: rem(10px);
+						border-radius: 50%;
+						background: #a0a0a0;
+						content: ' ';
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+
+		.foot {
+
+			> a {
+				display: block;
+				margin: rem(30px) auto 0 auto;
+				width: rem(510px);
+				height: rem(70px);
+				line-height: rem(70px);
+				font-size: remm(26px);
+				text-align: center;
+				border-radius: rem(10px);
+
+				&.authorize {
+					color: #fff;
+					background: #b7202c;
+				}
+
+				&.history {
+					color: #fff;
+					background: #337ab7;
+				}
+
+				&.reg {
+					color: #b81f2d;
+					border: 1px solid #b81f2d;
+				}
+			}
+		}
+
+		.copyright {
+			text-align: center;
+
+			> span {
+				font-size: rem(16px);
+				color: #999;
+				vertical-align: middle;
+			}
+
+			> i {
+				margin: 0 rem(2px);
+			}
+		}
+  }
+}

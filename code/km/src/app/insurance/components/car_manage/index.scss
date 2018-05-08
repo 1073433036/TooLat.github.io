@@ -1,0 +1,69 @@
+@import "~assets/styles/_bootstrap";
+
+.car_manage-page {
+  height: 100%;
+	background: #eeeff1;
+
+	> ._v-container > ._v-content {
+		padding-top: rem(90px);
+	}
+
+  .wrapper {
+
+    .container {
+
+			.list {
+
+				.item {
+					position: relative;
+					margin-bottom: rem(20px);
+					padding: 0 rem(20px) rem(30px)  rem(20px);
+					font-size: rem(30px);
+					color: #000;
+					background-color: #fff;
+
+					> i {
+						position: absolute;
+						top: 0;
+						right: 0;
+						padding: rem(20px);
+						font-size: rem(40px);
+						color: #01b3f0;
+						z-index: 10;
+					}
+
+					.car {
+						padding-top: rem(25px);
+						overflow: hidden;
+
+						.number {
+							color: #999;
+						}
+
+						.left {
+							float: left;
+						}
+						.right {
+							float: right;
+							padding-right: rem(20px);
+						}
+					}
+
+					.insurBtn {
+						position: absolute;
+						top: 50%;
+				    right: rem(20px);
+				    height: rem(64px);
+				    line-height: rem(64px);
+				    margin-top: rem(-32px);
+				    background-color: #2ea7e0;
+				    color: #fff;
+				    font-size: rem(28px);
+				    padding: 0 rem(30px);
+				    border-radius: rem(10px);
+					}
+				}
+			}
+    }
+  }
+}

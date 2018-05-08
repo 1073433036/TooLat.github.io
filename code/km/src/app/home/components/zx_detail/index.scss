@@ -1,0 +1,13 @@
+@import "~assets/styles/_bootstrap";
+
+html, body {
+  font-size: rem(30px) !important;;
+  overflow: auto;
+}
+
+.zx-detail-page {
+  .wrapper {
+    padding-top: rem(90px);
+  }
+
+}

@@ -1,0 +1,125 @@
+@import "~assets/styles/_bootstrap";
+.testBankcard-page {
+  width: 100%;
+  height: 100%;
+  .tit {
+    height: 100%;
+    .list {
+      li {
+        &:nth-child(2) {}
+      }
+      .item {
+        position: relative;
+        width: 100%;
+        height: 667px;
+        img:nth-child(1) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 11;
+          width: 100%;
+          height: 100%;
+        }
+        img:nth-child(2) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 13;
+          width: 100%;
+        }
+        img:nth-child(3) {
+          width: 12rem;
+          position: absolute;
+          top: 5.299rem;
+          left: 50%;
+          z-index: 12;
+          margin-left: -5.5rem;
+        }
+        .resPath {
+          background: url(~assets/images/Bank_card/img16.png);
+          background-size: cover;
+          width: 12.494rem;
+          height: 3.714rem;
+          position: absolute;
+          bottom: 1.948rem;
+          margin-left: -6.247rem;
+          left: 50%;
+          z-index: 16;
+        }
+      }
+      .item02 {
+        position: relative;
+        width: 100%;
+        background: #6f80c4;
+        >span:nth-child(1) {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 9;
+        }
+        .content-box {
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          box-sizing: border-box;
+          padding-bottom: 1rem;
+          >span:nth-child(1) {
+            width: 5.6rem;
+            height: 5.6rem;
+            display: block;
+            padding-top: 1.5rem;
+            margin: 0 auto 1rem;
+          }
+          >span:nth-child(2) {
+            width: 18.052rem;
+            height: 1.948rem;
+            display: block;
+            margin: 0 auto;
+          }
+          ul {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+            flex-direction: column;
+            li {
+              // background: url(~assets/images/Bank_card/btn1.png);
+              // background-size: contain;
+              position: relative;
+              width: 16.8rem;
+              height: 3.7rem;
+              line-height: 2.6rem;
+              display: block;
+              margin: 0 auto;
+              text-align: center;
+              z-index: 99;
+              >span:nth-child(1) {
+                display: inline-block;
+                width: 13.53125rem;
+                height: 2.96875rem;
+              }
+              >span:nth-child(2) {
+                width: 8rem;
+                margin-top: .8rem;
+                display: inline-block;
+                position: absolute;
+                left: 25%;
+                top: -9%;
+              }
+              .haveSesult {
+                width: 6.935rem !important;
+                height: 2.13rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

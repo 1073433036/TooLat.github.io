@@ -1,0 +1,95 @@
+
+@import "~assets/styles/_bootstrap";
+
+.app-add-car-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  // .header-page{
+  //   background-color: #477b63;
+  // }
+
+  .wrapper {
+    padding-top: rem(90px);
+    color: #000;
+
+    .add-car-main {
+      background-color: #fff;
+
+      .carinfo-list {
+        padding: 0 rem(20px);
+
+        .carinfo-item {
+          display: flex;
+          position: relative;
+          width: 100%;
+          height: rem(122px);
+          padding: rem(40px) 0;
+          border-bottom: rem(2px) solid #dbdbdb;
+
+          .title {
+            margin-right: rem(5px);
+          }
+
+          .item-input {
+            width: rem(400px);
+            border: none;
+            outline: none;
+            margin-left: rem(20px);
+          }
+
+          .input-width {
+            width: rem(260px);
+          }
+
+          .item-input-span {
+            display: block;
+            width: rem(400px);
+            margin-left: rem(20px);
+          }
+
+          .span-empty {
+            color: #999;
+          }
+
+          .sp-right {
+            position: absolute;
+            top: rem(40px);
+            right: rem(10px);
+          }
+
+          .area-choice {
+            display: block;
+          }
+
+          .placeholder-color {
+            color: #999;
+          }
+        }
+      }
+
+      .tips {
+        margin: rem(78px) rem(80px) rem(70px) rem(80px);
+        font-size: rem(24px);
+        text-align: center;
+        line-height: 1.67;
+        color: #353535;
+      }
+
+      .addcar-btn {
+        width: rem(670px);
+        height: rem(90px);
+        margin: 0 auto;
+        text-align: center;
+        line-height: rem(90px);
+        font-size: rem(34px);
+        background-color: #01b3f0;
+        color: #fff;
+        border-radius: rem(12px);
+      }
+    }
+
+  }
+}

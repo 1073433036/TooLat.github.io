@@ -1,0 +1,142 @@
+@import "~assets/styles/_bootstrap";
+
+.location_selecter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #f4f4f4;
+
+
+  .location-layer {
+    height: 100%;
+
+    .wrap {
+      height: 100%;
+
+      .inner {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+
+        .head {
+          padding: 0 rem(20px);
+          height: rem(90px);
+          line-height: rem(90px);
+          border-bottom: 1px solid $bc;
+          background: #fff;
+
+          > span {
+            color: #333;
+          }
+
+          .close {
+            display: inline-block;
+            float: right;
+            font-weight: 400;
+            color: #399ef3;
+            cursor: pointer;
+          }
+        }
+
+        .main {
+          background: #f4f4f4;
+
+          .list-wrap {
+            display: block;
+            padding-top: rem(40px);
+          }
+
+          .hot-list {
+            display: block;
+
+            .caption {
+              display: block;
+              padding: 0 rem(20px);
+              height: rem(60px);
+              line-height: rem(60px);
+              font-weight: normal;
+            }
+
+            .list-inner {
+              display: block;
+              padding: 0 rem(10px);
+
+              &:after {
+                display: block;
+                clear: both;
+                content: '';
+              }
+
+              .item {
+                display: inline-block;
+                float: left;
+                margin-bottom: rem(20px);
+                padding: 0 rem(10px);
+                width: percentage(1/3);
+
+                > a {
+                  display: block;
+                  border: 1px solid $bc;
+                  height: rem(70px);
+                  line-height: rem(70px);
+                  text-align: center;
+                  background-color: #fff;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      .select-group {
+        padding-bottom: rem(90px);
+        height: 100%;
+        background: #fff;
+
+        &:after {
+          display: block;
+          clear: both;
+          content: ' ';
+        }
+
+        .list {
+          float: left;
+          width: 50%;
+          height: 100%;
+          border-top: 1px solid #eee;
+
+          .prop, .city {
+            padding: 0 rem(20px);
+          }
+
+          .item, .no-data {
+            height: rem(90px);
+            line-height: rem(90px);
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid $bc;
+          }
+
+          ._v-content {
+            padding-top: 0;
+          }
+
+          .item {
+
+            &.active {
+              color: #399ef3;
+            }
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

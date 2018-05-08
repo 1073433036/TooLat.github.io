@@ -1,0 +1,37 @@
+@import "~assets/styles/_bootstrap";
+
+.video_play {
+  height: 100%;
+
+  .wrapper {
+    padding-top: rem(90px);
+    height: 100%;
+
+    .vid-wrap {
+    	padding-bottom: 56.25%;
+    	height: 0;
+
+	    .video {
+	    	position: absolute;
+	    	top: 0;
+	    	left: 0;
+	    	width: 100%;
+	    	height: 100%;
+	    }
+
+    }
+
+  }
+}
+
+video::-internal-media-controls-download-button {
+  display: none;
+}
+
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+video::-webkit-media-controls-panel {
+  width: calc(100% + 50px);
+}

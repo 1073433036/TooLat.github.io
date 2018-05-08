@@ -1,0 +1,156 @@
+@import "~assets/styles/_bootstrap";
+
+.task-detail-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+      padding-bottom: rem(30px);
+
+      .top {
+        position: relative;
+        padding-top: rem(70px);
+        padding-bottom: rem(60px);
+        background: linear-gradient(#0a0f12, #2a3f4b);
+        text-align: center;
+        color: #fff;
+
+        .require {
+          text-align: center;
+          font-size: 0;
+
+          &.on {
+            margin-bottom: rem(38px);
+          }
+
+          .item {
+            display: inline-block;
+            vertical-align: top;
+            height: rem(60px);
+            line-height: rem(60px);
+            padding: 0 rem(35px);
+            font-size: rem(32px);
+            color: #ffdb00;
+
+            .text {
+              padding-right: rem(10px);
+              font-size: rem(45px);
+            }
+          }
+
+          div {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 rem(14px);
+          }
+
+          .avatar {
+            width: rem(80px);
+            height: rem(80px);
+            border-radius: 50%;
+            overflow: hidden;
+          }
+
+          .nick {
+            height: rem(80px);
+            line-height: rem(80px);
+            font-size: rem(32px);
+          }
+
+          .label {
+            margin-top: rem(20px);
+            height: rem(40px);
+            border: 1px solid #fff;
+            font-size: rem(24px);
+            padding: 0 rem(30px);
+            border-radius: rem(20px);
+          }
+        }
+      }
+
+      .body {
+        padding: rem(20px) 0;
+
+        .option {
+          background-color: #fff;
+
+          &:not(:last-child) {
+            margin-bottom: rem(20px);
+          }
+
+          .title {
+            padding-left: rem(10px);
+            line-height: rem(80px);
+            font-size: rem(32px);
+            color: #333;
+            border-bottom: 1px solid $bc;
+
+            i.icon {
+              display: inline-block;
+              vertical-align: top;
+              height: rem(80px);
+              width: rem(80px);
+            }
+          }
+
+          .list {
+						padding: rem(15px) 0;
+						border-bottom: 1px solid $bc;
+
+            .item {
+              height: rem(68px);
+              line-height: rem(68px);
+              padding: 0 rem(55px);
+
+              span {
+                display: inline-block;
+                vertical-align: top;
+                font-size: rem(28px);
+              }
+
+              .left {
+                color: #666;
+              }
+
+              .right {
+                float: right;
+                color: #333;
+              }
+
+              .text {
+                color: #51b6ec;
+              }
+            }
+          }
+        }
+      }
+
+      .submit-btn {
+        padding: rem(20) rem(30px);
+        background-color: #fff;
+
+        > a {
+          display: block;
+          width: 100%;
+          height: rem(92px);
+          line-height: rem(92px);
+          text-align: center;
+          color: #fff;
+          font-size: rem(32px);
+          border-radius: rem(10px);
+          background-color: #01b3f0;
+
+          &.on {
+            background-color: #c9c9c9;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+

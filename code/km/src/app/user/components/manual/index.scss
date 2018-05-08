@@ -1,0 +1,75 @@
+@import "~assets/styles/_bootstrap";
+
+.manual-page {
+  position: relative;
+  padding-top: rem(90px);
+  height: 100%;
+  background: #edf0f0;
+
+  .nav-list {
+    position: absolute;
+    top: rem(90px);
+    left: 0;
+    width: 100%;
+    font-size: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #fff;
+    z-index: 2;
+    box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .3);
+    white-space: nowrap;
+
+    .item {
+      display: inline-block;
+
+      &.on > a > span {
+        color: #4196ff;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: rem(4px);
+          background-color: #4196ff;
+        }
+      }
+
+      > a {
+        display: block;
+        padding: 0 rem(30px);
+        font-size: rem(30px);
+
+        > span {
+          position: relative;
+          display: block;
+          height: rem(80px);
+          line-height: rem(80px);
+          color: #666;
+        }
+      }
+    }
+  }
+
+  > ._v-container > ._v-content {
+    padding-top: rem(170px);
+  }
+
+  .wrapper {
+
+    .container {
+
+      .image {
+
+        > img {
+          display: block;
+          width: 100%;
+          height: auto;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}

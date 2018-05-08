@@ -1,0 +1,33 @@
+@import "~assets/styles/_bootstrap";
+
+.nonactivated-page {
+	height: 100%;
+	background: #edf0f0;
+
+	.group {
+
+		.list {
+			padding: 0 rem(60px) rem(60px) rem(60px);
+			background-color: #fff;
+			overflow: hidden;
+
+			.item {
+				margin-top: rem(50px);
+				padding-left: rem(20px);
+				width: 100%;
+				height: rem(87px);
+				line-height: rem(87px);
+				font-size: rem(34px);
+				color: #000;
+				border: 1px solid $bc;
+				border-radius: rem(10px);
+				background-color: #f6f6f6;
+
+				.number {
+					padding-left: rem(12px);
+				}
+			}
+		}
+	}
+	
+}

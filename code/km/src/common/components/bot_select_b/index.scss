@@ -1,0 +1,120 @@
+@import "~assets/styles/_bootstrap";
+
+.bot-select-b-page {
+  height: 100%;
+  z-index: 1000;
+
+  .layer {
+    height: 100%;
+    z-index: 1000;
+
+    &:before {
+      position: fixed;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 1000;
+    }
+
+    .inner {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 0 rem(10px) rgba(0, 0, 0, .3);
+      z-index: 1000;
+
+      .head {
+        height: rem(120px);
+        line-height: rem(120px);
+        border-bottom: 1px solid $bc;
+
+        .close, .complete {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          cursor: pointer;
+          z-index: 999;
+        }
+        
+        .cancel {
+          width:rem(40px);
+          height:rem(30px);
+          display:inline-block;
+          position:absolute;
+          right:rem(10px);
+          background:url(~assets/images/insurance_order/delect.png) no-repeat;
+          background-size:100%;
+          z-index: 10000;
+          top:rem(48px);
+        }
+
+        .close {
+          right: rem(30px);
+          color: #01b5f1;
+        }
+
+        .title {
+          font-size: rem(32px);
+          color: #333;
+          text-align: center;
+        }
+      }
+
+      .body {
+        padding: rem(5px) 0;
+        height: rem(380px);
+
+        .select-group {
+          height: 100%;
+
+          .list {
+            width: 100%;
+
+            .item {
+              height: rem(85px);
+              line-height: rem(85px);
+              font-size: rem(28px);
+              color: #333;
+              display: flex;
+              padding: rem(20px);
+              
+              p {
+                flex: 1;
+                height: rem(42px);
+                line-height: rem(42px);
+                color: #c00;
+                text-align: left;
+              }
+
+              .price{
+                text-align: right;
+              }
+
+              .name {
+                color: #333;
+              }
+
+              &.active {
+                p{
+                  color: #01b5f1;
+                }
+                background: #f3f6f5;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+}

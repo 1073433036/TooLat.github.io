@@ -1,0 +1,279 @@
+@import "~assets/styles/_bootstrap";
+
+.peer-detail-page {
+  height: 100%;
+  background: #edf0f0;
+
+  ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+    padding-bottom: rem(90px);
+
+    .controller {
+      .header {
+        .search {
+          padding: rem(20px);
+
+          .inner {
+            margin: 0 auto;
+            padding: 0 rem(25px);
+            width: rem(715px);
+            height: rem(90px);
+            line-height: rem(90px);
+            border-radius: rem(10px);
+            background: #fff;
+
+            > input {
+              margin-left: rem(25px);
+              padding: 0 rem(10px);
+              height: rem(60px);
+              line-height: rem(60px);
+              border: none;
+              vertical-align: middle;
+            }
+
+            .btn-sea {
+              position: absolute;
+              display: inline-block;
+              top: 0;
+              right: rem(25px);
+              bottom: 0;
+              margin: auto 0;
+              width: rem(100px);
+              height: rem(60px);
+              line-height: rem(60px);
+              color: #fff;
+              border: none;
+              border-radius: rem(10px);
+              background: #3dbcf0;
+              vertical-align: middle;
+            }
+          }
+        }
+
+      }
+      .main {
+        .list {
+          .item {
+            padding: rem(40px) rem(20px) rem(30px);
+            border-bottom: 1px solid $bc;
+						background: #fff;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .avatar {
+              display: inline-block;
+              width: rem(120px);
+              height: rem(120px);
+              vertical-align: top;
+              border-radius: 50%;
+              overflow-x: hidden;
+
+              > img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .userinfo {
+              display: inline-block;
+              padding-left: rem(20px);
+              width: auto;
+              line-height: rem(40px);
+              margin-bottom: rem(8px);
+
+              .name {
+                height: rem(32px);
+                line-height: rem(32px);
+                font-size: rem(32px);
+                color: #000;
+                margin-bottom: rem(10px);
+              }
+
+              .text {
+                height: rem(48px);
+                line-height: rem(48px);
+                font-size: rem(28px);
+                color: #999;
+
+                .fc {
+                  color: #ff6c32;
+                }
+              }
+
+              .company {
+                width: rem(420px);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+
+              .chat {
+                position: absolute;
+                right: 0;
+                top: rem(-10px);
+                text-align: center;
+                transform: translateX(100%);
+
+                .link {
+                  display: block;
+
+                  > span {
+                    display: block;
+                    font-size: rem(24px);
+                    color: #01b3f0;
+                  }
+                }
+
+              }
+            }
+
+            .tags {
+              padding-top: rem(10px);
+              padding-left: rem(140px);
+              font-size: 0;
+
+              .tag {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: rem(15px);
+                margin-bottom: rem(10px);
+                padding: rem(6px) rem(20px);
+                font-size: rem(24px);
+                border: 1px solid #01b3f0;
+                border-radius: rem(40px);
+                color: #01b3f0;
+              }
+            }
+          }
+        }
+      }
+
+      .base-info {
+        height: rem(72px);
+        line-height: rem(72px);
+        padding-left: rem(20px);
+        color: #999;
+        font-size: rem(30px);
+      }
+
+      .list-group {
+        padding-left: rem(20px);
+        background: #fff;
+
+        &.on {
+          border-bottom: 1px solid $bc;
+        }
+
+        .item {
+          position: relative;
+          height: rem(88px);
+					line-height: rem(88px);
+
+					.write {
+						color: #999;
+					}
+
+          &:not(:last-child) {
+            border-bottom: 1px solid $bc;
+          }
+
+          .icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: rem(40px);
+          }
+
+          .name {
+            padding-left: rem(15px);
+            color: #333;
+            vertical-align: middle;
+          }
+
+          > strong {
+            position: absolute;
+            top: 0;
+            right: rem(40px);
+            bottom: 0;
+            margin: auto 0;
+            color: #333;
+            font-weight: normal;
+            vertical-align: middle;
+
+            > i {
+              margin-right: rem(20px);
+            }
+          }
+        }
+      }
+
+      .image-list {
+        padding: rem(20px) 0 0;
+        text-align: center;
+        font-size: 0;
+        background-color: #fff;
+
+        .item {
+          display: inline-block;
+          width: rem(140px);
+          margin: 0 rem(90px);
+
+          .image {
+            width: rem(140px);
+            height: rem(140px);
+
+            > img {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .name {
+            height: rem(70px);
+            line-height: rem(70px);
+            color: #999;
+            font-size: rem(28px);
+          }
+        }
+      }
+
+      .loan-require {
+        padding-left: rem(80px);
+        padding-right: rem(40px);
+        padding-bottom: rem(40px);
+        background-color: #fff;
+        line-height: rem(50px);
+
+        .content {
+          font-size: rem(26px);
+        }
+      }
+
+      .btn-add {
+        padding-top: rem(100px);
+
+        > button {
+          display: block;
+          margin: 0 auto;
+          width: rem(710px);
+          height: rem(90px);
+          text-align: center;
+          font-size: rem(32px);
+          color: #fff;
+          border: none;
+          border-radius: rem(10px);
+          background: #01b5f1;
+          cursor: pointer;
+        }
+
+      }
+
+    }
+  }
+
+}

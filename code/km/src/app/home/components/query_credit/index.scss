@@ -1,0 +1,168 @@
+@import "~assets/styles/_bootstrap";
+
+.query-credit-page {
+  height: 100%;
+
+  .wrapper {
+
+    .container {
+      position: relative;
+
+      .return {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem(90px);
+        height: rem(90px);
+        z-index: 2;
+
+        &:before {
+          content: '';
+          display: block;
+          width: rem(28px);
+          height: rem(28px);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: rem(-14px);
+          margin-left: rem(-14px);
+          border-bottom: 1px solid #fff;
+          border-left: 1px solid #fff;
+          transform: rotate(45deg);
+          transform-origin: 50% 50%;
+        }
+      }
+
+      .bg {
+        position: relative;
+        width: 100%;
+
+        > img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: rem(480px);
+
+        .query-btn {
+          padding-bottom: rem(88px);
+          text-align: center;
+
+          .btn {
+            display: inline-block;
+            vertical-align: top;
+            width: rem(462px);
+            height: rem(84px);
+            line-height: rem(84px);
+            text-align: center;
+            color: #fff;
+            font-size: rem(30px);
+            background: url('~assets/images/query-credit-btn.png') no-repeat;
+            background-size: 100% 100%;
+            border-radius: rem(10px);
+            overflow: hidden;
+          }
+        }
+
+        .report-btn {
+          text-align: center;
+          font-size: 0;
+          padding-bottom: rem(116px);
+
+          .btn {
+            display: inline-block;
+            vertical-align: top;
+            line-height: rem(52px);
+            border: rem(2px) solid #08affb;
+            border-radius: rem(10px);
+            color: #08affb;
+            padding: 0 rem(25px);
+            margin: 0 rem(36px);
+            font-size: rem(30px);
+          }
+        }
+
+        .title-style {
+          text-align: center;
+
+          .name {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            height: rem(60px);
+            line-height: rem(60px);
+            font-size: rem(32px);
+            color: #333;
+            padding: 0 rem(20px);
+
+            &:before, &:after {
+              position: absolute;
+              top: rem(29px);
+              content: '';
+              display: block;
+              width: rem(100px);
+              height: rem(2px);
+              background-color: #333;
+            }
+
+            &:before {
+              right: 100%;
+            }
+
+            &:after {
+              left: 100%;
+            }
+          }
+        }
+
+        .list {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 0 rem(30px);
+          justify-content: center;
+          transform: scale(0.8);
+          .item {
+            width: rem(220px);
+            padding-top: rem(12px);
+            .icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: rem(72px);
+            }
+
+            .name {
+              line-height: rem(40px);
+              font-size: rem(18px);
+              color: #333;
+              text-align: center;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+        }
+
+        .company-logo {
+          padding-top: rem(40px);
+
+          >img {
+            display: block;
+            vertical-align: top;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

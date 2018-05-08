@@ -1,0 +1,105 @@
+@import "~assets/styles/_bootstrap";
+
+.app-my-car-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #eeeff1;
+
+  // .header-page{
+  //   background-color: #00a679;
+  // }
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .mycar-list {
+      padding: 0 rem(20px);
+      font-size: rem(26px);
+      color: #757575;
+
+      .mycar-item {
+        position: relative;
+        width: 100%;
+        height: rem(252px);
+        padding: rem(27px) rem(32px);
+        margin-top: rem(20px);
+        background-color: #fff;
+        line-height: 2.1;
+
+        .delete-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: rem(34px);
+          right: rem(20px);
+          width: rem(42px);
+          height: rem(42px);
+        }
+
+        .detail-btn {
+          position: absolute;
+          bottom: rem(15px);
+          right: rem(15px);
+          padding: rem(10px) rem(20px);
+          color: #01b3f0;
+        }
+      }
+    }
+
+    .peccancy-empty-img {
+      width: 50%;
+      padding-top: rem(300px);
+      margin: 0 auto;
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+
+  .delete-car-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      background-color: #fff;
+      transform: translate(-50%, -50%);
+      border-radius: rem(12px);
+
+      > h4 {
+        padding: rem(40px) 0;
+        border-bottom: 1px solid $bc;
+        font-size: rem(30px);
+        text-align: center;
+        color: #000;
+      }
+
+      .delete-btn, .cancel-btn {
+        float: left;
+        width: 50%;
+        padding: rem(20px) 0;
+        font-size: rem(28px);
+        text-align: center;
+      }
+
+      .delete-btn {
+        border-right: 1px solid $bc;
+        color: #00a679;
+      }
+
+      .cancel-btn {
+        color: #999;
+      }
+    }
+  }
+}

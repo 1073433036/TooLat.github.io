@@ -1,0 +1,125 @@
+@import "~assets/styles/_bootstrap";
+
+.auth-flow-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .form-group {
+
+        .list {
+          margin-bottom: rem(20px);
+          box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .1);
+
+          .item {
+            padding-left: rem(30px);
+            background-color: #fff;
+
+            &:not(:last-child) .box {
+              border-bottom: 1px solid $bc;
+            }
+
+            .box {
+              display: flex;
+              padding: rem(15px) rem(20px) rem(15px) 0;
+
+              .name, .content {
+                height: rem(70px);
+                line-height: rem(70px);
+                font-size: rem(30px);
+                color: #333;
+              }
+
+              .name {
+                width: rem(160px);
+              }
+
+              .content {
+                flex: 1;
+                min-width: 1px;
+                padding-left: rem(40px);
+
+                .input-item {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                  outline: none;
+                  color: #333;
+                }
+
+                .cr {
+                  color: #ff4249;
+                }
+              }
+
+              .code {
+
+                .phone-code {
+                  padding: 0 rem(20px);
+                  height: rem(60px);
+                  line-height: rem(60px);
+                  color: #fff;
+                  border-radius: rem(10px);
+                  background-color: #01b3f0;
+                }
+              }
+
+              .select {
+                height: rem(70px);
+                line-height: rem(70px);
+                font-size: rem(28px);
+                color: #999;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                > span, > i {
+									font-size: rem(28px);
+                  display: inline-block;
+                  vertical-align: top;
+                }
+
+                i.icon {
+                  height: rem(70px);
+                  line-height: rem(70px);
+                  transform: rotate(180deg);
+                  color: #999;
+                  font-size: rem(60px);
+                }
+              }
+            }
+          }
+        }
+
+        .submit-btn {
+          padding-top: rem(40px);
+          text-align: center;
+
+          .btn {
+            display: inline-block;
+            vertical-align: top;
+            width: rem(400px);
+            height: rem(80px);
+            line-height: rem(80px);
+            background-color: #c9c9c9;
+            font-size: rem(36px);
+            color: #fff;
+            border-radius: rem(10px);
+            border: none;
+            outline: none;
+
+            &.active {
+              background-color: #01b3f0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

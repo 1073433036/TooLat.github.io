@@ -1,0 +1,116 @@
+@import "~assets/styles/_bootstrap";
+
+.task-set-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+      padding-bottom: rem(30px);
+
+      .list {
+        width: 100%;
+        background-color: #fff;
+
+        > li {
+          border-bottom: 1px solid #eee;
+
+          > a {
+            position: relative;
+            display: block;
+            height: rem(120px);
+            line-height: rem(120px);
+            text-align: center;
+            font-size: rem(30px);
+            color: #333;
+
+            > span {
+              display: inline-block;
+              vertical-align: top;
+
+              span.text {
+                font-size: rem(24px);
+                color: #999;
+              }
+            }
+
+
+            > i {
+              &.type {
+                position: absolute;
+                display: block;
+                top: 45%;
+                right: rem(50px);
+                margin-top: rem(-20px);
+                width: rem(20px);
+                height: rem(40px);
+                border-bottom: 1px solid #ff5e13;
+                border-right: 1px solid #ff5e13;
+                transform: rotate(45deg);
+                transform-origin: 50% 50%;
+              }
+            }
+
+          }
+        }
+
+        &.custom {
+          > li {
+            padding: 0 rem(20px) 0 rem(45px);
+
+            > a {
+              text-align: left;
+
+              &:after {
+                display: block;
+                clear: both;
+                content: ' ';
+              }
+
+              .left, .right {
+                float: left;
+                width: 50%;
+              }
+
+              .right {
+                padding-right: rem(40px);
+                color: #999;
+                text-align: right;
+              }
+
+              .sp-right {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto 0;
+              }
+            }
+          }
+        }
+      }
+
+      .btn {
+        padding-top: rem(160px);
+
+        > button {
+          display: block;
+          margin: 0 auto;
+          width: rem(710px);
+          height: rem(95px);
+          line-height: rem(95px);
+          font-size: rem(32px);
+          color: #fff;
+          text-align: center;
+          border: none;
+          border-radius: rem(10px);
+          background: #01b5fa;
+        }
+      }
+    }
+  }
+}
+

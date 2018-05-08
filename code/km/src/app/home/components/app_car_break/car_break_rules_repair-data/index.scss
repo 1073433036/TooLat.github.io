@@ -1,0 +1,99 @@
+@import "~assets/styles/_bootstrap";
+
+.app-repair-data-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  // .header-page{
+  //   background-color: #00a776;
+  // }
+
+  .wrapper {
+    padding-top: rem(90px);
+    color: #707070;
+    line-height: 1.67;
+
+    .tips-group {
+      padding: rem(30px) rem(20px);
+
+      .repair-data-notice {
+        color: #ed0c05;
+      }
+    }
+
+    > h3 {
+      height: rem(45px);
+      padding-left: rem(20px);
+      font-size: rem(28px);
+
+      .sp {
+        margin-top: rem(-5px);
+        vertical-align: middle;
+      }
+    }
+
+    .upload-papers {
+
+      .upload-item {
+        position: relative;
+        width: rem(403px);
+        height: rem(275px);
+        margin: 0 auto;
+        margin-top: rem(45px);
+
+        > label {
+          overflow: hidden;
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: rem(18px);
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        .reset {
+          position: absolute;
+          z-index: 9999;
+          bottom: 0;
+          right: rem(-80px);
+          color: #000;
+        }
+
+        .upload-input {
+          display: none;
+        }
+
+        .animation-reset {
+          transition: all 1s linear;
+          transform: rotate(720deg);
+        }
+      }
+
+      .tips {
+        padding: rem(60px) rem(60px) 0 rem(60px);
+        font-size: rem(24px);
+        color: #999;
+      }
+    }
+
+    .submit-btn {
+      width: 80%;
+      height: rem(100px);
+      margin: 0 auto;
+      margin-top: rem(100px);
+      text-align: center;
+      line-height: rem(100px);
+      font-size: rem(34px);
+      background-color: #01b3f0;
+      color: #fff;
+      border-radius: rem(16px);
+    }
+
+  }
+}

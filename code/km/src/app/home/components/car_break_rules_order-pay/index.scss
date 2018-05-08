@@ -1,0 +1,253 @@
+@import "~assets/styles/_bootstrap";
+
+.car-rules-order-pay-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+
+  .fl{float: left;}
+
+  .fr{float: right;}
+
+  .header-page{
+    background-color: #00a679;
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+    color: #707070;
+
+    .span-color1 {
+      color: #000;
+    }
+
+    .span-color2 {
+      color: #d23131;
+    }
+
+    .item-title {
+      height: rem(55px);
+      padding-left: rem(20px);
+      line-height: rem(55px);
+      font-size: rem(28px);
+    }
+
+    .order-info-list {
+      padding: 0 rem(20px) rem(20px) rem(20px);
+      background-color: #fff;
+
+      > li {
+        width: 100%;
+        height: rem(80px);
+        padding: rem(23px) 0;
+        border-bottom: rem(1px) solid #f0f0f0;
+      }
+    }
+
+    .pay-model-list {
+      background-color: #fff;
+
+      > li {
+        width: 100%;
+        height: rem(80px);
+        padding: rem(20px);
+        border-bottom: rem(1px) solid #f0f0f0;
+        line-height: rem(40px);
+
+        .icon {
+          vertical-align: middle;
+          font-size: rem(40px);
+          margin-right: rem(5px);
+        }
+      }
+
+      .right {
+
+        .input-group {
+
+          .shape {
+            position: relative;
+            display: block;
+            width: rem(40px);
+            height: rem(40px);
+            border: rem(1px) solid #bfbfbf;
+            border-radius: 100%;
+          }
+
+          .shape:before {
+            content: '';
+            position: absolute;
+            top: rem(3px);
+            left: rem(12px);
+            width: rem(10px);
+            height: rem(23px);
+            border-right: rem(3px) solid #fff;
+            border-bottom: rem(3px) solid #fff;
+            transform: rotate(42deg);
+            opacity: 0;
+          }
+
+          .radio-input {
+            display: none;
+          }
+
+          .radio-input:checked + .shape{
+            border: none;
+            background-color: #48bf9f;
+          }
+
+          .radio-input:checked + .shape:before{
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .pay-btn {
+      width: 90%;
+      height: rem(80px);
+      margin: 0 auto;
+      margin-top: rem(30px);
+      text-align: center;
+      line-height: rem(80px);
+      background-color: #00a679;
+      font-size: rem(32px);
+      color: #fff;
+      border-radius: rem(12px);
+    }
+
+    .pay-statement {
+      margin-top: rem(35px);
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: rem(50px);
+        padding-left: rem(40px);
+
+        > label {
+          width: rem(55px);
+          height: rem(40px);
+        }
+
+        .span-color2 {
+          color: #2bc96f;
+        }
+
+        .input-checkbox {
+          display: none;
+        }
+
+        .input-checkbox:checked + .shape:before {
+          opacity: 1;
+        }
+
+        .shape {
+          display: block;
+          position: relative;
+          width: rem(40px);
+          height: rem(40px);
+          border-radius: rem(10px);
+          background-color: #00a679;
+        }
+
+        .shape:before {
+          content: '';
+          position: absolute;
+          top: rem(1px);
+          left: rem(12px);
+          width: rem(12px);
+          height: rem(24px);
+          border-right: rem(3px) solid #fff;
+          border-bottom: rem(3px) solid #fff;
+          transform: rotate(42deg);
+          opacity: 0;
+        }
+
+      }
+    }
+
+    .user-tips {
+      padding: rem(50px) rem(20px) 0 rem(30px);
+      color: #999;
+      line-height: 1.67;
+      font-size: rem(24px);
+
+      .hint {
+        margin-left: rem(-10px);
+        color: #000;
+      }
+    }
+
+  }
+
+  .tips {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: rem(125px);
+    text-align: center;
+    line-height: 1.67;
+    color: #999;
+  }
+
+  .transaction-tips {
+    position: fixed;
+    z-index: 8888;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    color: #333;
+
+    .tips-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      font-size: rem(24px);
+      line-height: 1.67;
+      background-color: #fff;
+      border-radius: rem(12px);
+
+      > h2 {
+        padding-top: rem(30px);
+        font-size: rem(30px);
+        text-align: center;
+      }
+
+      .tips-items {
+        padding: rem(30) rem(30px) rem(50px) rem(30px);
+        border-bottom: rem(1px) solid #ccc;
+      }
+
+
+      .btn-group {
+        width: 100%;
+        height: rem(86px);
+
+        .cancel-btn, .accept-btn {
+          float: left;
+          width: 50%;
+          height: 100%;
+          font-size: rem(28px);
+          text-align: center;
+          line-height: rem(86px);
+        }
+
+        .cancel-btn {
+          border-right: rem(1px) solid #ccc;
+        }
+
+        .accept-btn {
+          color: #2cc770;
+        }
+
+      }
+    }
+  }
+}

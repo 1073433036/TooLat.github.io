@@ -1,0 +1,189 @@
+@import "~assets/styles/_bootstrap";
+
+.secondhand-house-loan-page {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: #eeeff1;
+
+  .wrapper {
+    margin-top: rem(90px);
+
+    .change-btn-group {
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+      zoom: 1;
+      width: rem(510px);
+      margin: 0 auto;
+      padding-top: rem(37px);
+      margin-bottom: rem(44px);
+      color: #333;
+
+      .loan-btn, .area-btn {
+        float: left;
+        width: rem(250px);
+        height: rem(67px);
+        line-height: rem(67px);
+        text-align: center;
+        font-size: rem(30px);
+        background-color: #fff;
+      }
+
+      .loan-btn {
+        border-radius: rem(8px) 0 0 rem(8px);
+      }
+
+      .area-btn {
+        border-radius: 0 rem(8px) rem(8px) 0;
+      }
+
+      .active-btn {
+        background-color: #01b3f0;
+        color: #fff;
+      }
+    }
+
+    .list {
+      background-color: #fff;
+      font-size: rem(28px);
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        height: rem(127px);
+        line-height: rem(127px);
+        margin-left: 5%;
+        border-bottom: rem(3px) solid #eee;
+      }
+
+      .radio-group {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(80px);
+        margin-left: rem(55px);
+        color: #333;
+
+        :checked + .circle-radio .hook {
+          display: block;
+        }
+
+        .circle-radio {
+          display: block;
+          width: rem(37px);
+          height: rem(37px);
+          margin-right: rem(23px);
+          border-radius: 100%;
+          background-color: #01b3f0;
+
+          .hook {
+              display: block;
+              display: none;
+              width: rem(10px);
+              height: rem(22px);
+              margin: 0 auto;
+              margin-top: rem(4px);
+              border-right: rem(2px) solid #fff;
+              border-bottom: rem(2px) solid #fff;
+              transform: rotate(45deg);
+            }
+        }
+
+        .radio-h {
+          display: none;
+        }
+      }
+
+      .bordernone {
+        border: none;
+      }
+
+      .left {
+        color: #333;
+      }
+
+      .right {
+        margin-right: 5%;
+      }
+
+      .readyonly-input {
+        padding-left: rem(15px);
+        padding-right: rem(20px);
+        border: none;
+        text-align: right;
+      }
+
+      .input, .tips {
+        float: left;
+      }
+
+      .tips {
+        color: #333;
+      }
+
+      .tips1 {
+        float: left;
+        color: #333;
+      }
+
+      .move-lt {
+        margin-right: rem(28px);
+      }
+
+      .width {
+        width: rem(230px);
+        height: rem(72px);
+        padding-left: rem(5rem);
+        padding-right: rem(25rem);
+        border: none;
+        border-radius: rem(12px);
+        margin-right: rem(12px);
+        background-color: #f5f5f5;
+        text-align: right;
+      }
+
+      .width1 {
+        width: rem(230px);
+        height: rem(72px);
+        padding-left: rem(5rem);
+        padding-right: rem(25rem);
+        border: none;
+        text-align: right;
+      }
+
+    }
+
+    .calculate {
+      margin-top: rem(58px);
+
+      .calculate-btn, .reset-btn {
+        display: block;
+        width: 90%;
+        height: rem(93px);
+        line-height: rem(93px);
+        border: none;
+        border-radius: rem(10px);
+        margin: 0 auto;
+        margin-top: rem(23px);
+        background-color: #01b3f0;
+        text-align: center;
+        color: #fff;
+        font-size: rem(32px);
+      }
+
+      .reset-btn {
+        background-color: #fff;
+        color: #01b3f0;
+      }
+    }
+
+  }
+
+
+}

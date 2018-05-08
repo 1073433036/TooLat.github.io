@@ -1,0 +1,129 @@
+@import "~assets/styles/_bootstrap";
+
+.agency_my_team-page {
+	height: 100%;
+
+	.header-page {
+		background: url('~assets/images/wallet-header.png') no-repeat;
+		background-size: cover;
+	}
+
+	.wrapper {
+		padding-top: rem(90px);
+		padding-bottom: rem(90px);
+		height: 100%;
+	}
+
+	.container {
+
+		.main {
+			padding: 0 rem(60px);
+			width: 100%;
+			height: rem(270px);
+			background: url('~assets/images/wallet-setting.png') no-repeat;
+			background-size: 100% 100%;
+
+			.top {
+				position: relative;
+				width: 100%;
+				height: rem(164px);
+
+				.head {
+					position: absolute;
+					top: rem(30px);
+					left: 0;
+					width: rem(100px);
+					height: rem(100px);
+					border: 1px solid $bc;
+					border-radius: 50%;
+
+					> img {
+						width: 100%;
+						height: 100%;
+						border-radius: 50%;
+					}
+				}
+
+				.info {
+					position: absolute;
+					top: rem(38px);
+					left: rem(120px);
+					font-size: rem(32px);
+					color: #fff;
+				}
+			}
+
+			.today {
+				width: 100%;
+				font-size: rem(30px);
+				color: #fff;
+
+				&:after {
+					display: block;
+					clear: both;
+					content: ' ';
+				}
+
+				.new-add {
+					float: left;
+					width: 36%;
+					text-align: center;
+
+					.number {
+						margin-top: rem(12px);
+						font-size: rem(36px);
+					}
+				}
+
+				.attention {
+					float: left;
+					margin-left: rem(100px);
+					width: 46%;
+					text-align: center;
+
+					.number {
+						margin-top: rem(12px);
+						font-size: rem(36px);
+					}
+				}
+			}
+		}
+
+		.list-group {
+			margin-top: rem(20px);
+
+			.list {
+				
+				.item {
+					padding: rem(40px) rem(20px);
+					height: rem(126px);
+					background-color: #fff;
+					border-bottom: 1px solid $bc;
+
+					> i {
+						float: right;
+						margin-top: rem(5px);
+					}
+
+					.left {
+						float: left;
+						font-size: rem(32px);
+						color: #000;
+
+						.number {
+							padding-left: rem(20px);
+							vertical-align: middle;
+						}
+					}
+
+					.right {
+						float: right;
+						margin-right: rem(50px);
+						font-size: rem(32px);
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+}

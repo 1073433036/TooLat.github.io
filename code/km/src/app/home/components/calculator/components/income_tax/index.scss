@@ -1,0 +1,142 @@
+@import "~assets/styles/_bootstrap";
+
+.income-tax-page {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: #eeeff1;
+
+  .components {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wrapper {
+    margin-top: rem(90px);
+
+    .change-btn-group {
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+      zoom: 1;
+      width: rem(510px);
+      margin: 0 auto;
+      padding-top: rem(37px);
+      margin-bottom: rem(44px);
+      color: #333;
+
+      .gone-btn, .forward-btn {
+        float: left;
+        width: rem(250px);
+        height: rem(67px);
+        line-height: rem(67px);
+        text-align: center;
+        font-size: rem(30px);
+        background-color: #fff;
+      }
+
+      .gone-btn {
+        border-radius: rem(8px) 0 0 rem(8px);
+      }
+
+      .forward-btn {
+        border-radius: 0 rem(8px) rem(8px) 0;
+      }
+
+      .active-btn {
+        background-color: #01b3f0;
+        color: #fff;
+      }
+    }
+
+    .list {
+      background-color: #fff;
+      font-size: rem(28px);
+
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        height: rem(127px);
+        line-height: rem(127px);
+        margin-left: 5%;
+        border-bottom: rem(3px) solid #eee;
+      }
+
+      .bordernone {
+        border: none;
+      }
+
+      .left {
+        color: #333;
+      }
+
+      .right {
+        margin-right: 5%;
+      }
+
+      .readyonly-input {
+        padding-left: rem(15px);
+        padding-right: rem(20px);
+        border: none;
+        text-align: right;
+      }
+
+      .input, .tips {
+        float: left;
+      }
+
+      .tips {
+        color: #333;
+      }
+
+      .width {
+        width: rem(230px);
+        height: rem(72px);
+        padding-left: rem(5rem);
+        padding-right: rem(25rem);
+        border: none;
+        margin-right: rem(12px);
+        text-align: right;
+      }
+    }
+
+    .tips1 {
+      float: left;
+      color: #333;
+    }
+
+    .calculate {
+      margin-top: rem(58px);
+
+      .calculate-btn, .reset-btn {
+        display: block;
+        width: 90%;
+        height: rem(93px);
+        line-height: rem(93px);
+        border: none;
+        border-radius: rem(10px);
+        margin: 0 auto;
+        margin-top: rem(23px);
+        background-color: #01b3f0;
+        text-align: center;
+        color: #fff;
+        font-size: rem(32px);
+      }
+
+      .reset-btn {
+        background-color: #fff;
+        color: #01b3f0;
+      }
+    }
+  }
+
+
+}

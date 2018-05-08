@@ -1,0 +1,175 @@
+@import "~assets/styles/_bootstrap";
+
+.common-invite-page {
+
+  .controller {
+    width: 100%;
+    height: 100%;
+
+    .group {
+      position: absolute;
+      bottom: rem(240px);
+      right: rem(20px);
+      z-index: 9999;
+
+      .item {
+        margin-bottom: rem(20px);
+        width: rem(78px);
+        height: rem(78px);
+        border-radius: rem(50px);
+        overflow: hidden;
+        background: url('~assets/images/utility-invite.png') no-repeat;
+        background-size: 100%;
+        // box-shadow: 0px rem(4px) rem(8px) rgba(0, 0, 0, .5);
+
+        // &:before {
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   display: block;
+        //   width: 100%;
+        //   height: 100%;
+        //   content: ' ';
+        //   background: rgba(0, 0, 0, .8);
+        //   z-index: 1000;
+        // }
+
+        > a {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          // > i {
+          //   position: absolute;
+          //   top: 0;
+          //   bottom: 0;
+          //   left: 0;
+          //   right: 0;
+          //   margin: auto;
+          //   width: rem(48px);
+          //   height: rem(48px);
+          //   z-index: 2000;
+          //   background: url('~assets/images/utility-invite.png') no-repeat;
+          //   background-size: 100%;
+          // }
+
+          > span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: rem(24px);
+            color: #fff;
+            text-align: center;
+            z-index: 1000;
+          }
+        }
+
+      }
+    }
+
+    .body {
+      position: absolute;
+      bottom: 0;
+      padding: rem(25px) rem(25px) 0 rem(25px);
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 rem(-4px) rem(20px) rgba(0, 0, 0, .5);
+      z-index: 3999;
+
+      .head {
+        padding-bottom: rem(25px);
+        border-bottom: 1px solid $bc;
+
+        .avatar {
+          display: inline-block;
+          width: rem(85px);
+          height: rem(85px);
+          border-radius: 50%;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .invite-info {
+          position: absolute;
+          top: 0;
+          left: rem(115px);
+
+          .name {
+            color: #333;
+          }
+
+          .level {
+            > span {
+              font-size: rem(22px);
+              color: #999;
+            }
+          }
+        }
+
+        .qrcode {
+          position: absolute;
+          top: 0;
+          right: rem(40px);
+          padding: 0 rem(10px);
+          line-height: rem(50px);
+          border-radius: rem(50px);
+          background: #0cacfc;
+
+          > span {
+            font-size: rem(24px);
+            color: #fff;
+            vertical-align: middle;
+          }
+
+          > i {
+            width: rem(23px);
+            height: rem(23px);
+          }
+        }
+      }
+
+      .foot {
+        left: rem(25px);
+        width: rem(725px);
+        padding: rem(25px) 0;
+
+        &:after {
+          display: block;
+          clear: both;
+          content: ' ';
+        }
+
+        .link {
+          display: block;
+          float: left;
+          margin: 0 rem(25px);
+          width: rem(165px);
+          line-height: rem(50px);
+          text-align: center;
+          border: 1px solid #19d100;
+          border-radius: rem(50px);
+
+          &.link-02 {
+            border: 1px solid #2ea7e0;
+          }
+
+          &.link-03 {
+            border: 1px solid #ff3f46;
+          }
+
+          > span {
+            font-size: rem(24px);
+            vertical-align: middle;
+          }
+
+        }
+      }
+
+    }
+  }
+
+}

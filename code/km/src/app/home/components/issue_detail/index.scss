@@ -1,0 +1,61 @@
+@import "~assets/styles/_bootstrap";
+
+.increase-detail {
+  height: 100%;
+  background: #fff;;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .controller {
+      padding: rem(30px) rem(30px) 0 rem(30px);
+      background: #fff;
+
+      .title{
+        font-size: rem(44px);
+        color:#333;
+      }
+
+      .date{
+        padding-top: rem(40px);
+        font-size: rem(24px);
+
+        .kamun{
+          color: #01b3f0;
+          padding-left: rem(30px);
+        }
+      }
+
+      .content{
+        position: relative;
+        line-height: 1.8;
+        padding: rem(58px) 0;
+
+        .text-top {
+					padding-top: rem(30px);
+          padding-bottom: rem(60px);
+        }
+
+        .text-middle{
+					margin: auto;
+          width: 100%;
+          height: rem(340px);
+
+          > img {
+						margin: auto;
+            height: rem(340px);
+          }
+        }
+
+        .text-bottom{
+          padding-top: rem(60px);
+
+          > a {
+            color: #ff4249;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

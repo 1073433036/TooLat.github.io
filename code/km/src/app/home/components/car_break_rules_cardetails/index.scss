@@ -1,0 +1,126 @@
+@import "~assets/styles/_bootstrap";
+
+.my-car-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f3f5f7;
+
+  .header-page{
+    background-color: #0a0f12;
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+    .car-break-list{
+      background-color: #fff;
+      .title{
+        padding: 0 rem(30px);
+        font-size: rem(24px);
+        display: flex;
+        height: rem(73px);
+        line-height: rem(73px);
+        border-bottom: #eeeeee 1px solid;
+        .time{
+          flex: 1;
+          color: #666666;
+          text-align: left;
+        }
+      }
+      .conter{
+        padding: 0 rem(30px);
+        .conter-tit{
+          color: #000;
+          font-size: rem(30px);
+          line-height: rem(86px);
+        }
+        .detail{
+          font-size: rem(24px);
+          color: #999999;
+          line-height: rem(40px);
+        }
+      }
+      .bottom-btn{
+        padding: 0 rem(30px);
+        height: rem(130px);
+        ul{
+          height: 100%;
+          display: flex;
+          width: rem(400px);
+          align-items: center;
+          li{
+            flex: 1;
+            padding-left: rem(58px);
+            font-size: rem(24px);
+            color: #000;
+            span{
+              border-radius: 50%;
+              border: 1px solid #ccc;
+              display: inline-block;
+              width: rem(40px);
+              height: rem(40px);
+              text-align: center;
+              line-height: rem(38px);
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            span.blue{
+              border-color: #03b2f1;
+              color: #03b2f1;
+            }
+            span.yellow{
+              border-color: #f2812e;
+              color: #f2812e;
+            }
+            span.red{
+              border-color: #f8042c;
+              color: #f8042c;
+            }
+          }
+        }
+      }
+      .code{
+        padding: 0 rem(30px) rem(30px);
+        border-bottom: #eeeeee 1px solid;
+        p{
+          line-height: rem(45px);
+          font-size: rem(24px);
+          color: #999;
+        }
+      }
+    }
+   
+    
+  }
+   .car-break-map{
+      margin-top: rem(30px);
+      width:100%;
+      // height: rem(426px);
+
+    }
+  .immediately{
+      button{
+        width: rem(650px);
+        height: rem(102px);
+        background-color: #03b2f1;
+        color: #fff;
+        font-size: rem(32px);
+        margin: 0 auto;
+        border: none;
+        display: block;
+        margin-top: rem(82px);
+        border-radius: rem(12px);
+      }
+    }
+
+}
+#allmap {
+  width:100%;
+  // width: rem(690px);
+  height: rem(500px);
+  overflow: hidden;
+  margin:0;
+  font-family:"微软雅黑";
+}

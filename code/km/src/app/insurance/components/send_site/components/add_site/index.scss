@@ -1,0 +1,107 @@
+@import "~assets/styles/_bootstrap";
+
+.add_site {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeff1;
+  z-index: 9999;
+
+  .header {
+    background-color: #000;
+
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(90px);
+      height: rem(90px);
+      z-index: 2;
+
+      &:before {
+        content: '';
+        display: block;
+        width: rem(28px);
+        height: rem(28px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: rem(-14px);
+        margin-left: rem(-14px);
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+      }
+    }
+
+    .title {
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      color: #fff;
+      font-size: rem(36px);
+    }
+  }
+
+  .main {
+		margin-top: rem(110px);
+
+		.box {
+			position: relative;
+			padding: rem(34px) rem(20px);
+			height: rem(102px);
+			font-size: rem(30px);
+			color: #333;
+			background-color: #fff;
+			border-bottom: 1px solid $bc;
+
+			> i {
+				position: absolute;
+				top: rem(34px);
+				right: rem(20px);
+			}
+
+			> input {
+				position: absolute;
+				top: rem(34px);
+				right: rem(20px);
+				text-align: right;
+				color: #999;
+				border: none;
+			}
+
+			.name {
+				position: absolute;
+				top: rem(34px);
+				left: rem(20px);
+			}
+
+			> span {
+				position: absolute;
+				top: rem(34px);
+				left: rem(260px);
+				width: rem(420px);
+				text-align: right;
+			}
+
+			.fc {
+				color: #999;
+			}
+		}
+
+		.btn {
+			margin: rem(165px) auto;
+			width: rem(710px);
+			height: rem(92px);
+			line-height: rem(92px);
+			text-align: center;
+			font-size: rem(32px);
+			color: #fff;
+			border-radius: rem(10px);
+			background-color: #2ea7e0;
+		}
+  }
+}

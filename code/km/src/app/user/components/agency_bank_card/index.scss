@@ -1,0 +1,124 @@
+@import "~assets/styles/_bootstrap";
+
+.agency_bank_card-page {
+	height: 100%;
+	background: #edf0f0;
+
+	.header-page {
+		background: url('~assets/images/wallet-header.png') no-repeat;
+	}
+
+	.wrapper {
+		padding: rem(90px) 0;
+		height: 100%;
+
+		.controller {
+
+			.main {
+
+				.list {
+					margin-top: rem(20px);
+					padding-left: rem(28px);
+					font-size: rem(32px);
+					background-color: #fff;
+					border-bottom: 1px solid $bc;
+					box-shadow: 0 rem(5px) rem(2px) #ccc;
+
+					.item {
+						position: relative;
+						height: rem(100px);
+						border-bottom: 1px solid $bc;
+
+						&:last-child {
+							border-bottom: none;
+						}
+
+						.name {
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: rem(100px);
+							line-height: rem(100px);
+							color: #000;
+						}
+
+						.input {
+							position: absolute;
+							top: 0;
+							left: rem(160px);
+							width: rem(560px);
+							height: 100%;
+
+							> input {
+								width: 100%;
+								height: 100%;
+								border: none;
+							}
+
+							.auth-code {
+								position: absolute;
+								top: rem(14px);
+								right: rem(20px);
+								width: rem(160px);
+								height: rem(70px);
+								line-height: rem(70px);
+								text-align: center;
+								font-size: rem(28px);
+								border-radius: rem(10px);
+								background-color: #01b3f0;
+								z-index: 1111;
+
+								.phone-code {
+									color: #fff;
+								}
+							}
+						}
+
+						.box {
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: rem(400px);
+							height: rem(100px);
+							line-height: rem(100px);
+							text-align: right;
+
+							> i {
+								margin-top: rem(-10px);
+								margin-right: rem(20px);
+							}
+
+							.select {
+								padding-right: rem(20px);
+							}
+						}
+					}
+				}
+
+				.submit-btn {
+          padding-top: rem(170px);
+          text-align: center;
+
+          .btn {
+            display: inline-block;
+            vertical-align: top;
+            width: rem(652px);
+            height: rem(104px);
+            line-height: rem(104px);
+            background-color: #c9c9c9;
+            font-size: rem(36px);
+            color: #fff;
+            border-radius: rem(10px);
+            border: none;
+            outline: none;
+
+            &.active {
+              background-color: #01b3f0;
+            }
+          }
+        }
+			}
+		}
+	}
+
+}

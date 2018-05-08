@@ -1,0 +1,253 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-progress-query-page {
+  padding-top: rem(90px);
+  height: 100%;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .banner {
+        width: 100%;
+        height: rem(300px);
+
+        > img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .bank-logo {
+        padding: rem(30px) 0;
+        text-align: center;
+        background-color: #fff;
+
+        .logo {
+          display: inline-block;
+          vertical-align: top;
+          height: rem(80px);
+
+          > img {
+            display: block;
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+
+      .form-group {
+
+        .input-item {
+          display: flex;
+          align-items: center;
+          position: relative;
+          padding: rem(30px) rem(20px);
+          width: 100%;
+          border-bottom: 1px solid #eee;
+          background: #fff;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          > span {
+            margin-left: rem(20px);
+            font-size: rem(28px);
+            color: #333;
+            vertical-align: middle;
+          }
+
+          > input {
+            flex: 1;
+            margin-left: rem(50px);
+            padding: 0 rem(5px);
+            height: rem(68px);
+            font-size: rem(28px);
+            border: none;
+            vertical-align: middle;
+          }
+
+          i.icon {
+            display: inline-block;
+            vertical-align: top;
+            height: rem(68px);
+            line-height: rem(68px);
+            font-size: rem(40px);
+          }
+
+          .code {
+            position: absolute;
+            right: rem(20px);
+            bottom: rem(30px);
+
+            .phone-code {
+              height: rem(68px);
+              background-color: #01b3f0;
+              color: #fff;
+              font-size: rem(28px);
+              border-radius: rem(10px);
+              padding: 0 rem(30px);
+
+              &.active {
+                background: #c9c9c9;
+              }
+            }
+          }
+
+          .vali-code {
+            position: absolute;
+            right: rem(20px);
+            top: 50%;
+            width: rem(200px);
+            height: rem(70px);
+            margin-top: rem(-35px);
+            background-color: #f6f6f6;
+            cursor: pointer;
+
+            > img {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+
+      }
+
+      .button-item {
+        padding-top: rem(60px);
+        padding-bottom: rem(50px);
+        background-color: #fff;
+
+        .btn {
+          display: block;
+          margin: 0 auto;
+          width: rem(710px);
+          height: rem(95px);
+          line-height: rem(95px);
+          font-size: rem(32px);
+          color: #fff;
+          text-align: center;
+          border: none;
+          border-radius: rem(10px);
+          background: #01b3f0;
+          cursor: pointer;
+        }
+      }
+      .info-wrapper {
+        padding: rem(20px);
+        background-color: #fff;
+
+        ul.list {
+
+          li.item {
+            position: relative;
+            overflow: hidden;
+
+            &:not(:last-child) {
+              margin-bottom: rem(10px);
+            }
+
+            &.on {
+
+              > a {
+                background-color: #01b3f0;
+                border: 1px solid #01b3f0;
+                color: #fff;
+
+                .select {
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  border-top: rem(35px) solid transparent;
+                  border-right: rem(35px) solid #fff;
+                  border-bottom: rem(35px) solid #fff;
+                  border-left: rem(35px) solid transparent;
+                  border-radius: 0 0 rem(10px) 0;
+
+                  i.icon {
+                    top: rem(-20px);
+                    right: rem(-50px);
+                    font-size: rem(24px);
+                  }
+                }
+              }
+
+              i.icon {
+                color: #fff;
+              }
+            }
+
+            > a {
+              display: block;
+              position: relative;
+              padding: rem(10px) rem(20px);
+              border: 1px solid $bc;
+              border-radius: rem(10px);
+              background-color: #f5f5f5;
+              color: #666;
+              transition: all 0s;
+
+              .text {
+                line-height: rem(42px);
+                font-size: rem(28px);
+
+                > span {
+                  display: inline-block;
+                  margin-right: rem(20px);
+                  width: rem(120px);
+                  text-align: right;
+                }
+              }
+
+              .select {
+                display: none;
+              }
+            }
+
+            i.icon {
+              position: absolute;
+              top: 0;
+              right: 0;
+              color: #666;
+              font-size: rem(36px);
+              display: block;
+              width: rem(80px);
+              height: rem(80px);
+              line-height: rem(80px);
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .add-wrapper {
+        background-color: #fff;
+        padding: rem(10px) rem(20px) rem(30px);
+
+        > a {
+          display: block;
+          vertical-align: top;
+          border: 1px solid $bc;
+          border-radius: rem(10px);
+          overflow: hidden;
+          text-align: center;
+          line-height: rem(84px);
+          color: #666;
+          font-size: rem(30px);
+        }
+      }
+
+
+    }
+  }
+
+
+}

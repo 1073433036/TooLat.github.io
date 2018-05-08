@@ -1,0 +1,115 @@
+@import "~assets/styles/_bootstrap";
+
+.zx-page {
+  width: 100%;
+  height: 100%;
+
+  > ._v-content > ._v-content {
+    position: relative;
+  }
+
+  .wrapper {
+    padding-top: rem(94px);
+    width: 100%;
+    height: 100%;	
+    background: #eeeeee;
+	background-size: cover;
+
+		.controller {
+		
+
+			.message_logo {
+				margin: rem(60px) 0;
+				// height: rem(268px);
+
+				img {
+					width: rem(150px);
+					height: rem(150px);
+					margin: 0 auto;
+
+				}
+			}
+
+			.main {
+				background: #fff;
+
+				.list {
+					display: flex;
+					text-align: center;
+					border-top: rem(1px) solid #eee;
+		
+					a {
+						height: rem(182px);
+						flex: 1;
+
+						i {
+						  width: rem(65px);
+						  height: rem(62px);
+						  display: block;
+						  margin: 0 auto;
+						  margin-top: rem(50px);
+						  margin-bottom: rem(12px);
+						}
+						i.icon1 {
+							background: url(~assets/images/general_message/2.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon2 {
+							background: url(~assets/images/general_message/11.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon3 {
+							background: url(~assets/images/general_message/3.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon4 {
+							background: url(~assets/images/general_message/4.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon5 {
+							background: url(~assets/images/general_message/5.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon6 {
+							background: url(~assets/images/general_message/6.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon7 {
+							background: url(~assets/images/general_message/9.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon8 {
+							background: url(~assets/images/general_message/8.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon9 {
+							background: url(~assets/images/general_message/7.png) no-repeat;
+						  background-size: 100%;
+						}
+						i.icon10 {
+							background: url(~assets/images/general_message/10.png) no-repeat;
+						  background-size: 100%;
+						}
+
+						em {
+						
+						}
+					}
+				}
+
+				.list1,.list2,.list3,.list4{
+					.list_item { 
+						border-right: rem(1px) solid #eee;
+					}
+					&:last-child {
+						border-bottom: rem(1px) solid #eee;
+					}
+				}
+
+			}
+		}
+
+
+	
+  }
+}

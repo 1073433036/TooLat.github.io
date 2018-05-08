@@ -1,0 +1,56 @@
+@import "~assets/styles/_bootstrap";
+
+.send_site_page {
+  height: 100%;
+	background: #edf0f0;
+
+	> ._v-container > ._v-content {
+    padding-top: rem(90px);
+	}
+	
+	.slot {
+		padding: 0 rem(10px);
+	}
+
+  .wrapper {
+
+    .controller {
+
+      .main {
+
+				.item {
+					margin-top: rem(20px);
+					background: #fff;
+
+					.list {
+						position: relative;
+						padding: rem(30px) rem(20px);
+						border-bottom: 1px solid $bc;
+
+						> i {
+							position: absolute;
+							top: 37%;
+							right: rem(20px);
+						}
+
+						.info {
+							width: rem(620px);
+							font-size: rem(32px);
+							color: #000;
+
+							.phone {
+								padding-left: rem(20px);
+							}
+						}
+
+						.location {
+							width: rem(620px);
+							padding-top: rem(10px);
+							color: #999;
+						}
+					}
+				}
+      }
+    }
+  }
+}

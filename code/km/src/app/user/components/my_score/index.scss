@@ -1,0 +1,325 @@
+@import "~assets/styles/_bootstrap";
+
+.user-my_score-page {
+  height: 100%;
+  background: #eee;
+
+  ._v-content {
+    padding-top: rem(180px);
+    padding-bottom: rem(150px);
+  }
+
+  .nav-tab {
+    padding-top: rem(90px);
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    z-index: 1000;
+
+    &:after {
+      display: block;
+      clear: both;
+      content: ' ';
+    }
+
+    .tab-item {
+      float: left;
+      width: calc(100% / 3);
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      border-right: 1px solid $bc;
+
+      &.active {
+        color: #01b3f0;
+
+        &:before {
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 80%;
+          border-bottom: 1px solid #01b3f0;
+          content: ' ';
+        }
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .container {
+    padding: 0 rem(25px) rem(25px) rem(25px);
+
+    .score-group {
+
+      .score-item {
+        margin: rem(30px) 0;
+
+        .title {
+          font-size: rem(30px);
+          color: #999;
+
+          &:before {
+            display: inline-block;
+            width: rem(10px);
+            height: rem(35px);
+            content: ' ';
+            border-right: rem(10px);
+            background: #01b3f0;
+            vertical-align: middle;
+          }
+
+          > span {
+            display: inline-block;
+            padding-left: rem(15px);
+            vertical-align: middle;
+          }
+
+        }
+      }
+
+      .score-info {
+        width: 100%;
+
+        .content {
+          margin-top: rem(30px);
+          padding-top: rem(115px);
+          height: rem(280px);
+          border-radius: rem(10px);
+          background: #fff;
+          box-shadow: 0 rem(4px) rem(10px) rgba(0, 0, 0, .2);
+
+          .speed {
+            margin: 0 auto;
+            width: rem(447px);
+            height: rem(22px);
+            border-radius: rem(20px);
+            background: #84d83f;
+
+            .bg {
+              position: absolute;
+              left: 0;
+              height: 100%;
+              border-radius: rem(20px);
+              background: #e01717;
+              transition: all .5s;
+
+              .tips {
+                position: absolute;
+                right: rem(-36px);
+                top: rem(-54px);
+                font-size: rem(20px);
+                color: #333;
+
+                &:before {
+                  display: block;
+                  width: rem(73px);
+                  height: rem(50px);
+                  content: ' ';
+                  background: url('~assets/images/score-tips.png') no-repeat;
+                  background-size: 100%;
+                }
+
+                > span {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+
+            .body {
+              position: absolute;
+              top: rem(50px);
+              width: 100%;
+
+              &:after {
+                display: block;
+                clear: both;
+                content: ' ';
+              }
+
+              .body-item {
+                float: left;
+                width: 50%;
+
+                &:before {
+                  display: inline-block;
+                  width: rem(50px);
+                  height: rem(23px);
+                  content: ' ';
+                  border-radius: rem(20px);
+                  background: #e01717;
+                  vertical-align: middle;
+                }
+
+                &.good {
+                  text-align: right;
+
+                  &:before {
+                    background: #84d83f;
+                  }
+                }
+
+                > span {
+                  display: inline-block;
+                  padding-left: rem(10px);
+                  vertical-align: middle;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+
+      .score-list {
+
+        .list {
+          padding-top: rem(25px);
+
+          .item {
+            margin-bottom: rem(25px);
+            padding: rem(30px) rem(25px);
+            border-radius: rem(10px);
+            background: #fff;
+            box-shadow: 0 rem(4px) rem(10px) rgba(0, 0, 0, .2);
+
+            .head {
+              padding-bottom: rem(25px);
+              border-bottom: 1px solid $bc;
+
+              .avatar {
+                display: inline-block;
+                width: rem(85px);
+                height: rem(85px);
+                border-radius: 50%;
+                overflow: hidden;
+
+                > img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+
+              .invite-info {
+                position: absolute;
+                top: 0;
+                left: rem(115px);
+
+                .name {
+                  color: #333;
+                }
+
+                .level {
+                  padding-top: rem(10px);
+
+                  > span {
+                    font-size: rem(22px);
+                    color: #999;
+                  }
+                }
+              }
+
+              .head-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                .tiem {
+                  color: #999;
+                }
+
+                .score {
+                  position: absolute;
+                  right: 0;
+                  padding-top: rem(10px);
+
+                  > span {
+                    vertical-align: middle;
+                  }
+
+                  &.bad {
+                    color: #e31717;
+                  }
+
+                  &.good {
+                    color: #83c14b;
+                  }
+                }
+              }
+            }
+
+            .body {
+              padding: rem(50px) 0;
+
+              > p {
+                line-height: rem(50px);
+                font-size: rem(24px);
+                color: #333;
+
+                > span {
+                  color: #01ace6;
+                }
+
+                > em {
+                  color: #999;
+                }
+              }
+            }
+
+            .foot {
+              left: rem(25px);
+              width: rem(725px);
+
+              &:after {
+                display: block;
+                clear: both;
+                content: ' ';
+              }
+
+              .link {
+                display: block;
+                float: left;
+                margin: 0 rem(25px);
+                width: rem(165px);
+                line-height: rem(50px);
+                text-align: center;
+                border: 1px solid #19d100;
+                border-radius: rem(50px);
+
+                &.link-02 {
+                  border: 1px solid #2ea7e0;
+                }
+
+                &.link-03 {
+                  border: 1px solid #ff3f46;
+                }
+
+                > span {
+                  font-size: rem(24px);
+                  vertical-align: middle;
+                }
+
+              }
+            }
+          }
+        }
+
+        .no-data {
+          text-align: center;
+          color: #999;
+        }
+      }
+    }
+
+  }
+
+}

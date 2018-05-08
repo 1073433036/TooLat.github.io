@@ -1,0 +1,85 @@
+@import "~assets/styles/_bootstrap";
+
+.notify-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(635px);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: rem(10px);
+    box-shadow: 0 0 rem(20px) rgba(0, 0, 0, .5);
+
+    .content {
+      .head {
+        height: rem(80px);
+
+        .head-inner {
+          position: absolute;
+          top: rem(50px);
+          width: 100%;
+          z-index: 1000;
+
+          > span {
+            position: absolute;
+            height: rem(60px);
+            line-height: rem(60px);
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            z-index: 1000;
+          }
+
+          > i {
+            display: block;
+            margin: auto;
+          }
+        }
+
+        > i {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: rem(20px);
+          margin: auto 0;
+        }
+      }
+
+      .body {
+        padding: 0 rem(35px) rem(35px) rem(35px);
+
+        .body-inner {
+          padding: rem(65px) rem(30px) rem(30px) rem(30px);
+          border: 1px dashed #ddd;
+          border-radius: rem(10px);
+
+          .time {
+            > span {
+              color: #999;
+            }
+          }
+
+          .text {
+            padding-top: rem(35px);
+
+            > p {
+              line-height: rem(50px);
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

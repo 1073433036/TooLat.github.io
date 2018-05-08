@@ -1,0 +1,299 @@
+@import "~assets/styles/_bootstrap";
+
+.business-edit-page {
+  height: 100%;
+  background: #edf0f0;
+
+  .wrapper {
+    padding: rem(90px) 0;
+    height: 100%;
+
+    .controller {
+
+      .form-group {
+
+        .input-group {
+          margin-top: rem(20px);
+        }
+
+        .input-item {
+          padding: 0 rem(20px);
+          width: 100%;
+          height: rem(130px);
+          line-height: rem(130px);
+          border-bottom: 1px solid #eee;
+          background: #fff;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .sp-right {
+            position: absolute;
+            right: rem(40px);
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          &.w280 {
+            > span {
+              width: rem(300px);
+            }
+
+            .right {
+              width: rem(320px);
+            }
+          }
+
+
+          > span {
+            position: absolute;
+            display: inline-block;
+            left: rem(100px);
+            width: rem(200px);
+            font-size: rem(28px);
+            color: #333;
+            vertical-align: middle;
+
+
+            > em {
+              padding-left: rem(10px);
+              font-size: rem(28px);
+              color: #ffa60e;
+              vertical-align: middle;
+            }
+          }
+
+          .right {
+            position: absolute;
+            display: inline-block;
+            right: rem(80px);
+            width: rem(420px);
+            height: 100%;
+            text-align: right;
+
+            .avatar {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              width: rem(120px);
+              height: rem(120px);
+              margin-top: rem(-60px);
+              overflow: hidden;
+              border-radius: 50%;
+            }
+
+            .text {
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              width: 100%;
+              display: inline-block;
+            }
+
+            > input {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto 0;
+              right: 0;
+              padding: 0 rem(5px);
+              width: 100%;
+              height: rem(68px);
+              font-size: rem(28px);
+              text-align: right;
+              border: none;
+              vertical-align: middle;
+            }
+
+            input.input-file {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+            }
+
+            .cropper {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: rem(60px);
+              margin: auto 0;
+              width: rem(80px);
+              height: rem(80px);
+            }
+
+          }
+        }
+
+        .button-item {
+          padding-top: rem(95px);
+
+          .btn {
+            display: block;
+            margin: 0 auto;
+            width: rem(710px);
+            height: rem(95px);
+            line-height: rem(95px);
+            font-size: rem(32px);
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: rem(10px);
+            background: #c9c9c9;
+            cursor: pointer;
+
+          }
+        }
+
+      }
+    }
+  }
+
+  .company {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #edf0f0;
+
+    .desc {
+      padding-top: rem(90px);
+
+      .content {
+        padding: rem(30px) 0;
+        background: #fff;
+
+        .title {
+          padding-left: rem(20px);
+          padding-bottom: rem(30px);
+          font-size: rem(28px);
+          color: #333;
+        }
+
+        .textarea {
+					position: relative;
+          display: block;
+          margin: 0 auto;
+          padding: rem(10px);
+          width: rem(690px);
+					height: rem(360px);
+					line-height: rem(50px);
+          font-size: rem(28px);
+          color: #999;
+          border: 1px solid $bc;
+				}
+
+				.number {
+					position: absolute;
+					bottom: rem(50px);
+					right: 0;
+					width: 100%;
+					height: rem(40px);
+					text-align: right;
+					padding-right: rem(50px);
+				}
+			}
+
+			.clear {
+							clear:both;
+						}
+
+			.photo {
+				padding: rem(30px);
+				width: 100%;
+				background-color: #fff;
+
+				.item {
+					width: 100%;
+
+					.list {
+            overflow: hidden;
+						position: relative;
+						margin-right: rem(30px);
+						margin-bottom: rem(30px);
+						width: rem(146px);
+						height: rem(146px);
+            text-align: center;
+						float: left;
+
+						> input {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							opacity: 0;
+						}
+
+						.delete {
+							position: absolute;
+							top: rem(-20px);
+							right: rem(-20px);
+							width: rem(40px);
+							height: rem(40px);
+
+							> i {
+								width: rem(40px);
+								height: rem(40px);
+							}
+						}
+
+						.input {
+							width: 100%;
+							height: 100%;
+							border: 1px solid $bc;
+
+              .desc-txt {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: rem(146px);
+                font-size: rem(26px);
+                color: #999;
+              }
+						}
+
+						&:nth-child(4n) {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+
+      .btn {
+        padding-top: rem(120px);
+
+        > button {
+          display: block;
+          margin: 0 auto;
+          width: rem(710px);
+          height: rem(90px);
+          font-size: rem(32px);
+          color: #fff;
+          border: none;
+          border-radius: rem(10px);
+          background: #01b5f1;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+}
+
+
+@keyframes myHorn
+{
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}

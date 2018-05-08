@@ -1,0 +1,107 @@
+@import "~assets/styles/_bootstrap";
+
+.message-reward-detail-page {
+  height: 100%;
+  background: #edf0f0;
+
+  ._v-content {
+    padding: rem(90px) 0;
+  }
+
+  .content {
+    padding-left: rem(20px);
+    background: #fff;
+
+    .head {
+      height: rem(110px);
+      line-height: rem(110px);
+      border-bottom: 1px solid $bc;
+
+      .title {
+        padding-left: rem(20px);
+        display: inline-block;
+        font-size: rem(28px);
+      }
+
+      .money {
+        position: absolute;
+        top: 0;
+        right: rem(20px);
+
+        > em {
+          font-size: rem(28px);
+          color: #00a776;
+        }
+
+        > span {
+          font-size: rem(32px);
+          color: #00a776;
+        }
+
+      }
+
+    }
+
+
+    .body {
+      // padding: rem(20px) 0;
+
+      .item {
+				padding: rem(20px);
+        // line-height: rem(80px);
+        font-size: rem(28px);
+				color: #999;
+				border-bottom: 1px solid $bc;
+
+				&:after {
+					display: block;
+					clear: both;
+					content: ' ';
+				}
+
+        .commission {
+          color: #01b3f0;
+
+          > em {
+            color: #01b3f0;
+
+            &.on {
+              color: #f00;
+            }
+          }
+        }
+
+				> em {
+					float: left;
+          color: #666;
+				}
+
+        > span {
+          // position: absolute;
+					// right: rem(20px);
+					float: right;
+        }
+
+        .user-info {
+          display: inline-block;
+          margin-left: rem(40px);
+
+
+          .name {
+            display: inline-block;
+            max-width: rem(170px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .level {
+            font-size: rem(24px);
+          }
+        }
+      }
+    }
+
+  }
+
+}

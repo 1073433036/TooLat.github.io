@@ -1,0 +1,187 @@
+@import "~assets/styles/_bootstrap";
+
+.bill-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .menu {
+        height: rem(80px);
+        line-height: rem(80px);
+        padding-left: rem(20px);
+        background-color: #fff;
+        font-size: 0;
+
+        > a {
+          display: inline-block;
+          padding: 0 rem(20px);
+          font-size: rem(30px);
+          color: #333;
+
+          &.on {
+            color: #febd17;
+          }
+        }
+      }
+
+      .ledger {
+        position: relative;
+        padding: rem(46px) 0 rem(24px);
+        border-top: 1px solid $bc;
+        background-color: #fff;
+        text-align: center;
+        color: #333;
+        box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .2);
+
+        .money {
+          height: rem(80px);
+          line-height: rem(80px);
+          font-size: rem(60px);
+        }
+
+        .date {
+          height: rem(48px);
+          line-height: rem(48px);
+          font-size: rem(28px);
+          color: #666;
+        }
+
+        .btn {
+          position: absolute;
+          top: 50%;
+          margin-top: rem(-30px);
+          display: block;
+          width: rem(60px);
+          height: rem(60px);
+          line-height: rem(60px);
+          text-align: center;
+          color: #999;
+          font-size: rem(50px);
+
+          i.icon {
+            display: block;
+            height: rem(60px);
+            line-height: rem(60px);
+          }
+
+          &.left {
+            left: rem(90px);
+          }
+
+          &.right {
+            right: rem(90px);
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .headline {
+        position: relative;
+        padding-top: rem(20px);
+        text-align: center;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: rem(50px);
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: #ccc;
+        }
+
+        span.name {
+          display: inline-block;
+          vertical-align: top;
+          height: rem(60px);
+          line-height: rem(60px);
+          padding: 0 rem(20px);
+          background-color: #eeeff1;
+          font-size: rem(28px);
+          color: #333;
+        }
+      }
+
+      .month-list {
+
+        .month-item {
+
+          .title {
+            height: rem(80px);
+            line-height: rem(80px);
+            padding-left: rem(20px);
+            font-size: rem(28px);
+            color: #666;
+          }
+
+          .day-list {
+            background-color: #fff;
+            box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .2);
+
+            .day-item {
+              padding-left: rem(20px);
+
+              &:not(:last-child) > a {
+                border-bottom: 1px solid $bc;
+              }
+
+              > a {
+                display: flex;
+                padding: rem(22px) rem(20px) rem(22px) 0;
+
+                .logo {
+                  flex: 0 0 rem(80px);
+                  width: rem(80px);
+                  height: rem(80px);
+                  border-radius: 50%;
+                  overflow: hidden;
+
+                  > img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: top;
+                  }
+                }
+
+                .content {
+                  flex: 1;
+                  min-width: 1px;
+                  padding-left: rem(20px);
+
+                  .name {
+                    height: rem(44px);
+                    line-height: rem(44px);
+                    font-size: rem(32px);
+                    color: #333;
+                  }
+
+                  .date {
+                    height: rem(36px);
+                    line-height: rem(36px);
+                    font-size: rem(28px);
+                    color: #999;
+                  }
+                }
+
+                .money {
+                  height: rem(80px);
+                  line-height: rem(80px);
+                  font-size: rem(36px);
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

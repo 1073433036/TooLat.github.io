@@ -1,0 +1,304 @@
+@import "~assets/styles/_bootstrap";
+*{
+  position: initial;
+}
+.list-box-pd{
+  padding: rem(10px) rem(20px);
+}
+.query-credit-report-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #ececec;
+.mt-15{
+  margin-top: rem(15px);
+}
+.mb-15{
+  margin-bottom: rem(15px);
+}
+
+  .fsc-blue{
+    color: #5089df;
+  }
+  .fsc-red{
+    color: #cc5b53;
+  }
+  .bg-gray{
+    background: #eee;
+  }
+  .wrapper {
+    padding-top: rem(90px);
+    padding-bottom: rem(130px);
+
+    .z-flex{
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    .z-flex-item{
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+    .z-table{
+      display: table;
+    }
+    .z-table-item{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .container {
+      position: relative;
+      .report-info{
+        background: #fff;
+        margin-bottom: rem(15px);
+        .report-info-hd{
+          padding: rem(30px);
+          background: #5089df;
+          font-size: rem(32px);
+          color: #fff;
+          text-align: center;
+        }
+        .report-list{
+          background: url('~assets/images/report-bg-fs.png');
+          background-size: 100%;
+          padding: rem(30px);
+          .report-box{
+            border: 1px solid #eee;
+          }
+          .item{
+            .item-name{
+              padding: rem(25px) rem(30px);
+              width: rem(215);
+              font-size: rem(20px);
+              background: #eee;
+              border-right: 1px solid #eee;
+            }
+            .item-info{
+              padding: rem(25px) rem(30px);
+              font-size: rem(20px);
+              color: #666;
+            }
+          }
+        }
+
+        .ad-score{
+          margin-top: rem(20);
+          padding: rem(30) rem(20);
+          background: #eee;
+          .score-left{
+            margin-right:rem(60px);
+            .score-bg{
+              position: relative;
+              width: rem(100px);
+              height: rem(100px);
+              background: url('~assets/images/score-icon.png') no-repeat;
+              background-size: 100%;
+              .score-num{
+                position: absolute;
+                left:0;
+                right: 0;
+                top: rem(24px);
+                margin: 0 auto;
+                color: #fff;
+                font-size: rem(20);
+                text-align: center;
+              }
+            }
+            .score-title{
+              font-size: rem(20px);
+              color: #3c4147;
+            }
+          }
+          .score-info{
+            font-size: rem(20px);
+            color: #666;
+          }
+
+        }
+        .result-info{
+          padding: rem(30px) rem(20px);
+          background: url('~assets/images/report-bg-fs.png');
+          background-size: contain;
+          .risk{
+            width: rem(24px);
+            height: rem(24px);
+
+            &.high-risk-icon{
+              background: url('~assets/images/high-risk-icon.png') no-repeat;
+              background-size: 100%;
+              display: inline-block;
+            }
+            &.low-risk-icon{
+              background: url('~assets/images/low-risk-icon.png') no-repeat;
+              background-size: 100%;
+              display: inline-block;
+            }
+          }
+          .result-title{
+            padding: rem(30px) rem(20px);
+            vertical-align: middle;
+            position: relative;
+            .title{
+              font-size: rem(24px);
+            }
+            .assace{
+              font-size: rem(24px);
+              position: absolute;
+              right: rem(20px);
+              .risk-yes{
+                background: #cc5b53;
+                color: #fff;
+                padding: rem(8px) rem(15px);
+                margin-right:rem(15) ;
+                border-radius: rem(5px);
+              }
+              .risk-no{
+                background: #179b20;
+                color: #fff;
+                padding: rem(8px) rem(15px);
+                margin-right:rem(15) ;
+                border-radius: rem(5px);
+              }
+            }
+          }
+          .analysis{
+            border:1px solid #eee;
+            border-radius: rem(10px);
+            margin: rem(10px) 0;
+            .analysis-hd{
+              border-top-right-radius: rem(10px);
+              border-top-left-radius: rem(10px);
+              padding: rem(25px) rem(30px);
+              background: #eee;
+              &.bg-t{
+                background: transparent;
+                position: relative;
+                padding: rem(25px) 0;
+                &:after{
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  height: rem(2);
+                  width: 100%;
+                  left: 0;
+                  background: #eee;
+                }
+              }
+              .result-title{
+                padding: 0;
+              }
+            }
+            .analysis-list{
+              .item{
+                width: 100%;
+                .item-name{
+                  padding: rem(25px) rem(10px);
+                  max-width: rem(200px);
+                  width: rem(200px);
+                  font-size: rem(20px);
+                  text-align: center;
+                  background: #eee;
+                  border-right: rem(2px) solid #eee;
+                }
+                .item-info{
+                  max-width: rem(215);
+                  padding: rem(25px) 0 rem(25px) rem(30px);
+                  font-size: rem(20px);
+                  text-align: center;
+                  color: #666;
+                  &.z-t-l{
+                    text-align: left;
+                    padding-left: 0;
+                  }
+                }
+              }
+            }
+           &.car-report{
+             .analysis-list{
+               .item-name{
+                 max-width: rem(60px);
+                 width: rem(60px);
+               }
+               .item-info{
+                  text-align: left;
+               }
+             }
+           }
+          }
+
+
+        }
+        .car-report{
+          .item{
+            width: 100%;
+            .item-name{
+              padding: rem(25px) rem(30px);
+              max-width: rem(200px);
+              width: rem(200px);
+              font-size: rem(20px);
+            }
+            .item-info{
+              width: rem(215px);
+              padding: rem(25px) rem(30px);
+              font-size: rem(20px);
+              color: #666;
+              .title{
+                font-size: rem(22px);
+                color: #333;
+              }
+              .sm-title{
+                font-size: rem(20px);
+              }
+              .info{
+                margin-top: rem(10px);
+                span{
+                  padding: rem(10px);
+                  display: inline-block;
+                  line-height: 1;
+                  border:rem(2px) solid #eee;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+        .device{
+          .device-list{
+            .list-item{
+              width: 100%;
+              .item{
+                padding: rem(10px);
+                width:2.5rem;
+                max-width: 2.5rem;
+                word-break: break-all;
+                word-wrap: break-word;
+                text-align: center;
+              }
+            }
+          }
+        }
+.report-ad{
+  padding: rem(60px) rem(34px);
+  background: #eee;
+  p{
+    font-size: rem(20px);
+    color: #333;
+    text-indent: 2em;
+  }
+}
+
+
+
+
+
+      }
+
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import "~assets/styles/_bootstrap";
+
+.primary_menber-page {
+	height: 100%;
+	background: #edf0f0;
+
+	.group {
+		// padding-top: rem(110px);
+
+		.list {
+
+			.item {
+				position: relative;
+				height: rem(197px);
+				background-color: #fff;
+				border-bottom: 1px solid $bc;
+
+				.head {
+					position: absolute;
+					top: rem(48px);
+					left: rem(20px);
+					width: rem(100px);
+					height: rem(100px);
+					border-radius: 50%;
+
+					> img {
+						width: 100%;
+						height: 100%;
+						border-radius: 50%;
+					}
+				}
+
+				.box {
+					position: absolute;
+					top: rem(50px);
+					left: rem(142px);
+					width: rem(590px);
+
+					.info {
+						position: relative;
+						width: 100%;
+						height: rem(42px);
+
+						.person {
+							position: absolute;
+							top: 0;
+							left: 0;
+							font-size: rem(32px);
+							color: #000;
+
+							.partner {
+								padding-left: rem(10px);
+								font-size: rem(28px);
+								color: #01b3f0;
+							}
+						}
+
+						.date {
+							position: absolute;
+							top: 0;
+							right: 0;
+							height: rem(42px);
+							line-height: rem(42px);
+							font-size: rem(28px);
+							color: #000;
+						}
+					}
+
+					.phone {
+						position: relative;
+						margin-top: rem(15px);
+						width: 100%;
+						height: rem(38px);
+						font-size: rem(28px);
+						color: #999;
+
+						.person {
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+
+						.date {
+							position: absolute;
+							top: 0;
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

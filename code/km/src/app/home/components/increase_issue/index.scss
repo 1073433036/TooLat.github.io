@@ -1,0 +1,153 @@
+@import "~assets/styles/_bootstrap";
+
+.increase-issue {
+  height: 100%;
+  background: #edf0f0;
+
+  .slot {
+
+    .right {
+
+      > a {
+        display: block;
+				width: 100%;
+				height: 100%;
+				padding: 0 rem(10px);
+        color: #fff;
+      }
+    }
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .main {
+      padding: rem(30px) rem(20px) rem(30px) rem(20px);
+      background-color: #fff;
+
+      .title {
+        font-size: rem(28px);
+        font-weight: bold;
+        padding-bottom: rem(20px);
+      }
+
+      .compile {
+        width: 100%;
+        height: rem(64px);
+        padding-left: rem(20px);
+        border: 1px solid $bc;
+        background-color: #fafafa;
+        border-radius: rem(10px);
+      }
+    }
+
+    .txt {
+      margin-top:rem(20px);
+      padding: rem(30px) rem(20px) rem(20px) rem(20px);
+      background-color: #fff;
+
+      .title {
+        font-size: rem(28px);
+        font-weight: bold;
+        padding-bottom: rem(20px);
+      }
+
+      .textbox {
+
+				.list {
+					position: relative;
+					width: 100%;
+					height: rem(260px);
+					border: 1px solid $bc;
+					margin-bottom: rem(20px);
+					padding: rem(10px) rem(20px) 0 rem(10px);
+					border-radius: rem(10px);
+
+					.uploading {
+						position: absolute;
+						top: rem(30px);
+						left: rem(50px);
+						width: rem(200px);
+						height: rem(200px);
+						border: 1px solid $bc;
+
+						.avatar {
+							width: rem(200px);
+							height: rem(200px);
+						}
+
+						.input {
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							margin: auto 0;
+							width: rem(200px);
+							height: rem(200px);
+							opacity: 0;
+						}
+					}
+
+					.box {
+						width: rem(430px);
+						height: rem(200px);
+						position: absolute;
+						top: rem(30px);
+						left: rem(260px);
+						line-height: rem(50px);
+						font-size: rem(28px);
+						color: #ccc;
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 4;
+						overflow: hidden;
+
+						> input {
+							width: rem(430px);
+							height: rem(200px);
+							opacity: 0;
+						}
+					}
+				}
+			}
+
+      .add {
+        margin-left: 45%;
+        margin-top: rem(20px);
+      }
+    }
+	}
+
+	.increase-detail {
+		height: 100%;
+		background: #fff;
+
+		.slot {
+
+			.right {
+				width: 100%;
+				height: 100%;
+				padding: rem(25px) rem(10px);
+
+			}
+		}
+
+		.main {
+			width: 100%;
+			height: 100%;
+			padding-top: rem(90px);
+
+			.text {
+				width: 100%;
+				height: 100%;
+				resize : none;
+				color: #333;
+				font-size: rem(28px);
+				text-align: left;
+				line-height: rem(42px);
+				background-color: #eeeff1;
+				padding: rem(20px);
+			}
+		}
+	}
+}

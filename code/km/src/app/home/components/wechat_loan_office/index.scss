@@ -1,0 +1,136 @@
+@import "~assets/styles/_bootstrap";
+
+.wechat_loan_office_page {
+  height: 100%;
+	background: #edf0f0;
+	overflow-x: hidden;
+
+	>._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+  	height: 100%;
+  	padding-top: rem(90px);
+
+  	.swiper-container{
+	    width: 100%;
+	    height: 100%;
+
+	    .swiper-slide {
+	    	height: auto;
+	    }
+		}
+
+    .controller {
+
+      .main {
+				padding-bottom: rem(60px);
+
+				.photo {
+					width: 100%;
+					height: rem(250px);
+
+					> img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.form-box {
+					margin: rem(20px) rem(46px);
+
+					.list {
+
+						.item {
+							margin-bottom: rem(20px);
+							width: 100%;
+							height: rem(96px);
+							border: 1px solid $bc;
+							border-radius: rem(10px);
+							background-color: #fff;
+
+							> input {
+								padding-left: rem(20px);
+								width: 100%;
+								height: 100%;
+								border: none;
+								border-radius: rem(10px);
+							}
+						}
+					}
+
+					.box {
+						position: relative;
+						width: 100%;
+						height: rem(96px);
+						color: #333;
+
+						.box-item {
+							position: absolute;
+							top: 0;
+							width: rem(308px);
+							height: rem(96px);
+							line-height: rem(96px);
+							border: 1px solid $bc;
+							border-radius: rem(10px);
+							background-color: #fff;
+							text-align: center;
+
+							&.left {
+								left: 0;
+							}
+
+							&.right {
+								right: 0;
+							}
+
+							.text {
+								width: 100%;
+								height: 100%;
+						    white-space: nowrap;
+						    text-overflow: ellipsis;
+						    overflow: hidden;
+						    padding: 0 rem(50px);
+							}
+
+							> i {
+								position: absolute;
+								top: 50%;
+								right: rem(20px);
+								transform: translate(0px, -50%);
+							}
+						}
+					}
+
+					.affirm {
+						text-align: center;
+
+						.btn {
+							margin: rem(40px) auto;
+							width: 100%;
+							height: rem(104px);
+							line-height: rem(104px);
+							text-align: center;
+							font-size: rem(32px);
+							color: #fff;
+							border: none;
+							border-radius: rem(10px);
+							background-color: #ccc;
+
+							&.on {
+								background-color: #01b3f0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.selecter-page {
+		position: fixed;
+		z-index: 10;
+	}
+}
+

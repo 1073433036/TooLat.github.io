@@ -1,0 +1,206 @@
+@import "~assets/styles/_bootstrap";
+
+.insurance-page {
+	height: 100%;
+	background: #edf0f0;
+
+	._v-container > ._v-content {
+		padding-top: rem(90px);
+	}
+
+	.wrapper {
+
+		.controller {
+
+			.main {
+
+				.photo {
+					width: 100%;
+					height: rem(300px);
+					border-bottom: 1px solid $bc;
+
+					> img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.info {
+					height: rem(116px);
+					background-color: #fff;
+					border-top: 1px solid $bc;
+					border-bottom: 1px solid $bc;
+					box-shadow: 0px rem(8px) rem(8px) #ccc;
+
+					&:after {
+						display: block;
+						clear: both;
+						content: ' ';
+					}
+
+					.left {
+						float: left;
+						width: 50%;
+						height: 100%;
+
+
+						.indent {
+							display: block;
+							width: 100%;
+							height: 100%;
+							padding: rem(10px) 0;
+							line-height: rem(96px);
+							text-align: center;
+							font-size: rem(32px);
+							color: #000;
+							border-right: 1px solid $bc;
+
+							> span {
+								padding-left: rem(30px);
+								vertical-align: middle;
+							}
+						}
+					}
+
+					.right {
+						float: left;
+						width: 50%;
+						height: 100%;
+
+						.indent {
+							display: block;
+							width: 100%;
+							height: 100%;
+							padding: rem(10px) 0;
+							line-height: rem(96px);
+							text-align: center;
+							font-size: rem(32px);
+							color: #333;
+
+							> span {
+								padding-left: rem(30px);
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+
+				.box {
+
+					.list {
+						margin-top: rem(20px);
+						background-color: #fff;
+
+						.item {
+							position: relative;
+							border-bottom: 1px solid $bc;
+							box-shadow: 0px rem(8px) rem(4px) #ccc;
+
+							.top {
+								padding: 0 rem(20px);
+								width: 100%;
+								height: rem(90px);
+								line-height: rem(90px);
+								font-size: rem(32px);
+								border-bottom: 1px solid $bc;
+								color: #333;
+
+								> span {
+									padding-left: rem(10px);
+								}
+							}
+
+							.content {
+								position: relative;
+								width: 100%;
+								height: rem(240px);
+
+								.video {
+									position: absolute;
+									top: rem(30px);
+									left: rem(30px);
+									width: rem(180px);
+									height: rem(180px);
+
+									> img {
+										width: 100%;
+										height: 100%;
+									}
+
+									.mask-layer {
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										background-color: rgba(0,0,0,.5);
+										z-index: 11;
+
+										.play {
+											position: absolute;
+											top: rem(60px);
+											left: rem(60px);
+											width: rem(60px);
+											height: rem(60px);
+										}
+									}
+								}
+
+								.hint {
+									position: absolute;
+									top: rem(36px);
+									left: rem(240px);
+									width: rem(475px);
+									font-size: rem(28px);
+
+									.title {
+										font-size: rem(30px);
+										color: #333;
+									}
+								}
+							}
+
+							> video {
+								position: fixed;
+								top: rem(90px);
+								left: 0;
+								width: 100%;
+								height: auto;
+								z-index: 99;
+							}
+						}
+					}
+				}
+
+				.accounts {
+					padding: rem(180px) 0 rem(80px);
+					text-align: center;
+
+					.user {
+						line-height: rem(60px);
+
+						> span {
+							padding: 0 rem(10px);
+							font-size: rem(30px);
+							color: #666;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 999999;
+		width: 20%;
+		height: 20%;
+
+		> iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

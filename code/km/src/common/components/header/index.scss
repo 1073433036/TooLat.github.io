@@ -1,0 +1,93 @@
+@import "~assets/styles/_bootstrap";
+
+.header-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: #000;
+  transition: all .5s;
+
+  &.on {
+    background-color: #000 !important;
+  }
+
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(90px);
+    height: rem(90px);
+    z-index: 2;
+
+    &:before {
+      content: '';
+      display: block;
+      width: rem(28px);
+      height: rem(28px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: rem(-14px);
+      margin-left: rem(-14px);
+      border-bottom: 1px solid #fff;
+      border-left: 1px solid #fff;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+  }
+
+  .title {
+    height: rem(90px);
+    line-height: rem(90px);
+    text-align: center;
+    color: #fff;
+    font-size: rem(36px);
+
+    > img {
+      display: inline-block;
+      width: rem(50px);
+      height: rem(50px);
+      vertical-align: middle;
+    }
+
+    > span {
+      vertical-align: middle;
+    }
+  }
+
+  .head-right {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: rem(20px);
+    bottom: 0;
+    margin: auto;
+    height: rem(90px);
+    line-height: rem(90px);
+    color: #fff;
+
+    .slot, .app-share {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .app-share {
+      cursor: pointer;
+
+      > i {
+        transform: rotate(90deg);
+      }
+    }
+
+    > a {
+      display: block;
+      color: #fff;
+    }
+
+    > span {
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import "~assets/styles/_bootstrap";
+
+.rule-page {
+  height: 100%;
+  background-color: #eeeff1;
+
+  .help-nav {
+    position: absolute;
+    top: 0;
+    left: rem(90px);
+    right: rem(90px);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: rem(10px) rem(80px);
+    background-color: #000;
+
+    .item {
+      flex: 1;
+      min-width: 1px;
+      line-height: rem(60px);
+      border: 1px solid #fff;
+      text-align: center;
+
+      &:nth-child(1) {
+        border-radius: rem(10px) 0 0 rem(10px);
+      }
+
+      &:nth-child(2) {
+        border-radius: 0 rem(10px) rem(10px) 0;
+      }
+
+      &.on {
+        background-color: #fff;
+
+        > a {
+          color: #2d8cf0;
+        }
+      }
+
+      > a {
+        display: block;
+        color: #fff;
+        font-size: rem(28px);
+        transition: all 0s;
+      }
+    }
+  }
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+
+    .controller {
+
+      .help {
+        margin-top: rem(20px);
+
+        .list {
+          background-color: #fff;
+
+          .item {
+            font-size: rem(28px);
+
+            .generalize {
+              position: relative;
+              padding: rem(42px) rem(40px) rem(42px) rem(72px);
+              border-bottom: 1px solid $bc;
+              color: #000;
+
+              .num {
+                position: absolute;
+                top: rem(42px);
+                left: rem(20px);
+              }
+
+              .text {
+                font-weight: bold;
+              }
+
+              .right {
+                float: right;
+                width: rem(60px);
+                height: rem(40px);
+                text-align: center;
+              }
+
+              .content {
+                margin-top: rem(34px);
+                font-size: rem(26px);
+                color: #999;
+              }
+
+              .fade-enter-active, .fade-leave-active {
+                transition: opacity .5s
+              }
+              .fade-enter, .fade-leave-to {
+                opacity: 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

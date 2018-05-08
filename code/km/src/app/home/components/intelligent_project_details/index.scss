@@ -1,0 +1,178 @@
+@import "~assets/styles/_bootstrap";
+
+.intelligentProjectDetails {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+  .red{
+    color : #ff4046 !important;
+  }
+  .green{
+    color: #31bd64 !important;
+  }
+  .yellow{
+    color: #31bd64 !important;
+  }
+  .blue{
+    color: #03b2f1 !important;
+  }
+  .wrapper {
+
+    .container {
+      .waiting{
+        width: rem(41px);
+        height: rem(40px);
+        display: inline-block;
+        top: rem(10px);
+        background: url(~assets/images/card_manage/list4.png)  no-repeat;
+        background-size: 100%;
+        margin-right: rem(8px);
+      }
+      .error_icon{
+        color: #ff4046 !important;
+        .waiting {
+          background: url(~assets/images/card_manage/list2.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+      .succeed_icon {
+        color: #56f340 !important;
+        .waiting {
+          background: url(~assets/images/card_manage/list3.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+      .execution_icon {
+        color: #00c5f7 !important;
+        .waiting {
+          background: url(~assets/images/card_manage/list5.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+      .container_header {
+        display: flex;
+        border-bottom: rem(1px) solid #dddddd;
+        height: rem(178px);
+        line-height: rem(178px);
+        background: #fff;
+        .item {
+          flex: 1;
+          border-right: rem(1px) solid #dddddd;
+          height: rem(72px);
+          margin-top: rem(62px);
+          padding: rem(10px);
+          p {
+           height: rem(40px);
+           line-height: rem(22px);
+           text-align: center;
+          }
+        }
+      }
+
+      .tip-wrapper {
+        margin-top: rem(20px);
+        box-sizing: border-box;
+        padding: 0 rem(20px);
+        line-height: rem(40px);
+        font-size: rem(24px);
+      }
+
+      .form-group {
+        .list {
+          margin:0 rem(20px) ;
+          box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .1);
+
+          .item {
+            border-radius: rem(10px);
+            padding:0 rem(30px);
+            background-color: #fff;
+            margin:rem(20px) 0;
+
+            .date,.bill {
+              padding: rem(40px) 0;
+            }
+
+            .date {
+              border-bottom: rem(1px) solid #ddd;
+              display: flex;
+              position: relative;
+
+              span {
+                padding-right: rem(30px);
+                &:last-child {
+                  position: absolute;
+                  right: rem(-20px);
+                }
+              }
+              .money {
+                text-align: center;
+              }
+            }
+
+            .bill {
+              position: relative;
+              padding-left: rem(10px);
+              span {
+                font-size: rem(28px);
+              }
+
+              .cancel{
+                padding-left: 0;
+              }
+
+
+              .msg_icon{
+                width: rem(41px);
+                height: rem(40px);
+                display: inline-block;
+                vertical-align: text-bottom;
+                background: url(~assets/images/card_manage/plan.png) no-repeat;
+                background-size: 100%;
+                z-index: 10000;
+              }
+
+              .status {
+                color: #f8b010;
+                font-size: rem(24px);
+                margin-left: rem(20px);
+              }
+              .error {
+                color: #fe484e;
+              }
+              .cancel {
+                color: #ccc;
+              }
+
+            }
+
+          }
+        }
+
+      }
+    }
+
+    .resume {
+       width: rem(710px);
+       height: rem(90px);
+       line-height: rem(90px);
+       text-align: center;
+       font-size: rem(32px);
+       color: #fff;
+       margin: rem(80px) rem(20px) 0 rem(20px);
+       background-color: #c9c9c9;
+       border: 1px solid #c9c9c9;
+       border-radius: rem(10px);
+
+       &.on {
+         background-color: #01b3f0;
+         border: 1px solid #01b3f0;
+       }
+    }
+  }
+}
+.header-back{
+  display:block !important;
+}

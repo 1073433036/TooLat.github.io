@@ -1,0 +1,163 @@
+@import "~assets/styles/_bootstrap";
+
+.card_insurance {
+  height: 100%;
+	background: #edf0f0;
+
+	._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+
+    .controller {
+
+      .main {
+
+				.item {
+					background: #fff;
+
+					.list {
+						position: relative;
+						padding: rem(20px) rem(18px);
+						height: rem(140px);
+						border-bottom: 1px solid $bc;
+
+						.logo {
+							position: absolute;
+							top: rem(20px);
+							left: rem(18px);
+							padding: rem(10px);
+							width: rem(96px);
+							height: rem(96px);
+							border: 1px solid $bc;
+							border-radius: 50%;
+
+							.image {
+								display: block;
+								vertical-align: top;
+								width: 100%;
+								height: 100%;
+							}
+						}
+
+						.name {
+							position: absolute;
+							top: 0;
+							left: rem(136px);
+							height: rem(140px);
+							line-height: rem(132px);
+							font-size: rem(32px);
+							font-weight: bold;
+							color: #000;
+						}
+
+						.select {
+							position: absolute;
+							top: 0;
+							right: rem(20px);
+					    display: flex;
+					    height: 100%;
+					    align-items: center;
+
+							.checkbox-wrappe {
+							  display: inline-block;
+							  margin-right: rem(16px);
+							  cursor: pointer;
+
+							  .checkbox {
+							    display: inline-block;
+							    outline: 0;
+							    line-height: 1;
+							    vertical-align: middle;
+							    white-space: nowrap;
+							    cursor: pointer;
+
+							    &.checkbox-checked {
+							      .checkbox-inner {
+							        border-color: #2d8cf0;
+							        background-color: #2d8cf0;
+
+							        &:after {
+							          transform: rotate(45deg) scale(1);
+							        }
+							      }
+							    }
+
+							    .checkbox-inner {
+							      display: inline-block;
+							      width: rem(32px);
+							      height: rem(32px);
+							      border-radius: 50%;
+							      position: relative;
+							      top: 0;
+							      left: 0;
+							      border: 1px solid #dddee1;
+							      border-radius: 2px;
+							      background-color: #fff;
+							      transition: all .2s ease-in-out;
+
+							      &:after {
+							        position: absolute;
+							        display: table;
+							        top: 0;
+							        left: 0;
+							        right: 0;
+							        margin: 0 auto;
+							        width: rem(8px);
+							        height: rem(16px);
+							        border: 2px solid #fff;
+							        border-top: 0;
+							        border-left: 0;
+							        content: '';
+							        transform: rotate(45deg) scale(0);
+							        transition: all .2s ease-in-out;
+							      }
+							    }
+							  }
+							}
+
+							.box {
+								text-align: center;
+
+								.money {
+									color: #333;
+								}
+
+								.detail {
+									margin-top: rem(10px);
+
+									> a {
+										display: inline-block;
+										border: 1px solid #01b3f0;
+								    color: #01b3f0;
+								    padding: rem(6px) rem(10px);
+								    border-radius: rem(6px);
+								    font-size: rem(24px);
+								    margin: 0 rem(6px);
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.btn {
+					margin: rem(60px) auto;
+					width: rem(400px);
+					height: rem(80px);
+					line-height: rem(80px);
+					text-align: center;
+					color: #fff;
+					border-radius: rem(10px);
+					background-color: #ccc;
+					font-size: rem(30px);
+				}
+
+				.active {
+					background-color: #01b3f0;
+				}
+      }
+    }
+  }
+}

@@ -1,0 +1,1064 @@
+
+
+@import "~assets/styles/_bootstrap";
+
+.message-false-data {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #fff;
+
+  .wrapper {
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    background-color: #2da8df;
+    height: rem(90px);
+    line-height: rem(90px);
+
+    > a {
+      flex: 1;
+      text-align: center;
+      color: #fff;
+
+      &:last-child {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+
+  .result-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 2001;
+
+    .mask {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .image {
+      position: absolute;
+      top: rem(90px);
+      left: 50%;
+      width: rem(506px);
+      height: rem(900px);
+      margin-left: rem(-253px);
+      z-index: 2;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .tip {
+      position: absolute;
+      top: rem(1020px);
+      left: 0;
+      width: 100%;
+      text-align: center;
+
+      span.name {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid #fff;
+        padding: rem(10px) rem(20px);
+        color: #fff;
+        font-size: rem(28px);
+        border-radius: rem(10px);
+        background-color: #000;
+      }
+
+      .box {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: rem(200px);
+        height: rem(60px);
+        margin-left: rem(-100px);
+
+        > div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          border-radius: rem(20px);
+          animation: rotate 2s 0s linear infinite;
+
+          &:nth-child(2) {
+            animation-delay: .8s;
+          }
+
+          &:nth-child(3) {
+            animation-delay: .5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.container {
+  position: relative;
+  width: rem(750px);
+  height: rem(1334px);
+  background-color: #fff;
+  z-index: 2;
+
+  .screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .message-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+
+      .bg {
+        position: relative;
+        width: 100%;
+
+        > img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    .scroll-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .scroll-body {
+        padding-bottom: rem(1000px);
+      }
+    }
+
+    .message-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+
+      .bg {
+        position: relative;
+        width: 100%;
+
+        > img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .ios-screen {
+
+    .message-header {
+
+      .bg {
+
+        > img {
+          height: rem(173px);
+        }
+      }
+
+      .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: rem(40px);
+        padding-right: rem(11px);
+
+        .operator {
+          line-height: rem(24px);
+          padding-left: rem(54px);
+          padding-right: rem(10px);
+          font-size: rem(24px);
+          color: #000;
+        }
+
+        .content {
+          flex: 1;
+          min-width: 1px;
+          height: 100%;
+        }
+
+        .icon {
+          width: auto;
+          height: rem(40px);
+
+          > img {
+            display: block;
+            width: auto;
+            height: rem(40px);
+          }
+        }
+
+        .percent {
+          line-height: rem(24px);
+          font-size: rem(24px);
+          color: #000;
+          z-index: 2;
+          margin-left: rem(6px);
+        }
+
+        .electricity {
+          width: rem(48px);
+          height: rem(23px);
+          padding: rem(2px);
+          border: rem(2px) solid #969596;
+          border-radius: rem(4px);
+          z-index: 2;
+          margin-left: rem(6px);
+          margin-right: rem(6px);
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: rem(5px);
+            left: rem(48px);
+            width: 0;
+            height: 0;
+            border-top: rem(4.5px) solid transparent;
+            border-left: rem(4px) solid #969596;
+            border-bottom: rem(4.5px) solid transparent;
+          }
+
+          .number {
+            height: 100%;
+            background-color: #000;
+
+            &.on {
+              background-color: #f00;
+            }
+
+            &.charge {
+              background-color: #76d672;
+            }
+          }
+        }
+      }
+
+      .time {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: rem(100px);
+        line-height: rem(40px);
+        margin-left: rem(-50px);
+        text-align: center;
+        font-size: rem(24px);
+        color: #000;
+      }
+
+      .phone {
+        position: absolute;
+        bottom: rem(12px);
+        left: 50%;
+        width: rem(200px);
+        line-height: rem(40px);
+        margin-left: rem(-100px);
+        text-align: center;
+        font-size: rem(24px);
+        color: #000
+      }
+    }
+
+    .scroll-box {
+
+      .scroll-body {
+
+        .list {
+          padding-top: rem(173px);
+
+          .item {
+            padding: rem(34px) rem(32px) 0;
+
+            .sys-date {
+              line-height: rem(28px);
+              text-align: center;
+              font-size: rem(24px);
+              color: #8e8e93;
+              padding-bottom: rem(18px);
+
+              > span {
+                display: inline-block;
+                vertical-align: top;
+              }
+            }
+
+            .message-box {
+              position: relative;
+
+              .message {
+                position: relative;
+                display: inline-block;
+                max-width: rem(522px);
+                line-height: rem(40px);
+                padding: rem(16px) rem(24px);
+                background-color: #e5e5ea;
+                border-radius: rem(26px) rem(26px) rem(26px) 0;
+                font-size: rem(30px);
+                color: #000;
+                word-break: break-all;
+
+                .money {
+                  display: inherit;
+                  position: relative;
+                  color: #3479f7;
+
+                  &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: rem(4px);
+                    width: 100%;
+                    height: rem(1px);
+                    background-color: #3479f7;
+                  }
+                }
+              }
+
+              .bg-icon {
+                display: block;
+                width: rem(48px);
+                height: rem(17px);
+                position: absolute;
+                left: rem(-12px);
+                bottom: 0;
+
+                > img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+
+            &.noDate1 {
+
+              .message-box {
+
+                .message {
+                  border-radius: rem(26px);
+                }
+
+                .bg-icon {
+                  display: none;
+                }
+              }
+            }
+
+            &.noDate2 {
+              padding-top: rem(2px);
+            }
+          }
+        }
+      }
+    }
+
+    .message-footer {
+
+      .bg {
+
+        > img {
+          height: rem(174px);
+        }
+      }
+    }
+
+    &.fs-m {
+
+      .scroll-box .scroll-body .list .item {
+
+        .sys-date {
+          line-height: rem(36px);
+          font-size: rem(28px);
+        }
+
+        .message-box .message {
+          padding-bottom: rem(65px);
+          font-size: rem(36px);
+          line-height: rem(45px);
+
+          .money:before {
+            bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.fs-l {
+
+      .scroll-box .scroll-body .list .item {
+
+        .sys-date {
+          line-height: rem(40px);
+          font-size: rem(30px);
+        }
+
+        .message-box .message {
+          padding-bottom: rem(70px);
+          font-size: rem(40px);
+          line-height: rem(50px);
+
+          .money:before {
+            bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.fs-xl {
+
+      .scroll-box .scroll-body .list .item {
+
+        .sys-date {
+          line-height: rem(42px);
+          font-size: rem(32px);
+        }
+
+        .message-box .message {
+          padding-bottom: rem(75px);
+          font-size: rem(44px);
+          line-height: rem(54px);
+
+          .money:before {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .android1-screen {
+    background-color: #f8f8f8;
+
+    .message-header {
+      position: relative;
+
+      .bg {
+
+        > img {
+          height: rem(153px);
+        }
+      }
+
+      .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: rem(38px);
+        padding-right: rem(9px);
+
+        .time {
+          line-height: rem(24px);
+          padding-left: rem(12px);
+          font-size: rem(24px);
+          color: #535354;
+        }
+
+        .content {
+          flex: 1;
+          min-width: 1px;
+          height: 100%;
+        }
+
+        .icon {
+          width: auto;
+          height: rem(38px);
+
+          > img {
+            display: block;
+            width: auto;
+            height: rem(38px);
+          }
+        }
+
+        .operator {
+          line-height: rem(24px);
+          font-size: rem(24px);
+          color: #535354;
+          z-index: 2;
+          transform: scale(0.8, 0.8);
+        }
+
+        .percent {
+          line-height: rem(24px);
+          font-size: rem(24px);
+          color: #535354;
+          z-index: 2;
+          transform: scale(0.8, 0.8);
+        }
+
+        .electricity {
+          width: rem(48px);
+          height: rem(18px);
+          padding: rem(2px);
+          border: 1px solid #535354;
+          border-radius: rem(10px);
+          z-index: 2;
+          margin-left: rem(4px);
+          margin-right: rem(2px);
+
+          .box {
+            width: 100%;
+            height: 100%;
+            border-radius: rem(10px);
+            overflow: hidden;
+            text-align: right;
+          }
+
+          .number {
+            display: inline-block;
+            height: 100%;
+            vertical-align: top;
+            background-color: #535354;
+
+            &.on {
+              background-color: #f00;
+            }
+
+            &.charge {
+              background-color: #47c200;
+            }
+          }
+        }
+      }
+
+      .phone {
+        position: absolute;
+        top: rem(86px);
+        left: rem(76px);
+        line-height: rem(28px);
+        font-size: rem(28px);
+        color: #535354;
+      }
+    }
+
+    .scroll-box {
+
+      .scroll-body {
+        padding-top: rem(193px);
+
+        .message-line {
+          position: relative;
+          height: rem(10px);
+          padding: 0 rem(25px);
+
+          > img {
+            position: absolute;
+            top: rem(-11px);
+            left: rem(25px);
+            display: block;
+            width: rem(700px);
+            height: rem(22px);
+          }
+        }
+
+        .list {
+          padding: 0 rem(38px);
+
+          .item {
+            padding-top: rem(40px);
+
+            .msg-time {
+              padding-left: rem(10px);
+              line-height: rem(40px);
+              color: #7c7c7c;
+              font-size: rem(24px);
+            }
+
+            .message-box {
+              position: relative;
+
+              .message {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                max-width: rem(520px);
+                line-height: rem(42px);
+                padding: rem(24px) rem(30px) rem(20px) rem(30px);
+                background-color: #fff;
+                border-radius: rem(26px);
+                border: rem(2px) solid #e9e9e9;
+                font-size: rem(26px);
+                color: #000;
+                word-break: break-all;
+
+                .money {
+                  display: inherit;
+                  position: relative;
+                  color: #0d90ff;
+
+                  &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: rem(4px);
+                    width: 100%;
+                    height: rem(1px);
+                    background-color: #0d90ff;
+                  }
+                }
+              }
+            }
+
+            .warn {
+              padding-top: rem(20px);
+              text-align: center;
+
+              .content {
+                display: inline-block;
+                vertical-align: top;
+                width: rem(528px);
+                line-height: rem(36px);
+                padding: rem(10px);
+                background-color: #cbcbcb;
+                color: #fff;
+                font-size: rem(24px);
+                text-align: left;
+                border-radius: rem(10px);
+
+                > img {
+                  display: inline-block;
+                  width: rem(32px);
+                  height: rem(32px);
+                  vertical-align: bottom;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .message-footer {
+
+      .bg {
+
+        > img {
+          height: rem(109px);
+        }
+      }
+    }
+
+    &.fs-m {
+
+      .message-header .phone {
+        font-size: rem(30px);
+      }
+
+      .scroll-box .scroll-body .list .item {
+
+        .msg-time {
+          line-height: rem(48px);
+          font-size: rem(26px);
+        }
+
+        .message-box .message {
+          font-size: rem(34px);
+          line-height: rem(54px);
+        }
+      }
+    }
+
+    &.fs-l {
+
+      .message-header .phone {
+        font-size: rem(32px);
+      }
+
+      .scroll-box .scroll-body .list .item {
+
+        .msg-time {
+          line-height: rem(50px);
+          font-size: rem(28px);
+        }
+
+        .message-box .message {
+          font-size: rem(38px);
+          line-height: rem(58px);
+        }
+      }
+    }
+
+    &.fs-xl {
+
+      .message-header .phone {
+        font-size: rem(36px);
+      }
+
+      .scroll-box .scroll-body .list .item {
+
+        .msg-time {
+          line-height: rem(50px);
+          font-size: rem(28px);
+        }
+
+        .message-box .message {
+          width: 100%;
+          font-size: rem(50px);
+          line-height: rem(74px);
+        }
+      }
+    }
+  }
+
+  .android2-screen {
+    background-color: #f4f4f4;
+
+    .message-header {
+      position: relative;
+
+      .bg {
+
+        > img {
+          height: rem(146px);
+        }
+      }
+
+      .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: rem(50px);
+        padding-right: rem(12px);
+
+        .content {
+          flex: 1;
+          min-width: 1px;
+          height: 100%;
+        }
+
+        .icon {
+          width: auto;
+          height: rem(50px);
+
+          > img {
+            display: block;
+            width: auto;
+            height: rem(50px);
+          }
+        }
+
+        .percent {
+          line-height: rem(24px);
+          font-size: rem(24px);
+          color: #474747;
+          z-index: 2;
+        }
+
+        .electricity {
+          width: rem(50px);
+          height: rem(20px);
+          padding: rem(2px);
+          border: 1px solid #474747;
+          border-radius: rem(4px);
+          z-index: 2;
+          margin-left: rem(4px);
+          margin-right: rem(2px);
+
+          .box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            text-align: right;
+
+            .number {
+              display: inline-block;
+              height: 100%;
+              vertical-align: top;
+              background-color: #474747;
+
+              &.on {
+                background-color: #f00;
+              }
+            }
+
+            .image {
+              position: absolute;
+              top: 0;
+              left: 50%;
+              display: block;
+              height: 100%;
+              width: auto;
+              transform: translate(-50%, 0);
+            }
+          }
+        }
+      }
+
+      .time {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: rem(100px);
+        line-height: rem(50px);
+        margin-left: rem(-50px);
+        text-align: center;
+        font-size: rem(24px);
+        color: #474747;
+      }
+
+      .phone {
+        position: absolute;
+        bottom: rem(32px);
+        left: 50%;
+        width: rem(400px);
+        line-height: rem(30px);
+        font-size: rem(30px);
+        color: #000;
+        text-align: center;
+        margin-left: rem(-200px);
+      }
+    }
+
+    .tips {
+      position: absolute;
+      top: rem(146px);
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: rem(27px) 0;
+      background-color: #ededed;
+      z-index: 2;
+
+      .text {
+        flex: 1;
+        min-width: 1px;
+        line-height: rem(42px);
+        text-align: center;
+        font-size: rem(34px);
+        color: #2398f7;
+
+        &:last-child {
+          border-left: rem(2px) solid #bfbfbf;
+        }
+      }
+    }
+
+    .scroll-box {
+
+      .scroll-body {
+        padding-top: rem(242px);
+
+        .list {
+          padding: 0 rem(45px);
+
+          .item {
+            padding-bottom: rem(27px);
+
+            .msg-date {
+              width: 100%;
+              line-height: rem(60px);
+              color: #808080;
+              font-size: rem(24px);
+              text-align: center;
+            }
+
+            .message-wrap {
+              position: relative;
+
+              .message-box {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                max-width: rem(512px);
+                padding: rem(22px) rem(20px);
+                background-color: #dadfe2;
+                border-radius: rem(20px);
+                color: #000;
+
+                .message {
+                  word-break: break-all;
+                  font-size: rem(34px);
+                  line-height: rem(46px);
+
+                  .money {
+                    position: relative;
+                    color: #2398f7;
+
+                    &:after {
+                      content: '';
+                      display: block;
+                      position: absolute;
+                      left: 0;
+                      bottom: 0;
+                      width: 100%;
+                      height: rem(1px);
+                      background-color: #2398f7;
+                    }
+                  }
+                }
+
+                .msg-time {
+                  padding-top: rem(20px);
+                  padding-right: rem(4px);
+                  text-align: right;
+                  line-height: rem(28px);
+                  color: #808080;
+                  font-size: rem(24px);
+                }
+              }
+            }
+
+            .warn {
+              padding-top: rem(20px);
+              text-align: center;
+
+              .content {
+                display: inline-block;
+                vertical-align: top;
+                width: rem(528px);
+                line-height: rem(36px);
+                padding: rem(10px);
+                background-color: #cbcbcb;
+                color: #fff;
+                font-size: rem(24px);
+                text-align: left;
+                border-radius: rem(10px);
+
+                > img {
+                  display: inline-block;
+                  width: rem(32px);
+                  height: rem(32px);
+                  vertical-align: bottom;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .message-footer {
+
+      .bg {
+
+        > img {
+          height: rem(109px);
+        }
+      }
+    }
+
+    &.fs-m {
+
+      .scroll-box .scroll-body .list .item {
+
+        .msg-date {
+          font-size: rem(28px);
+        }
+
+        .message-wrap .message-box {
+
+          .message {
+            font-size: rem(38px);
+            line-height: rem(50px);
+          }
+
+          .msg-time {
+            font-size: rem(28px);
+          }
+        }
+      }
+    }
+
+    &.fs-l {
+
+      .scroll-box .scroll-body .list .item {
+
+        .msg-date {
+          font-size: rem(30px);
+        }
+
+        .message-wrap .message-box {
+
+          .message {
+            font-size: rem(42px);
+            line-height: rem(58px);
+          }
+
+          .msg-time {
+            font-size: rem(30px);
+          }
+        }
+      }
+    }
+
+    &.fs-xl {
+
+      .scroll-box .scroll-body .list .item {
+
+        .msg-date {
+          font-size: rem(36px);
+        }
+
+        .message-wrap .message-box {
+
+          .message {
+            font-size: rem(56px);
+            line-height: rem(76px);
+          }
+
+          .msg-time {
+            font-size: rem(36px);
+          }
+        }
+      }
+    }
+  }
+}

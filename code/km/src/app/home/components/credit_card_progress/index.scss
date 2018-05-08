@@ -1,0 +1,155 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-progress-page {
+  padding-top: rem(90px);
+  height: 100%;
+
+  ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+    padding-bottom: rem(30px);
+		background-color: #fff;
+
+		.tips {
+			position: relative;
+			height: rem(60px);
+			line-height: rem(60px);
+			padding-left: rem(64px);
+			overflow: hidden;
+			background-color: #2d3940;
+
+			i.icon {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: rem(64px);
+				height: rem(60px);
+				line-height: rem(60px);
+				text-align: center;
+				color: #fff;
+				font-size: rem(32px);
+				background-color: #2d3940;
+			}
+
+			.notice {
+				position: absolute;
+				top: 0;
+				left: rem(64px);
+				width: 100%;
+				height: rem(60px);
+				overflow: hidden;
+
+				.marquee {
+					height: rem(60px);
+					word-break:keep-all;
+					white-space:nowrap;
+					font-size: rem(24px);
+					color: #fff;
+					text-align: left;
+					animation: marquee 40s linear infinite;
+				}
+
+				@keyframes marquee {
+					0% {
+							transform: translateX(100%);
+					}
+					100% {
+							transform: translateX(-455%);
+					}
+				}
+			}
+		}
+
+    .big-title {
+      line-height: rem(86px);
+      padding-left: rem(20px);
+      font-size: rem(30px);
+      color: #333;
+      border-bottom: 1px solid $bc;
+    }
+
+    ul.bank-list {
+      font-size: 0;
+
+      li.item {
+        display: inline-block;
+        vertical-align: top;
+        width: 33.333333%;
+        border-bottom: 1px dashed $bc;
+        border-right: 1px dashed $bc;
+
+        &:nth-child(3n) {
+          border-right: none;
+        }
+
+        > a {
+          display: block;
+          padding: rem(38px) 0 rem(30px);
+          text-align: center;
+          font-size: rem(28px);
+          color: #333;
+
+          .logo {
+            padding-bottom: rem(22px);
+
+            .image {
+              position: relative;
+              display: inline-block;
+              vertical-align: top;
+              width: rem(72px);
+              height: rem(72px);
+
+              > img {
+                display: block;
+                vertical-align: top;
+                width: 100%;
+                height: 100%;
+              }
+
+              .info-tips {
+                position: absolute;
+                top: 0;
+                left: 70%;
+
+                > span {
+                  position: absolute;
+                  top: rem(-8px);
+                  left: rem(10px);
+                  display: inline-block;
+                  font-size: rem(24px);
+                  color: #fff;
+                  background-color: red;
+                  height: rem(32px);
+                  line-height: rem(32px);
+                  min-width: rem(32px);
+                  text-align: center;
+                  border-radius: rem(16px);
+                  padding: 0 rem(8px);
+                }
+              }
+            }
+          }
+
+          .name {
+            height: rem(46px);
+            line-height: rem(26px);
+            font-size: rem(28px);
+            color: #333;
+					}
+
+					.refer {
+						margin: auto;
+						width: rem(120px);
+						border: 1px solid #ca0f0f;
+						border-radius: rem(6px);
+						font-size: rem(24px);
+						color: #ca0f0f;
+					}
+        }
+      }
+    }
+  }
+}

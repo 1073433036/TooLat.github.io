@@ -1,0 +1,138 @@
+@import "~assets/styles/_bootstrap";
+
+.protocol_detail_page {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  padding-top: rem(100px);
+  // padding-top: 15vh;
+  background-color: rgba(100,100,100,.7);
+  color: #333;
+
+  .protocol-title {
+    width: 100%;
+    height: rem(80px);
+    font-size: rem(36px);
+    text-align: center;
+    line-height: rem(50px);
+  }
+
+  .protocol-content{
+    overflow: hidden;
+    width: 90%;
+    height: rem(800px);
+    // height: 55vh;
+    padding-bottom: rem(30px);
+    margin: 0 auto;
+    line-height: 1.67;
+    background-color: #fff;
+    border-radius: rem(12px);
+
+    .wrapper {
+      width: 85%;
+      height: 100%;
+      margin: 0 auto;
+      padding-top: rem(1px);
+
+      .detail {
+        width: 100%;
+        margin-top: rem(60px);
+        padding-bottom: rem(70px);
+
+        .h1 {
+          width: 100%;
+          font-size: rem(36px);
+          text-align: center;
+        }
+
+        .protocol-list {
+          font-size: rem(24px);
+          line-height: 1.90;
+
+          > h3 {
+            margin-top: rem(15px);
+            font-size: rem(30px);
+          }
+
+        }
+      }
+    }
+
+  }
+
+  .protocol-choose {
+    margin-left: 5%;
+    margin-top: rem(15px);
+
+    .input-group {
+
+      > input {
+        display: none;
+      }
+
+      > input:checked + label .rect::before {
+        display: block;
+      }
+
+      > label {
+        display: block;
+        position: relative;
+        height: rem(60px);
+        line-height: rem(60px);
+
+        .rect {
+          position: relative;
+          float: left;
+          width: rem(40px);
+          height: rem(40px);
+          margin-top: rem(10px);
+          margin-right: rem(20px);
+          background-color: #ccc;
+        }
+
+        .rect::before {
+          content: '';
+          display: none;
+          position: absolute;
+          left: rem(12px);
+          width: rem(14px);
+          height: rem(30px);
+          border-right: rem(2px) solid #fff;
+          border-bottom: rem(2px) solid #fff;
+          transform: rotate(38deg);
+        }
+      }
+
+    }
+  }
+
+  .protocol-end-btn {
+    width: 40%;
+    height: rem(80px);
+    margin: 0 auto;
+    margin-top: rem(30px);
+    font-size: rem(34px);
+    border-radius: rem(12px);
+    background-color: #01b5f1;
+    text-align: center;
+    line-height: rem(80px);
+    letter-spacing: rem(5px);
+    color: #fff;
+
+  }
+
+}
+
+.slide-enter-active, .slide-leave-active{
+  transition: all .5s ease;
+}
+.slide-enter {
+  transform: translate(0,-100%);
+}
+.slide-leave-to {
+  transform: translate(0,100%)
+}

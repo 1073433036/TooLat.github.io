@@ -1,0 +1,45 @@
+@import "~assets/styles/_bootstrap";
+
+.agency_senior_member-page {
+	padding-top: rem(90px);
+	height: 100%;
+	background: #edf0f0;
+	
+	.header-page {
+		background: url('~assets/images/wallet-header.png') no-repeat;
+		background-size: cover;
+	}
+
+	> ._v-container > ._v-content {
+		padding-top: rem(210px);
+	}
+
+	.main {
+		z-index: 99999;
+
+		.list {
+			margin-bottom: rem(20px);
+			padding: 0 rem(70px);
+			border-bottom: 1px solid $bc;
+			background: #fff;
+			display: flex;
+			justify-content: space-between;
+			overflow: hidden;
+
+			.item {
+				float: left;
+				padding-left: rem(16px);
+				width: 42%;
+				height: rem(100px);
+				text-align:center;
+				line-height: rem(100px);
+				font-size: rem(32px);
+			}
+
+			.active {
+				color: #01b0f3;
+				border-bottom:2px solid #01b0f3;
+			}
+		}
+	}
+}

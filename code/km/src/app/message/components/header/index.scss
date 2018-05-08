@@ -1,0 +1,41 @@
+@import "~assets/styles/_bootstrap";
+
+.message-head-page {
+  .header {
+    height: rem(90px);
+    line-height: rem(90px);
+    text-align: center;
+    background: #091111;
+    z-index: 1000;
+
+    .item {
+      margin: 0 rem(15px);
+      padding: rem(10px) rem(30px);
+      font-size: rem(30px);
+      color: #fff;
+      text-align: center;
+
+      &.active {
+        color: #2ea7e0;
+        background: #fff;
+        border-radius: rem(50px);
+      }
+
+      > i {
+        position: absolute;
+        display: inline-block;
+        top: rem(-10px);
+        right: rem(10px);
+        font-size: rem(24px);
+        color: #fff;
+        background-color: red;
+        height: rem(32px);
+        line-height: rem(32px);
+        min-width: rem(32px);
+        text-align: center;
+        border-radius: rem(16px);
+        padding: 0 rem(8px);
+      }
+    }
+  }
+}

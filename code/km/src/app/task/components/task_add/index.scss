@@ -1,0 +1,169 @@
+@import "~assets/styles/_bootstrap";
+
+.task-add-page {
+  height: 100%;
+  background: #edf0f0;
+
+  .nav {
+    position: absolute;
+    top: 0;
+    padding-top: rem(90px);
+    border-bottom: 1px solid $bc;
+    z-index: 1000;
+
+    .inner {
+      height: rem(115px);
+      background: #fff;
+
+      &:after {
+        display: block;
+        clear: both;
+        content: ' ';
+      }
+
+      .left, .right {
+        float: left;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      .left {
+        padding-left: rem(20px);
+        width: rem(90px);
+
+        .sp-horn {
+          animation: myHorn .8s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+
+      .right {
+        padding-right: rem(20px);
+        width: rem(660px);
+
+        > p {
+          font-size: rem(24px);
+          color: #ffa60e;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    padding: rem(205px) 0;
+
+    .controller {
+
+      .form-group {
+
+        .input-group {
+          margin-top: rem(20px);
+        }
+
+        .input-item {
+          padding: 0 rem(20px);
+          width: 100%;
+          height: rem(130px);
+          line-height: rem(130px);
+          border-bottom: 1px solid #eee;
+          background: #fff;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .sp-right {
+            position: absolute;
+            right: rem(40px);
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          &.w280 {
+            > span {
+              width: rem(300px);
+            }
+
+            .right {
+              width: rem(320px);
+            }
+          }
+
+
+          > span {
+            display: inline-block;
+            margin-left: rem(20px);
+            width: rem(200px);
+            font-size: rem(28px);
+            color: #333;
+            vertical-align: middle;
+
+
+            > em {
+              padding-left: rem(10px);
+              font-size: rem(28px);
+              color: #ffa60e;
+              vertical-align: middle;
+            }
+          }
+
+          .right {
+            position: absolute;
+            display: inline-block;
+            padding-right: rem(40px);
+            width: rem(420px);
+            height: 100%;
+            text-align: right;
+
+            > input {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto 0;
+              right: rem(60px);
+              padding: 0 rem(5px);
+              width: 100%;
+              height: rem(68px);
+              font-size: rem(28px);
+              text-align: right;
+              border: none;
+              vertical-align: middle;
+            }
+
+          }
+        }
+
+        .button-item {
+          padding-top: rem(95px);
+
+          .btn {
+            display: block;
+            margin: 0 auto;
+            width: rem(710px);
+            height: rem(95px);
+            line-height: rem(95px);
+            font-size: rem(32px);
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: rem(10px);
+            background: #c9c9c9;
+            cursor: pointer;
+
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+
+@keyframes myHorn
+{
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}

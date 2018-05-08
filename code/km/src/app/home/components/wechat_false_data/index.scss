@@ -1,0 +1,1085 @@
+@import "~assets/styles/_bootstrap";
+
+.wechat-false-data {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #fff;
+
+  .wrapper {
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
+
+    .container {
+      position: relative;
+      width: rem(750px);
+      height: rem(1334px);
+      background-color: #ebebeb;
+
+      &.ios {
+
+        .scroll-box {
+
+          > ._v-container > ._v-content {
+            padding-top: rem(65px);
+          }
+        }
+      }
+
+      &.android {
+
+        .scroll-box {
+
+          > ._v-container > ._v-content {
+            padding-top: rem(67px);
+          }
+        }
+      }
+
+      &.android2 {
+
+        .scroll-box {
+
+          > ._v-container > ._v-content {
+            padding-top: rem(85px);
+          }
+        }
+      }
+
+      &.android3 {
+
+        .scroll-box {
+
+          > ._v-container > ._v-content {
+            padding-top: rem(87px);
+          }
+        }
+      }
+
+      .apple-ios {
+        position: relative;
+        height: 100%;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .operator {
+          position: absolute;
+          top: rem(9px);
+          left: rem(54px);
+          height: rem(23px);
+          line-height: rem(23px);
+          font-size: rem(24px);
+          color: #fff;
+          z-index: 2;
+        }
+
+        .signal-4g {
+          position: absolute;
+          top: rem(9px);
+          left: rem(171px);
+          height: rem(23px);
+          line-height: rem(23px);
+          font-size: rem(24px);
+          color: #fff;
+          z-index: 2;
+        }
+
+        .signal-wifi {
+          position: absolute;
+          top: rem(7px);
+          left: rem(160px);
+          width: rem(40px);
+          height: rem(25px);
+          z-index: 2;
+        }
+
+        .time {
+          position: absolute;
+          top: rem(10px);
+          left: 50%;
+          width: rem(100px);
+          height: rem(19px);
+          line-height: rem(19px);
+          margin-left: rem(-50px);
+          text-align: center;
+          font-size: rem(24px);
+          color: #fff;
+          z-index: 2;
+        }
+
+        .ios-icon {
+          position: absolute;
+          top: 0;
+          right: rem(10px);
+          display: flex;
+          height: rem(41px);
+          align-items: center;
+          z-index: 2;
+
+          .item {
+            height: 100%;
+            width: auto;
+
+            &.on {
+              margin-left: rem(6px);
+            }
+
+            > img {
+              display: inline-block;
+              vertical-align: top;
+              height: rem(34px);
+              width: auto;
+            }
+          }
+
+          .percent {
+            height: rem(23px);
+            line-height: rem(23px);
+            font-size: rem(24px);
+            color: #fff;
+            z-index: 2;
+            margin-left: rem(8px);
+          }
+
+          .electricity {
+            width: rem(48px);
+            height: rem(23px);
+            padding: rem(2px);
+            border: rem(2px) solid #828184;
+            border-radius: rem(4px);
+            z-index: 2;
+            margin-left: rem(6px);
+            margin-right: rem(6px);
+
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: rem(5px);
+              left: rem(48px);
+              width: 0;
+              height: 0;
+              border-top: rem(4.5px) solid transparent;
+              border-left: rem(4px) solid #828184;
+              border-bottom: rem(4.5px) solid transparent;
+            }
+
+            .number {
+              height: 100%;
+              background-color: #fff;
+
+              &.on {
+                background-color: #f00;
+              }
+
+              &.charge {
+                background-color: #76d672;
+              }
+            }
+          }
+        }
+
+        .company {
+          position: absolute;
+          top: rem(65px);
+          left: 50%;
+          width: rem(420px);
+          height: rem(35px);
+          line-height: rem(35px);
+          margin-left: rem(-210px);
+          font-size: rem(35px);
+          font-weight: bold;
+          color: #fff;
+          text-align: center;
+          z-index: 2;
+        }
+
+        .edition {
+          position: absolute;
+          top: rem(70px);
+          left: rem(51px);
+          height: rem(30px);
+          line-height: rem(30px);
+          color: #fff;
+          font-size: rem(30px);
+          z-index: 2;
+        }
+
+        .bg-img {
+          position: absolute;
+          top: rem(128px);
+          left: 0;
+          bottom: rem(100px);
+          width: 100%;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .head-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: rem(128px);
+          z-index: 2;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+          }
+        }
+      }
+
+      .android {
+        position: relative;
+        height: 100%;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .head-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: rem(130px);
+          z-index: 2;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+          }
+        }
+
+        .head {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          width: 100%;
+          height: rem(39px);
+          padding-left: rem(10px);
+          padding-right: rem(10px);
+          align-items: center;
+          z-index: 2;
+          background-color: #303135;
+
+          .time {
+            height: rem(18px);
+            line-height: rem(18px);
+            font-size: rem(24px);
+            color: #d6d6d7;
+            transform: scale(.8,.8);
+          }
+
+          .content {
+            flex: 1;
+            height: rem(39px);
+            min-width: 1px;
+          }
+
+          .icon {
+            width: auto;
+            height: 100%;
+            margin-left: rem(4px);
+
+            > img {
+              width: auto;
+              height: 100%;
+            }
+          }
+
+          .operator {
+            height: rem(18px);
+            line-height: rem(18px);
+            font-size: rem(24px);
+            color: #d6d6d7;
+            transform: scale(.75,.75);
+            margin-left: rem(4px);
+          }
+
+          .signal-4g {
+            height: rem(18px);
+            line-height: rem(18px);
+            font-size: rem(24px);
+            color: #d6d6d7;
+            margin-left: rem(4px);
+            transform: scale(.75,.75);
+          }
+
+          .electricity {
+            width: rem(48px);
+            height: rem(18px);
+            padding: rem(2px);
+            border: rem(2px) solid #d6d6d7;
+            border-radius: rem(10px);
+            margin-left: rem(8px);
+
+            .box {
+              width: 100%;
+              height: 100%;
+              border-radius: rem(10px);
+              overflow: hidden;
+
+              .number {
+                height: 100%;
+                background-color: #d6d6d7;
+
+                &.on {
+                  background-color: #f00;
+                }
+
+                &.charge {
+                  background-color: #47c200;
+                }
+              }
+            }
+          }
+
+          .percent {
+            width: rem(42px);
+            height: rem(18px);
+            line-height: rem(18px);
+            font-size: rem(24px);
+            color: #d6d6d7;
+            margin-left: rem(2px);
+            transform: scale(.75,.75);
+          }
+        }
+
+        .company {
+          position: absolute;
+          top: rem(68px);
+          left: rem(114px);
+          height: rem(34px);
+          line-height: rem(34px);
+          font-size: rem(34px);
+          color: #fff;
+          z-index: 2;
+        }
+
+        .bg-img {
+          position: absolute;
+          top: rem(130px);
+          left: 0;
+          bottom: rem(93px);
+          width: 100%;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .android2 {
+        position: relative;
+        height: 100%;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .head-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: rem(148px);
+          z-index: 2;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+          }
+        }
+
+        .head {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          width: 100%;
+          height: rem(50px);
+          padding-left: rem(10px);
+          padding-right: rem(10px);
+          align-items: center;
+          z-index: 2;
+
+          .content {
+            flex: 1;
+            height: rem(50px);
+            min-width: 1px;
+          }
+
+          .icon {
+            width: auto;
+            height: 100%;
+
+            > img {
+              width: auto;
+              height: 100%;
+            }
+          }
+
+          .electricity {
+            width: rem(48px);
+            height: rem(22px);
+            padding: rem(2px);
+            border: rem(2px) solid #fff;
+            border-radius: rem(4px);
+            margin-left: rem(8px);
+
+            .box {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+
+              .number {
+                height: 100%;
+                background-color: #fff;
+
+                &.on {
+                  background-color: #f00;
+                }
+              }
+            }
+          }
+
+          .percent {
+            height: rem(22px);
+            line-height: rem(22px);
+            font-size: rem(24px);
+            color: #fff;
+            margin-left: rem(2px);
+          }
+        }
+
+        .time {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: rem(200px);
+          height: rem(50px);
+          line-height: rem(50px);
+          font-size: rem(24px);
+          color: #d6d6d7;
+          margin-left: rem(-100px);
+          text-align: center;
+          z-index: 2;
+        }
+
+        .company {
+          position: absolute;
+          top: rem(82px);
+          left: rem(114px);
+          height: rem(34px);
+          line-height: rem(34px);
+          font-size: rem(34px);
+          color: #fff;
+          z-index: 2;
+        }
+
+        .bg-img {
+          position: absolute;
+          top: rem(148px);
+          left: 0;
+          bottom: rem(100px);
+          width: 100%;
+
+          &.on {
+            bottom: rem(200px);
+          }
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .b-footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: rem(100px);
+          z-index: 2;
+
+          > img {
+            display: block;
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .android3 {
+        position: relative;
+        height: 100%;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .head-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: rem(150px);
+          z-index: 2;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+          }
+        }
+
+        .head {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          width: 100%;
+          height: rem(50px);
+          padding-left: rem(10px);
+          padding-right: rem(16px);
+          align-items: center;
+          z-index: 2;
+
+          .operator {
+
+            .line {
+              height: rem(25px);
+              line-height: rem(25px);
+              font-size: rem(24px);
+              color: #acadaf;
+              transform: scale(.75, .75);
+            }
+          }
+
+          .content {
+            flex: 1;
+            height: rem(50px);
+            min-width: 1px;
+          }
+
+          .icon {
+            width: auto;
+            height: 100%;
+
+            > img {
+              width: auto;
+              height: 100%;
+            }
+          }
+
+          .electricity {
+            position: relative;
+            width: rem(48px);
+            height: rem(22px);
+            padding: rem(2px);
+            border: rem(2px) solid #acadaf;
+            border-radius: rem(4px);
+            margin-left: rem(8px);
+
+            &:after {
+              content: '';
+              display: block;
+              width: rem(4px);
+              height: rem(12px);
+              position: absolute;
+              top: 50%;
+              left: rem(48px);
+              margin-top: rem(-6px);
+              background-color: #acadaf;
+            }
+
+            .box {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+
+              .number {
+                height: 100%;
+                background-color: #acadaf;
+
+                &.on {
+                  background-color: #f00;
+                }
+
+                &.charge {
+                  background-color: #73b034;
+                }
+              }
+
+              img.charge {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: rem(20px);
+                height: rem(12px);
+                margin-top: rem(-6px);
+                margin-left: rem(-10px);
+              }
+            }
+          }
+
+          .percent {
+            height: rem(22px);
+            line-height: rem(22px);
+            font-size: rem(24px);
+            color: #acadaf;
+            margin-left: rem(2px);
+          }
+
+          .time {
+            height: rem(50px);
+            line-height: rem(50px);
+            font-size: rem(24px);
+            color: #acadaf;
+            margin-left: rem(12px);
+          }
+        }
+
+        .company {
+          position: absolute;
+          top: rem(82px);
+          left: rem(114px);
+          height: rem(34px);
+          line-height: rem(34px);
+          font-size: rem(34px);
+          color: #fff;
+          z-index: 2;
+        }
+
+        .bg-img {
+          position: absolute;
+          top: rem(148px);
+          left: 0;
+          bottom: rem(100px);
+          width: 100%;
+
+          &.on {
+            bottom: rem(200px);
+          }
+
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .b-footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: rem(100px);
+          z-index: 2;
+
+          > img {
+            display: block;
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .scroll-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &.android2 {
+          bottom: rem(200px);
+        }
+
+        &.android3 {
+          bottom: rem(200px);
+        }
+
+        .list {
+          padding-bottom: rem(100px);
+
+          .item {
+            padding: rem(63px) rem(37px) 0;
+             .money{
+                color:#f00;
+              }
+            &.info {
+              padding: rem(63px) 0 0;
+
+              .date {
+                padding-bottom: rem(28px);
+              }
+
+              .user-box {
+                position: relative;
+                padding-right: rem(120px);
+                text-align: right;
+
+                .avatar {
+                  position: absolute;
+                  top: 0;
+                  right: rem(20px);
+                  width: rem(80px);
+                  height: rem(80px);
+
+                  > img {
+                    display: block;
+                    vertical-align: top;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+
+                .message {
+                  display: inline-block;
+                  max-width: rem(498px);
+                  line-height: rem(40px);
+                  padding: rem(19px) rem(18px);
+                  border: rem(1px) solid #7fb25a;
+                  border-radius: rem(10px);
+                  background-color: #afe56e;
+                  word-wrap: break-word;
+                  text-align: left;
+                  font-size: rem(30px);
+                  color: #000;
+
+                  &:after {
+                    position: absolute;
+                    right: rem(-8.5px);
+                    top: rem(31px);
+                    content: '';
+                    display: block;
+                    width: rem(16px);
+                    height: rem(16px);
+                    background-color: #afe56e;
+                    border-top: 0.03125rem solid #7fb25a;
+                    border-right: 0.03125rem solid #7fb25a;
+                    transform: rotate(45deg);
+                    transform-origin: 50% 50%;
+                  }
+                }
+              }
+            }
+
+            .date {
+              text-align: center;
+              font-size: 0;
+              padding-bottom: rem(39px);
+
+              > span {
+                display: inline-block;
+                height: rem(40px);
+                line-height: rem(40px);
+                padding: 0 rem(10px);
+                background-color: rgba(153, 153, 153, .4);
+                color: #fff;
+                font-size: rem(24px);
+                border-radius: rem(10px);
+              }
+            }
+
+            .box {
+              padding: rem(35px) rem(20px) 0;
+              border: rem(1px) solid #cccccc;
+              border-radius: rem(10px);
+              background-color: #fff;
+
+              .status {
+                height: rem(34px);
+                line-height: rem(34px);
+                font-size: rem(34px);
+                color: #000;
+                margin-bottom: rem(11px);
+              }
+
+              .day {
+                height: rem(28px);
+                line-height: rem(28px);
+                font-size: rem(28px);
+                color: #8c8c8c;
+                margin-bottom: rem(45px);
+              }
+
+              .text {
+                line-height: rem(44px);
+                font-size: rem(30px);
+                color: #000;
+
+                &.on {
+
+                  > span {
+                    color: #F00;
+                  }
+                }
+              }
+
+              .detail {
+                position: relative;
+                padding: rem(40px) 0 rem(34px);
+
+                &:before {
+                  content: "";
+                  display: block;
+                  width: 100%;
+                  height: rem(2px);
+                  position: absolute;
+                  top: rem(20px);
+                  left: 0;
+                  background-color: #e5e5e5;
+                }
+
+                &:after {
+                  content: "";
+                  display: block;
+                  width: rem(20px);
+                  height: rem(20px);
+                  position: absolute;
+                  right: rem(8px);
+                  top: 50%;
+                  margin-top: rem(-10px);
+                  border-top: rem(3px) solid #c7c7cc;
+                  border-right: rem(3px) solid #c7c7cc;
+                  transform: rotate(45deg);
+                }
+
+                .name {
+                  display: inline-block;
+                  vertical-align: top;
+                  height: rem(26px);
+                  line-height: rem(26px);
+                  font-size: rem(26px);
+                  color: #000;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(100px);
+        padding-left: rem(89px);
+        display: flex;
+        align-items: center;
+        z-index: 3;
+
+        &.android2 {
+          bottom: rem(100px);
+        }
+
+        &.android3 {
+          bottom: rem(100px);
+        }
+
+        .image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          > img {
+            display: block;
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        > a {
+          flex: 1;
+          min-width: 1px;
+          text-align: center;
+          font-size: rem(30px);
+          color: #4a4a4a;
+        }
+
+        i.icon-bar {
+          display: block;
+          flex: 0 0 rem(1px);
+          width: rem(1px);
+          height: rem(100px);
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    background-color: #2da8df;
+    height: rem(90px);
+    line-height: rem(90px);
+
+    > a {
+      flex: 1;
+      text-align: center;
+      color: #fff;
+
+      &:last-child {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+
+  .result-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 2001;
+
+    .mask {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .image {
+      position: absolute;
+      top: rem(90px);
+      left: 50%;
+      width: rem(506px);
+      height: rem(900px);
+      margin-left: rem(-253px);
+      z-index: 2;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .tip {
+      position: absolute;
+      top: rem(1020px);
+      left: 0;
+      width: 100%;
+      text-align: center;
+
+      span.name {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid #fff;
+        padding: rem(10px) rem(20px);
+        color: #fff;
+        font-size: rem(28px);
+        border-radius: rem(10px);
+        background-color: #000;
+      }
+
+      .box {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: rem(200px);
+        height: rem(60px);
+        margin-left: rem(-100px);
+
+        > div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          border-radius: rem(20px);
+          animation: rotate 2s 0s linear infinite;
+
+          &:nth-child(2) {
+            animation-delay: .8s;
+          }
+
+          &:nth-child(3) {
+            animation-delay: .5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

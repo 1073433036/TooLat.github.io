@@ -1,0 +1,138 @@
+@import "~assets/styles/_bootstrap";
+
+.message-info-page {
+  height: 100%;
+  background: #edf0f0;
+
+  ._v-container > ._v-content {
+    padding-top: rem(90px);
+    padding-bottom: rem(110px);
+  }
+
+  .wrapper {
+
+    .list {
+      padding-top: rem(20px);
+
+      .item {
+        height: rem(140px);
+        border-bottom: 1px solid $bc;
+        background: #fff;
+
+        > a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .avatar {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: rem(20px);
+          margin: auto 0;
+          width: rem(94px);
+          height: rem(94px);
+          border-radius: 50%;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .info {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: rem(160px);
+          margin: auto 0;
+          width: rem(590px);
+          height: rem(94px);
+
+          .head {
+            .tit {
+              display: inline-block;
+              width: rem(355px);
+              font-size: rem(32px);
+              color: #333;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .time {
+              position: absolute;
+              top: 0;
+              right: rem(20px);
+              font-size: rem(24px);
+              color: #999;
+            }
+          }
+
+          .msg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: rem(28px);
+            color: #999;
+
+
+            > span {
+              display: inline-block;
+              width: rem(385px);
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .btn {
+              position: absolute;
+              right: rem(20px);
+              bottom: 0;
+
+              > button {
+                display: inline-block;
+                padding: rem(10px) rem(20px);
+                font-size: rem(24px);
+                color: #fff;
+                border: none;
+                border-radius: rem(5px);
+                background: #5cb85c;
+                cursor: pointer;
+
+                &.del {
+                  background: #d9534f;
+                }
+
+                &.close {
+                  background: #ddd;
+                }
+              }
+            }
+          }
+        }
+
+        &.be {
+          &:before {
+            display: block;
+            position: absolute;
+            top: rem(30px);
+            left: rem(114px);
+            width: rem(15px);
+            height: rem(15px);
+            content: ' ';
+            border-radius: 50%;
+            background: #fd5050;
+          }
+        }
+      }
+    }
+  }
+
+}

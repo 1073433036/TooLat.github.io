@@ -1,0 +1,686 @@
+@import "~assets/styles/_bootstrap";
+
+.sign_in {
+  height: 100%;
+  background: #edf0f0;
+
+  .slot {
+
+    .right {
+
+      > a{
+        color: #fff;
+      }
+    }
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .controller {
+
+    	.namenick {
+    		text-align: center;
+    		line-height: rem(80px);
+    		color: #fff;
+    		background-color: #000;
+    		font-size: rem(32px);
+    	}
+
+      .photo {
+				position: relative;
+        width: 100%;
+				height: rem(300px);
+				padding: 0 rem(20px) rem(30px) 0;
+				background-color: #0a0f12;
+
+				.data {
+					width: 100%;
+					overflow: hidden;
+
+					.list {
+						display: flex;
+						padding-left: rem(10px);
+						color: #fff;
+
+						.item {
+							position: relative;
+							width: rem(60px);
+							height: rem(60px);
+							line-height: rem(60px);
+							margin-top: rem(56px);
+							margin-right: rem(20px);
+							margin-left: rem(10px);
+							text-align: center;
+
+							&.on {
+								background: url('~assets/images/round-01.png') no-repeat;
+								background-size: cover;
+							}
+
+							> i {
+								position: absolute;
+								top: rem(-66px);
+								left: rem(6px);
+							}
+						}
+
+						.active {
+							color: #ff4b51;
+						}
+					}
+				}
+
+				.integral {
+					position: absolute;
+					bottom: rem(20px);
+					left: rem(30px);
+					width: 100%;
+					height: rem(136px);
+
+					.figure {
+						font-size: rem(60px);
+						color: #ff4b51;
+					}
+
+					.info {
+
+						.present {
+							font-size: rem(24px);
+							padding-right: rem(24px);
+							border-right: 1px solid $bc;
+							color: #ccc;
+						}
+
+						.add_up {
+							font-size: rem(24px);
+							padding-left: rem(24px);
+							color: #ccc;
+						}
+					}
+
+					.sign_box {
+						position: absolute;
+						bottom: rem(20px);
+						right: rem(50px);
+						width: rem(200px);
+						height: rem(100px);
+						text-align: center;
+						color: #fff;
+						background-color: #ff4b51;
+						border-radius: rem(10px);
+						z-index: 99;
+
+						.sign {
+							width: rem(150px);
+							margin: 0 rem(25px);
+							padding: rem(10px) 0;
+							border-bottom: 1px solid $bc;
+						}
+					}
+					.disabled {
+						background-color: #ccc;
+					}
+				}
+      }
+
+      .main {
+				margin-top: rem(20px);
+				background-color: #fff;
+
+        .convert_box {
+					width: 100%;
+					height: rem(80px);
+					line-height: rem(60px);
+					padding-top: rem(20px);
+
+					.convert {
+						width: rem(180px);
+						height: rem(60px);
+						text-align: center;
+						color: #fff;
+						float: left;
+						border-top-right-radius: rem(30px);
+						border-bottom-right-radius: rem(30px);
+						background: url('~assets/images/convert-01.png');
+
+					}
+
+					> a {
+						display: block;
+						float: right;
+						color: #666;
+						padding-right: rem(30px);
+						text-decoration: underline;
+					}
+				}
+
+				.box_list {
+					width: 100%;
+					overflow: hidden;
+
+					.list {
+						padding: rem(15px);
+						font-size: 0;
+
+						.item {
+							display: inline-block;
+							width: 50%;
+							padding: rem(15px);
+							border-radius: rem(20px);
+							overflow: hidden;
+
+							> a {
+								position: relative;
+								display: block;
+								width: 100%;
+								height: rem(200px);
+								font-size: rem(28px);
+								color: #fff;
+
+								> img {
+									display: block;
+									width: 100%;
+									height: 100%;
+								}
+
+								> div {
+									position: absolute;
+									left: rem(20px);
+							    white-space: nowrap;
+							    text-overflow: ellipsis;
+							    overflow: hidden;
+							    max-width: rem(200px);
+								}
+
+								.name {
+									top: rem(20px);
+									height: rem(46px);
+									line-height: rem(46px);
+									font-size: rem(30px);
+								}
+
+								.des {
+									top: rem(66px);
+									height: rem(42px);
+									line-height: rem(42px);
+								}
+
+								.inte {
+									bottom: rem(10px);
+									height: rem(40px);
+									line-height: rem(40px);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.award {
+				margin-top: rem(20px);
+				background-color: #fff;
+
+				.convert_box {
+					width: 100%;
+					height: rem(80px);
+					line-height: rem(60px);
+					padding-top: rem(20px);
+
+					.convert {
+						width: rem(180px);
+						height: rem(60px);
+						text-align: center;
+						float: left;
+
+					}
+
+					> a {
+						display: block;
+						float: right;
+						color: #666;
+						padding-right: rem(30px);
+						text-decoration: underline;
+					}
+				}
+
+				.draw	{
+					width: 100%;
+					overflow: hidden;
+
+					.backdrop {
+						position: relative;
+						width: rem(670px);
+						height: rem(460px);
+						margin: rem(40px) rem(40px) 0 rem(40px);
+						background: url('~assets/images/prize-01-1.png');
+						background-size: cover;
+						overflow: hidden;
+
+						.consume {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: rem(60px);
+							line-height: rem(60px);
+							text-align: center;
+							color: #fff;
+							font-size: rem(28px);
+						}
+
+						.carousel {
+							width: rem(610px);
+							height: rem(370px);
+							background: #fff;
+							margin: auto;
+							margin-top: rem(56px);
+							box-shadow:0px 0px 30px #999 inset;
+							overflow: hidden;
+
+							.item_box {
+								width: rem(570px);
+								height: rem(220px);
+								margin: rem(75px) auto;
+
+								.list  {
+
+									.item {
+										position: relative;
+
+										.image {
+											width: 100%;
+											height: 100%;
+											background: url('~assets/images/integral-goods02.png') no-repeat;
+											background-size: 100% 100%;
+
+											> img {
+												display: block;
+												width: 100%;
+												height: 100%;
+											}
+										}
+
+										.info {
+											position: absolute;
+											top: rem(30px);
+											left: rem(50px);
+											width: rem(300px);
+											color: #333;
+
+											div {
+												width: 100%;
+										    white-space: nowrap;
+										    text-overflow: ellipsis;
+										    overflow: hidden;
+											}
+
+											.name {
+												height: rem(54px);
+												line-height: rem(54px);
+												font-size: rem(30px);
+												font-weight: bold;
+											}
+
+											.desc {
+												height: rem(42px);
+												line-height: rem(42px);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					.draw-area {
+						position: relative;
+						width: 100%;
+						height: rem(720px);
+						margin-top: rem(33px);
+						background-color: #fdd727;
+
+						.turnwrap-img {
+							position: absolute;
+							z-index: 99;
+						}
+
+						.turnplate {
+							position: absolute;
+							top: rem(132px);
+							left: rem(169px);
+							z-index: 999;
+							width: rem(455px);
+							height: rem(455px);
+						}
+
+						.draw-btn {
+							position: absolute;
+							top: rem(230px);
+							left: rem(316px);
+							z-index: 99999;
+							width: rem(175px);
+						}
+					}
+
+
+					.btn {
+						width: rem(710px);
+						height: rem(76px);
+						margin: rem(-5px) auto;
+					}
+
+					.win_record {
+						position: relative;
+						width: 100%;
+						height: rem(524px);
+						margin: auto;
+						background-color: #d9170d;
+
+						.win_number {
+							position: absolute;
+							top: rem(65px);
+							left: 50%;
+							margin-left: rem(-181px);
+							width: rem(362px);
+							height: rem(77px);
+							line-height: rem(77px);
+							text-align: center;
+							font-size: rem(30px);
+							background-color: #ffbe04;
+							border-radius: rem(52px);
+							color: #fff;
+						}
+
+						.winbox-wrap {
+							position: absolute;
+							top: rem(175px);
+							left: rem(50px);
+							width: rem(650px);
+							height: rem(260px);
+							border-radius: rem(15rem);
+							background-color: #fff;
+
+							.win_box {
+								position: absolute;
+								top: rem(50px);
+								width: 100%;
+								height: rem(150px);
+								margin-top: rem(10px);
+								padding-left: rem(60px);
+								overflow: hidden;
+
+								.list {
+
+									.item {
+
+										.tel {
+											padding-left: rem(20px);
+											padding-right: rem(20px);
+										}
+									}
+								}
+							}
+						}
+
+					}
+				}
+			}
+    }
+	}
+
+	.member-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+
+    .member{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      width: rem(590px);
+      height: rem(560px);
+			border-radius: rem(10px);
+      background: url('~assets/images/prize-photo-01.png');
+			background-size: cover;
+			transform: translate(-50%, -50%);
+
+			.shop_img {
+				width: rem(200px);
+				height: rem(200px);
+				margin: rem(70px) auto;
+
+				> img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.gain {
+				padding-top: rem(56px);
+				font-size: rem(28px);
+				text-align: center;
+			}
+
+      .abolish {
+        position: absolute;
+        bottom: rem(22px);
+        left: 16%;
+        width: rem(400px);
+				height: rem(80px);
+        line-height: rem(80px);
+        border-radius: rem(10px);
+        text-align: center;
+				font-size: rem(30px);
+				background-color: #febd17;
+
+				> a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					color:#fff;
+				}
+      }
+
+      i.icon {
+      	position: absolute;
+		    left: 50%;
+		    bottom: rem(-150px);
+		    margin-left: rem(-40px);
+		    width: rem(80px);
+		    height: rem(80px);
+		    line-height: rem(80px);
+		    text-align: center;
+		    color: #fff;
+		    font-size: rem(60px);
+		    border-radius: 50%;
+		    border: 1px solid #fff;
+		    cursor: pointer;
+      }
+    }
+	}
+
+	.no_win {
+		position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+
+		.no_photo {
+			position: absolute;
+      top:50%;
+      left: 50%;
+      width: rem(590px);
+      height: rem(560px);
+			border-radius: rem(10px);
+      background: url('~assets/images/prize-photo-02.png');
+			background-size: cover;
+			transform: translate(-50%, -50%);
+
+			.abolish {
+        position: absolute;
+        bottom: rem(22px);
+        left: 16%;
+        width: rem(400px);
+				height: rem(80px);
+        line-height: rem(80px);
+        border-radius: rem(10px);
+        text-align: center;
+				font-size: rem(32px);
+				background-color: #febd17;
+				color: #fff;
+      }
+
+      i.icon {
+      	position: absolute;
+		    left: 50%;
+		    bottom: rem(-150px);
+		    margin-left: rem(-40px);
+		    width: rem(80px);
+		    height: rem(80px);
+		    line-height: rem(80px);
+		    text-align: center;
+		    color: #fff;
+		    font-size: rem(60px);
+		    border-radius: 50%;
+		    border: 1px solid #fff;
+		    cursor: pointer;
+      }
+		}
+	}
+
+	@keyframes turnname {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(1440deg);
+		}
+	}
+
+	@keyframes turnname1 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes turnname2 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(45deg);
+		}
+	}
+
+	@keyframes turnname3 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(90deg);
+		}
+	}
+
+	@keyframes turnname4 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(135deg);
+		}
+	}
+
+	@keyframes turnname5 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(180deg);
+		}
+	}
+
+	@keyframes turnname6 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(225deg);
+		}
+	}
+
+	@keyframes turnname7 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(270deg);
+		}
+	}
+
+	@keyframes turnname8 {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(315deg);
+		}
+	}
+
+
+	.animation-time-pre-control1 {
+		animation: turnname 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-fill-mode: forwards;
+	}
+
+
+	.animation-time-control1 {
+		animation: turnname1 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.animation-time-control2 {
+		animation: turnname2 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.animation-time-control3 {
+		animation: turnname3 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.animation-time-control4 {
+		animation: turnname4 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.animation-time-control5 {
+		animation: turnname5 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.animation-time-control6 {
+		animation: turnname6 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.animation-time-control7 {
+		animation: turnname7 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+	.animation-time-control8 {
+		animation: turnname8 4.5s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+}

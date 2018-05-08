@@ -1,0 +1,257 @@
+@import "~assets/styles/_bootstrap";
+
+.query-credit-form-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+    padding-bottom: rem(130px);
+
+    .container {
+      position: relative;
+
+      .bg {
+        position: relative;
+        width: 100%;
+
+        > img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .box {
+        width: 100%;
+
+        .form-group {
+          background-color: #fff;
+
+          .item {
+            display: flex;
+            align-items: center;
+            padding: rem(22px) rem(15px);
+
+            &:not(:last-child) {
+              border-bottom: 1px solid #ddd;
+            }
+
+            i.icon {
+              flex: 0 0 rem(50px);
+              width: rem(48px);
+              height: rem(48px);
+              line-height: rem(50px);
+              text-align: center;
+              color: #999;
+              font-size: rem(40px);
+              &.user-name {
+                width: rem(36px);
+                height: rem(36px);
+                background: url('~assets/images/credit-report/user-name.png') no-repeat center;
+                background-size: contain;
+              }
+              &.user-phone {
+                width: rem(40px);
+                height: rem(40px);
+                background: url('~assets/images/credit-report/user-phone.png') no-repeat center;
+                background-size: contain;
+              }
+              &.user-id {
+                width: rem(32px);
+                height: rem(32px);
+                background: url('~assets/images/credit-report/user-id.png') no-repeat center;
+                background-size: contain;
+              }
+              &.user-email {
+                width: rem(32px);
+                height: rem(32px);
+                background: url('~assets/images/credit-report/user-email.png') no-repeat center;
+                background-size: contain;
+              }
+            }
+
+            .name {
+              flex: 0 0 rem(160px);
+              width: rem(160px);
+              line-height: rem(50px);
+              padding-left: rem(10px);
+              font-size: rem(28px);
+              color: #333;
+            }
+
+            .content {
+              flex: 1;
+              min-width: 1px;
+
+              .input-item {
+                border: none;
+                display: block;
+                outline: none;
+                font-size: rem(28px);
+                color: #333;
+              }
+            }
+          }
+        }
+
+        .goods-list {
+          padding: rem(30px) rem(20px);
+          .item {
+            position: relative;
+            margin-bottom: rem(30px);
+
+            .image {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+
+            .content {
+              position: absolute;
+              top: rem(80px);
+              left: rem(240px);
+              .look-report {
+                text-decoration: underline;
+                text-underline-position: under;
+              }
+              .pirce {
+                font-size: 0;
+
+                .new {
+                  display: inline-block;
+                  vertical-align: top;
+                  height: rem(56px);
+                  line-height: rem(56px);
+                  font-size: rem(32px);
+                  color: #d32b2a;
+                  font-weight: bold;
+                  padding-right: rem(20px);
+                }
+
+                .old {
+                  display: inline-block;
+                  vertical-align: bottom;
+                  font-size: rem(24px);
+                  color: #fff;
+                  line-height: rem(48px);
+                  text-decoration: line-through;
+                }
+              }
+
+              .text {
+                height: rem(54px);
+                line-height: rem(54px);
+                color: #fff;
+                font-size: rem(24px);
+                text-shadow: rem(4px) rem(4px) rem(20px) rgba(51, 51, 51, .5);
+              }
+            }
+
+            .btn {
+              position: absolute;
+              top: 50%;
+              right: rem(20px);
+              display: block;
+              width: rem(40px);
+              height: rem(40px);
+              margin-top: rem(-20px);
+              background-color: rgba(255, 255, 255, .4);
+              border-radius: 50%;
+
+              &:after {
+                position: absolute;
+                top: 40%;
+                left: 45%;
+                content: '';
+                display: block;
+                width: rem(20px);
+                height: rem(12px);
+                margin-top: rem(-6px);
+                margin-left: rem(-10px);
+                border-left: rem(4px) solid #fff;
+                border-bottom: rem(4px) solid #fff;
+                transform: rotate(-45deg) scale(0);
+                transform-origin: 50% 50%;
+                transition: all .2s ease-in-out;
+              }
+
+              &.on:after {
+                transform: rotate(-45deg) scale(1);
+              }
+            }
+          }
+        }
+      }
+
+      .jump-h5 {
+        position: absolute;
+        top: rem(40px);
+        left: rem(100px);
+        right: rem(100px);
+        display: block;
+        height: rem(240px);
+      }
+    }
+  }
+
+  .footer-fixed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: rem(130px);
+    padding: 0 rem(20px);
+    background-color: #fff;
+    z-index: 2;
+
+    .price {
+      width: rem(160px);
+      font-size: rem(30px);
+      color: #d32b2a;
+      white-space: nowrap;
+    }
+
+    .content {
+      flex: 1;
+      min-height: 1px;
+      min-width: 1px;
+
+      .agree {
+        text-align: center;
+        color: #333;
+        font-size: rem(28px);
+
+        .checkbox-wrappe {
+          margin: 0;
+        }
+      }
+
+      .agree-title {
+        color: #2c74b9;
+        font-size: rem(28px);
+        text-align: center;
+        margin-top: rem(10px);
+      }
+    }
+
+    .query {
+      width: rem(155px);
+      height: rem(70px);
+      line-height: rem(70px);
+      text-align: center;
+      background-color: #d32b2a;
+      color: #fff;
+      font-size: rem(28px);
+      border-radius: rem(10px);
+    }
+  }
+  .checkbox-wrappe .checkbox.checkbox-checked .checkbox-inner {
+    border-radius: 50%;
+    border-color: #dd9d05;
+    background-color: #dd9d05;
+  }
+}

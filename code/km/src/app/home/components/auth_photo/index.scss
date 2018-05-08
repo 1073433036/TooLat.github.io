@@ -1,0 +1,191 @@
+@import "~assets/styles/_bootstrap";
+
+.auth-photo-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .nav {
+        padding: rem(40px) rem(80px) rem(96px);
+        background-color: #01b3f0;
+
+        .list {
+          display: flex;
+          height: rem(14px);
+          padding: 0 rem(17px);
+
+          .item {
+            position: relative;
+            flex: 1;
+            min-width: 1px;
+            background-color: #66d9ff;
+
+            &.on {
+              background-color: #fff;
+
+              &:first-child:before, &:last-child:after {
+                background-color: #fff;
+              }
+
+              &:first-child .name, &:last-child .name {
+                color: #fff;
+              }
+            }
+
+            &:before, &:after {
+              content: '';
+              display: block;
+              width: rem(34px);
+              height: rem(34px);
+              position: absolute;
+              top: 50%;
+              margin-top: rem(-17px);
+              border-radius: 50%;
+              background-color: #66d9ff;
+            }
+
+            &:before {
+              left: rem(-17px);
+            }
+
+            &:after {
+              right: rem(-17px);
+            }
+
+            &:first-child:after, &:last-child:before {
+              background-color: transparent;
+            }
+
+            .name {
+              display: block;
+              height: rem(60px);
+              line-height: rem(60px);
+              position: absolute;
+              left: rem(-17px);
+              right: rem(-17px);
+              top: rem(38px);
+              color: #fff;
+              font-size: rem(30px);
+              text-align: center;
+              color: #cce3ff;
+            }
+
+            &:first-child .name {
+              text-align: left;
+            }
+
+            &:last-child .name {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .form-group {
+
+        .upload {
+          padding: rem(10px) rem(15px);
+          font-size: 0;
+
+          .item {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            padding: rem(10px) rem(5px);
+
+            // &:nth-child(1) .box {
+            //   background: url(~assets/images/identity-just.png) no-repeat center;
+            //   background-size: 100%;
+            // }
+
+            // &:nth-child(2) .box {
+            //   background: url(~assets/images/identity-back.png) no-repeat center;
+            //   background-size: 100%;
+            // }
+
+            // &:nth-child(3) .box {
+            //   background: url(~assets/images/identity-self.png) no-repeat center;
+            //   background-size: 100%;
+            // }
+
+            // &:nth-child(4) .box {
+            //   background: url(~assets/images/identity-bank.png) no-repeat center;
+            //   background-size: 100%;
+            // }
+
+            .box {
+              position: relative;
+              height: rem(220px);
+              font-size: rem(28px);
+              text-align: center;
+              border: 1px solid #ccc;
+
+              .image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                > img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  vertical-align: top;
+
+                  &.w130 {
+                    width: rem(130px);
+                  }
+                }
+              }
+
+              > span {
+                position: absolute;
+                bottom: rem(10px);
+                left: 0;
+                right: 0;
+              }
+
+              .input-item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+              }
+            }
+
+          }
+        }
+
+        .submit-btn {
+          padding-top: rem(40px);
+          text-align: center;
+
+          .btn {
+            display: inline-block;
+            vertical-align: top;
+            width: rem(400px);
+            height: rem(80px);
+            line-height: rem(80px);
+            background-color: #c9c9c9;
+            font-size: rem(36px);
+            color: #fff;
+            border-radius: rem(10px);
+            border: none;
+            outline: none;
+
+            &.active {
+              background-color: #01b3f0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

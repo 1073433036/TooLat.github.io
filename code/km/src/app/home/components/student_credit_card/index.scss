@@ -1,0 +1,237 @@
+
+
+@import "~assets/styles/_bootstrap";
+.studentCreditCard{
+  width: 100%;
+  height: 100%;
+  padding-top: rem(90px);
+  position: relative;
+  > ._v-container > ._v-content {
+    position: relative;
+    padding-top: rem(90px);
+    padding-bottom: rem(20px);
+  }
+  .stu_ad{
+    height:rem(320px);
+    width:100%;
+    img{
+      width:100%;
+      height:100%;
+      overflow:hidden;
+    }
+  }
+  .aplly_wrap{
+    padding-left:rem(30px);
+    background:#ffffff;
+    .narrate{
+      position: absolute;
+      right:rem(30px);
+      color:#999;
+      font-size:rem(23px);
+    }
+    .aplly_list li{
+      &:nth-child(2){
+        border-top:none;
+      }
+      border-top:1px solid #dddddd;
+      border-bottom:1px solid #dddddd;
+      height: rem(236px);
+      padding:rem(45px) 0;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-box-align: center;
+      -moz-box-align: justify;
+      -ms-flex-align: center;
+      justify-content: space-between;
+      .bank_img{
+        width:rem(225px);
+        height:rem(145px);
+        overflow:hidden;
+        margin-right:rem(20px);
+        img{
+          width:100%;
+          height:100%;
+          overflow:hidden;
+        }
+      }
+      .bank_info{
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        position: relative;
+        dt {
+          height:rem(56px);
+          line-height:rem(56px);
+          font-size:rem(30px);
+          color:#333333;
+        }
+        dd{
+          max-width: rem(300px);
+          height:rem(36px);
+          line-height:rem(36px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size:rem(24px);
+          color:#999999;
+          vertical-align: middle;
+        }
+        .tagflag{
+          vertical-align: middle;
+          width:rem(10rem);
+          height:rem(10rem);
+          display:inline-block;
+          border-radius:100%;
+          background:#999999;
+          margin-right: rem(10rem);
+        }
+      }
+      .goapply{
+        width:rem(153px);
+        position: relative;
+        .apply_btn{
+          margin-top:rem(44px);
+          width:rem(120px);
+          text-align:center;
+          height:rem(52px);
+          line-height:rem(52px);
+          margin-top: rem(20px);
+          display:inline-block;
+          border-radius:rem(30px);
+          border:1px solid #03b2f1;
+          font-size:rem(24px);
+          color:#03b2f1;
+        }
+      }
+    }
+
+  }
+
+  .remark_wrap{
+    padding-left:rem(30px);
+    margin-top: rem(17px);
+    background:#ffffff;
+    padding-bottom: rem(30px);
+    p{
+      font-size:rem(24px);
+      color:#999;
+      height:rem(40px);
+      line-height:rem(40px);
+    }
+  }
+  .aplly_title{
+    height:rem(95px);
+    line-height:rem(95px);
+    font-size:rem(30px);
+    color:#333333;
+    padding-left:rem(20px);
+    background:url(~assets/images/title_icon.png) no-repeat 0 center;
+    background-size:rem(6rem) rem(31rem);
+  }
+  .qrcode_btn,.share_btn{
+    width:rem(100px);
+    height:rem(45px);
+    position: absolute;
+    right:0;
+    bottom:rem(-30px);
+    text-align: center;
+    line-height:rem(45px);
+    background:#03b2f1;
+    color:#ffffff;
+    font-size:rem(24px);
+    border-radius:rem(10px);
+    margin-right: rem(30px);
+  }
+  .share_btn{
+    background:#f97e38;
+  }
+
+  .text {
+    margin: rem(20px) 0;
+    padding: 0 rem(20px);
+    color: #999;
+    font-size: 12px;
+
+    >p {
+      &:not(:first-child) {
+        margin-top: rem(15px);
+      }
+    }
+  }
+
+  .layer {
+    position: relative;
+    z-index: 2001;
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(590px);
+      height: rem(350px);
+      margin-top: rem(-175px);
+      margin-left: rem(-295px);
+      padding-top: rem(260px);
+      background: url(~assets/images/card-share-layer.png) no-repeat;
+      background-size: 100%;
+      text-align: center;
+      font-size: 0;
+      z-index: 2001;
+
+      > a {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(240px);
+        line-height: rem(62px);
+        font-size: rem(32px);
+        margin: 0 rem(15px);
+        border-radius: rem(40px);
+        overflow: hidden;
+
+        &:first-child {
+          border: 1px solid $bc;
+          color: #999;
+        }
+
+        &:last-child {
+          border: 1px solid #01b3f0;
+          background-color: #01b3f0;
+          color: #fff;
+        }
+      }
+    }
+
+    .share-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+   .header-back{
+        display: block !important;
+    }
+
+}

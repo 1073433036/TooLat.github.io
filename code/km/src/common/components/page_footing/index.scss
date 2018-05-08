@@ -1,0 +1,117 @@
+@import "~assets/styles/_bootstrap";
+
+.page_footing {
+
+  .controller {
+
+    .footer {
+			padding: 0 rem(40px);
+			height: rem(254px);
+			background-color: #eee;
+			overflow: hidden;
+
+			.kameng {
+				margin-top: rem(68px);
+				width: 100%;
+				height: rem(53px);
+
+				.top {
+					position: relative;
+					margin: auto;
+					width: rem(200px);
+					height: rem(53px);
+					line-height: rem(43px);
+					font-size: rem(24px);
+					color: #000;
+
+					.logo {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: rem(43px);
+						height: rem(43px);
+						border-radius: rem(10px);
+
+						> img {
+							width: 100%;
+							height: 100%;
+							border-radius: rem(10px);
+						}
+					}
+
+					.title {
+						padding-left: rem(63px);
+
+					}
+				}
+			}
+
+			.service {
+				position: relative;
+				margin-top: rem(26px);
+				width: 100%;
+				height: rem(40px);
+				line-height: rem(40px);
+				font-size: rem(24px);
+				color: #999;
+        transform: scale(0.8);
+
+				.left {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				.right {
+					position: absolute;
+					top: 0;
+					right: 0;
+
+					> i {
+						display: inline-block;
+						width: rem(28px);
+						height: rem(32px);
+						background: url('~assets/images/core-logo02.png') no-repeat;
+						background-size: 100%;
+						vertical-align: middle;
+					}
+				}
+			}
+
+			.info {
+				position: relative;
+				height: rem(40px);
+				line-height: rem(40px);
+				font-size: rem(24px);
+				color: #999;
+        transform: scale(0.8);
+
+				.personal {
+					position: absolute;
+					top: 0;
+					left: rem(20px);
+
+					> i {
+						display: inline-block;
+						width: rem(40px);
+						height: rem(16px);
+						background: url('~assets/images/core-logo01.png') no-repeat;
+						background-size: 100%;
+						vertical-align: middle;
+					}
+
+					.China {
+						vertical-align: middle;
+					}
+				}
+
+				.sites {
+					position: absolute;
+					top: 0;
+					left: rem(214px);
+				}
+			}
+		}
+  }
+
+}

@@ -1,0 +1,118 @@
+@import "~assets/styles/_bootstrap";
+
+.dates-page {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
+
+  .layer {
+    height: 100%;
+
+    &:before {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 1000;
+    }
+
+    .inner {
+      position: absolute;
+      bottom: 0;
+      padding: 0 rem(30px);
+      width: 100%;
+      height: rem(340px);
+      background: #fff;
+      box-shadow: 0 0 rem(10px) rgba(0, 0, 0, .3);
+      z-index: 1000;
+
+      .head {
+        padding: rem(20px) 0;
+        height: rem(80px);
+
+        .left {
+          display: inline-block;
+
+          > span {
+            color: #333;
+            cursor: pointer;
+          }
+        }
+
+        .right {
+          position: absolute;
+          top: rem(30px);
+          right: 0;
+          display: inline-block;
+
+          .item {
+            margin: 0 rem(10px);
+            padding: rem(10px) rem(20px);
+            color: #fff;
+            text-align: center;
+            border-radius: rem(10px);
+            background: #01b5f1;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .body {
+        padding: rem(5px) 0;
+        height: rem(260px);
+
+        .select-group {
+          height: 100%;
+
+          &:after {
+            display: block;
+            clear: both;
+            content: ' ';
+          }
+
+          .child {
+            height: 100%;
+          }
+
+          .list {
+            padding-bottom: rem(20px);
+            text-align: center;
+
+            .item {
+              height: rem(60px);
+              line-height: rem(60px);
+
+              &.act {
+                color: #01b5f1;
+              }
+            }
+          }
+
+          &.item-1 .child {
+            width: 100%;
+          }
+
+          &.item-2 .child {
+            float: left;
+            width: 50%;
+          }
+
+          &.item-3 .child {
+            float: left;
+            width: calc(100% / 3);
+          }
+        }
+      }
+    }
+
+
+  }
+}

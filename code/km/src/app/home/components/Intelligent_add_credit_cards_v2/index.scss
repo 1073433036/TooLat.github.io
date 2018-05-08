@@ -1,0 +1,242 @@
+@import "~assets/styles/_bootstrap";
+
+.IntelligentAddCreditCardsV2 {
+  height: 100%;
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .basic_info_-wrapper {
+    .btn {
+      width: rem(710px);
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      font-size: rem(32px);
+      color: #fff;
+      margin: rem(80px) rem(20px) 0 rem(20px);
+      background-color: #c9c9c9;
+      border: 1px solid #c9c9c9;
+      border-radius: rem(10px);
+
+      &.on {
+        background-color: #01b3f0;
+        border: 1px solid #01b3f0;
+      }
+    }
+    .info_header {
+      padding: 0 rem(20px);
+      display:flex;
+      position: relative;
+      margin-top: rem(24px);
+      height: rem(40px);
+      line-height: rem(40px);
+      background: #f6f6f9;
+      span{
+        flex:1;
+      }
+
+      .text{
+        position: absolute;
+        right:rem(50px);
+        color:#666;
+        font-size: rem(20px);
+      }
+    }
+
+    .info_box {
+      margin-top: rem(20px);
+
+      .info {
+        font-size: rem(28px);
+        background: #fff;
+        margin-top:rem(20px);
+
+        .detail_list {
+          position: relative;
+          height: rem(126px);
+          line-height: rem(126px);
+          font-size: rem(28px);
+          border-bottom: 1px solid $bc;
+          color: #000;
+          overflow: hidden;
+          padding: 0 rem(20px);
+
+          .query {
+            display: inline-block;
+            margin-left: rem(20px);
+            width: rem(40px);
+            height: rem(46px);
+            margin-top: rem(50px);
+            position: absolute;
+            top: rem(-5px);
+            // left: rem(170px);
+            background: url('~assets/images/card_manage/query.png') no-repeat;
+            background-size: 100%;
+
+          }
+          em {
+            display: inline-block;
+            float: left;
+            margin-right: rem(20px);
+            width: rem(40px);
+            height: rem(46px);
+            margin-top: rem(48px);
+
+              &.cvn2 { 
+                background: url('~assets/images/Intelligence/4.png') no-repeat;
+                background-size: 100%;
+             } 
+             &.validity { 
+                background: url('~assets/images/Intelligence/5.png') no-repeat;
+                background-size: 100%;
+             } 
+             &.issuingBank { 
+                background: url('~assets/images/Intelligence/6.png') no-repeat;
+                background-size: 100%;
+             } 
+             &.billDate { 
+                background: url('~assets/images/Intelligence/7.png') no-repeat;
+                background-size: 100%;
+             } 
+             &.dueDate { 
+                background: url('~assets/images/Intelligence/8.png') no-repeat;
+                background-size: 100%;
+             } 
+             &.phone { 
+                background: url('~assets/images/Intelligence/9.png') no-repeat;
+                background-size: 100%;
+             }
+             &.refresh { 
+                background: url('~assets/images/Intelligence/10.png') no-repeat;
+                background-size: 100%;
+             } 
+             &.code { 
+                background: url('~assets/images/Intelligence/11.png') no-repeat;
+                background-size: 100%;
+             }
+             &.imgcode { 
+                background: url('~assets/images/Intelligence/10.png') no-repeat;
+                background-size: 100%;
+                position: absolute;
+                right: 0;
+             }
+          }
+
+          .date {
+            color:#5d5a5a;
+            position: absolute;
+            right: rem(50px);
+          }
+
+          .people {
+            float: left;
+          }
+
+          .relative {
+            color: #b5b5b5;
+          }
+
+          input.input-item {
+            position: absolute;
+            top: rem(26px);
+            right: rem(50px);
+            width: rem(400px);
+            height: rem(70px);
+            font-size: rem(28px);
+            text-align: right;
+            border: none;
+            outline: none;
+            &::-webkit-input-placeholder { color: #c3c3c3; }
+            &::-moz-placeholder { color: #c3c3c3; }
+            &:-moz-placeholder { color: #c3c3c3; }
+            &:-ms-input-placeholder { color: #c3c3c3; }
+            &.school {
+              right: rem(65px);
+              &::-webkit-input-placeholder { color: #000; }
+              &::-moz-placeholder { color: #000; }
+              &:-moz-placeholder { color: #000; }
+              &:-ms-input-placeholder { color: #000; }
+            }
+            &.verificationCode {
+              right: rem(225px);
+              width: rem(200px);
+            }
+            &:disabled { background-color: #fff; }
+          }
+
+
+          .arrow {
+            position: absolute;
+            top: rem(45px);
+            right: rem(20px);
+            width: rem(18px);
+            height: rem(32px);
+            background: url('~assets/images/credit-card/arrow-left-little.png') no-repeat center / 100% 100%;
+          }
+
+        }
+      }
+    }
+  }
+  .imgcode_list {
+    position:relative;
+  }
+  .imgcode_input {
+    position: absolute;
+    top: rem(22px);
+    left: rem(15px);
+    border:rem(1px) solid #ccc;
+    border-radius:rem(10px);
+    width:rem(402px);
+    height:rem(81px);
+    padding:rem(15px);
+  }
+
+  .ram_Code {
+    position:absolute;
+    right: rem(100px);
+    top: rem(32px);
+    color:#fff;
+    background:#ccc;
+    border:none;
+    width: rem(140px);
+    height: rem(61px);
+    line-height: rem(61px);
+    border-radius: rem(10px); 
+    text-align: center;
+  }
+
+  .getCode {
+    position:absolute;
+    right: rem(30px);
+    top: rem(32px);
+    color:#fff;
+    background:#ffa50d;
+    border:none;
+    width: rem(180px);
+    height: rem(61px);
+    border-radius: rem(10px); 
+    padding: 0 rem(5px);
+  }
+  .getCode.active{
+    background-color: #c9c9c9;
+  }
+
+  .getCode_input {
+    border: none;
+    height: rem(126px);
+    line-height: rem(126px);
+    position: absolute;
+    right:rem(120px);
+  }
+
+}
+.extend-btn {
+  display:none;
+}
+
+.header-back{
+  display:block !important;
+}

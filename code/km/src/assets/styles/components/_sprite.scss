@@ -1,0 +1,6 @@
+.sp {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@include sprites($spritesheet-sprites);

@@ -1,0 +1,46 @@
+@import "~assets/styles/_bootstrap";
+
+.navbar-page{
+  background-color: #fff;
+
+  .navlist{
+    width: 100%;
+    height: rem(89px);
+
+    .ullist{
+      height: 100%;
+      display: flex;
+      li{
+        position: relative;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        height: 100%;
+        color: #27b9f1;
+        font-size: rem(28px);
+      }
+    }
+
+    .spanline{
+      position: absolute;
+      left: 0;
+      color: #eee;
+      font-size: rem(3px);
+
+    }
+
+    em {
+      padding: 0 rem(15px);
+    }
+
+    .litext{
+      box-sizing: border-box;
+      display: line-block;
+      height: rem(89px);
+      line-height: rem(92px);
+      border-bottom: rem(2px) solid #01b3f0;
+    }
+  }
+}

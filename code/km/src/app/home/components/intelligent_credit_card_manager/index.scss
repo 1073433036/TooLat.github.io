@@ -1,0 +1,267 @@
+@import "~assets/styles/_bootstrap";
+
+.intelligentCreditCardManager {
+  height: 100%;
+  display: flex;
+.fontcolor{
+  color: #d2d2d2;
+}
+  .bg-wiite{
+    background: #fff;
+    text-align: center !important;
+    padding: 0 rem(5px) !important;
+    border-radius: rem(5px);
+  }
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .card_list {
+    flex: 1;
+    // margin: rem(25px);
+    padding: rem(20px) rem(20px) 0 rem(20px) ;
+    background: url(~assets/images/card_manage/bg1.png) no-repeat;;
+    background-size:100% !important;
+    color: #fff;
+    border-radius: rem(12px) ;
+    margin-top: rem(20px);
+    margin-left: rem(20px);
+    margin-right: rem(20px);
+
+    .logo {
+      width: rem(88px);
+      position: absolute;
+      top: rem(30px);
+      left:rem(30px);
+      background: #fff;
+      border-radius: rem(10px);
+      img {
+        background-size: 100%;
+      }
+    }
+
+    .card_detail {
+      flex: 4;
+      padding-left:rem(137px);
+      .red{
+        color: #ea766d;
+      }
+      .green{
+        color: #31bd64;
+      }
+      .delect{
+        position: absolute;
+        right: rem(20px);
+        i{
+          width:rem(30px);
+          height:rem(50px);
+          display:inline-block;
+          position:absolute;
+          right:rem(72px);
+          top:rem(5px);
+          background:url(~assets/images/card_manage/delect.png) no-repeat;
+          background-size:100%;
+
+        }
+      }
+
+      ul {
+        li {
+            display: flex;
+
+            &:last-child {
+              margin-top: rem(20px);
+              margin-bottom: rem(10px);
+            }
+          margin-bottom: rem(5px);
+           p {
+              flex: 1;
+              height: rem(46px);
+              line-height: rem(46px);
+              span {
+                text-align: right;
+                padding-left: rem(14px);
+              }
+           }
+        }
+      }
+    }
+
+    .card-bottom {
+      border-top: rem(1px) dashed #f3f5f7;
+      display: flex;
+      div {
+        flex: 1;
+        position:relative;
+      }
+      p {
+
+        padding: rem(10px) rem(10px) rem(10px) rem(50px);
+        width: rem(180px);
+        height: rem(50px);
+        // line-height: rem(50px);
+        border-radius: rem(15px);
+        border: rem(1px) solid #fff;
+        margin: rem(25px) 0;
+        margin-left: rem(20px);
+
+        span {
+          width: rem(110px);
+          position: absolute;
+          width: 80%;
+          top:rem(2px);
+        }
+        .msg_icon{
+            width:rem(30px);
+            height:rem(32px);
+            display:inline-block;
+            position:absolute;
+            left:rem(12px);
+            z-index: 10000;
+            top:rem(5px);
+        }
+        .approve {
+           background:url(~assets/images/card_manage/select.png) no-repeat;
+           background-size:100%;
+        }
+        .list {
+          background:url(~assets/images/card_manage/add.png) no-repeat;
+          background-size:100%;
+        }
+        .refund {
+          background:url(~assets/images/card_manage/pay.png) no-repeat;
+          background-size:100%;
+        }
+
+      }
+    }
+
+  }
+
+  .card_list2 {
+    background: url(~assets/images/card_manage/bg2.png) no-repeat;
+    background-size:102%;
+  }
+
+  .submit_add {
+    width: rem(650px);
+    margin:rem(60px) auto;
+    text-align: center;
+    padding:rem(35px) 0;
+    background:#fff;
+    border-radius: rem(15px);
+    border: rem(2px) dashed #f3f5f7;
+    font-size: rem(32px);
+    border: rem(1px) dashed #b0b0b0;
+    .sp-add {
+      width: rem(45px);
+      height: rem(45px);
+      margin-right: rem(30px);
+    }
+  }
+
+  .tip-wrapper {
+    margin: rem(70px) 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    ul.step {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 rem(40px);
+
+      > li {
+        position: relative;
+        width: rem(170px);
+        height: rem(60px);
+        line-height: rem(60px);
+        font-size: rem(24px);
+        color: #fff;
+        text-indent: rem(44px);
+        background: linear-gradient(#93e2fe, #0db5f2);
+        border-radius: rem(10px);
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: rem(12px);
+          transform: translateY(-50%);
+          content: '';
+        }
+
+        &:not(:last-child) {
+          &::after {
+            position: absolute;
+            top: 50%;
+            right: rem(-56px);
+            transform: translateY(-50%);
+            content: '';
+            width: rem(32px);
+            height: rem(36px);
+            background: url(~assets/images/intelligent_generation/arrow.png) no-repeat center / 100% 100%;
+          }
+        }
+
+        &:first-child {
+          &::before {
+            width: rem(26px);
+            height: rem(30px);
+            background: url(~assets/images/intelligent_generation/authentication.png) no-repeat center / 100% 100%;
+          }
+        }
+
+        &:nth-child(2) {
+          text-indent: rem(50px);
+
+          &::before {
+            width: rem(24px);
+            height: rem(24px);
+            background: url(~assets/images/intelligent_generation/subscribe.png) no-repeat center / 100% 100%;
+          }
+        }
+
+        &:last-child {
+          text-indent: rem(50px);
+
+          &::before {
+            width: rem(30px);
+            height: rem(30px);
+            background: url(~assets/images/intelligent_generation/watch-list.png) no-repeat center / 100% 100%;
+          }
+        }
+      }
+    }
+
+    ul.step-text {
+      margin-top: rem(20px);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 rem(20px);
+
+      > li {
+        color: #333;
+        font-size: rem(24px);
+      }
+    }
+  }
+
+}
+.extend-btn {
+  display:none;
+}
+
+.header-back{
+  display:block !important;
+}
+.ad-print{
+  padding: rem(18px);
+  background: #fff;
+  .title{
+    font-size: rem(24px);
+    text-align: center;
+    margin-bottom: rem(10px);
+  }
+  .sm-title{
+    font-size: rem(22px);
+  }
+}

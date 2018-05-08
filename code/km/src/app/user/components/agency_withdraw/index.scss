@@ -1,0 +1,126 @@
+@import "~assets/styles/_bootstrap";
+
+.agency_withdraw-page {
+	height: 100%;
+	background: #edf0f0;
+
+	.header-page {
+		background: url('~assets/images/wallet-header.png') no-repeat;
+	}
+
+	.wrapper {
+		padding: rem(90px) 0;
+		height: 100%;
+
+		.controller {
+
+			.main {
+				margin-top: rem(20px);
+
+				.list {
+
+					.item {
+						position: relative;
+						height: rem(238px);
+						background-color: #fff;
+						border-bottom: 1px solid $bc;
+
+						> i {
+							position: absolute;
+							top: rem(100px);
+							right: rem(30px);
+						}
+
+						.left {
+							position: absolute;
+							top: rem(48px);
+							left: rem(20px);
+							width: rem(200px);
+							font-size: rem(32px);
+							color: #333;
+						}
+
+						.middle {
+							position: absolute;
+							top: rem(48px);
+							left: rem(240px);
+
+							.name {
+								font-size: rem(32px);
+								color: #333;
+							}
+
+							.number {
+								padding-top: rem(20px);
+								font-size: rem(32px);
+								color: #666;
+							}
+
+							.day {
+								padding-top: rem(20px);
+								color: #999;
+							}
+						}
+					}
+				}
+			}
+
+			.money {
+				padding: 0 rem(20px);
+				width: 100%;
+				height: rem(100px);
+				line-height: rem(100px);
+				font-size: rem(32px);
+
+				.withdraw {
+					padding-left: rem(50px);
+					color: #01b3f0;
+				}
+			}
+
+			.extract {
+				padding: rem(34px) rem(20px);
+				background-color: #fff;
+				border-bottom: 1px solid $bc;
+
+				.sum {
+					font-size: rem(32px);
+					clear: #000;
+				}
+
+				.input {
+					position: relative;
+					margin-top: rem(34px);
+					margin-bottom: rem(20px);
+					height: rem(50px);
+
+					> input {
+						position: absolute;
+						top: rem(8px);
+						left: rem(50px);
+						height: 100%;
+						font-size: rem(34px);
+						border: none;
+					}
+
+					.symbol {
+						font-size: rem(50px);
+						color: #000;
+					}
+				}
+			}
+
+			.btn {
+				margin: rem(190px) auto;
+				width: rem(652px);
+				height: rem(104px);
+				line-height: rem(104px);
+				text-align: center;
+				color: #fff;
+				border-radius: rem(10px);
+				background-color: #01b3f0;
+			}
+		}
+	}
+
+}

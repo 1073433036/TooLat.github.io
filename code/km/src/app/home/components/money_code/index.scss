@@ -1,0 +1,102 @@
+@import "~assets/styles/_bootstrap";
+
+.moneycode-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #3e4350;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+      padding: rem(30px);
+
+      .box {
+        position: relative;
+        padding-top: rem(50px);
+        border-radius: rem(10px);
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+
+        &.wechat {
+          background-color: #429056;
+        }
+
+        &.alipay {
+          background-color: #42aadf;
+        }
+
+        &:before, &:after {
+          display: block;
+          content: '';
+          width: rem(40px);
+          height: rem(40px);
+          position: absolute;
+          bottom: rem(93px);
+          border-radius: 50%;
+          background-color: #3e4350;
+          z-index: 2;
+        }
+
+        &:before {
+          left: rem(-20px);
+        }
+
+        &:after {
+          right: rem(-20px);
+        }
+
+        .title {
+          height: rem(54px);
+          line-height: rem(54px);
+          font-size: rem(36px);
+          margin-bottom: rem(15px);
+          font-weight: bold;
+        }
+
+        .text {
+          line-height: rem(42px);
+          padding: 0 rem(60px);
+          font-size: rem(28px);
+        }
+
+        .code {
+          padding-top: rem(20px);
+          padding-bottom: rem(30px);
+
+          .image {
+            display: inline-block;
+            vertical-align: top;
+            width: rem(310px);
+            height: rem(310px);
+            background-color: #fff;
+
+            > img {
+              display: block;
+              vertical-align: top;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .money {
+          line-height: rem(70px);
+          font-size: rem(60px);
+          padding-bottom: rem(37px);
+        }
+
+        .save {
+          display: block;
+          line-height: rem(113px);
+          border-top: 1px solid $bc;
+          background-color: #fff;
+          color: #01b3f0;
+          font-size: rem(36px);
+        }
+      }
+    }
+  }
+}
+

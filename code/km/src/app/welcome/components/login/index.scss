@@ -1,0 +1,206 @@
+@import "~assets/styles/_bootstrap";
+
+.login-page {
+  position: relative;
+  height: 100%;
+
+  ._v-container>._v-content {
+    height: 100%;
+
+  }
+  .wrapper {
+    position: relative;
+    height: 100%;
+
+    .company-logo {
+      position: absolute;
+      top: rem(120px);
+      left: 0;
+      width: 100%;
+      text-align: center;
+
+      .image {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(154px);
+        height: rem(154px);
+        // border: rem(10px) solid #464a4d;
+        // border-radius: 50%;
+        // overflow: hidden;
+
+        > img {
+          vertical-align: top;
+        }
+			}
+		}
+
+		.KaMun {
+			position: absolute;
+      top: rem(320px);
+      left: 0;
+      width: 100%;
+			text-align: center;
+
+			.photo {
+				display: inline-block;
+        vertical-align: top;
+        width: rem(435px);
+        height: rem(97px);
+        overflow: hidden;
+			}
+		}
+
+    .login-box {
+      position: absolute;
+      top: rem(480px);
+      left: rem(50px);
+      right: rem(50px);
+      padding: 0 rem(60px) rem(30px) rem(60px);
+      background-color: rgba(255, 255, 255, .3);
+      border-radius: rem(10px);
+
+      .form-group {
+
+        ul.list {
+          padding-bottom: rem(85px);
+
+          li.item {
+            padding-top: rem(44px);
+            border-bottom: 1px solid rgba(225, 225, 225, .5);
+
+            .content {
+              position: relative;
+              height: rem(70px);
+              padding-left: rem(70px);
+
+              i.icon {
+                display: block;
+                width: rem(60px);
+                height: rem(70px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: rem(70px);
+                text-align: center;
+                font-size: rem(40px);
+                color: #fff;
+
+                &:before {
+                  color: #fff;
+                }
+              }
+
+              > input {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: rem(28px);
+                color: #fff;
+
+                &::placeholder {
+                  color: #e1e1e1;
+                }
+              }
+
+              a.getpass {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                display: block;
+                height: rem(70px);
+                line-height: rem(70px);
+                color: #feca30;
+                font-size: rem(28px);
+							}
+
+							.code {
+								position: absolute;
+                right: 0;
+                bottom: rem(14px);
+
+								.phone-code {
+									width: rem(190px);
+									height: rem(64px);
+									text-align: center;
+									line-height: rem(64px);
+									color: #fff;
+									font-size: rem(28px);
+									border-radius: rem(15px);
+									background-color: #ff8b1b;
+
+									&.active {
+                    background-color: #c9c9c9;
+									}
+								}
+							}
+
+              .getcode {
+                position: absolute;
+                right: 0;
+                bottom: rem(14px);
+                height: rem(64px);
+                line-height: rem(64px);
+                border-radius: rem(10px);
+								overflow: hidden;
+
+                button {
+                  padding: 0 rem(20px);
+                  background-color: #ff8b1b;
+                  color: #fff;
+
+                  &.active {
+                    background-color: #c9c9c9;
+									}
+                }
+              }
+            }
+          }
+        }
+
+        .submit-btn {
+          padding-bottom: rem(28px);
+
+          .btn {
+            display: block;
+            width: 100%;
+            height: rem(82px);
+            border: none;
+            outline: none;
+            font-size: rem(32px);
+            color: #fff;
+            background-color: #c9c9c9;
+            border-radius: rem(10px);
+
+            &.on {
+              background: linear-gradient(to right, #ffa40c, #fecb31);
+            }
+          }
+        }
+      }
+
+      .go-register {
+        height: rem(45px);
+        line-height: rem(45px);
+        text-align: center;
+        font-size: rem(28px);
+        color: #fff;
+
+        > a {
+          color: #feca30;
+        }
+      }
+    }
+
+    .regsiter-btn {
+      position: absolute;
+      top: rem(960px);
+      width: 100%;
+      text-align: center;
+      font-size: rem(26px);
+      color: #feca30;
+    }
+  }
+}

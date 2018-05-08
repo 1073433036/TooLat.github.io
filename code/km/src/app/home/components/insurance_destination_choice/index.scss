@@ -1,0 +1,78 @@
+
+
+@import "~assets/styles/_bootstrap";
+.insuranceDestinationChoice {
+  position: relative;
+
+  .confirm {
+    position: absolute;
+    top: rem(-66px);
+    z-index: 10000;
+    color: #fff;
+    right:rem(30px);
+
+  }
+  .destination_list {
+    margin-top: rem(94px);
+    background: #fff;
+  }
+  .item {
+    font-size: rem(28px);
+    color: #333;
+    display: flex;
+    padding:rem(20px);
+    border: rem(1px) solid #eeeeee;
+    margin-top: rem(-1px);
+    p {
+      flex: 1;
+      height: rem(100px);
+      line-height: rem(100px);
+      color: #c00;
+      text-align: left;
+    }
+
+    .price {
+      text-align: right;
+
+      .select {
+        width:rem(50px);
+        height:rem(50px);
+        display:inline-block;
+        position:absolute;
+        right:rem(10px);
+        background:url(~assets/images/insurance_order/circle.png) no-repeat;
+        background-size:100%;
+        z-index: 10000;
+        top:rem(20px);
+      }
+    }
+
+    .name {
+      color: #333;
+      position: relative;
+
+      img{
+        width: rem(90px);
+        height: rem(90px);
+        margin-right: rem(20px);
+        position: absolute;
+        top: rem(10px);
+      }
+    }
+
+    &.active {
+      p{
+        i{
+          background:url(~assets/images/insurance_order/ok.png) no-repeat !important;
+          background-size:100% !important;
+
+        }
+      }
+    }
+  }
+
+  .header-back{
+    display: block !important;
+  }
+
+}

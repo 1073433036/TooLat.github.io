@@ -1,0 +1,289 @@
+@import "~assets/styles/_bootstrap";
+
+.perfect_insure_message-page {
+  height: 100%;
+  background: #eeeff1;
+  overflow-x: hidden;
+
+  .wrapper {
+  	height: 100%;
+    padding-top: rem(90px);
+
+    .swiper-container{
+	    width: 100%;
+	    height: 100%;
+
+	    .swiper-slide {
+	    	height: auto;
+	    }
+		}
+
+    .container {
+			padding-bottom: rem(500px);
+
+      .main {
+
+				.tips {
+					position: relative;
+					height: rem(60px);
+					line-height: rem(60px);
+					padding-left: rem(64px);
+					overflow: hidden;
+					background-color: #2d3940;
+
+					i.icon {
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						width: rem(64px);
+						height: rem(60px);
+						line-height: rem(60px);
+						text-align: center;
+						color: #fff;
+						font-size: rem(32px);
+						background-color: #2d3940;
+					}
+
+					.notice {
+						position: absolute;
+						top: 0;
+						left: rem(64px);
+						width: 100%;
+						height: rem(60px);
+						overflow: hidden;
+
+						.marquee {
+							height: rem(60px);
+							word-break:keep-all;
+							white-space:nowrap;
+							font-size: rem(24px);
+							color: #fff;
+							text-align: left;
+							animation: marquee 18s linear infinite;
+						}
+
+						@keyframes marquee {
+							0% {
+								transform: translateX(100%);
+							}
+							100% {
+								transform: translateX(-100%);
+							}
+						}
+					}
+				}
+
+				.box {
+					padding: rem(32px) rem(22px);
+					background-color: #fff;
+					border-bottom: 1px solid $bc;
+
+					&.on {
+						border-top: 1px solid $bc;
+						margin-top: rem(20px);
+					}
+
+					.call {
+						position: relative;
+						font-size: rem(32px);
+						color: #000;
+
+						> input {
+							float: right;
+							height: rem(50px);
+							text-align: right;
+							border: none;
+
+							&.readonly {
+						    padding-right: rem(20px);
+							}
+						}
+
+						.input {
+							position: absolute;
+							top: 0;
+							left: rem(240px);
+							text-align: left;
+						}
+
+						.image-box {
+							position: absolute;
+							top: rem(-34px);
+							right: 0;
+							width: rem(400px);
+							height: rem(116px);
+							line-height: rem(116px);
+							padding-right: rem(40px);
+							text-align: right;
+							font-size: rem(28px);
+							color: #999;
+							white-space: nowrap;
+
+							&.on {
+								color: #333;
+							}
+						}
+
+						.phone-code {
+							position: absolute;
+							top: 50%;
+							right: 0;
+							width: rem(180px);
+							height: rem(74px);
+							line-height: rem(74px);
+							margin-top: rem(-37px);
+							text-align: center;
+							font-size: rem(26px);
+							color: #fff;
+							border-radius: rem(10px);
+							background-color: #ffa50d;
+
+							&.active {
+								background: #c9c9c9;
+							}
+						}
+
+						.right{
+							float: right;
+						}
+
+						.name {
+							padding-left: rem(20px);
+							vertical-align: middle;
+							font-size: rem(28px);
+						}
+					}
+				}
+
+				.insure-people {
+					padding: rem(42px) rem(22px);
+					background-color: #fff;
+			    border-top: 1px solid #e8e8e8;
+    			border-bottom: 1px solid #e8e8e8;
+
+    			&:not(:first-child) {
+    				margin-top: rem(20px);
+    			}
+
+					.people {
+
+						.name {
+							font-size: rem(30px);
+					    font-weight: bold;
+					    color: #333;
+						}
+					}
+
+					.message {
+						position: absolute;
+						top: 0;
+						left: 0;
+						color: #999;
+					}
+
+					.fit {
+						position: absolute;
+						top: 0;
+						right: 0;
+						color: #000;
+
+						.checkbox-wrappe {
+							margin: 0;
+						}
+					}
+				}
+
+				.read {
+					position: relative;
+					margin-top: rem(50px);
+					margin-bottom: rem(26px);
+					height: rem(35px);
+					text-align: center;
+
+					.checkbox-wrappe {
+						margin: 0;
+					}
+
+					.statement {
+						color: #3dbcf0;
+					}
+				}
+
+				.btn {
+					display: block;
+					margin: auto;
+					width: rem(710px);
+					height: rem(92px);
+					line-height: rem(92px);
+					text-align: center;
+					font-size: rem(32px);
+					color: #fff;
+					border: none;
+					border-radius: rem(10px);
+					background-color: #2ea7e0;
+
+					&.on {
+						background-color: #c1c1c1;
+					}
+				}
+			}
+    }
+	}
+
+	.insure-statement {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.5);
+		z-index: 999999;
+
+		.box {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: rem(600px);
+			height: rem(900px);
+			margin-top: rem(-450px);
+			margin-left: rem(-300px);
+			background-color: #fff;
+			border-radius: rem(10px);
+
+			.text {
+				padding: rem(20px) rem(40px) rem(30px) rem(50px);
+				width: 100%;
+
+				> p {
+					margin-top: rem(30px);
+				}
+			}
+		}
+
+		.close {
+			position: absolute;
+			bottom: rem(100px);
+			left: rem(270px);
+			margin: auto;
+			width: rem(220px);
+			height: rem(80px);
+			font-size: rem(32px);
+			line-height: rem(80px);
+			text-align: center;
+			color: #fff;
+			border-radius: rem(10px);
+			background-color: #2ea7e0;
+		}
+	}
+
+	.slide-enter-active, .slide-leave-active{
+		transition: all .5s ease;
+	}
+	.slide-enter {
+		transform: translate(0,-100%);
+	}
+	.slide-leave-to {
+		transform: translate(0,100%)
+	}
+}

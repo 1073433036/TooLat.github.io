@@ -1,0 +1,197 @@
+@import "~assets/styles/_bootstrap";
+
+.intelligentPaymentReservation {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+  .wrapper {
+    .container {
+      
+      .container_header {
+        display: flex;
+        border-bottom: rem(1px) solid #dddddd;
+        height: rem(120px);
+        line-height: rem(120px);
+        background: #fff;
+
+        .item {
+          flex: 1;
+          height: rem(72px);
+          margin-top: rem(25px);
+          text-align: center;
+          i {
+              width: rem(41px);
+              height: rem(40px);
+              display: inline-block;
+              position: absolute;
+              left: rem(6px);
+              background: url(~assets/images/card_manage/add2.png) no-repeat;
+              background-size: 100%;
+              z-index: 10000;
+              top: rem(18px);
+          }
+
+          p {
+            padding-left: rem(40px);
+            width: rem(230px);
+            border-radius : rem(10px);
+            height: rem(70px);
+            line-height: rem(70px);
+            text-align: center;
+            color: #fff;
+          }
+          .consume {
+            background: #17a7f7; 
+            margin-left: rem(140px);
+            
+          }
+          .Repayment {
+             background: #f78d3d;
+             margin-left: rem(35px);
+          }
+        }
+
+        .item1 {
+          margin-left : rem(113px);
+        }
+        .item2 {
+          margin-left : rem(113px);
+        }
+      } 
+
+      .form-group {
+         .list {
+            margin: 0 rem(20px);
+            border-radius: rem(10px);
+
+            .item {
+              margin-top: rem(30px);
+              border-radius: rem(20px);
+              background-color: #fff;
+
+              div {
+                display: flex;
+                padding: rem(40px) 0;  
+                position: relative;   
+              }
+              .order {
+                background: #d8ebff;
+                position: relative;
+                padding: rem(20px);
+                p {
+                  width: 100%;
+                }
+                span {
+                  padding-left: rem(50px);
+                }
+                em {
+                  font-style:normal;
+                  color: #03b2f1;
+                }
+                .msg_icon{
+                  width: rem(41px);
+                  height: rem(40px);
+                  display: inline-block;
+                  position: absolute;
+                  left: rem(0px);
+                  background: url(~assets/images/card_manage/list5.png) no-repeat;
+                  background-size: 100%;
+                  z-index: 10000;
+                  top: rem(2px);
+                }
+                
+              }
+              .money {
+                p {
+                  color: #ccc;
+                  flex: 1;
+                  span {
+                    &:last-child {
+                     padding-left: rem(20px);
+                    }
+                  }
+                }
+              }
+              .service {
+                border-bottom: rem(1px) solid #ddd;
+                p {
+                  flex: 1;
+                  span {
+                    &:last-child {
+                     padding-left: rem(20px);
+                    }
+                  }
+                }
+                .more {
+                   width: rem(41px);
+                   height: rem(40px);
+                   display: inline-block;
+                   position: absolute;
+                   right: rem(38px);
+                   background: url(~assets/images/card_manage/down.png) no-repeat;
+                   background-size: 85%;
+                   z-index: 10000;
+                   top: rem(23px);
+                }
+
+              }
+
+            }
+         }
+         .select-item,input.input-item {
+             width: rem(311px);
+             height: rem(70px);
+             line-height: rem(70px);
+             font-size: rem(28px);
+             margin-left: rem(20px);
+             margin-right: rem(20px);
+             padding-left: rem(20px);
+             border: rem(1px) solid #ccc;
+             outline: none;
+             border-radius: rem(16px);
+             &::-webkit-input-placeholder { color: #c3c3c3; }
+             &::-moz-placeholder { color: #c3c3c3; }
+             &:-moz-placeholder { color: #c3c3c3; }
+             &:-ms-input-placeholder { color: #c3c3c3; }
+             &.school {
+               right: rem(65px);
+               &::-webkit-input-placeholder { color: #000; }
+               &::-moz-placeholder { color: #000; }
+               &:-moz-placeholder { color: #000; }
+               &:-ms-input-placeholder { color: #000; }
+             }
+             &.verificationCode {
+               right: rem(225px);
+               width: rem(200px);
+             }
+             &:disabled { background-color: #fff; }
+             &.files {
+               opacity: 0;
+             }
+
+           }
+
+      }
+      .affirmAdd {
+        width: rem(710px);
+        height: rem(90px);
+        line-height: rem(90px);
+        text-align: center;
+        font-size: rem(32px);
+        color: #fff;
+        margin: rem(80px) rem(20px) 0 rem(20px);
+        background-color: #c9c9c9;
+        border: 1px solid #c9c9c9;
+        border-radius: rem(10px);
+
+        &.on {
+          background-color: #01b3f0;
+          border: 1px solid #01b3f0;
+        }
+      }
+    }
+  }
+}

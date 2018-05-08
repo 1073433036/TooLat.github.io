@@ -1,0 +1,27 @@
+@import "~assets/styles/_bootstrap";
+
+.top-tips {
+  position: relative;
+  height: rem(60px);
+  line-height: rem(60px);
+  padding-left: rem(64px);
+  background-color: #2d3940;
+
+  i.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: rem(64px);
+    height: rem(60px);
+    line-height: rem(60px);
+    text-align: center;
+    color: #fff;
+    font-size: rem(32px);
+  }
+
+  marquee {
+    font-size: rem(28px);
+    color: #fff;
+  }
+}

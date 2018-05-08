@@ -1,0 +1,148 @@
+@import "~assets/styles/_bootstrap";
+
+.apply-guide {
+  position: relative;
+  padding-top: rem(90px);
+	height: 100%;
+	background-color: #eeeff1;
+
+  .wrapper {
+		padding-top: rem(90px);
+
+		.content {
+
+			.photo {
+				width: 100%;
+				height: rem(170px);
+
+				> img {
+					width: 100%;
+					height: rem(170px);
+				}
+			}
+		}
+
+		.flow {
+			border: 1px solid $bc;
+
+			.item {
+
+				.list {
+					margin-bottom: rem(20px);
+					padding-bottom: rem(20px);
+					background-color: #fff;
+
+					.title {
+						padding: rem(20px) 0;
+						width: 100%;
+						height: rem(110px);
+						white-space: nowrap;
+
+						.step {
+							float: left;
+
+							width: rem(270px);
+							height: rem(70px);
+							line-height: rem(70px);
+							text-align: center;
+							background: url('~assets/images/convert-03.png') no-repeat;
+							background-size: 100% 100%;
+							color: #fff;
+						}
+
+						.open {
+							float: left;
+							padding-left: rem(20px);
+							width: rem(270px);
+							height: rem(70px);
+							line-height: rem(70px);
+							font-size: rem(30px);
+							color: #000;
+						}
+					}
+
+					.info {
+						position: relative;
+						margin: auto;
+						padding: rem(20px);
+						width: rem(710px);
+						height: auto;
+						background: url('~assets/images/convert-04.png') no-repeat;
+						background-size: 100% 100%;
+
+						.photo {
+							width: rem(263px);
+							height: auto;
+						}
+
+						.text {
+							position: absolute;
+							top: rem(58px);
+							left: rem(300px);
+							line-height: rem(38px);
+							padding-right: rem(20px);
+							font-size: rem(24px);
+							color: #01b3f0;
+						}
+
+						.refer {
+							position: absolute;
+							top: rem(200px);
+							left: rem(300px);
+							padding-right: rem(20px);
+							font-size: rem(24px);
+							color: #01b3f0;
+						}
+					}
+				}
+			}
+		}
+
+		.card-guide {
+			> img {
+				width: 100%;
+			}
+		}
+	}
+
+	.big-photo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: rem(90px);
+		z-index: 2001;
+		background: rgba(0, 0, 0, .5);
+
+		.mask {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.box {
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+
+		i.icon {
+			position: absolute;
+			bottom: rem(10px);
+			display: block;
+			width: rem(72px);
+			height: rem(72px);
+			line-height: rem(70px);
+			text-align: center;
+			color: #fff;
+			font-size: rem(64px);
+			left: 50%;
+	    margin-left: rem(-36px);
+	    border: rem(1px) solid #fff;
+	    border-radius: 50%;
+		}
+	}
+}

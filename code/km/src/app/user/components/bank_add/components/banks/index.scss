@@ -1,0 +1,144 @@
+@import "~assets/styles/_bootstrap";
+
+.banks-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: rem(90px);
+  width: 100%;
+  background: #fff;
+  z-index: 1500;
+
+  .controller {
+    height: 100%;
+
+    .head {
+      line-height: rem(90px);
+      border-bottom: 1px solid #ddd;
+
+      .title {
+        font-size: rem(32px);
+        color: #333;
+      }
+
+      .search {
+        margin: rem(20px);
+        padding: 0 rem(20px);
+        height: rem(90px);
+        line-height: rem(90px);
+        border-radius: rem(10px);
+        background: #c9c9c9;
+
+
+        > input {
+          margin-left: rem(20px);
+          width: rem(520px);
+          height: rem(60px);
+          line-height: rem(60px);
+          border: none;
+          background: none;
+          vertical-align: middle;
+        }
+      }
+
+      .close {
+        width: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 rem(40px);
+        color: #f69352;
+        cursor: pointer;
+      }
+    }
+
+    .body {
+      height: 100%;
+
+      .list {
+        padding-bottom: rem(40px);
+
+        .item {
+          padding: rem(30px) rem(20px);
+          border-bottom: 1px solid #e8e8e8;
+
+          &:after {
+            display: block;
+            clear: both;
+            content: ' ';
+          }
+
+          .icon {
+            float: left;
+            width: rem(75px);
+            height: rem(75px);
+
+            > img {
+              width: 100%;
+              height: 100%;
+              border: none;
+              vertical-align: middle;
+            }
+          }
+
+          .info {
+            float: left;
+            padding-left: rem(40px);
+            width: rem(600px);
+
+            &.add-bank {
+              height: rem(75px);
+              line-height: rem(75px);
+            }
+
+            .name {
+              display: block;
+              font-size: rem(28px);
+              color: #333;
+            }
+
+            .username {
+              padding-top: rem(6px);
+              font-size: rem(22px);
+              color: #999;
+            }
+          }
+
+          .sp-select, .sp-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+        }
+      }
+
+      .custom-input {
+        width: 100%;
+        padding-bottom: rem(60px0);
+        text-align: center;
+
+        .tips {
+          padding: 0 rem(20px);
+          font-size: rem(26px);
+          margin-bottom: rem(30px);
+        }
+
+        .custom-btn {
+          width: rem(300px);
+          height: rem(90px);
+          margin: 0 auto;
+          border-radius: rem(12px);
+          line-height: rem(90px);
+          background-color: #01b3f0;
+          color: #fff;
+          font-size: rem(30px);
+        }
+      }
+    }
+
+  }
+
+}

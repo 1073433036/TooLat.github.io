@@ -1,0 +1,65 @@
+@import "~assets/styles/_bootstrap";
+
+.message-reward-page {
+  height: 100%;
+  background: #edf0f0;
+
+  ._v-content {
+    padding: rem(90px) 0;
+  }
+
+  .wrapper {
+
+    .list {
+      .item {
+        margin: 0 auto;
+        padding-top: rem(20px);
+				width: rem(675px);
+				border-bottom: 1px solid $bc;
+
+        .inner {
+          margin-top: rem(30px);
+          padding: rem(25px) 0 rem(25px) rem(50px);
+          border-radius: rem(10px);
+          background: #fff;
+
+          .head {
+            padding-bottom: rem(10px);
+            border-bottom: 1px solid $bc;
+            font-size: rem(30px);
+            color: #333;
+          }
+
+          .day {
+            padding-top: rem(10px);
+            font-size: rem(24px);
+						color: #b0b0b0;
+
+						.time {
+							padding-left: rem(20px);
+						}
+          }
+
+          .content {
+            padding: rem(20px) rem(50px) rem(20px) 0;
+
+            > p {
+              line-height: rem(50px);
+              font-size: rem(28px);
+              color: #333;
+            }
+          }
+
+          .detail {
+            display: block;
+            padding-top: rem(20px);
+            font-size: rem(28px);
+            color: #72d6f7;
+            border-top: 1px solid $bc;
+          }
+        }
+      }
+    }
+  }
+
+}

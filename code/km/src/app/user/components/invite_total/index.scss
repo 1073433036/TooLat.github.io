@@ -1,0 +1,180 @@
+@import "~assets/styles/_bootstrap";
+
+.invite-total-page {
+  height: 100%;
+  background: #edf0f0;
+
+  ._v-content {
+    padding-top: rem(90px);
+    padding-bottom: rem(150px);
+  }
+
+  .wrapper {
+
+    .container {
+
+      .head {
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+
+        .banner {
+          width: 100%;
+
+          > img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .info {
+          position: absolute;
+          left: 0;
+          bottom: rem(-34px);
+          width: 100%;
+          height: rem(300px);
+
+          .title {
+            height: rem(68px);
+            line-height: rem(68px);
+            margin-bottom: rem(32px);
+            text-align: center;
+            color: #fff;
+            font-size: rem(32px);
+          }
+
+          ul.list {
+            display: flex;
+            padding: 0 rem(62px);
+
+            li.item {
+              flex: 1;
+              min-width: 1px;
+              text-align: center;
+
+              &:not(:last-child):before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: rem(90px);
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: rem(-45px);
+                background-color: $bc;
+              }
+
+              .num {
+                height: rem(42px);
+                line-height: rem(42px);
+                margin-bottom: rem(14px);
+                font-size: rem(32px);
+                color: #333;
+              }
+
+              .name {
+                height: rem(44px);
+                line-height: rem(44px);
+              }
+            }
+          }
+        }
+      }
+
+      .submit-btn {
+        padding: rem(78px) 0;
+        text-align: center;
+        font-size: 0;
+
+        .btn {
+          display: inline-block;
+          height: rem(80px);
+          line-height: rem(80px);
+          padding: 0 rem(36px);
+          margin: 0 rem(18px);
+          font-size: rem(28px);
+          background: linear-gradient(to right, #f4b34a, #f97836);
+          color: #fff;
+          border-radius: rem(40px);
+          overflow: hidden;
+
+          &:nth-child(1) {
+            background: linear-gradient(to right, #01b3f0, #309afe);
+          }
+
+          &:nth-child(2) {
+            background: linear-gradient(to right, #f4b34a, #f97836);
+          }
+        }
+      }
+    }
+  }
+
+  .layer {
+    position: relative;
+    z-index: 2001;
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(590px);
+      height: rem(350px);
+      margin-top: rem(-175px);
+      margin-left: rem(-295px);
+      padding-top: rem(260px);
+      background: url(~assets/images/card-share-layer.png) no-repeat;
+      background-size: 100%;
+      text-align: center;
+      font-size: 0;
+      z-index: 2001;
+
+      > a {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(240px);
+        line-height: rem(62px);
+        font-size: rem(32px);
+        margin: 0 rem(15px);
+        border-radius: rem(40px);
+        overflow: hidden;
+
+        &:first-child {
+          border: 1px solid $bc;
+          color: #999;
+        }
+
+        &:last-child {
+          border: 1px solid #01b3f0;
+          background-color: #01b3f0;
+          color: #fff;
+        }
+      }
+    }
+
+    .share-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+
+}

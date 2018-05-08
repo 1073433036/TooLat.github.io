@@ -1,0 +1,38 @@
+@import "~assets/styles/_bootstrap";
+
+.car-break-pay-result-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  > header {
+    height: rem(90px);
+    line-height: rem(90px);
+    text-align: center;
+    color: #fff;
+    font-size: rem(36px);
+    background: #000;
+  }
+
+  .result-icon {
+    margin-top: rem(261px);
+    width: 100%;
+    height: rem(120px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: rem(192px) 100%;
+    background-image: url(~assets/images/pay_success.png);
+
+    &.fail {
+      margin-top: rem(200px);
+      height: rem(181px);
+      background-size: rem(212px) 100%;
+      background-image: url(~assets/images/pay_fail.png);
+    }
+  }
+
+  .result-tip {
+    margin-top: rem(40px);
+    text-align: center;
+  }
+}

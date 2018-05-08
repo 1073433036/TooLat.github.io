@@ -1,0 +1,189 @@
+@import "~assets/styles/_bootstrap";
+
+.prize_get {
+  height: 100%;
+	background: #edf0f0;
+
+	._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+
+    .controller {
+
+      .main {
+
+				.tips {
+					height: rem(88px);
+					line-height: rem(88px);
+					padding-left: rem(64px);
+					background-color: #ffffef;
+
+					i.icon {
+						position: absolute;
+						top: rem(20px);
+						left: rem(20px);
+						display: block;
+						width: rem(44px);
+						height: rem(40px);
+						line-height: rem(60px);
+						text-align: center;
+						color: #ea8c1c;
+						font-size: rem(32px);
+					}
+
+					.marquee {
+						font-size: rem(28px);
+						color: #ea8c1c;
+					}
+				}
+
+				.content {
+					background-color: #fff;
+					padding-bottom: rem(36px);
+
+					.body-info {
+						margin-top: rem(20px);
+						padding-left: rem(20px);
+						background: #fff;
+
+						.duration {
+							padding: rem(22px) 0;
+							font-size: rem(28px);
+							border-bottom: 1px solid $bc;
+						}
+
+						.amount {
+
+							.item {
+								width: 100%;
+								overflow: hidden;
+
+								.list {
+									float: left;
+									width: rem(244px);
+									height: rem(120px);
+									text-align: center;
+									font-size: rem(36px);
+									margin: rem(36px) rem(32px) rem(20px) 0;
+									border: 1px solid $bc;
+									border-radius: rem(16px);
+
+									.one {
+										padding-top: rem(16px);
+										color: #000;
+									}
+
+									.money {
+										font-size: rem(28px);
+										color: #999;
+										margin-top: rem(8px);
+									}
+								}
+
+								.select {
+									width: rem(244px);
+									height: rem(120px);
+									border: 1px solid #ff222e !important;
+									background: url('~assets/images/select-02.png') no-repeat;
+									background-size: cover;
+									z-index: 999;
+								}
+							}
+						}
+
+						.pay {
+							padding: rem(70px) 0 rem(20px) 0;
+							border-bottom: 1px solid $bc;
+							font-size: rem(28px);
+							color: #000;
+						}
+					}
+
+					.pattern {
+						padding: rem(36px) rem(20px) rem(128px) rem(20px);
+
+						.item {
+							width: 100%;
+							overflow: hidden;
+
+							.list {
+								float: left;
+								width: rem(196px);
+								height: rem(78px);
+								line-height: rem(78px);
+								margin-right: rem(40px);
+								font-size: rem(28px);
+								border: 1px solid $bc;
+								color: #999;
+								border-radius: rem(10px);
+
+								.way {
+									width: rem(40px);
+									height: rem(40px);
+									margin-left: rem(34px);
+								}
+							}
+						}
+
+						.active {
+							color: #000 !important;
+							border: 1px solid #24af41 !important;
+						}
+					}
+
+					.pact {
+						height: rem(40px);
+						line-height: rem(40px);
+						font-size: rem(28px);
+						padding: 0 rem(36px);
+						overflow: hidden;
+
+						> input {
+							float: left;
+							width: rem(40px);
+							height: rem(40px);
+							padding-bottom: rem(36px);
+						}
+
+						.rules {
+							color: #01b3f0;
+						}
+					}
+				}
+
+				.btn {
+					margin: rem(36px) auto;
+					margin-bottom: 0;
+					width: 22.1875rem;
+					height: 2.8125rem;
+					line-height: 2.8125rem;
+					font-size: 1rem;
+					text-align: center;
+					border: 1px solid #01b3f0;
+					background-color: #01b3f0;
+					border-radius: 0.3125rem;
+
+					> a {
+						color: #fff;
+					}
+				}
+
+				.info {
+					padding: rem(40px);
+
+					.title {
+						font-weight: bold;
+					}
+
+					.text {
+						margin-top: rem(10px);
+						line-height: rem(48px);
+						font-size: rem(26px);
+					}
+				}
+      }
+    }
+  }
+}

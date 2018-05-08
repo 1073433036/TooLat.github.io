@@ -1,0 +1,296 @@
+@import "~assets/styles/_bootstrap";
+
+.car_verification-page {
+  height: 100%;
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .keep-secret {
+    height: rem(90px);
+    line-height: rem(90px);
+    color: #999;
+    text-indent: rem(18px);
+  }
+
+  .list-wrapper {
+    position: relative;
+    height: rem(126px);
+    line-height: rem(126px);
+    font-size: rem(28px);
+    border-bottom: 1px solid $bc;
+    color: #000;
+
+    span.text {
+      float: left;
+    }
+
+    .prov {
+      position: absolute;
+      top: rem(37px);
+      right: rem(285px);
+      width: rem(78px);
+      height: rem(52px);
+      line-height: rem(52px);
+      text-align: center;
+      color: #1261a2;
+      background: #cfe5fe;
+    }
+
+    .vin-tip {
+      display: inline-block;
+      float: left;
+      width: rem(54px);
+      height: 100%;
+      background: url('~assets/images/car-verification/notify.png') no-repeat center / rem(34px) rem(34px);
+    }
+
+    >input {
+      position: absolute;
+      top: rem(26px);
+      right: rem(20px);
+      width: rem(300px);
+      height: rem(70px);
+      font-size: rem(28px);
+      text-align: right;
+      border: none;
+      outline: none;
+      &::-webkit-input-placeholder { color: #999; }
+      &::-moz-placeholder { color: #999; }
+      &:-moz-placeholder { color: #999; }
+      &:-ms-input-placeholder { color: #999; }
+      &.car-number {
+        right: rem(106px);
+        width: rem(174px);
+      }
+    }
+
+    .photo-btn {
+      position: absolute;
+      top: rem(28px);;
+      right: 0;
+      width: rem(86px);
+      height: rem(70px);
+      background: url('~assets/images/car-verification/camera.png') no-repeat center / rem(46px) rem(38px);
+      border-left: 1px solid $bc;
+    }
+
+    .photo-tip {
+      position: absolute;
+      top: rem(-25px);
+      right: rem(20px);
+      padding: 0 rem(15px);
+      height: rem(50px);
+      line-height: rem(50px);
+      color: #fff;
+      font-size: 12px;
+      background: #707070;
+      border-radius: rem(6px);
+      &::after {
+        position: absolute;
+        bottom: rem(-12px);
+        right: rem(15px);
+        content: '';
+        border-top: rem(12px) solid #707070;
+        border-left: rem(8px) solid transparent;
+        border-right: rem(8px) solid transparent;
+      }
+    }
+
+    .switch-btn {
+      position: absolute;
+      top: rem(43px);
+      right: rem(20px);
+      width: rem(100px);
+      height: rem(40px);
+      line-height: rem(40px);
+      border-radius: rem(20px);
+      color: #fff;
+      text-indent: rem(45px);
+      background: #c9c9c9;
+
+      .inner-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem(40px);
+        height: rem(40px);
+        background: url('~assets/images/car-verification/switch-circle.png') no-repeat center / 100% 100%;
+        // transition: all .3s linear;
+      }
+
+      &.on {
+        background: #03afe8;
+        text-indent: rem(15px);
+        .inner-circle {
+          left: rem(60px);
+        }
+      }
+    }
+  }
+
+  .car-info, .phone-remind {
+    background: #fff;
+    padding: 0 rem(20px);
+    font-size: rem(28px);
+  }
+
+  .car-info {
+
+  }
+
+  .phone-remind {
+    margin-top: rem(20px);
+  }
+
+  .save-btn {
+    width: rem(710px);
+    height: rem(90px);
+    line-height: rem(90px);
+    text-align: center;
+    font-size: rem(32px);
+    color: #fff;
+    margin: rem(180px) rem(20px) 0 rem(20px);
+    background-color: #01b3f0;
+    border: 1px solid #01b3f0;
+    border-radius: rem(10px);
+  }
+
+  .region {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-bottom: rem(10px);
+    background: #c9c9c9;
+    width: 100%;
+
+    >ul{
+      height: 100%;
+      display: flex;
+      flex-wrap:wrap;
+      align-items: center;
+
+      >li {
+        margin: rem(10px) 0 0 rem(22px);
+        border-radius: rem(5px);
+        width: rem(98px);
+        height: rem(74px);
+        background-color: #ededed;
+        text-align: center;
+        line-height: rem(74px);
+        color: #000;
+        font-size: rem(26rem);
+        box-shadow: 1px 1px 2px #ccc;
+      }
+    }
+  }
+
+  .car-dialog {
+    .bg {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 9999;
+    }
+
+    .take-photo-wrapper {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(650px);
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      background: #fff;
+
+      >header {
+        position: relative;
+        height: rem(100px);
+        line-height: rem(100px);
+        text-align: center;
+        font-size: rem(32px);
+        color: #03b2f1;
+
+        i.close-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-block;
+          width: rem(100px);
+          height: rem(100px);
+          background: url('~assets/images/car-verification/close.png') no-repeat center / rem(33px) rem(32px);
+        }
+      }
+      .take-photo-content {
+        padding: 0 rem(30px);
+
+        .take-photo-tip {
+          margin-bottom: rem(10px);
+          padding:0 rem(15px);
+          color: #999;
+        }
+
+        .photo-card-wrapper {
+          position: relative;
+          width: rem(590px);
+          height: rem(406px);
+          margin: rem(20px) 0 rem(15px);
+          background: url('~assets/images/car-verification/outline.png') no-repeat center / 100% 100%;
+
+          .photo-card {
+            position: absolute;
+            top: rem(15px);
+            left: rem(15px);
+            width: rem(560px);
+            height: rem(376px);
+            // background: url('~assets/images/car-verification/card-photo.png') no-repeat center / 100% 100%;
+          }
+
+          input[type="file"] {
+            opacity: 0;
+          }
+        }
+
+        .upload-btn {
+          width: rem(570px);
+          height: rem(90px);
+          line-height: rem(90px);
+          text-align: center;
+          font-size: rem(32px);
+          color: #fff;
+          margin: rem(25px) rem(10px) rem(30px);
+          background-color: #01b3f0;
+          border: 1px solid #01b3f0;
+          border-radius: rem(10px);
+        }
+      }
+    }
+
+    .vin-default {
+      position: fixed;
+      left: rem(29px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(692px);
+      height: rem(478px);
+      background: url('~assets/images/car-verification/vin-default.png') no-repeat center / 100% 100%;
+      z-index: 9999;
+    }
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: all 0.3s linear;
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0;
+  }
+
+}

@@ -1,0 +1,90 @@
+@import "~assets/styles/_bootstrap";
+
+.intelligentPlanningMode {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+  .wrapper {
+    .container {
+
+      .container_header {
+        display: flex;
+        border-bottom: rem(1px) solid #dddddd;
+        height: rem(178px);
+        line-height: rem(178px);
+        background: #fff;
+        .item {
+          flex: 1;
+          border-right: rem(1px) solid #dddddd;
+          height: rem(72px);
+          margin-top: rem(62px);
+          padding: rem(10px);
+          p {
+           height: rem(40px);
+           line-height: rem(22px);
+           text-align: center;
+          }
+        }
+      }
+      
+      .recommend{
+        background: #fff;
+        width:100%;
+        height: rem(389px);
+
+        .photo-cont {
+          width: rem(492px);
+          height: rem(307px);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .form-group {
+        .list {
+          margin-top: rem(20px);
+          margin-bottom: rem(20px);
+          box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .1);
+
+          .item {
+            padding-left: rem(30px);
+            background-color: #fff;
+
+            .sp{
+              &.sp-right{
+                position: absolute;
+                right: rem(10px);
+                top: 50%;
+                transform:translateY(-50%);
+              }
+            }
+            &:not(:last-child) .box {
+              border-bottom: 1px solid $bc;
+            }
+
+            .box {
+              display: flex;
+              padding: rem(15px) rem(20px) rem(15px) 0;
+              &.input-box{
+                padding-left: rem(63px);
+              }
+              .name, .content {
+                height: rem(70px);
+                line-height: rem(70px);
+                font-size: rem(30px);
+                color: #333;
+              }
+              
+            }
+          }
+        }       
+        
+      }
+    }
+  }
+}

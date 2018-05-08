@@ -1,0 +1,120 @@
+@import "~assets/styles/_bootstrap";
+
+.auto-h5-page {
+  width: 100%;
+  height: 100%;
+
+  .back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(90px);
+    height: rem(90px);
+    z-index: 2;
+
+    &::after {
+      content: '';
+      display: block;
+      width: rem(28px);
+      height: rem(28px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: rem(-14px);
+      margin-left: rem(-14px);
+      border-bottom: 1px solid #666;
+      border-left: 1px solid #666;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+
+    .container {
+      width: 100%;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        position: relative;
+        height: 100%;
+        overflow: auto;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          .swiper-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .btn {
+          position: absolute;
+          bottom: rem(40px);
+          left: 0;
+          right: 0;
+
+          .radio-wrappe {
+            .radio .sta {
+              color: #fff;
+            }
+          }
+
+          > button {
+            display: block;
+            margin: 0 auto;
+            width: rem(710px);
+            height: rem(100px);
+            line-height: rem(100px);
+            font-size: rem(32px);
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: rem(10px);
+            background: #ffba00;
+            cursor: pointer;
+            box-shadow: 0 rem(10px) rem(10px) rgba(0, 0, 0, .5);
+
+          }
+        }
+
+        .upward {
+          position: absolute;
+          left: 0;
+          bottom: rem(60px);
+          width: 100%;
+          text-align: center;
+
+          span {
+            animation: start 1.5s infinite ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes start {
+  0%, 30% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-20);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+}

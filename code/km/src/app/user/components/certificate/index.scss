@@ -1,0 +1,134 @@
+@import "~assets/styles/_bootstrap";
+
+.user-certificate-page {
+  height: 100%;
+  background: #edf0f0;
+
+  ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+    padding: rem(30px);
+  }
+
+  .content, .canvasImg {
+    margin: 0 auto;
+    height: rem(986px);
+  }
+
+  .canvasImg > img {
+    max-width: 100%;
+  }
+
+
+  .content {
+    background: #edf0f0;
+
+    .user-name, .jobs, .desc, .info, .company {
+      position: absolute;
+    };
+
+    .user-name {
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-top: rem(400px);
+      text-align: center;
+
+      > span {
+        vertical-align: middle;
+
+        &.name {
+          font-size: rem(28px);
+          color: #333;
+        }
+
+        &.tips {
+          font-size: rem(20px);
+        }
+      }
+
+    }
+
+    .jobs {
+      left: 0;
+      right: 0;
+      top: rem(450px);
+      text-align: center;
+      font-size: rem(24px);
+      color: #333;
+    }
+
+    .desc {
+      top: rem(515px);
+      padding: 0 rem(70px);
+
+      > p {
+        line-height: rem(40px);
+        font-size: rem(24px);
+      }
+
+    }
+
+    .info {
+      top: rem(660px);
+      padding: 0 rem(70px);
+      width: 100%;
+
+      .title {
+        display: inline-block;
+        line-height: rem(50px);
+        font-size: rem(24px);
+        vertical-align: top;
+      }
+
+      .txt {
+        display: inline-block;
+
+        > p {
+          line-height: rem(50px);
+          font-size: rem(24px);
+
+          > span {
+            color: #333;
+          }
+        }
+      }
+    }
+
+    .company {
+      bottom: rem(100px);
+      left: rem(300px);
+      padding-right: rem(20px);
+      padding-bottom: rem(4px);
+      font-size: rem(24px);
+      border-bottom: 1px solid #999;
+
+      > img {
+        position: absolute;
+        bottom: rem(-60px);
+        left: rem(20px);
+      }
+    }
+  }
+
+  .foot {
+    padding-top: rem(50px);
+
+    > button {
+      display: block;
+      margin: 0 auto;
+      width: rem(670px);
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      font-size: rem(32px);
+      color: #fff;
+      border: none;
+      border-radius: rem(10px);
+      background: #01b5f1;
+    }
+  }
+
+}

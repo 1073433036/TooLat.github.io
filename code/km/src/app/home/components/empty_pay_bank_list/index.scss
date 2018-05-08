@@ -1,0 +1,141 @@
+@import "~assets/styles/_bootstrap";
+
+.bank-page {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .tips {
+      width: 100%;
+      height: rem(70px);
+      font-size: rem(22px);
+      line-height: rem(70px);
+      background-color: #2d3940;
+
+      .icon-horn {
+        margin-left: rem(20px);
+        margin-right: rem(30px);
+      }
+
+      > span{
+        color: #fff;
+      }
+    }
+
+    .container {
+
+      .bank-list {
+        padding: rem(10px);
+
+        li.item {
+          padding: rem(10px);
+
+          > .btn {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: rem(200px);
+            padding-top: rem(20px);
+            padding-left: rem(128px);
+            border-radius: rem(10px);
+            color: #fff;
+
+            .logo {
+              position: absolute;
+              top: rem(20px);
+              left: rem(30px);
+              width: rem(80px);
+              height: rem(80px);
+              border-radius: 50%;
+              overflow: hidden;
+              background-color: #fff;
+              padding: rem(10px);
+
+              > img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                vertical-align: top;
+              }
+            }
+
+            .bank-name {
+              height: rem(46px);
+              line-height: rem(46px);
+              font-size: rem(30px);
+              margin-bottom: rem(6px);
+            }
+
+            .type {
+              height: rem(28px);
+              line-height: rem(28px);
+              font-size: rem(24px);
+              margin-bottom: rem(23px);
+            }
+
+            .number {
+              font-size: rem(36px);
+              letter-spacing: rem(6px);
+            }
+
+            .manage {
+              position: absolute;
+              top: 0;
+              right: 0;
+              line-height: rem(46px);
+              padding: rem(20px) rem(30px);
+              font-size: rem(28px);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .add-bank {
+        padding-top: rem(10px);
+
+        .btn {
+          display: block;
+          height: rem(80px);
+          line-height: rem(80px);
+          padding-left: rem(20px);
+          background-color: #fff;
+          color: #999;
+          font-size: rem(28px);
+
+          .icon:before {
+            color: #999;
+          }
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+          }
+
+          .icon-direction2 {
+            display: inline-block;
+            height: rem(80px);
+            line-height: rem(80px);
+            transform: rotate(180deg);
+            float: right;
+            font-size: rem(68px);
+          }
+        }
+      }
+    }
+
+    .add-card-tips {
+      width: 100%;
+      padding: 0 rem(30px);
+      margin-top: rem(60px);
+
+      > img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+@import "~assets/styles/_bootstrap";
+
+.wallet-page {
+	height: 100%;
+
+	.header-page {
+		background: url('~assets/images/wallet-header.png') no-repeat;
+	}
+	
+	.slot {
+
+		.right {
+
+			> a {
+				display: block;
+
+				> i {
+					width: rem(43px);
+					height: rem(45px);
+				}
+			}
+		}
+	}
+
+	.wrapper {
+		padding-top: rem(90px);
+		padding-bottom: rem(90px);
+		height: 100%;
+	}
+
+	.container {
+
+		.main {
+
+			.top {
+				width: 100%;
+				height: rem(360px);
+				background: url('~assets/images/wallet-setting.png') no-repeat;
+				background-size: 100% 100%;
+				overflow: hidden;
+
+				.earnings {
+					margin-top: rem(40px);
+					width: 100%;
+					text-align: center;
+					color: #fff;
+				}
+				.money {
+					margin-top: rem(20px);
+					width: 100%;
+					text-align: center;
+					color: #ffea00;
+
+					> span {
+						font-size: rem(38px);
+						font-weight: bold;
+					}
+				}
+
+				.kiting {
+					margin-top: rem(20px);
+					text-align: center;
+					font-size: rem(32px);
+					color: #fff;
+
+					.text {
+						padding: rem(4px) rem(65px);
+						border: 1px solid $bc;
+						border-radius: rem(30px);
+					}
+				}
+
+				.info {
+					margin-top: rem(40px);
+
+					.list {
+						overflow: hidden;
+
+						.item {
+							float: left;
+							width: 33.3333%;
+							text-align: center;
+							color: #fff;
+							border-right: 1px solid $bc;
+
+							&:last-child {
+								border-right: none;
+							}
+
+							.balance {
+								padding-top: rem(6px);
+							}
+						}
+					}
+				}
+			}
+
+			.menu-group {
+				padding-bottom: rem(30px);
+				border-bottom: 1px solid #ccc;
+				background: #fff;
+
+				&:after {
+					display: block;
+					clear: both;
+					content: ' ';
+				}
+
+				.item {
+					display: block;
+					float: left;
+					margin-top: rem(30px);
+					width: 25%;
+					text-align: center;
+
+					> em {
+						display: block;
+						padding-top: rem(15px);
+						font-size: rem(30px);
+						color: #333;
+					}
+
+					.sp-hot {
+						position: absolute;
+						top: rem(-20px);
+						right: 0;
+
+						animation: myHot 1.3s infinite;
+						animation-direction: alternate;
+					}
+				}
+			}
+
+			.box {
+				margin-top: rem(20px);
+				padding: rem(26px) rem(20px);
+				background-color: #fff;
+				border-bottom: 1px solid $bc;
+
+				.team {
+					width: 100%;
+					height: rem(48px);
+					
+					&:after {
+						display: block;
+						clear: both;
+						content: ' ';
+					}
+
+					.left {
+						float: left;
+						width: rem(109px);
+						line-height: rem(48px);
+						text-align: center;
+						color: #fff;
+						background: url('~assets/images/team.png') no-repeat;
+						background-size: 100% 100%;
+					}
+
+					.info {
+						float: left;
+						padding-left: rem(20px);
+						line-height: rem(48px);
+						font-size: rem(32px);
+						color: #333;
+					}
+				}
+
+				.content {
+					text-align: center;
+
+					.people {
+						padding-top: rem(40px);
+						color: #000;
+
+						.number {
+							font-size: rem(40px);
+							font-weight: bold;
+						}
+					}
+
+					.my-team {
+						padding-top: rem(20px);
+						color: #999;
+					}
+
+					.examine {
+						margin: auto;
+						margin-top: rem(20px);
+						width: rem(366px);
+						height: rem(60px);
+						line-height: rem(60px);
+						text-align: center;
+						font-size: rem(30px);
+						color: #fff;
+						border-radius: rem(30px);
+						background: url('~assets/images/team-01.png') no-repeat;
+						background-size: 100% 100%;
+					}
+				}
+			}
+
+			.list-group {
+				margin-top: rem(20px);
+				padding-left: rem(20px);
+				background-color: #fff;
+				border-bottom: 1px solid $bc;
+
+				.list {
+
+					.item {
+
+						.title {
+							padding: rem(25px) 0;
+							font-size: rem(32px);
+							color: #000;
+							border-bottom: 1px solid $bc;
+
+							> i {
+								width: rem(45px);
+								height: rem(45px);
+							}
+
+							.area {
+								padding-left: rem(20px);
+								vertical-align: bottom;
+							}
+						}
+
+						.info {
+							position: relative;
+							padding: rem(20px) 0;
+
+							.left {
+								width: rem(187px);
+								height: rem(163px);
+							}
+
+							.middle {
+								position: absolute;
+								top: rem(44px);
+								left: rem(215px);
+								font-size: rem(32px);
+								color: #000;
+
+								.help {
+									padding-top: rem(15px);
+									font-size: rem(28px);
+									color: #999;
+								}
+							}
+
+							.watch {
+								position: absolute;
+								bottom: rem(20px);
+								right: rem(30px);
+								width: rem(164px);
+								height: rem(48px);
+								line-height: rem(48px);
+								text-align: center;
+								color: #fff;
+								border-radius: rem(30px);
+								background: url('~assets/images/team-03.png') no-repeat;
+								background-size: 100% 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

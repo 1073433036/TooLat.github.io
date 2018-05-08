@@ -1,0 +1,90 @@
+@import "~assets/styles/_bootstrap";
+
+.credit-card-bill-page {
+  height: 100%;
+  background: #edf0f0;
+
+  .wrapper {
+    padding: rem(90px) 0;
+
+    .controller {
+
+      .form-group {
+
+        .input-group {
+          margin-top: rem(20px);
+        }
+
+        .input-item {
+          padding: rem(30px) rem(20px);
+          width: 100%;
+          border-bottom: 1px solid #eee;
+          background: #fff;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .sp-right {
+            position: absolute;
+            right: rem(40px);
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          > span {
+            display: inline-block;
+            margin-left: rem(20px);
+            width: rem(120px);
+            font-size: rem(28px);
+            color: #333;
+            vertical-align: middle;
+					}
+
+          .right {
+            display: inline-block;
+            padding-right: rem(40px);
+            width: rem(500px);
+            text-align: right;
+            vertical-align: middle;
+
+            > input {
+              padding: 0 rem(5px);
+              width: 100%;
+              height: rem(68px);
+              font-size: rem(28px);
+              text-align: right;
+              border: none;
+              vertical-align: middle;
+            }
+
+          }
+        }
+
+        .button-item {
+          padding-top: rem(95px);
+
+          .btn {
+            display: block;
+            margin: 0 auto;
+            width: rem(710px);
+            height: rem(95px);
+            line-height: rem(95px);
+            font-size: rem(32px);
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: rem(10px);
+            background: #c9c9c9;
+            cursor: pointer;
+
+          }
+        }
+
+      }
+    }
+  }
+
+}
+

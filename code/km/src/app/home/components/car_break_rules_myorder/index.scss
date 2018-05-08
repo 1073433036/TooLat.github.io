@@ -1,0 +1,139 @@
+@import "~assets/styles/_bootstrap";
+
+.my-car-break-order-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #eeeff1;
+
+  .fl {float: left;}
+  .fr {float: right;}
+
+  .header-page{
+    background-color: #00a679;
+  }
+
+  .wrapper {
+    padding-top: rem(90px);
+    color: #b8b8b8;
+
+    .order-nav {
+
+      .nav-list {
+        overflow: auto;
+        width: 100%;
+        background-color: #00a679;
+        color: #fff;
+        text-align: center;
+
+        > li {
+          float: left;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25%;
+          height: rem(80px);
+
+          > span {
+            display: block;
+            width: rem(117px);
+            height: rem(40px);
+            line-height: rem(40px);
+            border-radius: rem(50px);
+          }
+        }
+
+        .active {
+          background-color: #ef9036;
+        }
+      }
+    }
+
+    .order-detail-list {
+      padding: rem(15px) rem(20px);
+
+      .detail-item {
+        position: relative;
+        margin-bottom: rem(23px);
+        background-color: #fff;
+        border-radius: rem(14px);
+        box-shadow: 0 rem(4px) rem(6px) rem(2px) #e0e0e0;
+
+        > h3 {
+          overflow: auto;
+          padding: rem(22px) rem(20px);
+          border-bottom: rem(2px) solid #00a679;
+
+          .carno {
+            float: left;
+            font-size: rem(34px);
+            color: #000;
+          }
+
+          .status {
+            float: right;
+            font-size: rem(34px);
+            color: #00a679;
+          }
+        }
+
+        .list {
+          padding: rem(25px) 0 rem(16px) rem(80px);
+          line-height: 1.67;
+
+          .orderno {
+            margin-bottom: rem(5px);
+            font-size: rem(30px);
+            color: #000;
+          }
+
+          .orderAmount {
+            margin-top: rem(5px);
+            font-size: rem(32px);
+            color: #d33420;
+          }
+        }
+
+        .delete-btn {
+          position: absolute;
+          bottom: rem(14px);
+          right: rem(20px);
+          width: rem(140px);
+          height: rem(60px);
+          font-size: rem(28px);
+          text-align: center;
+          line-height: rem(60px);
+          background-color: #00a679;
+          color: #fff;
+          border-radius: rem(12px);
+
+          &.on {
+            background-color: #afafaf;
+          }
+        }
+
+        i.icon {
+          position: absolute;
+          top: 50%;
+          right: rem(20px);
+          height: rem(40px);
+          line-height: rem(40px);
+          margin-top: rem(-20px);
+          font-size: rem(40px);
+          color: #999;
+        }
+      }
+    }
+
+    .peccancy-empty-img {
+      width: 50%;
+      padding-top: rem(300px);
+      margin: 0 auto;
+
+      > img {
+        width: 100%;
+      }
+    }
+
+  }
+}

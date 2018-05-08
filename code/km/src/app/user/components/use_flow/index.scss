@@ -1,0 +1,58 @@
+@import "~assets/styles/_bootstrap";
+
+.use-flow-page {
+  padding-top: rem(90px);
+  height: 100%;
+  background: #edf0f0;
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .wrapper {
+
+    .container {
+      padding-top: rem(20px);
+
+      .list {
+        padding-left: rem(30px);
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        .item {
+          position: relative;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+          }
+
+          > a {
+            display: flex;
+            padding: rem(20px) rem(20px) rem(20px) 0;
+            align-items: center;
+
+            .image {
+              flex: 0 0 rem(97px);
+              width: rem(97px);
+              height: rem(97px);
+            }
+
+            .content {
+              flex: 1;
+              min-width: 1px;
+              padding-left: rem(30px);
+              font-size: rem(30px);
+              color: #333;
+            }
+
+            i.icon {
+              font-size: rem(48px);
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+}

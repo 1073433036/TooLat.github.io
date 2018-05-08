@@ -1,0 +1,148 @@
+@import "~assets/styles/_bootstrap";
+
+.a-p-page {
+  height: 100%;
+  z-index: 100;
+  position: relative;
+  .layer {
+    height: 100%;
+    z-index: 100;
+
+    &:before {
+      position: fixed;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: rem(100px);
+      left: 0;
+      width: 100%;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 99;
+    }
+
+    .inner {
+      position: absolute;
+      bottom: rem(120px);
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 0 rem(10px) rgba(0, 0, 0, .3);
+      z-index: 100;
+
+      .header {
+        height: rem(120px);
+        line-height: rem(120px);
+        border-bottom: 1px solid $bc;
+
+        .trial, .complete {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          cursor: pointer;
+          z-index: 998;
+        }
+        
+        .cancel {
+          width:rem(40px);
+          height:rem(30px);
+          display:inline-block;
+          position:absolute;
+          right:rem(10px);
+          background:url(~assets/images/insurance_order/delect.png) no-repeat;
+          background-size:100%;
+          z-index: 101;
+          top:rem(48px);
+        }
+
+        .close {
+          right: rem(30px);
+          color: #01b5f1;
+        } 
+        .trial {
+          left: rem(30px);
+          color: #333;
+
+          span {
+            color: #fa0808;
+          }
+        }
+
+        .title {
+          font-size: rem(32px);
+          color: #333;
+          text-align: center;
+        }
+      }
+
+      .body {
+        padding: rem(5px) 0;
+        height: rem(380px);
+
+        .select-group {
+          height: 100%;
+
+          .list {
+            width: 100%;
+
+            .item {
+              height: rem(85px);
+              line-height: rem(85px);
+              font-size: rem(28px);
+              color: #333;
+              display: flex;
+              padding: rem(20px);
+              
+              p {
+                flex: 1;
+                height: rem(42px);
+                line-height: rem(42px);
+                color: #c00;
+                text-align: left;
+              }
+
+              .time{
+                text-align: right;
+                padding-right: rem(70px);
+                color: #797777;
+              }
+
+              .name {
+                color: #333;
+              }
+              .more {
+                  width: rem(50px);
+                  height: rem(50px);
+                  display: inline-block;
+                  position: absolute;
+                  right: rem(30px);
+                  background-size: 100%;
+                  z-index: 100;
+                  top: rem(20px);
+                  color: #666;
+                  font-size: rem(40px)
+              }
+
+              &.active {
+                p{
+                  // color: #01b5f1;
+                }
+                // background: #f3f6f5;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  .dates-page .layer .inner {
+    bottom: rem(120px);
+  }
+}
+.utilitybar-page {
+  display: none !important;
+}

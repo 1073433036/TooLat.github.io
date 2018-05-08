@@ -1,0 +1,90 @@
+@import "~assets/styles/_bootstrap";
+
+.activated-page {
+	height: 100%;
+	background: #edf0f0;
+
+	.group {
+
+		.list {
+
+			.item {
+				position: relative;
+				height: rem(197px);
+				background-color: #fff;
+				border-bottom: 1px solid $bc;
+
+				.head {
+					position: absolute;
+					top: rem(48px);
+					left: rem(20px);
+					width: rem(100px);
+					height: rem(100px);
+					border-radius: 50%;
+
+					> img {
+						width: 100%;
+						height: 100%;
+						border-radius: 50%;
+					}
+				}
+
+				.box {
+					position: absolute;
+					top: rem(50px);
+					left: rem(142px);
+					width: rem(300px);
+					height: rem(94px);
+
+					.info {
+						width: 100%;
+						height: rem(42px);
+
+						.person {
+							font-size: rem(32px);
+							color: #000;
+
+							.partner {
+								padding-left: rem(10px);
+								font-size: rem(28px);
+								color: #01b3f0;
+							}
+						}
+
+						.phone {
+							padding-top: rem(10px);
+							color: #999;
+						}
+					}
+				}
+				.right {
+					position: absolute;
+					top: rem(50px);
+					right: rem(20px);
+					height: rem(94px);
+
+					.info {
+						width: 100%;
+						height: rem(42px);
+
+						.person {
+							font-size: rem(30px);
+							color: #000;
+
+							.city {
+								padding-left: rem(10px);
+							}
+						}
+
+						.location {
+							padding-top: rem(10px);
+							text-align: right;
+							color: #999;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

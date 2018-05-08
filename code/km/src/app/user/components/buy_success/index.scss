@@ -1,0 +1,267 @@
+@import "~assets/styles/_bootstrap";
+
+.noopsyche_cultivate_card_page {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: #edf0f0;
+
+  .pay-type {
+  	display: none;
+
+  	&.on {
+  		display: block;
+  	}
+  }
+
+  .box {
+		padding-bottom:rem(100px);
+
+		.wrapper {
+			padding-top: rem(90px);
+			padding-bottom: rem(44px);
+			background: #fff;
+
+			.payment {
+
+				.payment-log {
+					width: rem(100px);
+					height: rem(100px);
+					margin: rem(80px) auto;
+				}
+
+				.succeed {
+					font-size: rem(36px);
+					text-align: center;
+					color: #000;
+
+					> em {
+						color: #f00;
+					}
+				}
+			}
+
+			.activate {
+				width: rem(648px);
+				height: rem(206px);
+				border: 1px solid $bc;
+				margin: rem(50px) auto;
+				padding: rem(30px);
+
+				.video-activate {
+					height: rem(48px);
+					line-height: rem(48px);
+
+					.video-key {
+						padding-left: rem(14px);
+						font-size: rem(32px);
+						vertical-align: middle;
+						color: #000;
+					}
+
+					.info {
+						margin-top: rem(10px);
+						font-size: rem(28px);
+						color: #999;
+
+						> a {
+					    padding: 0 rem(10px);
+					    border: 1px solid #01b3f0;
+					    border-radius: rem(10px);
+					    color: #01b3f0;
+					    background-color: #eee;
+						}
+					}
+				}
+			}
+		}
+
+
+		.content {
+			padding: rem(44px) rem(50px);
+			border-top: 1px solid $bc;
+			box-shadow: rem(1px) rem(12px) rem(6px) $bc inset;
+			background-color: #eeeff1;
+
+			.title {
+				font-size: rem(28px);
+				color: #000;
+			}
+
+			.text {
+				padding-top: rem(22px);
+				line-height: rem(48px);
+				font-size: rem(24px);
+				color: #999;
+			}
+		}
+
+		.photo {
+			padding: rem(20px);
+		}
+
+		.btn {
+			width: 100%;
+			height: rem(80px);
+			margin-top: rem(60px);
+			padding-bottom: rem(100px);
+			padding: 0 rem(30px);
+			font-size: rem(32px);
+			overflow: hidden;
+
+			.go-back {
+				float: left;
+				width: rem(324px);
+				height: rem(80px);
+				line-height: rem(80px);
+				text-align: center;
+				border: 1px solid $bc;
+				border-radius: rem(40px);
+
+				> a {
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.download {
+				width: rem(324px);
+				height: rem(80px);
+				line-height: rem(80px);
+				text-align: center;
+				border: 1px solid $bc;
+				border-radius: rem(40px);
+				background-color: #01b3f0;
+				float: right;
+
+				> a {
+					color: #fff;
+				}
+			}
+
+			.invite {
+				margin: 0 auto;
+				width: rem(500px);
+				height: rem(80px);
+				line-height: rem(80px);
+				text-align: center;
+				border-radius: rem(10px);
+				background: #01b3f0;
+
+				> a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.enlarge {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99999;
+		background: rgba(0, 0, 0, .5);
+		overflow-x: auto;
+		display: flex;
+		align-items: center;
+
+		> img {
+			flex: 1;
+			width: auto;
+			max-width: inherit;
+			height: auto;
+			max-height: 70%;
+		}
+
+		i.icon {
+			position: fixed;
+			bottom: rem(50px);
+			left: 50%;
+			margin-left: rem(-40px);
+			display: block;
+			width: rem(80px);
+			height: rem(80px);
+			line-height: rem(80px);
+			text-align: center;
+			font-size: rem(60px);
+			border: 1px solid #fff;
+			color: #fff;
+			border-radius: 50%;
+			overflow-x: hidden;
+		}
+	}
+
+  .mask-layer {
+    position: relative;
+    z-index: 2001;
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(590px);
+      height: rem(350px);
+      margin-top: rem(-175px);
+      margin-left: rem(-295px);
+      padding-top: rem(260px);
+      background: url(~assets/images/card-share-layer.png) no-repeat;
+      background-size: 100%;
+      text-align: center;
+      font-size: 0;
+      z-index: 2001;
+
+      > a {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(240px);
+        line-height: rem(62px);
+        font-size: rem(32px);
+        margin: 0 rem(15px);
+        border-radius: rem(40px);
+        overflow: hidden;
+
+        &:first-child {
+          border: 1px solid $bc;
+          color: #999;
+        }
+
+        &:last-child {
+          border: 1px solid #01b3f0;
+          background-color: #01b3f0;
+          color: #fff;
+        }
+      }
+    }
+
+    .share-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      > img {
+        position: absolute;
+        display: block;
+        right: 0;
+        width: rem(519px);
+        height: rem(371px);
+      }
+    }
+  }
+
+}

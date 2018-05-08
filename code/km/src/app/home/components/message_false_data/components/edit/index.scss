@@ -1,0 +1,264 @@
+
+
+@import "~assets/styles/_bootstrap";
+
+.edit-false-data {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeff1;
+  z-index: 2001;
+
+  > ._v-container {
+    background-color: #eeeff1;
+  }
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 2;
+
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(90px);
+      height: rem(90px);
+      z-index: 2;
+
+      &:before {
+        content: '';
+        display: block;
+        width: rem(28px);
+        height: rem(28px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: rem(-14px);
+        margin-left: rem(-14px);
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+      }
+    }
+
+    .title {
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      color: #fff;
+      font-size: rem(36px);
+    }
+  }
+
+  .edit-wrapper {
+    padding-top: rem(90px);
+
+    .box {
+      padding-top: rem(32px);
+
+      .list {
+        background-color: #fff;
+        padding: 0 rem(20px);
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: rem(32px);
+
+        &.on {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+
+        .item {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: rem(10px) 0;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+          }
+
+          .title {
+            display: block;
+            height: rem(80px);
+            line-height: rem(80px);
+            color: #000;
+            font-size: rem(28px);
+          }
+
+          .content {
+            flex: 1;
+            min-width: 1px;
+            padding-right: rem(20px);
+            text-align: right;
+
+            span.name {
+              color: #01b3f0;
+              font-size: rem(28px);
+
+              &.on {
+                color: #757575;
+              }
+            }
+
+            .input-item {
+              width: 50%;
+              text-align: right;
+              border: none;
+              font-size: rem(28px);
+              color: #01b3f0;
+
+              &[type=file] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 106%;
+                height: 100%;
+                opacity: 0;
+              }
+            }
+
+            .switch-checked {
+              display: inline-block;
+              vertical-align: top;
+              height: 100%;
+
+              input[type="checkbox"] {
+                display: none;
+              }
+
+              input[type="checkbox"] + label {
+                display: inline-block;
+                vertical-align: top;
+                width: rem(115px);
+                height: rem(45px);
+                transition: 0.3s;
+              }
+
+              input[type="checkbox"] + label:after {
+                display: block;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: rem(45px);
+                height: rem(45px);
+                content: '';
+                cursor: pointer;
+                transition: 0.3s;
+              }
+
+              .open_audio:checked + label.green {
+                background: #01b3f0;
+              }
+
+              .open_audio + label.green:before {
+                position: absolute;
+                display: block;
+                top: 0;
+                bottom: 0;
+                right: rem(12px);
+                height: rem(45px);
+                line-height: rem(45px);
+                font-size: rem(24px);
+                content: 'OFF';
+                color: #fff;
+              }
+
+              .open_audio:checked + label.green:before {
+                position: absolute;
+                display: block;
+                top: 0;
+                bottom: 0;
+                left: rem(20px);
+                right: initial;
+                height: rem(45px);
+                line-height: rem(45px);
+                font-size: rem(24px);
+                content: 'ON';
+                color: #fff;
+              }
+
+              .open_audio:checked + label.green:after {
+                background: #fff;
+              }
+
+              .open_audio:checked + label:after {
+                left: 60%;
+              }
+
+              .open_audio + label {
+                background: #ddd;
+                border-radius: rem(40px);
+                box-shadow: rem(2px) rem(2px) rem(6px) #aaa;
+              }
+
+              .open_audio + label:after {
+                background: #fff;
+                border-radius: 50%;
+                box-shadow: rem(2px) rem(2px) rem(6px) #aaa;
+              }
+            }
+          }
+
+          .icon {
+            display: block;
+            width: rem(20px);
+            height: rem(35px);
+
+            .sp {
+              vertical-align: top;
+            }
+          }
+
+          .card-btn {
+            display: block;
+            background-color: #eeeff1;
+            position: absolute;
+            left: rem(200px);
+            top: 50%;
+            border: 1px solid #ddd;
+            padding: rem(18px) rem(40px);
+            border-radius: rem(10px);
+            line-height: rem(40px);
+            margin-top: rem(-40px);
+            color: #333;
+            z-index: 2;
+          }
+        }
+      }
+
+      .list-title {
+        padding-left: rem(20px);
+        line-height: rem(80px);
+        font-size: rem(28px);
+        color: #333;
+        font-weight: bold;
+      }
+
+      .submit-btn {
+        padding: rem(30px) rem(20px);
+
+        > a {
+          display: block;
+          width: 100%;
+          height: rem(90px);
+          line-height: rem(90px);
+          font-size: rem(32px);
+          color: #fff;
+          text-align: center;
+          border: none;
+          border-radius: rem(10px);
+          background: #01b3f0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

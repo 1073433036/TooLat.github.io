@@ -1,0 +1,212 @@
+@import "~assets/styles/_bootstrap";
+
+.finish-invite-page {
+  height: 100%;
+  background: #fff;
+
+  .wrapper {
+    .header {
+      position: relative;
+      height: rem(300px);
+      background: url(~assets/images/register-bg.png);
+
+      .header-logo {
+        position: absolute;
+        top: rem(35px);
+        left: 50%;
+        margin-left: rem(-58px);
+        width: rem(116px);
+        height: rem(116px);
+        background: url(~assets/images/register-logo.png) no-repeat center / 100% 100%;
+      }
+
+      .desc-top {
+        position: absolute;
+        top: rem(186px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(357px);
+        height: rem(23px);
+        background: url(~assets/images/register-tip-top.png) no-repeat center / 100% 100%;
+      }
+
+      .desc-bottom {
+        position: absolute;
+        top: rem(220px);
+        width: 100%;
+        color: #a09b74;
+        text-align: center;
+        font-size: rem(24px);
+      }
+    }
+
+    .content {
+      box-sizing: border-box;
+      padding: rem(30px);
+
+      .manager-wrapper {
+        height: rem(120px);
+
+        .avatar {
+          display: inline-block;
+          width: rem(85px);
+          height: rem(85px);
+          border-radius: 50%;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .nickName {
+          position: absolute;
+          top: rem(95px);
+          left: rem(-10px);
+          width: rem(100px);
+          font-size: rem(24px);
+          text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .invite-info {
+          position: absolute;
+          top: 0;
+          left: rem(115px);
+
+          .name {
+            color: #5d7dbd;
+          }
+
+          .level {
+            > span {
+              font-size: rem(22px);
+              color: #a0baef;
+            }
+          }
+        }
+
+        .green-tip {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: rem(20px);
+          box-sizing: border-box;
+          max-width: rem(410px);
+          background: #bef978;
+          border-radius: rem(10px);
+          font-size: rem(24px);
+
+          &::after {
+            position: absolute;
+            top: 50%;
+            margin-top: rem(-6px);
+            left: rem(-12px);
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: rem(6px) solid transparent;
+            border-right: rem(12px) solid #bef978;
+            border-bottom: rem(6px) solid transparent;
+          }
+        }
+      }
+
+      .info-wrapper {
+        margin-top: rem(70px);
+
+        .item {
+          position: relative;
+          height: rem(82px);
+          border: 1px solid #eee;
+          border-radius: rem(10px);
+          box-sizing: border-box;
+
+          &:not(:first-child) {
+            margin-top: rem(25px);
+          }
+
+          > span {
+            margin-left: rem(30px);
+            color: #333;
+            line-height: rem(82px);
+            font-size: rem(28px);
+          }
+
+          .val {
+            margin-left: rem(30px);
+            color: #888;
+          }
+
+          > input {
+            margin-left: rem(30px);
+            width: rem(320px);
+            color: #888;
+            border: 0;
+
+            &::-webkit-input-placeholder {
+              color: #ddd;
+            }
+            &::-moz-placeholder {
+              color: #ddd;
+            }
+            &:-moz-placeholder {
+              color: #ddd;
+            }
+            &:-ms-input-placeholder {
+              color: #ddd;
+            }
+          }
+
+          .code-wrapper {
+            position: absolute;
+            top: rem(16px);
+            right: rem(10px);
+
+            .phone-code {
+              box-sizing: border-box;
+              padding: 0 rem(15px);
+              min-width: rem(120px);
+              height: rem(48px);
+              line-height: rem(48px);
+              color: #f18f34;
+              font-size: rem(24px);
+              border: 1px solid #f18f34;
+              border-radius: rem(10px);
+
+              &.active {
+                background: #c9c9c9;
+              }
+            }
+          }
+        }
+
+        .pwd-tip {
+          margin-top: rem(5px);
+          text-indent: rem(5px);
+          color: #aaa;
+        }
+      }
+
+      .register-btn {
+        margin: rem(40px) rem(20px) 0;
+        height: rem(90px);
+        line-height: rem(90px);
+        text-align: center;
+        color: #fff;
+        background: #f18f34;
+        border-radius: rem(10px);
+      }
+
+      > p {
+        margin-top: rem(10px);
+        color: #ccc;
+        line-height: rem(40px);
+        text-align: center;
+      }
+    }
+  }
+}

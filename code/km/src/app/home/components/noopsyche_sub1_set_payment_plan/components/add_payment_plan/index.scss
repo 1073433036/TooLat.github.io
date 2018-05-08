@@ -1,0 +1,121 @@
+@import "~assets/styles/_bootstrap";
+
+.add_payment_plan_page {
+  height: 100%;
+  background: #eeeff1;
+  color: #fff;
+
+  .add-plan-subcomponent {
+    height: 100%;
+  }
+
+  .main {
+    padding-top: rem(90px);
+
+    .list {
+      background-color: #fff;
+      font-size: rem(28px);
+      color: #323232;
+      box-shadow: 0 rem(4px) rem(4px) #ccc;
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        height: rem(127px);
+        line-height: rem(127px);
+        margin-left: 5%;
+        border-bottom: rem(2px) solid #eee;
+      }
+
+      .bordernone {
+        border: none;
+      }
+
+      .left {
+        color: #333;
+      }
+
+      .right {
+        margin-right: 5%;
+      }
+
+      .readyonly-input {
+        padding-left: rem(15px);
+        margin-right: rem(15px);
+        border: none;
+        text-align: right;
+      }
+
+      .input {
+        float: left;
+      }
+
+      .input1 {
+        display: flex;
+        justify-content: flex-end;
+        float: right;
+        width: rem(220px);
+      }
+
+      .sub-input {
+        width: rem(70px);
+        border: none;
+        text-align: center;
+
+      }
+
+      .subtract {
+        width: rem(26px);
+        height: 100%;
+        font-size: rem(36px);
+        text-align: center;
+        color: #ff4348;
+      }
+
+      .plus {
+        width: rem(26px);
+        height: 100%;
+        font-size: rem(36px);
+        text-align: center;
+        color: #01b5f1;
+      }
+    }
+
+    .apply-tips {
+      line-height: 1.67;
+      padding: rem(30px) rem(20px) 0 rem(20px);
+      font-size: rem(24px);
+      color: #999;
+    }
+
+    .btn-next {
+      display: block;
+      width: rem(400px);
+      height: rem(80px);
+      margin: 0 auto;
+      margin-top: rem(55px);
+      font-size: rem(36px);
+      line-height: rem(80px);
+      text-align: center;
+      background-color: #01b5f1;
+      border-radius: rem(12px);
+      color: #fff;
+    }
+
+    .user-tips {
+			padding: rem(50px) rem(20px) 0 rem(30px);
+      color: #999;
+			line-height: 1.67;
+			font-size: rem(24px);
+
+			.hint {
+				margin-left: rem(-10px);
+				color: #000;
+			}
+    }
+
+  }
+
+}

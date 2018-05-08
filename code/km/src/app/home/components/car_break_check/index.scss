@@ -1,0 +1,130 @@
+@import "~assets/styles/_bootstrap";
+
+.car-break-check-page {
+  height: 100%;
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+  .circle_box{
+    height: 300px;
+    width:100%;
+    position: relative;
+    .bg{
+      position: absolute;
+      top:rem(82px);
+      left: rem(164px);
+      height:100%;
+      width:100%;
+      background:url(~assets/images/carBreakCheck.png) no-repeat;
+    }
+    .circle{
+        width:200px;
+        height:200px;
+        border:5px solid #ccc;
+        border-bottom:5px solid #f6f6f9;
+        border-radius:50%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    .progress,.progress2{
+        width:100px;
+        height:1px;
+        background:rgba(0,255,0,1);
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:rotate(135deg);
+        transform-origin:0% 0%;
+    }
+    .progress{
+        background:#f6f6f9;
+    }
+    .detail{
+        width:188px;
+        height:188px;
+        border:10px solid transparent;
+        background:#f6f6f9;
+        /*background:#ccc;*/
+        border-radius:50%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index:10;
+        text-align: center;
+        // line-height:490px;
+    }
+  }
+  // .img {
+  //   width: 200px;
+  //   height: 200px;
+  //   background: url(~assets/images/yinglian.jpg);
+  // }
+
+  .cont-wrapper {
+    position: relative;
+    height: rem(470px);
+    box-sizing: border-box;
+    z-index: 100;
+    top:76px;
+    .progress-wrapper {
+      position: absolute;
+      width: 100%;
+      height: rem(300px);
+    }
+
+    .day {
+      color: #08bc03;
+      font-size: rem(150px);
+      text-align: center;
+      height:rem(198px);
+    }
+
+    .day-tip {
+      color: #999;
+      font-size: rem(28px);
+      text-align: center;
+    }
+
+    .cont-tip {
+      margin-top: rem(30px);
+      color: #666;
+      font-size: rem(30px);
+      text-align: center;
+    }
+  }
+
+  .tip-top {
+    margin-top: rem(100px);
+    text-align: center;
+    color: #08bc03;
+    font-size: rem(30px);
+    line-height: rem(70px);
+  }
+
+  .tip-bottom {
+    text-align: center;
+    color: #333;
+    font-size: rem(24px);
+    line-height: rem(58px);
+  }
+
+  .deal-btn {
+    margin: rem(80px) rem(50px) 0;
+    height: rem(100px);
+    line-height: rem(100px);
+    font-size: rem(32px);
+    text-align: center;
+    border-radius: rem(15px);
+    color: #fff;
+    background: #40beff;
+
+    &.off {
+      color: #999;
+      background: #e9e9e9;
+    }
+  }
+}

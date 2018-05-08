@@ -1,0 +1,326 @@
+@import "~assets/styles/_bootstrap";
+.red{
+  color : #ff4046 !important
+}
+.green{
+  color: #31bd64;
+}
+.yellow{
+
+}
+.blue{}
+.ad-print{
+  padding: rem(10px) 0;
+  .title{
+    text-align: center;
+  }
+}
+.setCreditCardPayment {
+  height: 100%;
+
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .basic_info_-wrapper {
+    .btn {
+      width: rem(710px);
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      font-size: rem(32px);
+      color: #fff;
+      margin: rem(80px) rem(20px) 0 rem(20px);
+      background-color: #c9c9c9;
+      border: 1px solid #c9c9c9;
+      border-radius: rem(10px);
+      margin-bottom: rem(40px);
+      &.on {
+        background-color: #01b3f0;
+        border: 1px solid #01b3f0;
+      }
+    }
+    .btn-group {
+      @include clearfix;
+      .btn{
+        width: rem(300px);
+        float: right;
+        &:first-child{
+          float: left;
+        }
+      }
+    }
+
+    .info_box {
+      margin-top: rem(20px);
+
+      .info {
+        font-size: rem(28px);
+        background: #fff;
+        margin-top:rem(20px);
+        .detail_list {
+          position: relative;
+          height: rem(126px);
+          line-height: rem(126px);
+          font-size: rem(28px);
+          border-bottom: 1px solid $bc;
+          color: #000;
+          overflow: hidden;
+          padding: 0 rem(20px);
+          .add{
+            display: inline-block;
+            vertical-align: middle;
+            width: rem(37px);
+            height: rem(37px);
+            background: url('~assets/images/Intelligence/14.png') no-repeat;
+            background-size: 100%;
+          }
+          .reduce{
+            display: inline-block;
+            vertical-align: middle;
+            width: rem(37px);
+            height: rem(37px);
+            background: url('~assets/images/Intelligence/13.png') no-repeat;
+            background-size: 100%;
+          }
+          em {
+            display: inline-block;
+            float: left;
+            margin-right: rem(20px);
+            width: rem(40px);
+            height: rem(46px);
+            margin-top: rem(50px);
+            &.cvn2 {
+              background: url('~assets/images/Intelligence/4.png') no-repeat;
+              background-size: 100%;
+            }
+            &.pay {
+              background: url('~assets/images/Intelligence/12.png') no-repeat;
+              background-size: 100%;
+            }
+            &.billDate {
+              background: url('~assets/images/Intelligence/7.png') no-repeat;
+              background-size: 100%;
+            }
+            &.dueDate {
+              background: url('~assets/images/Intelligence/8.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+          .date {
+            color:#5d5a5a;
+            position: absolute;
+            right: rem(50px);
+          }
+          .people {
+            float: left;
+          }
+          .relative {
+            color: #b5b5b5;
+          }
+
+          .input-item {
+            position: absolute;
+            top: rem(26px);
+            right: rem(50px);
+            width: rem(360px);
+            height: rem(70px);
+            font-size: rem(28px);
+            text-align: right;
+            border: none;
+            outline: none;
+            &::-webkit-input-placeholder { color: #c3c3c3; }
+            &::-moz-placeholder { color: #c3c3c3; }
+            &:-moz-placeholder { color: #c3c3c3; }
+            &:-ms-input-placeholder { color: #c3c3c3; }
+            &.school {
+              right: rem(65px);
+              &::-webkit-input-placeholder { color: #000; }
+              &::-moz-placeholder { color: #000; }
+              &:-moz-placeholder { color: #000; }
+              &:-ms-input-placeholder { color: #000; }
+              overflow: hidden;
+            }
+            &.verificationCode {
+              right: rem(225px);
+              width: rem(200px);
+            }
+            &:disabled { background-color: #fff; }
+            .date-list{
+              display: inline-block;
+              max-width: rem(320px);
+              height: rem(70px);
+              overflow: hidden;
+              vertical-align: middle;
+            }
+          }
+          .num-item{
+            position: absolute;
+            top: rem(26px);
+            right: rem(50px);
+            width: rem(400px);
+            height: rem(70px);
+            font-size: rem(28px);
+            text-align: right;
+            line-height: rem(70px);
+            input{
+              width: rem(40px);
+              border: none;
+              outline: none;
+              vertical-align: middle;
+              text-align: center;
+              color: #01b3f0;
+            }
+          }
+          .arrow {
+            position: absolute;
+            top: rem(45px);
+            right: rem(20px);
+            width: rem(18px);
+            height: rem(32px);
+            background: url('~assets/images/credit-card/arrow-left-little.png') no-repeat center / 100% 100%;
+          }
+          &:first-child {
+            .input-item{
+              color: #01b3f0;
+            }
+          }
+        }
+      }
+    }
+    .date{
+      line-height: rem(70px);
+    }
+  }
+  .bill-block{
+    margin: rem(40px) rem(20px);
+    font-size: rem(28px);
+    border-radius: rem(10px);
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 rem(6px) rem(10px) rgba(0,0,0,.4);
+    .bill-block-head, .bill-block-foot{
+      padding: rem(20px);
+    }
+    .icon{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .icon-order{
+      width: rem(40px);
+      height: rem(40px);
+      background: url('~assets/images/Intelligence/icon-order.png') no-repeat;
+      background-size: 100%;
+      margin-right: rem(8px);
+    }
+    .icon-reset{
+      width: rem(40px);
+      height: rem(40px);
+      background: url('~assets/images/Intelligence/icon-reset.png') no-repeat;
+      background-size: 100%;
+      margin-right: rem(8px);
+    }
+    .bill-block-head{
+      background-color: #d8ebff;
+      color: #03b2f1;
+      time{
+        float: right;
+      }
+    }
+    .content-row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: rem(20px);
+      border-bottom: 1px solid #dddddd;
+      color: #000;
+      span{
+        color: grey;
+      }
+      .bill-label{
+        padding: rem(6px) rem(10px);
+        border: 1px dashed #03b2f1;
+        color: #03b2f1;
+        border-radius: rem(10px);
+        width: rem(200px);
+        height: rem(60px);
+        line-height: rem(40px);
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+      }
+    }
+    .bill-block-foot{
+      color: #03b2f1;
+      text-align: center;
+    }
+  }
+
+  .ad-print {
+    box-sizing: border-box;
+    padding: 0 rem(20px);
+  }
+}
+.dialog{
+  .head{
+    background-color: #f4f4f4;
+  }
+  .content{
+    overflow: hidden;
+    text-align: center;
+    .main{
+      margin-top: rem(30px);
+      & > p{
+        width: 100%;
+        font-size: rem(30px);
+        color: #333!important;
+      }
+      .info-html{
+        width: 100%;
+        font-size: rem(28px);
+        text-align: center;
+        color: #333!important;
+      }
+    }
+  }
+  .foot{
+    display: flex;
+    justify-content: flex-end;
+    & > button.dialog-item{
+      display: block;
+      flex: 1;
+      text-align: center;
+    }
+  }
+  .input-city{
+    width: rem(380px);
+    height: rem(80px);
+    border: 1px solid darkgrey;
+    border-radius: rem(10px);
+    padding: rem(10px);
+    margin-left: rem(20px);
+  }
+}
+.no-foot{
+  .content{
+    .main{
+      border-bottom: none;
+      padding-top: rem(20px);
+      padding-bottom: rem(30px);
+    }
+  }
+}
+.show-foot{
+  .content{
+    .main{
+      border-bottom: 1px solid #c5c5c5;
+      padding-top: rem(20px);
+      padding-bottom: rem(30px);
+    }
+  }
+}
+.dialog:before {
+  z-index: 999 !important;
+}

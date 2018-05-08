@@ -1,0 +1,214 @@
+@import "~assets/styles/_bootstrap";
+
+.creditcard-share-page {
+  padding-top: rem(90px);
+  height: 100%;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .container {
+
+      .head {
+        position: relative;
+        padding: rem(38px) 0 rem(60px) 0;
+        background-color: #fff;
+        text-align: center;
+        margin-bottom: rem(20px);
+
+        .nick {
+          height: rem(60px);
+          line-height: rem(60px);
+          font-size: rem(32px);
+          color: #01b3f0;
+        }
+
+        .text {
+          height: rem(56px);
+          line-height: rem(56px);
+          color: #333;
+          font-size: rem(30px);
+          margin-bottom: rem(26px);
+        }
+
+        .money {
+          height: rem(465px);
+          padding-top: rem(248px);
+          background: url(~assets/images/card-share-bg.png) no-repeat;
+          background-size: 100%;
+          margin-bottom: rem(53px);
+
+          .tips1 {
+            height: rem(50px);
+            line-height: rem(50px);
+            font-size: rem(32px);
+            font-weight: bold;
+            color: #fff;
+          }
+
+          .tips2 {
+            height: rem(44px);
+            line-height: rem(44px);
+            color: rgba(255, 255, 255, .74);
+            font-size: rem(28px);
+          }
+
+          .num {
+            height: rem(52px);
+            line-height: rem(52px);
+            color: #f3d220;
+            font-size: rem(28px);
+
+            > span {
+              padding-left: rem(10px);
+              font-size: rem(36px);
+              font-weight: bold;
+            }
+          }
+        }
+
+        .btn {
+
+          > a {
+            display: inline-block;
+            vertical-align: top;
+            width: rem(484px);
+            height: rem(80px);
+            line-height: rem(80px);
+            background-color: #269ffb;
+            color: #fff;
+            font-size: rem(36px);
+            border-radius: rem(40px);
+          }
+        }
+      }
+
+      ul.list {
+        background-color: #fff;
+
+        li.item {
+          position: relative;
+          padding-left: rem(100px);
+
+          &:not(:last-child) > a {
+            border-bottom: 1px solid $bc;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            width: rem(28px);
+            height: rem(28px);
+            position: absolute;
+            top: 50%;
+            right: rem(30px);
+            margin-top: rem(-14px);
+            border-bottom: 1px solid #999;
+            border-right: 1px solid #999;
+            transform: rotate(-45deg);
+            transform-origin: 50% 50%;
+          }
+
+          i.icon {
+            position: absolute;
+            top: 50%;
+            left: rem(20px);
+            display: block;
+            width: rem(60px);
+            height: rem(60px);
+            line-height: rem(60px);
+            margin-top: rem(-30px);
+            text-align: center;
+            font-size: rem(50px);
+            color: #269ffb;
+          }
+
+          > a {
+            display: block;
+            width: 100%;
+            padding: rem(36px) 0;
+
+            .name {
+              height: rem(52px);
+              line-height: rem(52px);
+              font-size: rem(32px);
+              color: #333;
+            }
+
+            .text {
+              height: rem(48px);
+              line-height: rem(48px);
+              font-size: rem(28px);
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .layer {
+    position: relative;
+    z-index: 2001;
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    .box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: rem(590px);
+      height: rem(350px);
+      margin-top: rem(-175px);
+      margin-left: rem(-295px);
+      padding-top: rem(260px);
+      background: url(~assets/images/card-share-layer.png) no-repeat;
+      background-size: 100%;
+      text-align: center;
+      font-size: 0;
+      z-index: 2001;
+
+      > a {
+        display: inline-block;
+        vertical-align: top;
+        width: rem(240px);
+        line-height: rem(62px);
+        font-size: rem(32px);
+        margin: 0 rem(15px);
+        border-radius: rem(40px);
+        overflow: hidden;
+
+        &:first-child {
+          border: 1px solid $bc;
+          color: #999;
+        }
+
+        &:last-child {
+          border: 1px solid #01b3f0;
+          background-color: #01b3f0;
+          color: #fff;
+        }
+      }
+    }
+
+    .share-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

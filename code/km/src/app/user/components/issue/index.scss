@@ -1,0 +1,170 @@
+@import "~assets/styles/_bootstrap";
+
+.user-issue-page {
+  height: 100%;
+
+  .wrapper {
+    padding-top: rem(90px);
+
+    .controller {
+
+      .list {
+
+        .time {
+          padding: rem(48px) 0 rem(36px);
+          text-align: center;
+
+          > span {
+            display: inline-block;
+            height: rem(45px);
+            line-height: rem(45px);
+            padding: 0 rem(20px);
+            vertical-align: top;
+            background-color: #ddd;
+            font-size: rem(24px);
+            color: #b0b0b0;
+            border-radius: rem(20px);
+          }
+        }
+
+        .box {
+          position: relative;
+          background-color: #fff;
+
+          .person {
+            position: relative;
+            height: rem(125px);
+            line-height: rem(125px);
+            padding-left: rem(60px);
+
+            .name {
+              padding-right: rem(30px);
+              font-size: rem(32px);
+              color: #333;
+            }
+
+            .text {
+              padding-right: rem(30px);
+              color: #999;
+              font-size: rem(28px);
+
+              .fc {
+                padding: 0 rem(5px);
+                color: #ff6815;
+              }
+            }
+
+            i.icon {
+              position: absolute;
+              top: 50%;
+              right: rem(20px);
+              margin-top: rem(-30px);
+              display: inline-block;
+              width: rem(60px);
+              height: rem(60px);
+              line-height: rem(60px);
+              text-align: center;
+              font-size: rem(40px);
+              color: #999;
+            }
+          }
+
+          .company {
+            position: relative;
+            padding: rem(26px) rem(20px) rem(38px) rem(50px);
+            border-top: 1px solid $bc;
+
+            .line {
+              position: relative;
+              height: rem(66px);
+              line-height: rem(66px);
+
+              .info {
+                display: inline-block;
+                padding-left: rem(10px);
+                vertical-align: middle;
+
+                > a {
+                  color: #febd17;
+                }
+              }
+
+              i.icon {
+                display: inline-block;
+                padding-right: rem(10px);
+                height: rem(66px);
+                line-height: rem(66px);
+                font-size: rem(36px);
+                color: #01b3f0;
+                vertical-align: top;
+              }
+
+              .enter {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0px, -50%);
+              }
+
+              > span {
+                font-size: rem(28px);
+              }
+            }
+
+            .grab {
+              width: rem(128px);
+              height: rem(54px);
+              line-height: rem(54px);
+              position: absolute;
+              top: 50%;
+              right: rem(20px);
+              margin-top: rem(-27px);
+              text-align: center;
+              font-size: rem(30px);
+              color: #fff;
+              background-color: #01b3f0;
+              border-radius: rem(10px);
+            }
+          }
+
+          .tips {
+            padding-left: rem(50px);
+            padding-bottom: rem(40px);
+            line-height: rem(50px);
+            color: #999;
+            font-size: rem(30px);
+          }
+
+          .stick {
+            position: absolute;
+            bottom: rem(32px);
+            right: rem(20px);
+            display: block;
+            height: rem(68px);
+            line-height: rem(68px);
+            padding: 0 rem(20px);
+            background-color: #01b3f0;
+            color: #fff;
+            border-radius: rem(10px);
+          }
+
+          .status {
+            position: absolute;
+            top: rem(-4px);
+            left: 0;
+            width: rem(107px);
+          }
+        }
+			}
+
+			.photo {
+				margin: rem(70px) auto;
+				width: rem(400px);
+
+				> img {
+					width: 100%;
+				}
+			}
+    }
+  }
+}

@@ -1,0 +1,242 @@
+@import "~assets/styles/_bootstrap";
+
+.insuranceInformation {
+  height: 100%;
+
+  > ._v-container > ._v-content {
+    padding-top: rem(90px);
+  }
+
+  .basic_info_wrapper {
+    
+    .info_header {
+      padding: 0 rem(20px);
+      display:flex;
+      position: relative;
+      margin-top: rem(24px);
+      height: rem(40px);
+      line-height: rem(40px);
+      background: #f6f6f9;
+      span{
+        flex:1;
+      }
+
+      .text{
+        position: absolute;
+        right:rem(50px);
+        color:#666;
+        font-size: rem(20px);
+      }
+    }
+
+    .info_box {
+      margin-top: rem(20px);
+
+      .info {
+        font-size: rem(28px);
+        background: #fff;
+        margin-top:rem(20px);
+        .detail_list {
+          position: relative;
+          height: rem(126px);
+          line-height: rem(126px);
+          font-size: rem(28px);
+          border-bottom: 1px solid $bc;
+          color: #000;
+          overflow: hidden;
+          padding: 0 rem(20px);
+
+          .date {
+            color:#5d5a5a;
+            position: absolute;
+            right: rem(50px);
+          }
+          .people {
+            float: left;
+          }
+          .relative {
+            color: #b5b5b5;
+          }
+
+          input.input-item {
+            position: absolute;
+            top: rem(26px);
+            right: rem(50px);
+            width: rem(400px);
+            height: rem(70px);
+            font-size: rem(28px);
+            text-align: right;
+            border: none;
+            outline: none;
+            &::-webkit-input-placeholder { color: #c3c3c3; }
+            &::-moz-placeholder { color: #c3c3c3; }
+            &:-moz-placeholder { color: #c3c3c3; }
+            &:-ms-input-placeholder { color: #c3c3c3; }
+            &.school {
+              right: rem(65px);
+              &::-webkit-input-placeholder { color: #000; }
+              &::-moz-placeholder { color: #000; }
+              &:-moz-placeholder { color: #000; }
+              &:-ms-input-placeholder { color: #000; }
+            }
+            &.verificationCode {
+              right: rem(225px);
+              width: rem(200px);
+            }
+            &:disabled { background-color: #fff; }
+          }
+
+          .arrow {
+            position: absolute;
+            top: rem(45px);
+            right: rem(20px);
+            width: rem(18px);
+            height: rem(32px);
+            background: url('~assets/images/credit-card/arrow-left-little.png') no-repeat center / 100% 100%;
+          }
+
+          .get-code {
+            position: absolute;
+            top: rem(29px);
+            right: rem(20px);
+            width: rem(180px);
+            height: rem(64px);
+            line-height: rem(64px);
+            text-align: center;
+            color: #fff;
+            background-color: #01b3f0;
+            border-radius: rem(10px);
+            &.active { background-color: #c9c9c9; }
+          }
+        }
+
+      }
+
+      .btn {
+        width: rem(710px);
+        height: rem(90px);
+        line-height: rem(90px);
+        text-align: center;
+        font-size: rem(32px);
+        color: #fff;
+        margin: rem(80px) rem(20px) 0 rem(20px);
+        background-color: #c9c9c9;
+        border: 1px solid #c9c9c9;
+        border-radius: rem(10px);
+
+        &.on {
+          background-color: #01b3f0;
+          border: 1px solid #01b3f0;
+        }
+      }
+    }
+  }
+
+ .information_insure {
+   position: fixed;
+   bottom: 0;
+   text-align: center;
+   height: rem(103px);
+   line-height: rem(103px);
+   background: #fff;
+   width: 100%;
+   display: flex;
+   span{
+     color: #fa0808;
+   }
+
+   .insure {
+     text-align: center;
+     padding:0 rem(70px);
+
+     span {
+       background: #fa0808;
+       position:absolute;
+       display:block;
+       height:100%;
+       width:86%;
+       right: rem(-20px);
+       color: #fff;
+     }
+   }
+
+   .price {
+     width: rem(200px);
+   }
+
+   p {
+     flex: 1;
+   }
+
+ }
+  .insure_payment {
+    
+    .price {
+      color: #fa0808;
+      text-align: right;
+      padding-right: rem(40px);
+    }
+
+    .insure_payment_msg {
+      height: rem(80px);
+      line-height: rem(80px);
+      font-size: 0.875rem;
+      padding: 0 rem(20px);
+      color: #666;
+    }
+
+    .content {
+      display: flex;
+      padding: 0 rem(20px);
+      background: #fff;
+      height: rem(100px);
+      line-height: rem(100px);
+      border-top: rem(1px) solid #e8e8e8;
+      border-bottom: rem(1px) solid #e8e8e8;
+      span{
+        flex: 1;
+      }
+    }
+  }
+
+  .insure_order {
+
+    .insure_order_msg {
+      height: rem(80px);
+      line-height: rem(80px);
+      font-size: 0.875rem;
+      border-bottom: 1px solid #e8e8e8;
+      color: #666;
+      padding: 0 rem(20px);
+    }
+
+    .content {
+      padding: rem(20px) rem(20px);
+      font-size: 0.875rem;
+      color: #666;
+      background: #fff;
+
+      p{
+        height: rem(60px);
+        line-height: rem(60px);
+        font-size: 0.875rem;
+        color: #666;
+      }
+
+      span{
+        flex: 1;
+      }
+    }
+  }
+
+  .foot{
+    height: rem(120px);
+  }
+}
+.extend-btn {
+  display:none;
+}
+
+.header-back{
+  display:block !important;
+}

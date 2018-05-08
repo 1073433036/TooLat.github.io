@@ -1,0 +1,235 @@
+@import "~assets/styles/_bootstrap";
+
+.indent-page {
+  height: 100%;
+  background: #eeeff1;
+
+  > ._v-container > ._v-content {
+		padding-top: rem(90px);
+	}
+
+  .wrapper {
+
+    .container {
+
+			.list {
+
+				.item {
+					margin-bottom: rem(20px);
+					background-color: #fff;
+
+					.top {
+						position: relative;
+						height: rem(180px);
+						border-bottom: 1px solid $bc;
+
+						.head {
+							position: absolute;
+							top: rem(46px);
+							left: rem(20px);
+							width: rem(85px);
+							height: rem(85px);
+							border-radius: 50%;
+
+							> img {
+								width: 100%;
+								height: 100%;
+								border-radius: 50%;
+							}
+						}
+
+						.box {
+							position: absolute;
+							top: rem(46px);
+							left: rem(135px);
+							width: rem(608px);
+							height: rem(85px);
+
+							.info {
+								padding-bottom: rem(10px);
+								width: 100%;
+								color: #999;
+								font-size: rem(30px);
+								overflow: hidden;
+
+								.name {
+									float: left;
+									color: #000;
+							    width: rem(250px);
+							    white-space: nowrap;
+							    text-overflow: ellipsis;
+							    overflow: hidden;
+								}
+
+								.plate-number {
+									color: #999;
+								}
+
+								.day {
+									float: right;
+									margin-right: rem(20px);
+
+									.city {
+										margin-right: rem(60px);
+									}
+
+									.num {
+										color: #e29300;
+									}
+								}
+							}
+						}
+					}
+
+					.insurance {
+						display: flex;
+						padding: 0 rem(20px);
+						height: rem(112px);
+						line-height: rem(112px);
+						font-size: rem(30px);
+						color: #000;
+						border-bottom: 1px solid $bc;
+
+						.name {
+							flex: 0 0 rem(200px);
+							text-align: left;
+						}
+
+						.content {
+							flex: 1;
+							white-space: nowrap;
+					    text-overflow: ellipsis;
+					    overflow: hidden;
+			        text-align: center;
+						}
+
+						.policy {
+							flex: 0 0 rem(200px);
+							color: #e29300;
+							text-align: right;
+						}
+					}
+
+					.offer {
+						// padding: 0 rem(160px);
+						height: rem(80px);
+						text-align: center;
+
+						.unfold {
+							// float: left;
+							display: inline-block;
+							width: rem(220px);
+							height: rem(80px);
+							line-height: rem(80px);
+							color: #01b3f0;
+
+							&.on > i {
+								transform: rotate(180deg);
+    						transform-origin: 50% 50%;
+							}
+						}
+						.amend {
+							display: inline-block;
+							width: rem(220px);
+							height: rem(80px);
+							line-height: rem(80px);
+							color: #01b3f0;
+						}
+					}
+				}
+			}
+    }
+  }
+
+  &.fade-enter-active, &.fade-leave-active {
+    transition: all 0.3s linear;
+  }
+  &.fade-enter, &.fade-leave-active {
+    opacity: 0;
+  }
+
+  .dialog {
+    &:before {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      content: ' ';
+      background: rgba(0, 0, 0, .3);
+      z-index: 99999;
+    }
+
+    .content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999999;
+      display: block;
+      float: none;
+      margin: 0;
+      padding:  0;
+      width: 65%;
+      height: auto;
+      text-align: center;
+      font-size: rem(26px);
+      border: rem(1px) solid #CCC;
+      border-radius: rem(12px);
+      background-color: #fff;
+
+      .close, .complete {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        cursor: pointer;
+        z-index: 999;
+      }
+
+      .cancel2{
+        width:rem(40px);
+        height:rem(30px);
+        display:inline-block;
+        position:absolute;
+        right:rem(5px);
+        background:url(~assets/images/insurance_order/delect.png) no-repeat;
+        background-size:100%;
+        z-index: 10000;
+        top:rem(20px);
+      }
+      .warning {
+        width:rem(80px);
+        height:rem(73px);
+        display:inline-block;
+        background:url(~assets/images/warning.png) no-repeat;
+        background-size:100%;
+        margin-top: rem(60px);
+        margin-bottom:rem(24px);
+      }
+
+      .close {
+        right: rem(30px);
+        color: #01b5f1;
+      }
+
+      .delect {
+        width: rem(150px);
+        height: rem(50px);
+        line-height: rem(50px);
+        background: #51c6f0;
+        text-align: center;
+        border-radius: rem(12px);
+        padding: 0 rem(10px);
+        margin: rem(30px) 0 rem(30px) 0;
+        color: #fff;
+        border: none;
+        font-size: rem(26px);
+
+      }
+    }
+  }
+}

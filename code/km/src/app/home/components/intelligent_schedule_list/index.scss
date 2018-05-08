@@ -1,0 +1,260 @@
+@import "~assets/styles/_bootstrap";
+
+.intelligentschedulelist {
+  height: 100%;
+  padding-top: rem(90px);
+  background: #eeeff1;
+  > ._v-container > ._v-content {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-top: rem(90px);
+    padding-bottom: rem(100px);
+  }
+  .red{
+    color : #ff4046 !important;
+  }
+  .green{
+    color: #31bd64 !important;
+  }
+  .yellow{
+    color: #31bd64 !important;
+  }
+  .blue{
+    color: #03b2f1 !important;
+  }
+  .Ins_nav {
+    width: 100%;
+    overflow: hidden;
+    height:rem(106px);
+    line-height:rem(106px);
+    font-size:rem(30px);
+    color:#333333;
+    background:#fff;
+    border-bottom:rem(1px) solid #ccc;
+    height: rem(118px);
+    z-index: 1000;
+
+    nav {
+          padding: 0 10px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: middle;
+          -ms-flex-align: middle;
+          align-items: middle;
+          // overflow: auto;
+          height:rem(95px);
+          line-height:rem(95px);
+        }
+
+    p {
+       background: #f9f9f9;
+       text-align: center;
+       -ms-flex-negative: 0;
+       flex-shrink: 0;
+        border: rem(1px) solid #ccc;
+        display: inline-block;
+        height: rem(65px);
+        line-height: rem(65px);
+        border-radius: rem(20px);
+        margin-left: rem(20px);
+        margin-right: rem(20px);
+        padding:0 rem(10px);
+        text-align: center;
+        margin-top: rem(16px);
+        font-size: rem(26px);
+      }
+
+      p.active {
+        border:rem(1px) solid #00b2ee;
+        color: #00b2ee;
+      }
+  }
+  .wrapper {
+    margin: rem(135px) 0 rem(20px);
+
+    .container {
+
+      .form-group {
+        .list {
+          margin:0 rem(20px) ;
+          box-shadow: 0 rem(10px) rem(20px) rgba(0, 0, 0, .1);
+
+          .item {
+            margin-top: rem(30px);
+            border-radius: rem(10px);
+            background-color: #fff;
+
+            div {
+              display: flex;
+              padding: rem(30px) rem(12px);
+              position: relative;
+            }
+            .order {
+              background: #eaeaea;
+              position: relative;
+              p{
+                width: 100%;
+              }
+              span.sn {
+                padding-left: rem(50px);
+                font-size: rem(24px);
+              }
+              span.cardCode {
+                font-size: rem(24px);
+                &.right {
+                  float: right;
+                  margin-right: rem(10px);
+                }
+              }
+              em {
+                font-style:normal;
+                color: #03b2f1;
+              }
+
+            }
+            .money {
+              border-bottom: rem(1px) solid #ddd;
+              padding-left: rem(30px);
+              p {
+                flex: 1;
+                span {
+                  &:last-child {
+                   padding-left: rem(20px);
+                  }
+                }
+              }
+            }
+            .service {
+              border-bottom: rem(1px) solid #ddd;
+              padding-left: rem(30px);
+              p {
+                flex: 1;
+                span {
+                  &:last-child {
+                   padding-left: rem(20px);
+                  }
+                }
+              }
+            }
+
+            .date {
+              span {
+                &:last-child {
+                  position: absolute;
+                  right:rem(48px);
+                  color: #f8b010;
+
+                }
+              }
+
+            }
+
+            .msg_icon{
+              width: rem(45px);
+              height: rem(45px);
+              display: inline-block;
+              position: absolute;
+              left: rem(0px);
+              background: url(~assets/images/card_manage/list5.png) no-repeat;
+              background-size: 100%;
+              z-index: 10000;
+            }
+
+            .delect{
+              width: rem(41px);
+              height: rem(46px);
+              display: inline-block;
+              position: absolute;
+              top: rem(-8px);
+              right: rem(10px);
+              background: url(~assets/images/card_manage/list_delect.png) no-repeat;
+              background-size: 100%;
+              z-index: 10000;
+              &.active{
+                display: none;
+              }
+            }
+
+            .waiting{
+              width: rem(41px);
+              height: rem(40px);
+              display: inline-block;
+              top: rem(10px);
+              background: url(~assets/images/card_manage/list4.png)  no-repeat;
+              background-size: 100%;
+              margin-right: rem(8px);
+            }
+
+          }
+
+          .execution {
+            .order {
+              background: #d8ebff;
+            }
+            .execution_icon {
+              color: #00c5f7 !important;
+              .waiting {
+                background: url(~assets/images/card_manage/list5.png) no-repeat;
+                background-size: 100%;
+              }
+            }
+          }
+          .error {
+            .order {
+              background: #fcebec;
+            }
+            .error_icon {
+              color: #ff4046 !important;
+              .waiting {
+                background: url(~assets/images/card_manage/list2.png) no-repeat;
+                background-size: 100%;
+              }
+            }
+
+          }
+          .succeed {
+            .order {
+              background: #e5f0e4;
+            }
+            .succeed_icon {
+              color: #56f340 !important;
+              .waiting {
+                background: url(~assets/images/card_manage/list3.png) no-repeat;
+                background-size: 100%;
+              }
+            }
+
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .tip-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: rem(20px);
+    height: rem(80px);
+    box-sizing: border-box;
+    padding: 0 rem(20px);
+    line-height: rem(40px);
+    font-size: rem(24px);
+  }
+}
+.more-btn{
+  .title{
+    text-align: center;
+    margin: 0 auto;
+    background: #808080;
+    padding: rem(5px) rem(10px);
+    color: #fff;
+    border-radius: rem(5px);
+  }
+}
+.header-back{
+  display:block !important;
+}

@@ -1,0 +1,54 @@
+@import "~assets/styles/_bootstrap";
+
+  .pay-success-page {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: #eeeff1;
+    color: #323232;
+
+    .content {
+      width: 100%;
+      padding-top: rem(90px);
+      padding-bottom: rem(120px);
+      background-color: #fff;
+      box-shadow: 0 rem(4px) rem(4px) #ccc;
+
+      .success {
+        width: 100%;
+        padding-top: rem(80px);
+        text-align: center;
+
+        > .sp-pay-complete {
+          width: rem(102px);
+          height: rem(102px);
+        }
+
+        > h3 {
+          width: 100%;
+          height: rem(80px);
+          margin-top: rem(20px);
+          font-size: rem(36px);
+          text-align: center;
+          line-height: rem(80px);
+        }
+      }
+
+      .btn-success {
+        display: block;
+        width: rem(400px);
+        height: rem(80px);
+        margin: 0 auto;
+        margin-top: rem(55px);
+        margin-bottom: rem(35px);
+        font-size: rem(36px);
+        line-height: rem(80px);
+        text-align: center;
+        background-color: #01b5f1;
+        border-radius: rem(12px);
+        color: #fff;
+      }
+    }
+
+
+  }

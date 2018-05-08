@@ -1,0 +1,547 @@
+@import "~assets/styles/_bootstrap";
+
+.task-page {
+  height: 100%;
+  background: #eee;
+
+  > ._v-container {
+    padding-top: rem(180px);
+
+    ._v-content {
+      padding-bottom: rem(180px);
+    }
+
+    &.on {
+      padding-top: rem(90px);
+    }
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background-color: #000;
+    transition: all .5s;
+
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(90px);
+      height: rem(90px);
+      z-index: 2;
+
+      &:before {
+        content: '';
+        display: block;
+        width: rem(28px);
+        height: rem(28px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: rem(-14px);
+        margin-left: rem(-14px);
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+      }
+    }
+
+    .title {
+      height: rem(90px);
+      text-align: center;
+      font-size: 0;
+      padding-top: rem(12px);
+
+      .switch {
+        display: inline-block;
+        height: rem(66px);
+        line-height: rem(60px);
+        padding: 0 rem(30px);
+        color: #fff;
+        font-size: rem(30px);
+        border: 1px solid #fff;
+
+        &.on {
+          background-color: #fff;
+          color: #000;
+        }
+
+        &:first-child {
+          border-radius: rem(10px) 0 0 rem(10px);
+        }
+
+        &:last-child {
+          border-radius: 0 rem(10px) rem(10px) 0;
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: rem(90px);
+      height: rem(90px);
+      line-height: rem(90px);
+      text-align: center;
+      font-size: rem(40px);
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    top: rem(90px);
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    background-color: #fff;
+
+    .box {
+      flex: 1;
+      min-width: 1px;
+
+      &:not(:last-child) {
+        border-right: 1px solid #eee;
+      }
+
+      a.select {
+        display: block;
+        height: rem(90px);
+        line-height: rem(90px);
+        text-align: center;
+        font-size: rem(28px);
+        color: #666;
+        border-bottom: 1px solid #eee;
+
+        &.on {
+
+          > span {
+
+            &:before {
+              transform: rotate(-45deg) translateX(1px);
+            }
+
+            &:after {
+              transform: rotate(45deg) translateX(-1px);
+            }
+          }
+        }
+
+        > span {
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          padding-right: rem(72px);
+
+          &:before, &:after {
+            content: '';
+            display: block;
+            width: rem(12px);
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            background: #999;
+            border-radius: 2px;
+            transition: all .3s;
+          }
+
+          &:before {
+            right: rem(36px);
+            transform: rotate(45deg) translateX(1px);
+            transform-origin: 100% 50%;
+          }
+
+          &:after {
+            right: rem(24px);
+            transform: rotate(-45deg) translateX(-1px);
+            transform-origin: 0% 50%;
+          }
+        }
+      }
+
+      .mask {
+        position: fixed;
+        top: rem(180px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+
+        &.on {
+          display: block;
+        }
+
+        .block {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: rem(110px);
+          width: 100%;
+          background-color: #fff;
+          overflow-x: hidden;
+          overflow-y: auto;
+
+          .list {
+            width: 100%;
+            background-color: #fff;
+
+            > li {
+              border-bottom: 1px solid #eee;
+
+              > a {
+                position: relative;
+                display: block;
+                height: rem(90px);
+                line-height: rem(90px);
+                text-align: center;
+                font-size: rem(28px);
+                color: #333;
+
+                > span {
+                  display: inline-block;
+                  vertical-align: top;
+
+                  span.text {
+                    font-size: rem(24px);
+                    color: #999;
+                  }
+                }
+
+
+                > i {
+                  &.type {
+                    position: absolute;
+                    display: block;
+                    top: 45%;
+                    right: rem(50px);
+                    margin-top: rem(-20px);
+                    width: rem(20px);
+                    height: rem(40px);
+                    border-bottom: 1px solid #ff5e13;
+                    border-right: 1px solid #ff5e13;
+                    transform: rotate(45deg);
+                    transform-origin: 50% 50%;
+                  }
+                }
+
+              }
+            }
+
+            &.custom {
+              > li {
+                padding: 0 rem(20px) 0 rem(45px);
+
+                > a {
+                  text-align: left;
+
+                  &:after {
+                    display: block;
+                    clear: both;
+                    content: ' ';
+                  }
+
+                  .left, .right {
+                    float: left;
+                    width: 50%;
+                  }
+
+                  .right {
+                    padding-right: rem(40px);
+                    color: #999;
+                    text-align: right;
+                  }
+
+                  .sp-right {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto 0;
+                  }
+                }
+              }
+            }
+          }
+
+          .btn {
+            padding-top: rem(160px);
+
+            > button {
+              display: block;
+              margin: 0 auto;
+              width: rem(710px);
+              height: rem(95px);
+              line-height: rem(95px);
+              font-size: rem(32px);
+              color: #fff;
+              text-align: center;
+              border: none;
+              border-radius: rem(10px);
+              background: #01b5fa;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .wrapper {
+    height: 100%;
+
+    .controller {
+
+      .banner {
+        width: 100%;
+        height: rem(230px);
+        padding-top: rem(36px);
+        background: url(~assets/images/task-top-bg.png) no-repeat center;
+        background-size: 100%;
+
+        .tasking {
+          text-align: center;
+          color: #fff;
+
+          i.icon:before {
+            color: #dde80e;
+          }
+
+          i.icon, > span {
+            display: inline-block;
+            vertical-align: top;
+            height: rem(84px);
+            line-height: rem(84px);
+            font-size: rem(44px);
+          }
+
+          > span.num {
+            color: #feca30;
+          }
+        }
+
+
+        .tasked {
+          text-align: center;
+
+          > span {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 rem(30px);
+            border: 1px solid #fff;
+            border-radius: rem(30px);
+            color: #fff;
+            line-height: rem(50px);
+          }
+        }
+      }
+
+
+      .tips {
+				position: relative;
+				height: rem(60px);
+				line-height: rem(60px);
+				padding-left: rem(64px);
+				overflow: hidden;
+				background-color: #2d3940;
+
+        i.icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: rem(64px);
+          height: rem(60px);
+          line-height: rem(60px);
+          text-align: center;
+          color: #fff;
+					font-size: rem(32px);
+					background-color: #2d3940;
+        }
+
+        .notice {
+					position: absolute;
+					top: 0;
+					left: rem(64px);
+					width: 100%;
+					height: rem(60px);
+					overflow: hidden;
+
+					.marquee {
+						height: rem(60px);
+						word-break:keep-all;
+						white-space:nowrap;
+						font-size: rem(24px);
+						color: #fff;
+						text-align: left;
+						animation: marquee 25s linear infinite;
+					}
+	
+					@keyframes marquee {
+						0% {
+								transform: translateX(100%);
+						}
+						100% {
+								transform: translateX(-200%);
+						}
+					}
+				}
+      }
+
+      .task-list {
+        padding-top: rem(24px);
+
+        .item {
+					padding-bottom: rem(24px);
+					
+					&:last-child {
+						padding-bottom: 0;
+					}
+
+          > a {
+            position: relative;
+            display: block;
+            background-color: #fff;
+            overflow: hidden;
+
+            .person {
+              height: rem(125px);
+              line-height: rem(125px);
+              padding-left: rem(100px);
+              overflow: hidden;
+
+              .name {
+                padding-right: rem(30px);
+                font-size: rem(32px);
+                color: #333;
+              }
+
+              .text {
+                padding-right: rem(30px);
+                color: #999;
+                font-size: rem(28px);
+
+                .fc {
+                  color: #ff6815;
+                }
+              }
+            }
+
+            .company {
+              position: relative;
+              padding: rem(26px) rem(20px) rem(20px) rem(50px);
+              border-top: 1px solid $bc;
+              border-bottom: 1px solid $bc;
+
+              .line {
+                height: rem(66px);
+                line-height: rem(66px);
+
+                i.icon {
+                  display: inline-block;
+                  vertical-align: top;
+                  height: rem(66px);
+                  line-height: rem(66px);
+                  padding-right: rem(10px);
+                  color: #01b3f0;
+                  font-size: rem(36px);
+                }
+
+                > span {
+                  font-size: rem(28px);
+                  color: #666;
+                }
+              }
+
+              .grab {
+                width: rem(128px);
+                height: rem(54px);
+                line-height: rem(54px);
+                position: absolute;
+                top: 60%;
+                right: rem(20px);
+                margin-top: rem(-27px);
+                text-align: center;
+                font-size: rem(30px);
+                color: #fff;
+                background-color: #01b3f0;
+                border-radius: rem(10px);
+							}
+
+							.integral {
+								width: rem(128px);
+                height: rem(54px);
+                line-height: rem(54px);
+                position: absolute;
+                top: 23%;
+                right: rem(20px);
+                margin-top: rem(-27px);
+                text-align: center;
+                font-size: rem(30px);
+								color: #666;
+								border: 1px solid $bc;
+                border-radius: rem(10px);
+							}
+            }
+
+            .term-list {
+              padding: rem(18px) rem(20px);
+							font-size: 0;
+							border-bottom: 1px solid $bc;
+
+              .text {
+                display: inline-block;
+                vertical-align: top;
+                width: 33.333333%;
+                height: rem(56px);
+                line-height: rem(56px);
+                font-size: rem(28px);
+                color: #333;
+
+                &.off {
+                  color: #999;
+                }
+
+                i {
+                  vertical-align: top;
+                }
+              }
+            }
+
+            .status {
+              display: inline-block;
+              height: rem(46px);
+              line-height: rem(46px);
+              padding: 0 rem(36px);
+              background-color: #ffb400;
+              position: absolute;
+              top: rem(16px);
+              left: rem(-40px);
+              color: #fff;
+              font-size: rem(28px);
+              transform: rotate(-45deg);
+              transform-origin: 50% 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
